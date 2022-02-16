@@ -1,0 +1,11 @@
+//
+//  Production.xcconfig
+//  LocalHero
+//
+//  Created by Sean Williams on 16/02/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_BASE_URL = api.gb.bink.com

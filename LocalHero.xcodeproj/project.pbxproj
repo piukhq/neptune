@@ -65,6 +65,9 @@
 		CE4EBB3927BD038C00A5CA31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE4EBB4327BD6D6300A5CA31 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		CE4EBB4627BD6E0900A5CA31 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		CE4EBB4827BD6F5700A5CA31 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
+		CE4EBB4927BD6F7500A5CA31 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -212,6 +215,9 @@
 			children = (
 				CE4EBB4327BD6D6300A5CA31 /* Configuration.swift */,
 				CE4EBB4627BD6E0900A5CA31 /* APIConstants.swift */,
+				CE4EBB4827BD6F5700A5CA31 /* Dev.xcconfig */,
+				CE4EBB4927BD6F7500A5CA31 /* Staging.xcconfig */,
+				CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 /* Begin XCBuildConfiguration section */
 		CE4EBB2A27BCF67800A5CA31 /* Alpha */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4EBB4827BD6F5700A5CA31 /* Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -543,6 +550,7 @@
 		};
 		CE4EBB2B27BCF67800A5CA31 /* App Store */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -736,6 +744,7 @@
 		};
 		CE4EBB3B27BD1B2800A5CA31 /* Beta */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4EBB4927BD6F7500A5CA31 /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -866,6 +875,7 @@
 		};
 		CE4EBB3F27BD1B3000A5CA31 /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4EBB4927BD6F7500A5CA31 /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
