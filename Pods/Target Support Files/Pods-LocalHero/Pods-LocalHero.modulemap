@@ -1,0 +1,6 @@
+framework module Pods_LocalHero {
+  umbrella header "Pods-LocalHero-umbrella.h"
+
+  export *
+  module * { export * }
+}
