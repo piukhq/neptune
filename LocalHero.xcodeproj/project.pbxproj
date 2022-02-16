@@ -20,6 +20,8 @@
 		CE4EBB2727BCF67800A5CA31 /* LocalHeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB2627BCF67800A5CA31 /* LocalHeroUITests.swift */; };
 		CE4EBB2927BCF67800A5CA31 /* LocalHeroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB2827BCF67800A5CA31 /* LocalHeroUITestsLaunchTests.swift */; };
 		CE4EBB3A27BD038C00A5CA31 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB3927BD038C00A5CA31 /* README.md */; };
+		CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB4327BD6D6300A5CA31 /* Configuration.swift */; };
+		CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB4627BD6E0900A5CA31 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		063DAD35A876E194524C39D0 /* Pods-LocalHero-LocalHeroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero-LocalHeroUITests.release.xcconfig"; path = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2121BD2D0EC20FB340FF2CAE /* Pods-LocalHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.debug.xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.debug.xcconfig"; sourceTree = "<group>"; };
-		71284277A0AC65C30242610D /* Pods-LocalHero-LocalHeroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero-LocalHeroUITests.debug.xcconfig"; path = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		12CF2699D9C33A9CDC729398 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero-LocalHeroUITests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.app store.xcconfig"; sourceTree = "<group>"; };
+		270A916EF0552327F70FB92B /* Pods-LocalHero.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.alpha.xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.alpha.xcconfig"; sourceTree = "<group>"; };
+		2A8D1DAE675C5CEC8D2C4417 /* Pods-LocalHero.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store.xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store.xcconfig"; sourceTree = "<group>"; };
+		6A1026485A9C4DE8661FAA4D /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero-LocalHeroUITests.alpha.xcconfig"; path = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.alpha.xcconfig"; sourceTree = "<group>"; };
+		6CC35D9037BC21944E7407C8 /* Pods-LocalHeroTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.alpha.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.alpha.xcconfig"; sourceTree = "<group>"; };
 		7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DAB5DF185306221D0505199 /* Pods-LocalHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.release.xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.release.xcconfig"; sourceTree = "<group>"; };
-		CA569BF93006072A4A78C5F7 /* Pods-LocalHeroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.release.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.release.xcconfig"; sourceTree = "<group>"; };
+		B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* LocalHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0727BCF67200A5CA31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +63,10 @@
 		CE4EBB2627BCF67800A5CA31 /* LocalHeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHeroUITests.swift; sourceTree = "<group>"; };
 		CE4EBB2827BCF67800A5CA31 /* LocalHeroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHeroUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE4EBB3927BD038C00A5CA31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE4EBB4327BD6D6300A5CA31 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		CE4EBB4627BD6E0900A5CA31 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E88B317B461CFBBD11D93B63 /* Pods-LocalHeroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.debug.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,14 +100,13 @@
 		B50659EC64B1159398EC1E0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2121BD2D0EC20FB340FF2CAE /* Pods-LocalHero.debug.xcconfig */,
-				7DAB5DF185306221D0505199 /* Pods-LocalHero.release.xcconfig */,
-				71284277A0AC65C30242610D /* Pods-LocalHero-LocalHeroUITests.debug.xcconfig */,
-				063DAD35A876E194524C39D0 /* Pods-LocalHero-LocalHeroUITests.release.xcconfig */,
-				E88B317B461CFBBD11D93B63 /* Pods-LocalHeroTests.debug.xcconfig */,
-				CA569BF93006072A4A78C5F7 /* Pods-LocalHeroTests.release.xcconfig */,
+				270A916EF0552327F70FB92B /* Pods-LocalHero.alpha.xcconfig */,
+				2A8D1DAE675C5CEC8D2C4417 /* Pods-LocalHero.app store.xcconfig */,
+				6A1026485A9C4DE8661FAA4D /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */,
+				12CF2699D9C33A9CDC729398 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */,
+				6CC35D9037BC21944E7407C8 /* Pods-LocalHeroTests.alpha.xcconfig */,
+				B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,6 +127,7 @@
 				CE4EBB0427BCF67200A5CA31 /* LocalHero */,
 				CE4EBB1B27BCF67700A5CA31 /* LocalHeroTests */,
 				CE4EBB2527BCF67800A5CA31 /* LocalHeroUITests */,
+				CE4EBB4527BD6DA600A5CA31 /* Configuration */,
 				CE4EBB0327BCF67200A5CA31 /* Products */,
 				B50659EC64B1159398EC1E0F /* Pods */,
 				C467ABE9AE29EB6A3D910F57 /* Frameworks */,
@@ -201,6 +205,15 @@
 				CE4EBB0927BCF67200A5CA31 /* ViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		CE4EBB4527BD6DA600A5CA31 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CE4EBB4327BD6D6300A5CA31 /* Configuration.swift */,
+				CE4EBB4627BD6E0900A5CA31 /* APIConstants.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,7 +421,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4EBB0A27BCF67200A5CA31 /* ViewController.swift in Sources */,
+				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
+				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
 				CE4EBB0827BCF67200A5CA31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,7 +480,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CE4EBB2A27BCF67800A5CA31 /* Debug */ = {
+		CE4EBB2A27BCF67800A5CA31 /* Alpha */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -524,9 +539,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Alpha;
 		};
-		CE4EBB2B27BCF67800A5CA31 /* Release */ = {
+		CE4EBB2B27BCF67800A5CA31 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -579,11 +594,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "App Store";
 		};
-		CE4EBB2D27BCF67800A5CA31 /* Debug */ = {
+		CE4EBB2D27BCF67800A5CA31 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2121BD2D0EC20FB340FF2CAE /* Pods-LocalHero.debug.xcconfig */;
+			baseConfigurationReference = 270A916EF0552327F70FB92B /* Pods-LocalHero.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -608,11 +623,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Alpha;
 		};
-		CE4EBB2E27BCF67800A5CA31 /* Release */ = {
+		CE4EBB2E27BCF67800A5CA31 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DAB5DF185306221D0505199 /* Pods-LocalHero.release.xcconfig */;
+			baseConfigurationReference = 2A8D1DAE675C5CEC8D2C4417 /* Pods-LocalHero.app store.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -637,11 +652,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = "App Store";
 		};
-		CE4EBB3027BCF67800A5CA31 /* Debug */ = {
+		CE4EBB3027BCF67800A5CA31 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E88B317B461CFBBD11D93B63 /* Pods-LocalHeroTests.debug.xcconfig */;
+			baseConfigurationReference = 6CC35D9037BC21944E7407C8 /* Pods-LocalHeroTests.alpha.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -658,11 +673,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalHero.app/LocalHero";
 			};
-			name = Debug;
+			name = Alpha;
 		};
-		CE4EBB3127BCF67800A5CA31 /* Release */ = {
+		CE4EBB3127BCF67800A5CA31 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA569BF93006072A4A78C5F7 /* Pods-LocalHeroTests.release.xcconfig */;
+			baseConfigurationReference = B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -679,11 +694,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalHero.app/LocalHero";
 			};
-			name = Release;
+			name = "App Store";
 		};
-		CE4EBB3327BCF67800A5CA31 /* Debug */ = {
+		CE4EBB3327BCF67800A5CA31 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71284277A0AC65C30242610D /* Pods-LocalHero-LocalHeroUITests.debug.xcconfig */;
+			baseConfigurationReference = 6A1026485A9C4DE8661FAA4D /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -698,11 +713,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LocalHero;
 			};
-			name = Debug;
+			name = Alpha;
 		};
-		CE4EBB3427BCF67800A5CA31 /* Release */ = {
+		CE4EBB3427BCF67800A5CA31 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 063DAD35A876E194524C39D0 /* Pods-LocalHero-LocalHeroUITests.release.xcconfig */;
+			baseConfigurationReference = 12CF2699D9C33A9CDC729398 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -717,7 +732,261 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LocalHero;
 			};
-			name = Release;
+			name = "App Store";
+		};
+		CE4EBB3B27BD1B2800A5CA31 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Beta;
+		};
+		CE4EBB3C27BD1B2800A5CA31 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270A916EF0552327F70FB92B /* Pods-LocalHero.alpha.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LocalHero/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Beta;
+		};
+		CE4EBB3D27BD1B2800A5CA31 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CC35D9037BC21944E7407C8 /* Pods-LocalHeroTests.alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.LocalHeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalHero.app/LocalHero";
+			};
+			name = Beta;
+		};
+		CE4EBB3E27BD1B2800A5CA31 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A1026485A9C4DE8661FAA4D /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.LocalHeroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LocalHero;
+			};
+			name = Beta;
+		};
+		CE4EBB3F27BD1B3000A5CA31 /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store (Internal)";
+		};
+		CE4EBB4027BD1B3000A5CA31 /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8D1DAE675C5CEC8D2C4417 /* Pods-LocalHero.app store.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LocalHero/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "App Store (Internal)";
+		};
+		CE4EBB4127BD1B3000A5CA31 /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.LocalHeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalHero.app/LocalHero";
+			};
+			name = "App Store (Internal)";
+		};
+		CE4EBB4227BD1B3000A5CA31 /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12CF2699D9C33A9CDC729398 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.LocalHeroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LocalHero;
+			};
+			name = "App Store (Internal)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -725,38 +994,46 @@
 		CE4EBAFD27BCF67100A5CA31 /* Build configuration list for PBXProject "LocalHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE4EBB2A27BCF67800A5CA31 /* Debug */,
-				CE4EBB2B27BCF67800A5CA31 /* Release */,
+				CE4EBB2A27BCF67800A5CA31 /* Alpha */,
+				CE4EBB3B27BD1B2800A5CA31 /* Beta */,
+				CE4EBB2B27BCF67800A5CA31 /* App Store */,
+				CE4EBB3F27BD1B3000A5CA31 /* App Store (Internal) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		CE4EBB2C27BCF67800A5CA31 /* Build configuration list for PBXNativeTarget "LocalHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE4EBB2D27BCF67800A5CA31 /* Debug */,
-				CE4EBB2E27BCF67800A5CA31 /* Release */,
+				CE4EBB2D27BCF67800A5CA31 /* Alpha */,
+				CE4EBB3C27BD1B2800A5CA31 /* Beta */,
+				CE4EBB2E27BCF67800A5CA31 /* App Store */,
+				CE4EBB4027BD1B3000A5CA31 /* App Store (Internal) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		CE4EBB2F27BCF67800A5CA31 /* Build configuration list for PBXNativeTarget "LocalHeroTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE4EBB3027BCF67800A5CA31 /* Debug */,
-				CE4EBB3127BCF67800A5CA31 /* Release */,
+				CE4EBB3027BCF67800A5CA31 /* Alpha */,
+				CE4EBB3D27BD1B2800A5CA31 /* Beta */,
+				CE4EBB3127BCF67800A5CA31 /* App Store */,
+				CE4EBB4127BD1B3000A5CA31 /* App Store (Internal) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		CE4EBB3227BCF67800A5CA31 /* Build configuration list for PBXNativeTarget "LocalHeroUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE4EBB3327BCF67800A5CA31 /* Debug */,
-				CE4EBB3427BCF67800A5CA31 /* Release */,
+				CE4EBB3327BCF67800A5CA31 /* Alpha */,
+				CE4EBB3E27BD1B2800A5CA31 /* Beta */,
+				CE4EBB3427BCF67800A5CA31 /* App Store */,
+				CE4EBB4227BD1B3000A5CA31 /* App Store (Internal) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 /* End XCConfigurationList section */
 	};
