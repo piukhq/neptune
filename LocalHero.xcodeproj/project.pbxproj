@@ -55,7 +55,7 @@
 		9D8E69498ECD5945AFDC2B47 /* Pods-LocalHeroTests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
-		CE4EBB0227BCF67200A5CA31 /* LocalHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0727BCF67200A5CA31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0927BCF67200A5CA31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		CE4EBB0327BCF67200A5CA31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE4EBB0227BCF67200A5CA31 /* LocalHero.app */,
+				CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */,
 				CE4EBB1827BCF67700A5CA31 /* LocalHeroTests.xctest */,
 				CE4EBB2227BCF67700A5CA31 /* LocalHeroUITests.xctest */,
 			);
@@ -252,7 +252,7 @@
 			);
 			name = LocalHero;
 			productName = LocalHero;
-			productReference = CE4EBB0227BCF67200A5CA31 /* LocalHero.app */;
+			productReference = CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CE4EBB1727BCF67700A5CA31 /* LocalHeroTests */ = {
@@ -639,7 +639,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.alpha;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Local Hero α";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.bink.localhero.alpha";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -670,7 +670,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Local Hero";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bink.localhero";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -843,7 +843,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.beta;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Local Hero β";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.bink.localhero.beta";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -970,7 +970,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.beta;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Local Hero β";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bink.localhero.beta";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
