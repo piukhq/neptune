@@ -28,7 +28,6 @@ end
     # Bink
 
     match(type: "appstore", app_identifier: "com.bink.localhero", readonly: true)
-    match(type: "adhoc", app_identifier: "com.bink.localhero", readonly: true)
     match(type: "development", app_identifier: "com.bink.localhero.alpha", readonly: true)
     match(type: "adhoc", app_identifier: "com.bink.localhero.beta", readonly: true)
 
