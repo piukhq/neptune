@@ -8,5 +8,12 @@
 import Foundation
 
 enum APIConstants {
-    
+    static var apiBaseURLString: String {
+        do {
+            let apiBaseURL = try Configuration.value(for: .apiBaseUrl)
+            return apiBaseURL
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
 }
