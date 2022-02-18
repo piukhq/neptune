@@ -21,6 +21,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Retrieve all the certificates for all targets and configures your machine to compile against devices
 
+### develop
+
+```sh
+[bundle exec] fastlane develop
+```
+
+Submit Develop build to TestFlight
+
 ----
 
 
