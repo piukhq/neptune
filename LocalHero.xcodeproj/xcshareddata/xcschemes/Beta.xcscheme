@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE4EBB0127BCF67200A5CA31"
-               BuildableName = "LocalHero.app"
+               BuildableName = "Local Hero.app"
                BlueprintName = "LocalHero"
                ReferencedContainer = "container:LocalHero.xcodeproj">
             </BuildableReference>
@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE4EBB1727BCF67700A5CA31"
-               BuildableName = "LocalHeroTests.xctest"
-               BlueprintName = "LocalHeroTests"
-               ReferencedContainer = "container:LocalHero.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE4EBB2127BCF67700A5CA31"
-               BuildableName = "LocalHeroUITests.xctest"
-               BlueprintName = "LocalHeroUITests"
-               ReferencedContainer = "container:LocalHero.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -65,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE4EBB0127BCF67200A5CA31"
-            BuildableName = "LocalHero.app"
+            BuildableName = "Local Hero.app"
             BlueprintName = "LocalHero"
             ReferencedContainer = "container:LocalHero.xcodeproj">
          </BuildableReference>
@@ -82,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE4EBB0127BCF67200A5CA31"
-            BuildableName = "LocalHero.app"
+            BuildableName = "Local Hero.app"
             BlueprintName = "LocalHero"
             ReferencedContainer = "container:LocalHero.xcodeproj">
          </BuildableReference>
