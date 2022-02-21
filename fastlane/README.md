@@ -13,34 +13,31 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### setup
+## iOS
+
+### ios setup
 
 ```sh
-[bundle exec] fastlane setup
+[bundle exec] fastlane ios setup
 ```
 
 Retrieve all the certificates for all targets and configures your machine to compile against devices
 
-### develop
+### ios develop
 
 ```sh
-[bundle exec] fastlane develop
+[bundle exec] fastlane ios develop
 ```
 
 Submit Develop build to TestFlight
 
-----
-
-
-## iOS
-
-### ios custom_lane
+### ios beta_dsym
 
 ```sh
-[bundle exec] fastlane ios custom_lane
+[bundle exec] fastlane ios beta_dsym
 ```
 
-Description of what the lane does
+Submit dysm to Sentry for crash reporting
 
 ----
 
