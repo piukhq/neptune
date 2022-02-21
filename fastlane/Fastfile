@@ -21,7 +21,6 @@ platform :ios do
     ENV["MATCH_PASSWORD"] = "!32Nzmzmznz!"
 
   end
-end
 
  desc "Retrieve all the certificates for all targets and configures your machine to compile against devices"
   lane :setup do
@@ -61,3 +60,15 @@ end
       skip_waiting_for_build_processing: true
     )
   end
+
+  desc "Submit dysm to Sentry for crash reporting"
+  lane :beta_dsym do
+    sentry_upload_dsym(
+      auth_token: ENV["SENTRY_AUTH_TOKEN"],
+      org_slug: 'bink',
+      project_slug: 'localhero',
+      dsym_path: ENV["BITRISE_DSYM_PATH"]
+    )
+  end
+
+end
