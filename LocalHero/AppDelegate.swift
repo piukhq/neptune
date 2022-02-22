@@ -5,7 +5,6 @@
 //  Created by Sean Williams on 16/02/2022.
 //
 
-import Firebase
 import UIKit
 
 @main
