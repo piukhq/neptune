@@ -11,9 +11,7 @@
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
 		CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */; };
-		CE4EBB0827BCF67200A5CA31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0727BCF67200A5CA31 /* SceneDelegate.swift */; };
-		CE4EBB0A27BCF67200A5CA31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* ViewController.swift */; };
-		CE4EBB0D27BCF67200A5CA31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0B27BCF67200A5CA31 /* Main.storyboard */; };
+		CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */; };
 		CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */; };
 		CE4EBB1227BCF67700A5CA31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB1027BCF67700A5CA31 /* LaunchScreen.storyboard */; };
 		CE4EBB1D27BCF67700A5CA31 /* LocalHeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB1C27BCF67700A5CA31 /* LocalHeroTests.swift */; };
@@ -28,6 +26,8 @@
 		CE4EBB5527BFC4EC00A5CA31 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EBB5427BFC4EC00A5CA31 /* FirebaseStorage */; };
 		CE4EBB5727BFC4EC00A5CA31 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EBB5627BFC4EC00A5CA31 /* FirebaseStorageCombine-Community */; };
 		CE4EBB5927BFC4EC00A5CA31 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EBB5827BFC4EC00A5CA31 /* FirebaseStorageSwift-Beta */; };
+		CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5A27C4F7D400A5CA31 /* World.swift */; };
+		CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +63,9 @@
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE4EBB0727BCF67200A5CA31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE4EBB0927BCF67200A5CA31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE4EBB0C27BCF67200A5CA31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4EBB1127BCF67700A5CA31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CE4EBB1327BCF67700A5CA31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE4EBB1827BCF67700A5CA31 /* LocalHeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalHeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB1C27BCF67700A5CA31 /* LocalHeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHeroTests.swift; sourceTree = "<group>"; };
 		CE4EBB2227BCF67700A5CA31 /* LocalHeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalHeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +78,9 @@
 		CE4EBB4927BD6F7500A5CA31 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		CE4EBB4D27BFC12D00A5CA31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE4EBB5A27C4F7D400A5CA31 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStateMachine.swift; sourceTree = "<group>"; };
+		CE4EBB6127C5086800A5CA31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,8 +175,10 @@
 		CE4EBB0427BCF67200A5CA31 /* LocalHero */ = {
 			isa = PBXGroup;
 			children = (
+				CE4EBB6127C5086800A5CA31 /* Info.plist */,
 				CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */,
-				CE4EBB0727BCF67200A5CA31 /* SceneDelegate.swift */,
+				CE4EBB5A27C4F7D400A5CA31 /* World.swift */,
+				CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */,
 				CE4EBB3827BCFB1B00A5CA31 /* Screens */,
 				CE4EBB3627BCFA3300A5CA31 /* Storyboards */,
 				CE4EBB3527BCF96300A5CA31 /* Supporting Files */,
@@ -205,7 +207,6 @@
 		CE4EBB3527BCF96300A5CA31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE4EBB1327BCF67700A5CA31 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -213,7 +214,6 @@
 		CE4EBB3627BCFA3300A5CA31 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				CE4EBB0B27BCF67200A5CA31 /* Main.storyboard */,
 				CE4EBB1027BCF67700A5CA31 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -230,7 +230,7 @@
 		CE4EBB3827BCFB1B00A5CA31 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CE4EBB0927BCF67200A5CA31 /* ViewController.swift */,
+				CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -368,7 +368,6 @@
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
 				CE4EBB3A27BD038C00A5CA31 /* README.md in Resources */,
-				CE4EBB0D27BCF67200A5CA31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,11 +461,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4EBB0A27BCF67200A5CA31 /* ViewController.swift in Sources */,
+				CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */,
+				CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */,
+				CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
-				CE4EBB0827BCF67200A5CA31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,14 +503,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE4EBB0B27BCF67200A5CA31 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE4EBB0C27BCF67200A5CA31 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE4EBB1027BCF67700A5CA31 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -574,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -630,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -651,10 +643,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HC34M8YE55;
 				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -663,6 +656,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.alpha;
+				PRODUCT_MODULE_NAME = LocalHero;
 				PRODUCT_NAME = "Local Hero α";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.bink.localhero.alpha";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -682,10 +676,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HC34M8YE55;
 				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,6 +689,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero;
+				PRODUCT_MODULE_NAME = LocalHero;
 				PRODUCT_NAME = "Local Hero";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bink.localhero";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -834,7 +830,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -855,10 +851,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HC34M8YE55;
 				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -867,6 +864,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.beta;
+				PRODUCT_MODULE_NAME = LocalHero;
 				PRODUCT_NAME = "Local Hero β";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.bink.localhero.beta";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -961,7 +959,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -982,10 +980,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HC34M8YE55;
 				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -994,6 +993,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.localhero.beta;
+				PRODUCT_MODULE_NAME = LocalHero;
 				PRODUCT_NAME = "Local Hero β";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bink.localhero.beta";
 				SWIFT_EMIT_LOC_STRINGS = YES;
