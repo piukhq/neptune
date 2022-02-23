@@ -38,6 +38,7 @@
 		CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7855927C63E2C00B8F3D9 /* LoginResponse.swift */; };
 		CEB7855D27C63E9200B8F3D9 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7855C27C63E9200B8F3D9 /* JWTDecode */; };
 		CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */; };
+		CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7856527C6549C00B8F3D9 /* APIErrorResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		CEB7855327C639D800B8F3D9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		CEB7855927C63E2C00B8F3D9 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		CEB7856327C64D1800B8F3D9 /* LoyaltyPlansTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyPlansTableViewController.swift; sourceTree = "<group>"; };
+		CEB7856527C6549C00B8F3D9 /* APIErrorResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponses.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -292,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */,
+				CEB7856527C6549C00B8F3D9 /* APIErrorResponses.swift */,
 				CEB7854C27C54C4800B8F3D9 /* NetworkingError.swift */,
 				CEB7855127C5514D00B8F3D9 /* BinkHTTPHeaders.swift */,
 				CEB7854A27C54A5C00B8F3D9 /* APIEndpoint.swift */,
@@ -327,6 +331,7 @@
 		CEB7856127C64C1000B8F3D9 /* Loyalty Plans */ = {
 			isa = PBXGroup;
 			children = (
+				CEB7856327C64D1800B8F3D9 /* LoyaltyPlansTableViewController.swift */,
 			);
 			path = "Loyalty Plans";
 			sourceTree = "<group>";
@@ -557,6 +562,7 @@
 				CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */,
 				CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
+				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,

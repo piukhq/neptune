@@ -17,7 +17,10 @@ enum APIEndpoint {
     case createPaymentAccount
     case spreedly
     case login
-
+    case logout
+    case magicLinks
+    case magicLinksAccessTokens
+    
     var headers: [BinkHTTPHeader] {
         var headers: [BinkHTTPHeader] = [.defaultUserAgent, .defaultContentType]
         headers.append(.defaultAccept)
@@ -95,6 +98,15 @@ enum APIEndpoint {
         }
     }
     
+    /// There are cases where an endpoint requires authorization, but shouldn't respond to a 401 response code such as .logout.
+    var shouldRespondToUnauthorizedStatus: Bool {
+        switch self {
+        case .logout, .magicLinks, .magicLinksAccessTokens:
+            return false
+        default: return true
+        }
+    }
+    
     private var scheme: String {
         return "https"
     }
@@ -118,6 +130,8 @@ enum APIEndpoint {
         case .spreedly:
             return ""
 //            return "https://core.spreedly.com/v1/payment_methods?environment_key=\(BinkappKeys().spreedlyEnvironmentKey)"
+        default:
+            return ""
         }
     }
 }
