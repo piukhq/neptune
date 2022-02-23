@@ -45,6 +45,8 @@
 		CEB7857027C6765600B8F3D9 /* bink.der in Resources */ = {isa = PBXBuildFile; fileRef = CEB7856F27C6765600B8F3D9 /* bink.der */; };
 		CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7857827C6866B00B8F3D9 /* BarcodeScannerViewController.swift */; };
 		CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */; };
+		CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858827C69C5900B8F3D9 /* Strings.swift */; };
+		CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858927C69C5900B8F3D9 /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		CEB7856F27C6765600B8F3D9 /* bink.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = bink.der; sourceTree = "<group>"; };
 		CEB7857827C6866B00B8F3D9 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHeroViewController.swift; sourceTree = "<group>"; };
+		CEB7858827C69C5900B8F3D9 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CEB7858927C69C5900B8F3D9 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +250,7 @@
 		CE4EBB3527BCF96300A5CA31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEB7858727C69C5900B8F3D9 /* SwiftGen */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -391,6 +396,15 @@
 				CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */,
 			);
 			path = LocalHeroUI;
+			sourceTree = "<group>";
+		};
+		CEB7858727C69C5900B8F3D9 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7858827C69C5900B8F3D9 /* Strings.swift */,
+				CEB7858927C69C5900B8F3D9 /* Assets.swift */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,7 +639,9 @@
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
+				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
+				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
