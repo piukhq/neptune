@@ -39,6 +39,10 @@
 		CEB7855D27C63E9200B8F3D9 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7855C27C63E9200B8F3D9 /* JWTDecode */; };
 		CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */; };
 		CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7856527C6549C00B8F3D9 /* APIErrorResponses.swift */; };
+		CEB7856727C65CDC00B8F3D9 /* LoyaltyPlansTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7856327C64D1800B8F3D9 /* LoyaltyPlansTableViewController.swift */; };
+		CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7856927C65F6900B8F3D9 /* LoyaltyPlanModel.swift */; };
+		CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7856B27C66CFE00B8F3D9 /* SafeDecoding.swift */; };
+		CEB7857027C6765600B8F3D9 /* bink.der in Resources */ = {isa = PBXBuildFile; fileRef = CEB7856F27C6765600B8F3D9 /* bink.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,9 @@
 		CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		CEB7856327C64D1800B8F3D9 /* LoyaltyPlansTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyPlansTableViewController.swift; sourceTree = "<group>"; };
 		CEB7856527C6549C00B8F3D9 /* APIErrorResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponses.swift; sourceTree = "<group>"; };
+		CEB7856927C65F6900B8F3D9 /* LoyaltyPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyPlanModel.swift; sourceTree = "<group>"; };
+		CEB7856B27C66CFE00B8F3D9 /* SafeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeDecoding.swift; sourceTree = "<group>"; };
+		CEB7856F27C6765600B8F3D9 /* bink.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = bink.der; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -248,6 +255,7 @@
 		CE4EBB3727BCFA3F00A5CA31 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEB7856F27C6765600B8F3D9 /* bink.der */,
 				CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -256,7 +264,7 @@
 		CE4EBB3827BCFB1B00A5CA31 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CEB7856127C64C1000B8F3D9 /* Loyalty Plans */,
+				CEB7856127C64C1000B8F3D9 /* LoyaltyPlans */,
 				CEB7855827C63E1A00B8F3D9 /* Login */,
 			);
 			path = Screens;
@@ -277,8 +285,9 @@
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				CE4EBB5A27C4F7D400A5CA31 /* World.swift */,
 				CEB7855327C639D800B8F3D9 /* UserManager.swift */,
+				CEB7856D27C66D1200B8F3D9 /* SafeDecoding */,
+				CEB7856E27C66D2500B8F3D9 /* World */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -328,12 +337,37 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CEB7856127C64C1000B8F3D9 /* Loyalty Plans */ = {
+		CEB7856127C64C1000B8F3D9 /* LoyaltyPlans */ = {
 			isa = PBXGroup;
 			children = (
+				CEB7856827C65F5B00B8F3D9 /* Models */,
 				CEB7856327C64D1800B8F3D9 /* LoyaltyPlansTableViewController.swift */,
 			);
-			path = "Loyalty Plans";
+			path = LoyaltyPlans;
+			sourceTree = "<group>";
+		};
+		CEB7856827C65F5B00B8F3D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7856927C65F6900B8F3D9 /* LoyaltyPlanModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEB7856D27C66D1200B8F3D9 /* SafeDecoding */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7856B27C66CFE00B8F3D9 /* SafeDecoding.swift */,
+			);
+			path = SafeDecoding;
+			sourceTree = "<group>";
+		};
+		CEB7856E27C66D2500B8F3D9 /* World */ = {
+			isa = PBXGroup;
+			children = (
+				CE4EBB5A27C4F7D400A5CA31 /* World.swift */,
+			);
+			path = World;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4EBB1227BCF67700A5CA31 /* LaunchScreen.storyboard in Resources */,
+				CEB7857027C6765600B8F3D9 /* bink.der in Resources */,
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
 				CE4EBB3A27BD038C00A5CA31 /* README.md in Resources */,
@@ -558,7 +593,9 @@
 				CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */,
 				CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */,
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
+				CEB7856727C65CDC00B8F3D9 /* LoyaltyPlansTableViewController.swift in Sources */,
 				CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */,
+				CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */,
 				CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */,
 				CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
@@ -567,6 +604,7 @@
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
+				CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */,
 				CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */,
 				CEB7854F27C54CEC00B8F3D9 /* BinkError.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,

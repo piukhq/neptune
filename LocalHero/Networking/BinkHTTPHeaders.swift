@@ -36,7 +36,7 @@ struct BinkHTTPHeader {
     }
     
     static func authorization(_ value: String) -> BinkHTTPHeader {
-        return BinkHTTPHeader(name: "Authorization", value: "Token \(value)")
+        return BinkHTTPHeader(name: "Authorization", value: "bearer \(value)")
     }
     
     static func binkTestAuth() -> BinkHTTPHeader {

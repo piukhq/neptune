@@ -8,7 +8,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -34,11 +33,13 @@ class LoginViewController: UIViewController {
         ])
         
         
-        // Store token from QR code in User Manager
     }
     
     @objc private func loginButtonTapped() {
-        print("Tapped")
+        // Store token from QR code in User Manager
+
+        let vc = LoyaltyPlansTableViewController()
+        navigationController?.show(vc, sender: self)
     }
 }
 
