@@ -12,11 +12,13 @@ class LoginViewController: LocalHeroViewController {
         let button = UIButton(type: .roundedRect)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white
-        button.setTitle("Login", for: .normal)
+        button.setTitle(L10n.loginButtonTitle, for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         button.layer.cornerRadius = 25
         button.layer.cornerCurve = .continuous
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.systemBlue.cgColor
         view.addSubview(button)
         return button
     }()

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LocalHero
+
+  Created by Sean Williams on 23/02/2022.
+  
+*/
+
+"login_button_title" = "Login";

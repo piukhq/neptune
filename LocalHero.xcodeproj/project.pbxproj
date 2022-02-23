@@ -47,6 +47,7 @@
 		CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */; };
 		CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858827C69C5900B8F3D9 /* Strings.swift */; };
 		CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858927C69C5900B8F3D9 /* Assets.swift */; };
+		CEB7858E27C6A52A00B8F3D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB7858D27C6A52A00B8F3D9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHeroViewController.swift; sourceTree = "<group>"; };
 		CEB7858827C69C5900B8F3D9 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CEB7858927C69C5900B8F3D9 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		CEB7858D27C6A52A00B8F3D9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7858727C69C5900B8F3D9 /* SwiftGen */,
+				CEB7858D27C6A52A00B8F3D9 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				CE4EBAFE27BCF67200A5CA31 /* Sources */,
 				CE4EBAFF27BCF67200A5CA31 /* Frameworks */,
 				CE4EBB0027BCF67200A5CA31 /* Resources */,
+				CEB7858C27C6A2AF00B8F3D9 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -530,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4EBB1227BCF67700A5CA31 /* LaunchScreen.storyboard in Resources */,
+				CEB7858E27C6A52A00B8F3D9 /* Localizable.strings in Resources */,
 				CEB7857027C6765600B8F3D9 /* bink.der in Resources */,
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
@@ -619,6 +624,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CEB7858C27C6A2AF00B8F3D9 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
