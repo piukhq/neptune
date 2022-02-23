@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: LocalHeroViewController {
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +23,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
         
         NSLayoutConstraint.activate([
             loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),

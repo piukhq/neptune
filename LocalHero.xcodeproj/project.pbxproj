@@ -43,6 +43,8 @@
 		CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7856927C65F6900B8F3D9 /* LoyaltyPlanModel.swift */; };
 		CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7856B27C66CFE00B8F3D9 /* SafeDecoding.swift */; };
 		CEB7857027C6765600B8F3D9 /* bink.der in Resources */ = {isa = PBXBuildFile; fileRef = CEB7856F27C6765600B8F3D9 /* bink.der */; };
+		CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7857827C6866B00B8F3D9 /* BarcodeScannerViewController.swift */; };
+		CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		CEB7856927C65F6900B8F3D9 /* LoyaltyPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyPlanModel.swift; sourceTree = "<group>"; };
 		CEB7856B27C66CFE00B8F3D9 /* SafeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeDecoding.swift; sourceTree = "<group>"; };
 		CEB7856F27C6765600B8F3D9 /* bink.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = bink.der; sourceTree = "<group>"; };
+		CEB7857827C6866B00B8F3D9 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHeroViewController.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -207,12 +211,14 @@
 			children = (
 				CE4EBB6127C5086800A5CA31 /* Info.plist */,
 				CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */,
+				CEB7857C27C68E3400B8F3D9 /* LocalHeroUI */,
 				CEB7855027C54CFF00B8F3D9 /* Error Handling */,
 				CEB7856027C644DC00B8F3D9 /* Extensions */,
 				CEB7853D27C53AE800B8F3D9 /* Networking */,
 				CE4EBB3727BCFA3F00A5CA31 /* Resources */,
 				CEB7853827C5320000B8F3D9 /* Routing */,
 				CE4EBB3827BCFB1B00A5CA31 /* Screens */,
+				CEB7857327C6862F00B8F3D9 /* BarcodeScanner */,
 				CE4EBB3627BCFA3300A5CA31 /* Storyboards */,
 				CE4EBB3527BCF96300A5CA31 /* Supporting Files */,
 				CEB7853727C531D700B8F3D9 /* Utilities */,
@@ -368,6 +374,23 @@
 				CE4EBB5A27C4F7D400A5CA31 /* World.swift */,
 			);
 			path = World;
+			sourceTree = "<group>";
+		};
+		CEB7857327C6862F00B8F3D9 /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7857827C6866B00B8F3D9 /* BarcodeScannerViewController.swift */,
+			);
+			name = BarcodeScanner;
+			path = Screens/BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		CEB7857C27C68E3400B8F3D9 /* LocalHeroUI */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */,
+			);
+			path = LocalHeroUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,10 +621,12 @@
 				CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */,
 				CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */,
 				CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */,
+				CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
+				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
 				CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */,
