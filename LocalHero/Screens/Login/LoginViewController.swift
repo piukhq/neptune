@@ -32,6 +32,9 @@ class LoginViewController: UIViewController {
             loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             loginButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+        
+        
+        // Store token from QR code in User Manager
     }
     
     @objc private func loginButtonTapped() {

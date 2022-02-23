@@ -5,6 +5,7 @@
 //  Created by Sean Williams on 16/02/2022.
 //
 
+import Firebase
 import UIKit
 
 @main
@@ -13,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        FirebaseApp.configure()
+        
+        print(APIConstants.baseURLString)
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window

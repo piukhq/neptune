@@ -23,6 +23,21 @@
 		CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB4D27BFC12D00A5CA31 /* GoogleService-Info.plist */; };
 		CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5A27C4F7D400A5CA31 /* World.swift */; };
 		CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */; };
+		CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */; };
+		CEB7854027C542C300B8F3D9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7853F27C542C300B8F3D9 /* FirebaseRemoteConfig */; };
+		CEB7854227C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7854127C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta */; };
+		CEB7854427C542C300B8F3D9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7854327C542C300B8F3D9 /* FirebaseStorage */; };
+		CEB7854627C542C300B8F3D9 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7854527C542C300B8F3D9 /* FirebaseStorageSwift-Beta */; };
+		CEB7854927C5485300B8F3D9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7854827C5485300B8F3D9 /* Alamofire */; };
+		CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7854A27C54A5C00B8F3D9 /* APIEndpoint.swift */; };
+		CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7854C27C54C4800B8F3D9 /* NetworkingError.swift */; };
+		CEB7854F27C54CEC00B8F3D9 /* BinkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7854E27C54CEC00B8F3D9 /* BinkError.swift */; };
+		CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7855127C5514D00B8F3D9 /* BinkHTTPHeaders.swift */; };
+		CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7855327C639D800B8F3D9 /* UserManager.swift */; };
+		CEB7855727C63BAE00B8F3D9 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7855627C63BAE00B8F3D9 /* KeychainAccess */; };
+		CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7855927C63E2C00B8F3D9 /* LoginResponse.swift */; };
+		CEB7855D27C63E9200B8F3D9 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7855C27C63E9200B8F3D9 /* JWTDecode */; };
+		CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +91,14 @@
 		CE4EBB5A27C4F7D400A5CA31 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStateMachine.swift; sourceTree = "<group>"; };
 		CE4EBB6127C5086800A5CA31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		CEB7854A27C54A5C00B8F3D9 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		CEB7854C27C54C4800B8F3D9 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		CEB7854E27C54CEC00B8F3D9 /* BinkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinkError.swift; sourceTree = "<group>"; };
+		CEB7855127C5514D00B8F3D9 /* BinkHTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinkHTTPHeaders.swift; sourceTree = "<group>"; };
+		CEB7855327C639D800B8F3D9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CEB7855927C63E2C00B8F3D9 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,7 +108,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB7854627C542C300B8F3D9 /* FirebaseStorageSwift-Beta in Frameworks */,
 				133F3207AE27BFE685E0AE3F /* Pods_LocalHero.framework in Frameworks */,
+				CEB7855D27C63E9200B8F3D9 /* JWTDecode in Frameworks */,
+				CEB7855727C63BAE00B8F3D9 /* KeychainAccess in Frameworks */,
+				CEB7854427C542C300B8F3D9 /* FirebaseStorage in Frameworks */,
+				CEB7854927C5485300B8F3D9 /* Alamofire in Frameworks */,
+				CEB7854227C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta in Frameworks */,
+				CEB7854027C542C300B8F3D9 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +197,9 @@
 			children = (
 				CE4EBB6127C5086800A5CA31 /* Info.plist */,
 				CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */,
+				CEB7855027C54CFF00B8F3D9 /* Error Handling */,
+				CEB7856027C644DC00B8F3D9 /* Extensions */,
+				CEB7853D27C53AE800B8F3D9 /* Networking */,
 				CE4EBB3727BCFA3F00A5CA31 /* Resources */,
 				CEB7853827C5320000B8F3D9 /* Routing */,
 				CE4EBB3827BCFB1B00A5CA31 /* Screens */,
@@ -220,7 +253,8 @@
 		CE4EBB3827BCFB1B00A5CA31 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */,
+				CEB7856127C64C1000B8F3D9 /* Loyalty Plans */,
+				CEB7855827C63E1A00B8F3D9 /* Login */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -241,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4EBB5A27C4F7D400A5CA31 /* World.swift */,
+				CEB7855327C639D800B8F3D9 /* UserManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -251,6 +286,49 @@
 				CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		CEB7853D27C53AE800B8F3D9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */,
+				CEB7854C27C54C4800B8F3D9 /* NetworkingError.swift */,
+				CEB7855127C5514D00B8F3D9 /* BinkHTTPHeaders.swift */,
+				CEB7854A27C54A5C00B8F3D9 /* APIEndpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CEB7855027C54CFF00B8F3D9 /* Error Handling */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7854E27C54CEC00B8F3D9 /* BinkError.swift */,
+			);
+			path = "Error Handling";
+			sourceTree = "<group>";
+		};
+		CEB7855827C63E1A00B8F3D9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */,
+				CEB7855927C63E2C00B8F3D9 /* LoginResponse.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CEB7856027C644DC00B8F3D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEB7856127C64C1000B8F3D9 /* Loyalty Plans */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Loyalty Plans";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +349,13 @@
 			);
 			name = LocalHero;
 			packageProductDependencies = (
+				CEB7853F27C542C300B8F3D9 /* FirebaseRemoteConfig */,
+				CEB7854127C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta */,
+				CEB7854327C542C300B8F3D9 /* FirebaseStorage */,
+				CEB7854527C542C300B8F3D9 /* FirebaseStorageSwift-Beta */,
+				CEB7854827C5485300B8F3D9 /* Alamofire */,
+				CEB7855627C63BAE00B8F3D9 /* KeychainAccess */,
+				CEB7855C27C63E9200B8F3D9 /* JWTDecode */,
 			);
 			productName = LocalHero;
 			productReference = CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */;
@@ -347,6 +432,10 @@
 			);
 			mainGroup = CE4EBAF927BCF67100A5CA31;
 			packageReferences = (
+				CEB7853E27C542C300B8F3D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CEB7854727C5485200B8F3D9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CEB7855527C63BAE00B8F3D9 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				CEB7855B27C63E9200B8F3D9 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */,
 			);
 			productRefGroup = CE4EBB0327BCF67200A5CA31 /* Products */;
 			projectDirPath = "";
@@ -462,11 +551,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */,
+				CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */,
+				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
 				CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */,
 				CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */,
+				CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
+				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
+				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
+				CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */,
+				CEB7854F27C54CEC00B8F3D9 /* BinkError.swift in Sources */,
+				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,6 +1187,79 @@
 			defaultConfigurationName = "App Store";
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEB7853E27C542C300B8F3D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		CEB7854727C5485200B8F3D9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CEB7855527C63BAE00B8F3D9 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+		CEB7855B27C63E9200B8F3D9 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEB7853F27C542C300B8F3D9 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB7853E27C542C300B8F3D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		CEB7854127C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB7853E27C542C300B8F3D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseRemoteConfigSwift-Beta";
+		};
+		CEB7854327C542C300B8F3D9 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB7853E27C542C300B8F3D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		CEB7854527C542C300B8F3D9 /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB7853E27C542C300B8F3D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+		CEB7854827C5485300B8F3D9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB7854727C5485200B8F3D9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CEB7855627C63BAE00B8F3D9 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB7855527C63BAE00B8F3D9 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		CEB7855C27C63E9200B8F3D9 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB7855B27C63E9200B8F3D9 /* XCRemoteSwiftPackageReference "JWTDecode.swift" */;
+			productName = JWTDecode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE4EBAFA27BCF67100A5CA31 /* Project object */;
 }
