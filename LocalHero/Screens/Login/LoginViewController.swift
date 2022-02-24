@@ -8,6 +8,8 @@
 import UIKit
 
 class LoginViewController: LocalHeroViewController {
+    // MARK: - Properties
+    
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -25,31 +27,44 @@ class LoginViewController: LocalHeroViewController {
     
     private weak var delegate: BarcodeScannerViewControllerDelegate?
     
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func configureUI() {
+        super.configureUI()
         NSLayoutConstraint.activate([
             loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
             loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             loginButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-        
-        
     }
     
-    @objc private func loginButtonTapped() {
-        // Store token from QR code in User Manager
+    
+    // MARK: - Private methods
 
+    @objc private func loginButtonTapped() {
         let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
         navigationController?.present(vc, animated: true)
     }
 }
 
+
+// MARK: - Barcode scanner delegate
+
 extension LoginViewController: BarcodeScannerViewControllerDelegate {
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?) {
-        print(barcode)
         dismiss(animated: true)
+        
+        let loginResponse = LoginResponse(apiKey: nil, userEmail: nil, uid: nil, accessToken: barcode)
+        Current.userManager.setNewUser(with: loginResponse)
+        
+        let vc = LoyaltyPlansTableViewController()
+        navigationController?.show(vc, sender: self)
     }
 }
 

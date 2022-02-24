@@ -18,7 +18,7 @@ class UserManager {
         static let emailKey = "email_key"
     }
 
-    private let keychain = Keychain(accessGroup: APIConstants.bundleID)
+    private let keychain = Keychain(service: APIConstants.bundleID)
     
     lazy var currentToken: String? = getKeychainValue(for: Constants.tokenKey)
     lazy var currentEmailAddress: String? = getKeychainValue(for: Constants.emailKey)
@@ -32,7 +32,7 @@ class UserManager {
             try setToken(with: response)
             try setEmail(with: response)
         } catch {
-            print("Failed to store token and / or email to keychain: \(error.localizedDescription)")
+//            print("Failed to store token and / or email to keychain: \(error.localizedDescription)")
         }
     }
     
