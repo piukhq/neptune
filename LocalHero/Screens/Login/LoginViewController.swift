@@ -23,6 +23,8 @@ class LoginViewController: LocalHeroViewController {
         return button
     }()
     
+    private weak var delegate: BarcodeScannerViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,8 +41,15 @@ class LoginViewController: LocalHeroViewController {
     @objc private func loginButtonTapped() {
         // Store token from QR code in User Manager
 
-        let vc = LoyaltyPlansTableViewController()
-        navigationController?.show(vc, sender: self)
+        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
+        navigationController?.present(vc, animated: true)
+    }
+}
+
+extension LoginViewController: BarcodeScannerViewControllerDelegate {
+    func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?) {
+        print(barcode)
+        dismiss(animated: true)
     }
 }
 

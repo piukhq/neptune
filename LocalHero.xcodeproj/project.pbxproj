@@ -48,6 +48,7 @@
 		CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858827C69C5900B8F3D9 /* Strings.swift */; };
 		CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858927C69C5900B8F3D9 /* Assets.swift */; };
 		CEB7858E27C6A52A00B8F3D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB7858D27C6A52A00B8F3D9 /* Localizable.strings */; };
+		CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		CEB7858827C69C5900B8F3D9 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CEB7858927C69C5900B8F3D9 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		CEB7858D27C6A52A00B8F3D9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackUtil.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -299,6 +301,7 @@
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */,
 				CEB7855327C639D800B8F3D9 /* UserManager.swift */,
 				CEB7856D27C66D1200B8F3D9 /* SafeDecoding */,
 				CEB7856E27C66D2500B8F3D9 /* World */,
@@ -652,6 +655,7 @@
 			files = (
 				CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */,
 				CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */,
+				CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */,
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
 				CEB7856727C65CDC00B8F3D9 /* LoyaltyPlansTableViewController.swift in Sources */,
 				CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */,
@@ -850,6 +854,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
@@ -883,6 +888,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
@@ -1058,6 +1064,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
@@ -1187,6 +1194,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
