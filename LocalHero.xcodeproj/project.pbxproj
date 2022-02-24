@@ -643,7 +643,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.bink.localhero.alpha";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Alpha;
 		};
@@ -674,7 +674,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bink.localhero";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "App Store";
 		};
@@ -847,7 +847,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.bink.localhero.beta";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Beta;
 		};
@@ -974,7 +974,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bink.localhero.beta";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "App Store (Internal)";
 		};
