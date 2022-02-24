@@ -12,5 +12,6 @@ let Current = World()
 class World {
     lazy var rootStateMachine = RootStateMachine()
     lazy var apiClient = APIClient()
-    lazy var userManager = UserManager()    
+    lazy var userManager = UserManager()
+    lazy var wallet = Wallet()
 }

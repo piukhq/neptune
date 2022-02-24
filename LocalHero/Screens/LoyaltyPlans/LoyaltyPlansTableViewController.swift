@@ -7,40 +7,23 @@
 
 import UIKit
 
-class LoyaltyPlansTableViewController: UITableViewController {
+class LoyaltyPlansViewModel {
+    var loyaltyPlans: [LoyaltyPlanModel] = []
     
-    var planID = 0
-    var loyaltyPlans: [LoyaltyPlanModel] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+    init() {
+        loyaltyPlans = Current.wallet.loyaltyPlans?.sorted(by: { firstPlan, secondPlan in
+            (firstPlan.planDetails?.companyName?.lowercased() ?? "") < (secondPlan.planDetails?.companyName?.lowercased() ?? "")
+        }) ?? []
     }
+
+}
+
+class LoyaltyPlansTableViewController: UITableViewController {
+    private let viewModel = LoyaltyPlansViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getLoyaltyPlans {
-            self.loyaltyPlans = $0
-        }
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
-        
-    }
-
-    private func getLoyaltyPlans(completion: @escaping ([LoyaltyPlanModel]) -> Void) {
-        let request = BinkNetworkRequest(endpoint: .getLoyaltyPlans, method: .get, headers: nil, isUserDriven: false)
-        Current.apiClient.performRequest(request, expecting: [Safe<LoyaltyPlanModel>].self) { result, _ in
-            switch result {
-            case .success(let response):
-                let safeResponse = response.compactMap( { $0.value })
-                completion(safeResponse)
-            case .failure(let error):
-                print("Failed to get membership plans")
-                print(error.localizedDescription)
-            }
-        }
     }
     
     // MARK: - Table view data source
@@ -50,20 +33,14 @@ class LoyaltyPlansTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return loyaltyPlans.count
+        return viewModel.loyaltyPlans.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
-        let plan = loyaltyPlans[indexPath.row]
+        let plan = viewModel.loyaltyPlans[indexPath.row]
         cell.textLabel?.text = plan.planDetails?.companyName ?? "Missing"
         cell.detailTextLabel?.text = plan.planDetails?.planName ?? ""
-        
         return cell
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let loyaltyPlanID = loyaltyPlans[indexPath.row].loyaltyPlanID else { return }
-        planID = loyaltyPlanID
     }
 }

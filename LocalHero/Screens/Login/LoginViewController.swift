@@ -63,8 +63,16 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         let loginResponse = LoginResponse(apiKey: nil, userEmail: nil, uid: nil, accessToken: barcode)
         Current.userManager.setNewUser(with: loginResponse)
         
-        let vc = LoyaltyPlansTableViewController()
-        navigationController?.show(vc, sender: self)
+        Current.wallet.getLoyaltyPlans { [weak self] success in
+            guard success else {
+                //TODO: - Show barcode error
+                print("SHOW ERROR")
+                return
+            }
+            
+            let vc = LoyaltyPlansTableViewController()
+            self?.navigationController?.show(vc, sender: self)
+        }
     }
 }
 
