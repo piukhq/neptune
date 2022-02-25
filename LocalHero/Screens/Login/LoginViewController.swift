@@ -57,30 +57,36 @@ class LoginViewController: LocalHeroViewController {
 // MARK: - Barcode scanner delegate
 
 extension LoginViewController: BarcodeScannerViewControllerDelegate {
+    
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?) {
         dismiss(animated: true)
-        print(barcode)
         let loginResponse = LoginResponse(apiKey: nil, userEmail: nil, uid: nil, accessToken: barcode)
-        
-        print("IS valid JWT: \(loginResponse.isValidJWT)")
         guard loginResponse.isValidJWT else  {
-            let alertController = makeAlertController(title: "Unsupported Barcode", message: nil)
-            present(alertController, animated: true)
+            showError(title: "Unsupported Barcode")
             return
         }
         
         Current.userManager.setNewUser(with: loginResponse)
         
-        Current.wallet.getLoyaltyPlans { [weak self] success in
-            guard success else {
-                //TODO: - Show barcode error
-                print("SHOW ERROR")
+        Current.wallet.getLoyaltyPlans { [weak self] error in
+            guard error == nil else {
+                if case .unauthorized = error {
+                    self?.showError(title: "Invalid Token")
+                } else {
+                    self?.showError(title: error?.localizedDescription ?? "Error")
+                }
+                
                 return
             }
             
             let vc = LoyaltyPlansTableViewController()
             self?.navigationController?.show(vc, sender: self)
         }
+    }
+    
+    func showError(title: String) {
+        let ac = self.makeAlertController(title: title, message: nil)
+        self.present(ac, animated: true)
     }
     
     func makeAlertController(title: String?, message: String?, completion: (() -> Void)? = nil) -> UIAlertController {
@@ -92,4 +98,3 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         return ac
     }
 }
-

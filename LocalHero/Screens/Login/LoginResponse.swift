@@ -39,14 +39,11 @@ struct LoginResponse: Codable {
     }
     
     var isValidJWT: Bool {
-        do {
-            let decodedToken = try decode(jwt: accessToken ?? "")
-            print(decodedToken.body)
+        if let _ = try? decode(jwt: accessToken ?? "") {
             return true
-        } catch {
-            print(error.localizedDescription)
+        } else {
+            return false
         }
-        return false
     }
     
     enum CodingKeys: String, CodingKey {

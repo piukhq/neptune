@@ -10,17 +10,15 @@ import Foundation
 class Wallet {
     private (set) var loyaltyPlans: [LoyaltyPlanModel]?
     
-    func getLoyaltyPlans(success: @escaping (Bool) -> Void) {
+    func getLoyaltyPlans(completion: @escaping (NetworkingError?) -> Void) {
         let request = BinkNetworkRequest(endpoint: .getLoyaltyPlans, method: .get, headers: nil, isUserDriven: false)
         Current.apiClient.performRequest(request, expecting: [Safe<LoyaltyPlanModel>].self) { result, _ in
             switch result {
             case .success(let response):
                 self.loyaltyPlans = response.compactMap( { $0.value })
-                success(true)
+                completion(nil)
             case .failure(let error):
-                print("Failed to get membership plans")
-                print(error.localizedDescription)
-                success(false)
+                completion(error)
             }
         }
     }
