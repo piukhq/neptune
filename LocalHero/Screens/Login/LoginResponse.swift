@@ -38,6 +38,17 @@ struct LoginResponse: Codable {
         return decodedToken?.body["user_id"] as? String
     }
     
+    var isValidJWT: Bool {
+        do {
+            let decodedToken = try decode(jwt: accessToken ?? "")
+            print(decodedToken.body)
+            return true
+        } catch {
+            print(error.localizedDescription)
+        }
+        return false
+    }
+    
     enum CodingKeys: String, CodingKey {
         case userEmail = "email"
         case uid

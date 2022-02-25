@@ -59,8 +59,16 @@ class LoginViewController: LocalHeroViewController {
 extension LoginViewController: BarcodeScannerViewControllerDelegate {
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?) {
         dismiss(animated: true)
-        
+        print(barcode)
         let loginResponse = LoginResponse(apiKey: nil, userEmail: nil, uid: nil, accessToken: barcode)
+        
+        print("IS valid JWT: \(loginResponse.isValidJWT)")
+        guard loginResponse.isValidJWT else  {
+            let alertController = makeAlertController(title: "Unsupported Barcode", message: nil)
+            present(alertController, animated: true)
+            return
+        }
+        
         Current.userManager.setNewUser(with: loginResponse)
         
         Current.wallet.getLoyaltyPlans { [weak self] success in
@@ -73,6 +81,15 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
             let vc = LoyaltyPlansTableViewController()
             self?.navigationController?.show(vc, sender: self)
         }
+    }
+    
+    func makeAlertController(title: String?, message: String?, completion: (() -> Void)? = nil) -> UIAlertController {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
+            completion?()
+        }))
+        
+        return ac
     }
 }
 
