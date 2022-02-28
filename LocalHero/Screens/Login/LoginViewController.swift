@@ -51,6 +51,11 @@ class LoginViewController: LocalHeroViewController {
         let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
         navigationController?.present(vc, animated: true)
     }
+    
+    private func showError(title: String) {
+        let ac = ViewControllerFactory.makeAlertController(title: title, message: nil)
+        self.present(ac, animated: true)
+    }
 }
 
 
@@ -61,7 +66,7 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         dismiss(animated: true)
         let loginResponse = LoginResponse(apiKey: nil, userEmail: nil, uid: nil, accessToken: barcode)
         guard loginResponse.isValidJWT else  {
-            showError(title: "Unsupported Barcode")
+            showError(title: L10n.alertUnsupportedBarcodeTitle)
             return
         }
         
@@ -70,30 +75,16 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         Current.wallet.getLoyaltyPlans { [weak self] error in
             guard error == nil else {
                 if case .unauthorized = error {
-                    self?.showError(title: "Invalid Token")
+                    self?.showError(title: L10n.alertInvalidToken)
                 } else {
-                    self?.showError(title: error?.localizedDescription ?? "Error")
+                    self?.showError(title: error?.localizedDescription ?? L10n.alertError)
                 }
                 
                 return
             }
             
-            let vc = LoyaltyPlansTableViewController()
-            self?.navigationController?.show(vc, sender: self)
+            let loyaltyPlansViewController = LoyaltyPlansTableViewController()
+            self?.navigationController?.show(loyaltyPlansViewController, sender: self)
         }
-    }
-    
-    func showError(title: String) {
-        let ac = self.makeAlertController(title: title, message: nil)
-        self.present(ac, animated: true)
-    }
-    
-    func makeAlertController(title: String?, message: String?, completion: (() -> Void)? = nil) -> UIAlertController {
-        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
-            completion?()
-        }))
-        
-        return ac
     }
 }

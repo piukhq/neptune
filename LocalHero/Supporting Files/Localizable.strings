@@ -6,4 +6,15 @@
   
 */
 
+//MARK: -  Login Screen
+
 "login_button_title" = "Login";
+
+
+//MARK: -  Alerts
+
+"alert_unsupported_barcode_title" = "Unsupported Barcode";
+"alert_invalid_token" = "Invalid Token";
+"alert_error" = "Error";
+"alert_ok" = "OK";
+

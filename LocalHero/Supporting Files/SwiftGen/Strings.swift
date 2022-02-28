@@ -10,6 +10,14 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Error
+  internal static let alertError = L10n.tr("Localizable", "alert_error")
+  /// Invalid Token
+  internal static let alertInvalidToken = L10n.tr("Localizable", "alert_invalid_token")
+  /// OK
+  internal static let alertOk = L10n.tr("Localizable", "alert_ok")
+  /// Unsupported Barcode
+  internal static let alertUnsupportedBarcodeTitle = L10n.tr("Localizable", "alert_unsupported_barcode_title")
   /// Login
   internal static let loginButtonTitle = L10n.tr("Localizable", "login_button_title")
 }

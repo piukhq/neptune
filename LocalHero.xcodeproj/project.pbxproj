@@ -50,6 +50,7 @@
 		CEB7858E27C6A52A00B8F3D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB7858D27C6A52A00B8F3D9 /* Localizable.strings */; };
 		CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */; };
 		CEB7859227C7A1CA00B8F3D9 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7859127C7A1CA00B8F3D9 /* Wallet.swift */; };
+		CEB7859427CCD92200B8F3D9 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7859327CCD92200B8F3D9 /* ViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		CEB7858D27C6A52A00B8F3D9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackUtil.swift; sourceTree = "<group>"; };
 		CEB7859127C7A1CA00B8F3D9 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		CEB7859327CCD92200B8F3D9 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -306,6 +308,7 @@
 			children = (
 				CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */,
 				CEB7855327C639D800B8F3D9 /* UserManager.swift */,
+				CEB7859527CCD93000B8F3D9 /* View Controller Factory */,
 				CEB7856D27C66D1200B8F3D9 /* SafeDecoding */,
 				CEB7856E27C66D2500B8F3D9 /* World */,
 			);
@@ -414,6 +417,14 @@
 				CEB7858927C69C5900B8F3D9 /* Assets.swift */,
 			);
 			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		CEB7859527CCD93000B8F3D9 /* View Controller Factory */ = {
+			isa = PBXGroup;
+			children = (
+				CEB7859327CCD92200B8F3D9 /* ViewControllerFactory.swift */,
+			);
+			path = "View Controller Factory";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -672,6 +683,7 @@
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
 				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
+				CEB7859427CCD92200B8F3D9 /* ViewControllerFactory.swift in Sources */,
 				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
