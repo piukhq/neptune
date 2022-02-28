@@ -1,26 +1,35 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+fastlane_version "1.104.0"
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
-default_platform(:ios)
+default_platform :ios
 
 platform :ios do
+
+  # Lifecycle
+
   before_all do |lane, options|
 
     ENV["MATCH_PASSWORD"] = "!32Nzmzmznz!"
 
+    # This excludes these targets from the code coverage, required if we just want BinkApp posted to Slack
+    ENV["COVERAGE_EXCLUDE_TARGETS"] = ""
+
+    # This allows the command line iTunes Connect uploaded to get through out firewall, otherwise all connections are blocked
+    # ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t DAV"
+
   end
+
+  after_all do |lane|
+  end
+
+  error do |lane, exception|
+      notification(
+        subtitle: "Fastlane: #{lane} failed",
+        message: exception.message
+      )
+  end
+
+
+  # Certificate management
 
  desc "Retrieve all the certificates for all targets and configures your machine to compile against devices"
   lane :setup do
@@ -53,8 +62,10 @@ platform :ios do
     )
 
     upload_to_testflight(
-      changelog: "Merge request build for branch: " + options[:branch_name]
+      changelog: "Merge request build for branch: " + options[:branch_name],
+      skip_waiting_for_build_processing: true
     )
+
   end
 
  desc "Submit Develop build to TestFlight"
