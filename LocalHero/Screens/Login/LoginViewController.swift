@@ -57,7 +57,6 @@ class LoginViewController: LocalHeroViewController {
 // MARK: - Barcode scanner delegate
 
 extension LoginViewController: BarcodeScannerViewControllerDelegate {
-    
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?) {
         dismiss(animated: true)
         let loginResponse = LoginResponse(apiKey: nil, userEmail: nil, uid: nil, accessToken: barcode)
