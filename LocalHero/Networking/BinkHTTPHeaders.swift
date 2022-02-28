@@ -40,7 +40,6 @@ struct BinkHTTPHeader {
     }
     
     static func binkTestAuth() -> BinkHTTPHeader {
-//        return BinkHTTPHeader(name: "Bink-Test-Auth", value: BinkappKeys().binkTestAuthHeaderToken)
         return BinkHTTPHeader(name: "", value: "")
     }
     

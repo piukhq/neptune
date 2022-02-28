@@ -32,7 +32,7 @@ class UserManager {
             try setToken(with: response)
             try setEmail(with: response)
         } catch {
-//            print("Failed to store token and / or email to keychain: \(error.localizedDescription)")
+            //TODO: - handle error for set user failure
         }
     }
     

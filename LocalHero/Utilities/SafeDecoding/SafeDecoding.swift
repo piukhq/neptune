@@ -16,7 +16,7 @@ struct Safe<Base: Decodable>: Decodable {
             self.value = try container.decode(Base.self)
         } catch {
             self.value = nil
-            print("SW: \(String(describing: error))")
+            print(String(describing: error))
         }
     }
 }
