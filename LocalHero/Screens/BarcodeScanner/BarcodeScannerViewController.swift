@@ -10,14 +10,12 @@ import AVFoundation
 import Vision
 
 struct BarcodeScannerViewModel {
-//    let plan: CD_MembershipPlan?
     var isScanning = false
 }
 
 
 protocol BarcodeScannerViewControllerDelegate: AnyObject {
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?)
-//    func barcodeScannerViewControllerShouldEnterManually(_ viewController: BarcodeScannerViewController, completion: (() -> Void)?)
 }
 
 class BarcodeScannerViewController: UIViewController, UINavigationControllerDelegate {
@@ -49,8 +47,6 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
     private var canPresentScanError = true
     private var hideNavigationBar = true
     private var shouldAllowScanning = true
-//    private var captureSource: BarcodeCaptureSource
-//    private let visionUtility = VisionImageDetectionUtility()
 
     private lazy var blurredView: UIVisualEffectView = {
         return UIVisualEffectView(effect: UIBlurEffect(style: .regular))
@@ -71,13 +67,6 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         return label
     }()
 
-//    private lazy var widgetView: LoyaltyScannerWidgetView = {
-//        let widget = LoyaltyScannerWidgetView()
-//        widget.addTarget(self, selector: #selector(enterManually))
-//        widget.translatesAutoresizingMaskIntoConstraints = false
-//        return widget
-//    }()
-
     private lazy var cancelButton: UIButton = {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -85,12 +74,6 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         button.addTarget(self, action: #selector(close), for: .touchUpInside)
         return button
     }()
-
-//    private lazy var photoLibraryButton: BinkButton = {
-//        return BinkButton(type: .plain, title: L10n.loyaltyScannerAddPhotoFromLibraryButtonTitle, enabled: true, action: { [weak self] in
-//            self?.toPhotoLibrary()
-//        })
-//    }()
     
     private var viewModel: BarcodeScannerViewModel
 
@@ -130,19 +113,12 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         guideImageView.frame = rectOfInterest.inset(by: Constants.guideImageInset)
         view.addSubview(guideImageView)
         view.addSubview(explainerLabel)
-//        view.addSubview(widgetView)
-
-//        footerButtons = [photoLibraryButton]
 
         NSLayoutConstraint.activate([
             explainerLabel.topAnchor.constraint(equalTo: guideImageView.bottomAnchor, constant: Constants.explainerLabelPadding),
             explainerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.explainerLabelPadding),
             explainerLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.explainerLabelPadding),
             explainerLabel.heightAnchor.constraint(equalToConstant: Constants.explainerLabelHeight)
-//            widgetView.topAnchor.constraint(equalTo: explainerLabel.bottomAnchor, constant: Constants.widgetViewTopPadding),
-//            widgetView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.widgetViewLeftRightPadding),
-//            widgetView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.widgetViewLeftRightPadding),
-//            widgetView.heightAnchor.constraint(equalToConstant: Constants.widgetViewHeight)
         ])
     }
 
@@ -215,8 +191,6 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         }
 
         captureOutput.rectOfInterest = videoPreviewLayer.metadataOutputRectConverted(fromLayerRect: rectOfInterest)
-
-//        scheduleTimer()
     }
 
     private func stopScanning() {
@@ -230,12 +204,6 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
             self?.timer?.invalidate()
         }
     }
-
-//    private func scheduleTimer() {
-//        timer = Timer.scheduledTimer(withTimeInterval: Constants.timerInterval, repeats: false, block: { [weak self] _ in
-//            self?.widgetView.timeout()
-//        })
-//    }
 
     private func performCaptureChecksForDevice(_ device: AVCaptureDevice) {
         do {
@@ -272,48 +240,9 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         device.unlockForConfiguration()
     }
 
-//    private func toPhotoLibrary() {
-//        let picker = UIImagePickerController()
-//        picker.allowsEditing = true
-//        picker.delegate = self
-//        picker.modalPresentationStyle = .overCurrentContext
-//        captureSource = .photoLibrary(viewModel.plan)
-//        timer?.invalidate()
-//        let navigationRequest = ModalNavigationRequest(viewController: picker, embedInNavigationController: false)
-//        Current.navigate.to(navigationRequest)
-//    }
-
-//    @objc private func enterManually() {
-//        delegate?.barcodeScannerViewControllerShouldEnterManually(self, completion: { [weak self] in
-//            guard let self = self else { return }
-//            self.navigationController?.removeViewController(self)
-//        })
-//    }
-
     @objc private func close() {
         dismiss(animated: true)
     }
-
-//    private func identifyMembershipPlanForBarcode(_ barcode: String) {
-//        Current.wallet.identifyMembershipPlanForBarcode(barcode) { [weak self] plan in
-//            guard let self = self else { return }
-//            guard let plan = plan else {
-//                if self.canPresentScanError {
-//                    self.canPresentScanError = false
-//                    DispatchQueue.main.async { [weak self] in
-//                        guard let self = self else { return }
-//                        self.widgetView.unrecognizedBarcode()
-//                    }
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + Constants.scanErrorThreshold, execute: { [weak self] in
-//                        self?.canPresentScanError = true
-//                    })
-//                }
-//                return
-//            }
-//
-//            self.passDataToBarcodeScannerDelegate(barcode: barcode, membershipPlan: plan)
-//        }
-//    }
 
     private func passDataToBarcodeScannerDelegate(barcode: String) {
         self.stopScanning()
@@ -324,21 +253,6 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
             self.delegate?.barcodeScannerViewController(self, didScanBarcode: barcode, completion: nil)
         }
     }
-
-//    private func showError(barcodeDetected: Bool) {
-//        let alert = BinkAlertController(title: L10n.errorTitle, message: barcodeDetected ? captureSource.errorMessage : L10n.loyaltyScannerFailedToDetectBarcode, preferredStyle: .alert)
-//        let action = UIAlertAction(title: L10n.ok, style: .cancel) { [weak self] _ in
-//            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.scanErrorThreshold, execute: {
-//                self?.canPresentScanError = true
-//                self?.shouldAllowScanning = true
-//                if !barcodeDetected {
-//                    self?.scheduleTimer()
-//                }
-//            })
-//        }
-//        alert.addAction(action)
-//        self.present(alert, animated: true, completion: nil)
-//    }
 }
 
 extension BarcodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
@@ -354,26 +268,3 @@ extension BarcodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
         }
     }
 }
-
-// MARK: - Detect barcode from image
-
-//extension BarcodeScannerViewController: UIImagePickerControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-//        guard let image = info[.editedImage] as? UIImage else { return }
-//        Current.navigate.close(animated: true) { [weak self] in
-//            self?.visionUtility.createVisionRequest(image: image) { barcode in
-//                guard let barcode = barcode else {
-//                    self?.showError(barcodeDetected: false)
-//                    return
-//                }
-//                self?.identifyMembershipPlanForBarcode(barcode)
-//            }
-//        }
-//    }
-//
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        Current.navigate.close(animated: true) {
-//            self.scheduleTimer()
-//        }
-//    }
-//}
