@@ -97,6 +97,7 @@
 		AE6A09166B90A7984C1A8C3711E0808E /* Pods-LocalHero */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LocalHero"; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8E59254DBFD4566045748250DCCD46 /* Pods-LocalHeroTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHeroTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C269D840BE1F7C819CA8E6377A99A752 /* Pods-LocalHeroTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHeroTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CEB785AC27CE866100B8F3D9 /* SwiftGen.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SwiftGen.release.xcconfig; sourceTree = "<group>"; };
 		EAF6E390C6719BDF040A7B1378A0C479 /* Pods-LocalHeroTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.beta.xcconfig"; sourceTree = "<group>"; };
 		FE2613FC9B196ED3D91E47DF2687E1C0 /* Pods-LocalHeroTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.alpha.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +223,7 @@
 		CEF6F837509A8472044A65E0183829BB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEB785AC27CE866100B8F3D9 /* SwiftGen.release.xcconfig */,
 				47B7CC0F137CBFE6284D00538E7C7431 /* SwiftGen.release.xcconfig */,
 			);
 			name = "Support Files";
