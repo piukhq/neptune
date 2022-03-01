@@ -23,6 +23,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Retrieve all the certificates for all targets and configures your machine to compile against devices
 
+### ios mr
+
+```sh
+[bundle exec] fastlane ios mr
+```
+
+Submit merge request build to TestFlight
+
 ### ios develop
 
 ```sh

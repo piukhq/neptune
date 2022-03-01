@@ -12,6 +12,8 @@ platform :ios do
 
     # This excludes these targets from the code coverage, required if we just want BinkApp posted to Slack
     ENV["COVERAGE_EXCLUDE_TARGETS"] = ""
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "180"
+    ENV["FASTLANE_XCODE_LIST_TIMEOUT"] = "180"
 
     # This allows the command line iTunes Connect uploaded to get through out firewall, otherwise all connections are blocked
     # ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t DAV"
