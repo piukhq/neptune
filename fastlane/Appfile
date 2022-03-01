@@ -1,4 +1,3 @@
-app_identifier("com.bink.localhero") # The bundle identifier of your app
 apple_id("app@bink.sh") # Your Apple email address
 
 itc_team_id("117879965") # App Store Connect Team ID
