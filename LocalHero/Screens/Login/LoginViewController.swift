@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LoginViewController: LocalHeroViewController {
     // MARK: - Properties
@@ -32,6 +33,9 @@ class LoginViewController: LocalHeroViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let addPaymentCardview = UIHostingController(rootView: AddPaymentAccountSwiftUIView(viewModel: AddPaymentAccountViewModel()))
+        navigationController?.show(addPaymentCardview, sender: self)
     }
     
     override func configureUI() {

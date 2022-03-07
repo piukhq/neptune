@@ -61,6 +61,10 @@
 		CEB785A727CCF2B200B8F3D9 /* CredentialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785A627CCF2B200B8F3D9 /* CredentialsModel.swift */; };
 		CEB785A927CCF34100B8F3D9 /* PlanDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785A827CCF34100B8F3D9 /* PlanDocumentModel.swift */; };
 		CEB785AB27CCF48700B8F3D9 /* ConsentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785AA27CCF48700B8F3D9 /* ConsentsModel.swift */; };
+		CEB785AF27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785AE27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift */; };
+		CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B027D6219F00B8F3D9 /* FormField.swift */; };
+		CEB785B327D6536300B8F3D9 /* PaymentAccountCreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */; };
+		CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +149,10 @@
 		CEB785A627CCF2B200B8F3D9 /* CredentialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsModel.swift; sourceTree = "<group>"; };
 		CEB785A827CCF34100B8F3D9 /* PlanDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDocumentModel.swift; sourceTree = "<group>"; };
 		CEB785AA27CCF48700B8F3D9 /* ConsentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentsModel.swift; sourceTree = "<group>"; };
+		CEB785AE27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentAccountSwiftUIView.swift; sourceTree = "<group>"; };
+		CEB785B027D6219F00B8F3D9 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountCreateModel.swift; sourceTree = "<group>"; };
+		CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountType.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -305,6 +313,7 @@
 		CE4EBB3827BCFB1B00A5CA31 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CEB785AD27D6168C00B8F3D9 /* AddPaymentAccount */,
 				CEB7856127C64C1000B8F3D9 /* LoyaltyPlans */,
 				CEB7855827C63E1A00B8F3D9 /* Login */,
 			);
@@ -436,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */,
+				CEB785B027D6219F00B8F3D9 /* FormField.swift */,
 			);
 			path = LocalHeroUI;
 			sourceTree = "<group>";
@@ -455,6 +465,16 @@
 				CEB7859327CCD92200B8F3D9 /* ViewControllerFactory.swift */,
 			);
 			path = "View Controller Factory";
+			sourceTree = "<group>";
+		};
+		CEB785AD27D6168C00B8F3D9 /* AddPaymentAccount */ = {
+			isa = PBXGroup;
+			children = (
+				CEB785AE27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift */,
+				CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */,
+				CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */,
+			);
+			path = AddPaymentAccount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -703,6 +723,7 @@
 				CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */,
 				CEB785A327CCF1D200B8F3D9 /* JourneyModel.swift in Sources */,
 				CEB785AB27CCF48700B8F3D9 /* ConsentsModel.swift in Sources */,
+				CEB785B327D6536300B8F3D9 /* PaymentAccountCreateModel.swift in Sources */,
 				CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */,
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
 				CEB785A927CCF34100B8F3D9 /* PlanDocumentModel.swift in Sources */,
@@ -715,6 +736,7 @@
 				CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
+				CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
 				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
@@ -725,11 +747,13 @@
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CEB7859F27CCEFB900B8F3D9 /* ContentModel.swift in Sources */,
 				CEB7859927CCEEAE00B8F3D9 /* PlanDetailsModel.swift in Sources */,
+				CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
 				CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */,
 				CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */,
 				CEB7854F27C54CEC00B8F3D9 /* BinkError.swift in Sources */,
+				CEB785AF27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
 				CEB7859D27CCEF8700B8F3D9 /* ImageModel.swift in Sources */,
 			);
