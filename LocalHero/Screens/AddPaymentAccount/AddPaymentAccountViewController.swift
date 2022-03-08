@@ -24,5 +24,6 @@ class AddPaymentAccountViewController: BaseFormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Add Payment Account"
     }
 }

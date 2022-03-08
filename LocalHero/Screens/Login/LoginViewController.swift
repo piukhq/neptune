@@ -34,9 +34,10 @@ class LoginViewController: LocalHeroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let addPaymentCardviewController = AddPaymentAccountViewController()        
+        let addPaymentCardviewController = AddPaymentAccountViewController()
         let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
         Current.navigate.to(navigationRequest)
+        
     }
     
     override func configureUI() {
@@ -56,9 +57,14 @@ class LoginViewController: LocalHeroViewController {
 //        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
 //        navigationController?.present(vc, animated: true)
         
+//        let addPaymentCardviewController = AddPaymentAccountViewController()
+//        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+//        Current.navigate.to(navigationRequest)
+        
         let addPaymentCardviewController = AddPaymentAccountViewController()
-        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
-        Current.navigate.to(navigationRequest)
+//        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+        let push = PushNavigationRequest(viewController: addPaymentCardviewController)
+        Current.navigate.to(push)
     }
     
     private func showError(title: String) {

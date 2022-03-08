@@ -14,9 +14,10 @@ class RootStateMachine: NSObject {
     func launch(withWindow window: UIWindow) {
         self.window = window
         let loginViewController = LoginViewController()
-        let navigationController = HeroNavigationController(rootViewController: loginViewController)
-        
-        window.rootViewController = navigationController
+        let navigationCOntroller = HeroNavigationController(rootViewController: loginViewController)
+        window.rootViewController = navigationCOntroller
+        Current.navigate.setRootViewController(navigationCOntroller)
+        window.tintColor = .black
         window.makeKeyAndVisible()
     }
 }
