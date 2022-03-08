@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseFormViewController: UIViewController, UICollectionViewDelegate {
+class BaseFormViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -19,6 +19,7 @@ class BaseFormViewController: UIViewController, UICollectionViewDelegate {
         collectionView.delegate = self
         collectionView.backgroundColor = .clear
         collectionView.register(FormCollectionViewCell.self)
+        view.addSubview(collectionView)
         return collectionView
     }()
     
@@ -59,6 +60,14 @@ class BaseFormViewController: UIViewController, UICollectionViewDelegate {
         ])
     }
 
+}
+
+extension BaseFormViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? FormCollectionViewCell else { return }
+        
+        cell.setWidth(collectionView.frame.size.width)
+    }
 }
 
 class NestedCollectionView: UICollectionView {

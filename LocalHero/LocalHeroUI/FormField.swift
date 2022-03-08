@@ -5,7 +5,7 @@
 //  Created by Sean Williams on 07/03/2022.
 //
 
-import Foundation
+import UIKit
 
 enum FieldCommonName: String, Codable {
     case email
@@ -49,7 +49,43 @@ class FormField: Identifiable {
         case paymentAccountNumber
         case choice
         case string
+        case sensitive
         case expiry(months: [FormPickerData], years: [FormPickerData])
+        case email
+        case phone
+        
+        var isSecureTextEntry: Bool {
+            switch self {
+            case .sensitive:
+                return true
+            default:
+                return false
+            }
+        }
+        
+        func capitalization() -> UITextAutocapitalizationType {
+            switch self {
+            case .text:
+                return .words
+            default:
+                return .none
+            }
+        }
+        
+        func keyboardType() -> UIKeyboardType {
+            switch self {
+            case .text, .sensitive:
+                return .default
+            case .paymentAccountNumber:
+                return .numberPad
+            case .email:
+                return .emailAddress
+            case .phone:
+                return .phonePad
+            default:
+                return .default
+            }
+        }
     }
     
     let title: String
@@ -78,4 +114,6 @@ class FormField: Identifiable {
         self.alternatives = alternatives
         self.hidden = hidden
     }
+    
+
 }

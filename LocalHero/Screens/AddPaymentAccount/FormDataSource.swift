@@ -67,8 +67,21 @@ extension FormDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: FormCollectionViewCell = collectionView.dequeue(indexPath: indexPath)
         
+        if let field = fields[safe: indexPath.item] {
+            cell.configure(with: field, delegate: self)
+        }
+        return cell
     }
-    
 }
 
+extension FormDataSource: FormCollectionViewCellDelegate {
+    func formCollectionViewCell(_ cell: FormCollectionViewCell, didSelectField: UITextField) {
+        print("did select field")
+    }
+    
+    func formCollectionViewCell(_ cell: FormCollectionViewCell, shouldResignTextField textField: UITextField) {
+        print("Should resign field")
+    }
+}

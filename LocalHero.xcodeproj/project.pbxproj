@@ -69,6 +69,9 @@
 		CEB785BB27D756B000B8F3D9 /* FormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785BA27D756B000B8F3D9 /* FormDataSource.swift */; };
 		CEB785BD27D75EDA00B8F3D9 /* BaseFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785BC27D75ED900B8F3D9 /* BaseFormViewController.swift */; };
 		CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785BE27D7640000B8F3D9 /* FormCollectionViewCell.swift */; };
+		CEB785C127D765C600B8F3D9 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C027D765C600B8F3D9 /* UICollectionViewExtension.swift */; };
+		CEB785C327D7667500B8F3D9 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C227D7667500B8F3D9 /* ReusableView.swift */; };
+		CEB785C627D77C3000B8F3D9 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C527D77C3000B8F3D9 /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +164,9 @@
 		CEB785BA27D756B000B8F3D9 /* FormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataSource.swift; sourceTree = "<group>"; };
 		CEB785BC27D75ED900B8F3D9 /* BaseFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormViewController.swift; sourceTree = "<group>"; };
 		CEB785BE27D7640000B8F3D9 /* FormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEB785C027D765C600B8F3D9 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		CEB785C227D7667500B8F3D9 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		CEB785C527D77C3000B8F3D9 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -349,6 +355,7 @@
 				CEB7859527CCD93000B8F3D9 /* View Controller Factory */,
 				CEB7856D27C66D1200B8F3D9 /* SafeDecoding */,
 				CEB7856E27C66D2500B8F3D9 /* World */,
+				CEB785C427D7668700B8F3D9 /* Protocols */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -394,6 +401,8 @@
 			isa = PBXGroup;
 			children = (
 				CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */,
+				CEB785C027D765C600B8F3D9 /* UICollectionViewExtension.swift */,
+				CEB785C527D77C3000B8F3D9 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -487,6 +496,14 @@
 				CEB785BE27D7640000B8F3D9 /* FormCollectionViewCell.swift */,
 			);
 			path = AddPaymentAccount;
+			sourceTree = "<group>";
+		};
+		CEB785C427D7668700B8F3D9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CEB785C227D7667500B8F3D9 /* ReusableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -742,6 +759,7 @@
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
 				CEB785A927CCF34100B8F3D9 /* PlanDocumentModel.swift in Sources */,
 				CEB7859B27CCEF5700B8F3D9 /* TiersModel.swift in Sources */,
+				CEB785C627D77C3000B8F3D9 /* Array+Extension.swift in Sources */,
 				CEB7856727C65CDC00B8F3D9 /* LoyaltyPlansTableViewController.swift in Sources */,
 				CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */,
 				CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */,
@@ -753,6 +771,7 @@
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
+				CEB785C127D765C600B8F3D9 /* UICollectionViewExtension.swift in Sources */,
 				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
 				CEB785A127CCEFDD00B8F3D9 /* PlanFeaturesModel.swift in Sources */,
@@ -764,6 +783,7 @@
 				CEB7859927CCEEAE00B8F3D9 /* PlanDetailsModel.swift in Sources */,
 				CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
+				CEB785C327D7667500B8F3D9 /* ReusableView.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
 				CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */,
 				CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */,
