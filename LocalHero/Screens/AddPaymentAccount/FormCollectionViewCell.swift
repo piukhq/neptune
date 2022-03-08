@@ -25,7 +25,7 @@ class FormCollectionViewCell: UICollectionViewCell {
     
     /// The parent stack view that is pinned to the content view of the cell. Contains all other views.
     private lazy var containerStack: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [fieldContainerVStack])
+        let stackView = UIStackView(arrangedSubviews: [fieldContainerVStack, separatorView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         contentView.addSubview(stackView)
@@ -50,9 +50,17 @@ class FormCollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, textFieldHStack])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 7, right: 10)
+        stackView.layoutMargins = UIEdgeInsets(top: 00, left: 20, bottom: 7, right: 20)
         stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
+    }()
+    
+    private lazy var separatorView: UIView = {
+       let separator = UIView()
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        separator.backgroundColor = .lightGray
+        separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        return separator
     }()
     
     /// The view that contains the text field, camera icon and the validation icon
@@ -68,7 +76,7 @@ class FormCollectionViewCell: UICollectionViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.font = UIFont.navbarHeaderLine2
+        label.font = .systemFont(ofSize: 12)
 //        label.textColor = Current.themeManager.color(for: .text)
         label.heightAnchor.constraint(equalToConstant: Constants.titleLabelHeight).isActive = true
         label.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -95,6 +103,7 @@ class FormCollectionViewCell: UICollectionViewCell {
         ])
         imageView.transform = CGAffineTransform(translationX: -4, y: 0)
         imageView.isHidden = false
+        imageView.tintColor = .systemRed
         return imageView
     }()
     
@@ -126,12 +135,11 @@ class FormCollectionViewCell: UICollectionViewCell {
     func configure(with field: FormField, delegate: FormCollectionViewCellDelegate?) {
         let isEnabled = !field.isReadOnly
         
-//        tintColor = .activeField
         titleLabel.text = field.title
         titleLabel.textColor = isEnabled ? .black : .gray
         textField.textColor = isEnabled ? .black : .gray
+        textField.attributedPlaceholder = NSAttributedString(string: field.placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
         textField.text = field.forcedValue
-        textField.placeholder = field.placeholder
         textField.isSecureTextEntry = field.fieldType.isSecureTextEntry
         textField.keyboardType = field.fieldType.keyboardType()
         textField.autocorrectionType = .no

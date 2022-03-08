@@ -14,4 +14,5 @@ class World {
     lazy var apiClient = APIClient()
     lazy var userManager = UserManager()
     lazy var wallet = Wallet()
+    lazy var navigate = Navigate()
 }

@@ -72,6 +72,9 @@
 		CEB785C127D765C600B8F3D9 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C027D765C600B8F3D9 /* UICollectionViewExtension.swift */; };
 		CEB785C327D7667500B8F3D9 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C227D7667500B8F3D9 /* ReusableView.swift */; };
 		CEB785C627D77C3000B8F3D9 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C527D77C3000B8F3D9 /* Array+Extension.swift */; };
+		CEB785C827D7842600B8F3D9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C727D7842600B8F3D9 /* UIColor+Extension.swift */; };
+		CEB785CA27D7853000B8F3D9 /* Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785C927D7853000B8F3D9 /* Navigate.swift */; };
+		CEB785CC27D7876200B8F3D9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785CB27D7876200B8F3D9 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +170,9 @@
 		CEB785C027D765C600B8F3D9 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		CEB785C227D7667500B8F3D9 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		CEB785C527D77C3000B8F3D9 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		CEB785C727D7842600B8F3D9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CEB785C927D7853000B8F3D9 /* Navigate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigate.swift; sourceTree = "<group>"; };
+		CEB785CB27D7876200B8F3D9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -363,6 +369,7 @@
 		CEB7853827C5320000B8F3D9 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				CEB785C927D7853000B8F3D9 /* Navigate.swift */,
 				CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */,
 			);
 			path = Routing;
@@ -401,6 +408,8 @@
 			isa = PBXGroup;
 			children = (
 				CEB7855E27C644D400B8F3D9 /* Bundle+Extension.swift */,
+				CEB785CB27D7876200B8F3D9 /* UIViewController+Extension.swift */,
+				CEB785C727D7842600B8F3D9 /* UIColor+Extension.swift */,
 				CEB785C027D765C600B8F3D9 /* UICollectionViewExtension.swift */,
 				CEB785C527D77C3000B8F3D9 /* Array+Extension.swift */,
 			);
@@ -770,6 +779,7 @@
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */,
+				CEB785CA27D7853000B8F3D9 /* Navigate.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
 				CEB785C127D765C600B8F3D9 /* UICollectionViewExtension.swift in Sources */,
 				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
@@ -780,6 +790,7 @@
 				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CEB7859F27CCEFB900B8F3D9 /* ContentModel.swift in Sources */,
+				CEB785C827D7842600B8F3D9 /* UIColor+Extension.swift in Sources */,
 				CEB7859927CCEEAE00B8F3D9 /* PlanDetailsModel.swift in Sources */,
 				CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
@@ -790,6 +801,7 @@
 				CEB785B727D66BCC00B8F3D9 /* HeroNavigationController.swift in Sources */,
 				CEB7854F27C54CEC00B8F3D9 /* BinkError.swift in Sources */,
 				CEB785B927D7567D00B8F3D9 /* AddPaymentAccountViewController.swift in Sources */,
+				CEB785CC27D7876200B8F3D9 /* UIViewController+Extension.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
 				CEB7859D27CCEF8700B8F3D9 /* ImageModel.swift in Sources */,
 			);

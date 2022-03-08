@@ -17,15 +17,16 @@ class BaseFormViewController: UIViewController {
         collectionView.dataSource = dataSource
         collectionView.isScrollEnabled = false
         collectionView.delegate = self
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .white
         collectionView.register(FormCollectionViewCell.self)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         view.addSubview(collectionView)
         return collectionView
     }()
     
     private lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 20
+        layout.minimumLineSpacing = 3
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         return layout
     }()
@@ -49,6 +50,7 @@ class BaseFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
+        view.backgroundColor = .white
     }
     
     private func configureLayout() {

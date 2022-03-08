@@ -9,16 +9,66 @@ import Foundation
 import UIKit
 
 class HeroNavigationController: UINavigationController {
+    private lazy var closeButton: UIBarButtonItem = {
+        let closeButton = UIBarButtonItem(image: Asset.close.image, style: .plain, target: self, action: #selector(close))
+        return closeButton
+    }()
+    
+    private var isModallyPresented: Bool = false
+    
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
+
+    }
+    
+    convenience init(rootViewController: UIViewController, isModallyPresented: Bool = false, shouldShowCloseButton: Bool = true) {
+        self.init(rootViewController: rootViewController)
+        self.isModallyPresented = isModallyPresented
+        if isModallyPresented && shouldShowCloseButton {
+            rootViewController.navigationItem.rightBarButtonItem = closeButton
+        }
+        
         navigationBar.standardAppearance = navBarAppearance()
         navigationBar.scrollEdgeAppearance = navBarAppearance()
         navigationBar.tintColor = .white
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func pushViewController(_ viewController: UIViewController, animated: Bool = false, hidesBackButton: Bool = false, completion: EmptyCompletionBlock? = nil) {
+        viewController.navigationItem.setHidesBackButton(hidesBackButton, animated: true)
+        pushViewController(viewController, animated: animated)
+        
+        guard animated, let coordinator = transitionCoordinator else {
+            DispatchQueue.main.async { completion?() }
+            return
+        }
+        coordinator.animate(alongsideTransition: nil) { _ in completion?() }
+    }
+    
+    func popViewController(animated: Bool = false, completion: EmptyCompletionBlock? = nil) {
+        popViewController(animated: animated)
+        
+        guard animated, let coordinator = transitionCoordinator else {
+            DispatchQueue.main.async { completion?() }
+            return
+        }
+        coordinator.animate(alongsideTransition: nil) { _ in completion?() }
+    }
+    
+    func popToRootViewController(animated: Bool = false, completion: EmptyCompletionBlock? = nil) {
+        popToRootViewController(animated: animated)
+        
+        guard animated, let coordinator = transitionCoordinator else {
+            DispatchQueue.main.async { completion?() }
+            return
+        }
+        coordinator.animate(alongsideTransition: nil) { _ in completion?() }
+    }
+    
     
     func navBarAppearance() -> UINavigationBarAppearance {
         let appearance = UINavigationBarAppearance()
@@ -29,24 +79,7 @@ class HeroNavigationController: UINavigationController {
         return appearance
     }
     
-}
-
-extension UIColor {
-    convenience init(hexString: String, alpha: CGFloat = 1.0) {
-        let hexString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        let scanner = Scanner(string: hexString)
-        if hexString.hasPrefix("#") {
-            scanner.currentIndex = hexString.index(hexString.startIndex, offsetBy: 1)
-        }
-        var color: UInt64 = 0
-        scanner.scanHexInt64(&color)
-        let mask = 0x000000FF
-        let r = Int(color >> 16) & mask
-        let g = Int(color >> 8) & mask
-        let b = Int(color) & mask
-        let red = CGFloat(r) / 255.0
-        let green = CGFloat(g) / 255.0
-        let blue = CGFloat(b) / 255.0
-        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    @objc private func close() {
+        dismiss(animated: true)
     }
 }
