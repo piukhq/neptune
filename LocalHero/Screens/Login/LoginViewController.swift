@@ -34,7 +34,7 @@ class LoginViewController: LocalHeroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let addPaymentCardview = UIHostingController(rootView: AddPaymentAccountSwiftUIView(viewModel: AddPaymentAccountViewModel()))
+        let addPaymentCardview = AddPaymentAccountViewController()
         navigationController?.show(addPaymentCardview, sender: self)
     }
     

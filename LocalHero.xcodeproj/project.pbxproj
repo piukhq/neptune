@@ -61,10 +61,14 @@
 		CEB785A727CCF2B200B8F3D9 /* CredentialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785A627CCF2B200B8F3D9 /* CredentialsModel.swift */; };
 		CEB785A927CCF34100B8F3D9 /* PlanDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785A827CCF34100B8F3D9 /* PlanDocumentModel.swift */; };
 		CEB785AB27CCF48700B8F3D9 /* ConsentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785AA27CCF48700B8F3D9 /* ConsentsModel.swift */; };
-		CEB785AF27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785AE27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift */; };
 		CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B027D6219F00B8F3D9 /* FormField.swift */; };
 		CEB785B327D6536300B8F3D9 /* PaymentAccountCreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */; };
 		CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */; };
+		CEB785B727D66BCC00B8F3D9 /* HeroNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B627D66BCC00B8F3D9 /* HeroNavigationController.swift */; };
+		CEB785B927D7567D00B8F3D9 /* AddPaymentAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785B827D7567C00B8F3D9 /* AddPaymentAccountViewController.swift */; };
+		CEB785BB27D756B000B8F3D9 /* FormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785BA27D756B000B8F3D9 /* FormDataSource.swift */; };
+		CEB785BD27D75EDA00B8F3D9 /* BaseFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785BC27D75ED900B8F3D9 /* BaseFormViewController.swift */; };
+		CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785BE27D7640000B8F3D9 /* FormCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,10 +153,14 @@
 		CEB785A627CCF2B200B8F3D9 /* CredentialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsModel.swift; sourceTree = "<group>"; };
 		CEB785A827CCF34100B8F3D9 /* PlanDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDocumentModel.swift; sourceTree = "<group>"; };
 		CEB785AA27CCF48700B8F3D9 /* ConsentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentsModel.swift; sourceTree = "<group>"; };
-		CEB785AE27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentAccountSwiftUIView.swift; sourceTree = "<group>"; };
 		CEB785B027D6219F00B8F3D9 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountCreateModel.swift; sourceTree = "<group>"; };
 		CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountType.swift; sourceTree = "<group>"; };
+		CEB785B627D66BCC00B8F3D9 /* HeroNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroNavigationController.swift; sourceTree = "<group>"; };
+		CEB785B827D7567C00B8F3D9 /* AddPaymentAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentAccountViewController.swift; sourceTree = "<group>"; };
+		CEB785BA27D756B000B8F3D9 /* FormDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataSource.swift; sourceTree = "<group>"; };
+		CEB785BC27D75ED900B8F3D9 /* BaseFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormViewController.swift; sourceTree = "<group>"; };
+		CEB785BE27D7640000B8F3D9 /* FormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCollectionViewCell.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -336,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */,
+				CEB785B627D66BCC00B8F3D9 /* HeroNavigationController.swift */,
 				CEB7855327C639D800B8F3D9 /* UserManager.swift */,
 				CEB7859527CCD93000B8F3D9 /* View Controller Factory */,
 				CEB7856D27C66D1200B8F3D9 /* SafeDecoding */,
@@ -470,9 +479,12 @@
 		CEB785AD27D6168C00B8F3D9 /* AddPaymentAccount */ = {
 			isa = PBXGroup;
 			children = (
-				CEB785AE27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift */,
 				CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */,
 				CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */,
+				CEB785B827D7567C00B8F3D9 /* AddPaymentAccountViewController.swift */,
+				CEB785BC27D75ED900B8F3D9 /* BaseFormViewController.swift */,
+				CEB785BA27D756B000B8F3D9 /* FormDataSource.swift */,
+				CEB785BE27D7640000B8F3D9 /* FormCollectionViewCell.swift */,
 			);
 			path = AddPaymentAccount;
 			sourceTree = "<group>";
@@ -724,7 +736,9 @@
 				CEB785A327CCF1D200B8F3D9 /* JourneyModel.swift in Sources */,
 				CEB785AB27CCF48700B8F3D9 /* ConsentsModel.swift in Sources */,
 				CEB785B327D6536300B8F3D9 /* PaymentAccountCreateModel.swift in Sources */,
+				CEB785BD27D75EDA00B8F3D9 /* BaseFormViewController.swift in Sources */,
 				CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */,
+				CEB785BB27D756B000B8F3D9 /* FormDataSource.swift in Sources */,
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
 				CEB785A927CCF34100B8F3D9 /* PlanDocumentModel.swift in Sources */,
 				CEB7859B27CCEF5700B8F3D9 /* TiersModel.swift in Sources */,
@@ -735,6 +749,7 @@
 				CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */,
 				CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
+				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
@@ -752,8 +767,9 @@
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
 				CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */,
 				CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */,
+				CEB785B727D66BCC00B8F3D9 /* HeroNavigationController.swift in Sources */,
 				CEB7854F27C54CEC00B8F3D9 /* BinkError.swift in Sources */,
-				CEB785AF27D6182700B8F3D9 /* AddPaymentAccountSwiftUIView.swift in Sources */,
+				CEB785B927D7567D00B8F3D9 /* AddPaymentAccountViewController.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
 				CEB7859D27CCEF8700B8F3D9 /* ImageModel.swift in Sources */,
 			);

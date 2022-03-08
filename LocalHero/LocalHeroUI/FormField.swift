@@ -31,13 +31,25 @@ enum FieldCommonName: String, Codable {
     case pan
 }
 
+struct FormPickerData: Equatable {
+    let title: String
+    let backingData: Int?
+    
+    init?(_ title: String?, backingData: Int? = nil) {
+        guard let title = title else { return nil }
+        
+        self.title = title
+        self.backingData = backingData
+    }
+}
+
 class FormField: Identifiable {
     enum FieldInputType {
         case text
         case paymentAccountNumber
-        case expiry
         case choice
         case string
+        case expiry(months: [FormPickerData], years: [FormPickerData])
     }
     
     let title: String
