@@ -109,6 +109,7 @@ class FormCollectionViewCell: UICollectionViewCell {
     
     private weak var formField: FormField?
     private weak var delegate: FormCollectionViewCellDelegate?
+    private var pickerSelectedChoice: String?
     private var preferredWidth: CGFloat = 1917 // This has to be a non zero value, chose 300 because of the movie 300.
 
     // MARK: - Initialisation
@@ -150,29 +151,11 @@ class FormCollectionViewCell: UICollectionViewCell {
 //        textField.inputAccessoryView = inputAccessory
 
         
-//        if case let .expiry(months, years) = field.fieldType {
-//            textField.inputView = FormMultipleChoiceInput(with: [months, years], delegate: self)
-//        } else if case let .choice(data) = field.fieldType {
-//            textField.inputView = FormMultipleChoiceInput(with: [data], delegate: self)
-//            pickerSelectedChoice = data.first?.title
-//            formField?.updateValue(pickerSelectedChoice)
-//        } else if case .date = field.fieldType {
-//            let datePicker = UIDatePicker()
-//            datePicker.datePickerMode = .date
-//            datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-//
-//            if #available(iOS 14.0, *) {
-//                datePicker.preferredDatePickerStyle = .inline
-//                datePicker.backgroundColor = Current.themeManager.color(for: .viewBackground)
-//                datePicker.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 400)
-//            }
-//
-//            textField.inputView = datePicker
-//            pickerSelectedChoice = datePicker.date.getFormattedString(format: .dayShortMonthYearWithSlash)
-//            formField?.updateValue(pickerSelectedChoice)
-//        } else {
-//            textField.inputView = nil
-//        }
+        if case let .expiry(months, years) = field.fieldType {
+            textField.inputView = FormMultipleChoiceInput(with: [months, years], delegate: self)
+        } else {
+            textField.inputView = nil
+        }
         
         self.delegate = delegate
     }
@@ -205,6 +188,18 @@ extension FormCollectionViewCell: UITextFieldDelegate {
     
 }
 
+extension FormCollectionViewCell: FormMultipleChoiceInputDelegate {
+    func multipleChoiceSeparatorForMultiValues() -> String? {
+        return "/"
+    }
+    
+    func multipleChoiceInputDidUpdate(newValue: String?, backingData: [Int]?) {
+        pickerSelectedChoice = newValue
+        formField?.updateValue(newValue)
+        textField.text = newValue
+        if let options = backingData { formField?.pickerDidSelect(options) }
+    }
+}
 
 fileprivate extension Selector {
     static let textFieldUpdated = #selector(FormCollectionViewCell.textFieldUpdated(_:text:backingData:))
