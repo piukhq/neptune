@@ -24,6 +24,9 @@ internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let neptune = ImageAsset(name: "Neptune")
   internal static let splashScreen = ImageAsset(name: "SplashScreen")
+  internal static let cardPaymentLogoAmEx = ImageAsset(name: "cardPaymentLogoAmEx")
+  internal static let cardPaymentLogoMastercard = ImageAsset(name: "cardPaymentLogoMastercard")
+  internal static let cardPaymentLogoVisa = ImageAsset(name: "cardPaymentLogoVisa")
   internal static let close = ImageAsset(name: "close")
   internal static let scannerGuide = ImageAsset(name: "scanner_guide")
 }

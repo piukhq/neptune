@@ -62,7 +62,8 @@ extension AddPaymentAccountViewController: FormDataSourceDelegate {
             let type = PaymentAccountType.type(from: value)
             viewModel.setPaymentAccopuntType(type)
             viewModel.setPaymentAccountFullPan(value)
-            print(type?.logoName)
+            let imageView = UIImageView(image: UIImage(named: type?.logoName ?? ""))
+            navigationItem.titleView = imageView
         case .text:
             viewModel.setPaymentAccountCardName(value)
         case .paymentAccountNickname:
