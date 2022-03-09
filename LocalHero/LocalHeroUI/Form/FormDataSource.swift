@@ -33,6 +33,7 @@ extension FormDataSourceDelegate {
 
 class FormDataSource: NSObject {
     var fields: [FormField] = []
+    private var cellTextFields: [Int: UITextField] = [:]
     
     typealias MultiDelegate = FormDataSourceDelegate & FormCollectionViewCellDelegate
     
@@ -137,6 +138,7 @@ extension FormDataSource: UICollectionViewDataSource {
         
         if let field = fields[safe: indexPath.item] {
             cell.configure(with: field, delegate: self)
+            cellTextFields[indexPath.item] = cell.textField
         }
         return cell
     }
@@ -144,10 +146,23 @@ extension FormDataSource: UICollectionViewDataSource {
 
 extension FormDataSource: FormCollectionViewCellDelegate {
     func formCollectionViewCell(_ cell: FormCollectionViewCell, didSelectField: UITextField) {
-        print("did select field")
+        delegate?.formCollectionViewCell(cell, didSelectField: didSelectField)
+        
+        if cellTextFields.first(where: { $0.value == didSelectField })?.key == cellTextFields.count - 1 {
+            didSelectField.returnKeyType = .done
+        } else {
+            didSelectField.returnKeyType = .next
+        }
     }
     
     func formCollectionViewCell(_ cell: FormCollectionViewCell, shouldResignTextField textField: UITextField) {
-        print("Should resign field")
+        guard let key = cellTextFields.first(where: { $0.value == textField })?.key else { return }
+        
+        if let nextTextField = cellTextFields[key + 1] {
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
     }
+    
 }

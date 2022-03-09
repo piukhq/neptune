@@ -185,32 +185,18 @@ class FormCollectionViewCell: UICollectionViewCell {
     }
     
     func setState(_ state: ControlState) {
-//        var validationLabelSpacing: CGFloat = validationLabel.isHidden ? 0 : 4
-//        var validationIconHidden = true
-//
-//        switch state {
-//        case .inactive:
-//            validationView.backgroundColor = .clear
-//            validationLabel.isHidden = true
-//            validationLabelSpacing = 0
-//        case .active:
-//            validationView.backgroundColor = .activeField
-//        case .valid:
-//            validationView.backgroundColor = .validField
-//            validationIconHidden = false
-//            validationLabelSpacing = 0
-//            validationLabel.isHidden = true
-//        case .invalid:
-//            validationView.backgroundColor = .invalidField
-//            validationLabelSpacing = 4
-//            validationLabel.isHidden = false
-//        }
-//
-//        guard let field = formField else { return }
-//        validationLabel.text = field.validationErrorMessage != nil ? field.validationErrorMessage : L10n.formFieldValidationError
-//        isValidationLabelHidden = validationLabel.isHidden
-//        validationIconImageView.isHidden = validationIconHidden
-//        containerStack.setCustomSpacing(validationLabelSpacing, after: fieldContainerVStack)
+        var validationIconHidden = true
+
+        switch state {
+        case .valid:
+            validationIconHidden = true
+        case .invalid:
+            validationIconHidden = false
+        default:
+            break
+        }
+
+        validationIconImageView.isHidden = validationIconHidden
     }
     
     // MARK: - Layout
