@@ -17,7 +17,7 @@ class BaseFormViewController: UIViewController {
         collectionView.dataSource = dataSource
         collectionView.isScrollEnabled = false
         collectionView.delegate = self
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(FormCollectionViewCell.self)
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         view.addSubview(collectionView)

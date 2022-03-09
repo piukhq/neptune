@@ -37,7 +37,7 @@ class FormCollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [fieldLabelsVStack])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.backgroundColor = .white
+        stackView.backgroundColor = .clear
         stackView.clipsToBounds = true
 //        let gestureRecognizer = UITapGestureRecognizer(target: self, action: .handleCellTap)
 //        stackView.addGestureRecognizer(gestureRecognizer)
@@ -144,9 +144,10 @@ class FormCollectionViewCell: UICollectionViewCell {
         let isEnabled = !field.isReadOnly
         
         titleLabel.text = field.title
-        titleLabel.textColor = isEnabled ? .black : .gray
-        textField.textColor = isEnabled ? .black : .gray
-        textField.attributedPlaceholder = NSAttributedString(string: field.placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        titleLabel.textColor = isEnabled ? .label : .gray
+        textField.textColor = isEnabled ? .label : .gray
+        textField.tintColor = .secondaryLabel
+        textField.placeholder = field.placeholder
         textField.text = field.forcedValue
         textField.isSecureTextEntry = field.fieldType.isSecureTextEntry
         textField.keyboardType = field.fieldType.keyboardType()
@@ -156,7 +157,6 @@ class FormCollectionViewCell: UICollectionViewCell {
         textField.accessibilityIdentifier = field.title
         formField = field
         textField.inputAccessoryView = inputAccessory
-
         
         if case let .expiry(months, years) = field.fieldType {
             textField.inputView = FormMultipleChoiceInput(with: [months, years], delegate: self)
@@ -165,6 +165,52 @@ class FormCollectionViewCell: UICollectionViewCell {
         }
         
         self.delegate = delegate
+        configureStateForFieldValidity(field)
+    }
+    
+    enum ControlState {
+        case inactive, active, valid, invalid
+    }
+    
+    private func configureStateForFieldValidity(_ field: FormField) {
+        let textfieldIsEmpty = textField.text?.isEmpty ?? false
+
+        if field.isValid() && !textfieldIsEmpty {
+            setState(.valid)
+        } else if !field.isValid() && !textfieldIsEmpty {
+            setState(.invalid)
+        } else {
+            setState(.inactive)
+        }
+    }
+    
+    func setState(_ state: ControlState) {
+//        var validationLabelSpacing: CGFloat = validationLabel.isHidden ? 0 : 4
+//        var validationIconHidden = true
+//
+//        switch state {
+//        case .inactive:
+//            validationView.backgroundColor = .clear
+//            validationLabel.isHidden = true
+//            validationLabelSpacing = 0
+//        case .active:
+//            validationView.backgroundColor = .activeField
+//        case .valid:
+//            validationView.backgroundColor = .validField
+//            validationIconHidden = false
+//            validationLabelSpacing = 0
+//            validationLabel.isHidden = true
+//        case .invalid:
+//            validationView.backgroundColor = .invalidField
+//            validationLabelSpacing = 4
+//            validationLabel.isHidden = false
+//        }
+//
+//        guard let field = formField else { return }
+//        validationLabel.text = field.validationErrorMessage != nil ? field.validationErrorMessage : L10n.formFieldValidationError
+//        isValidationLabelHidden = validationLabel.isHidden
+//        validationIconImageView.isHidden = validationIconHidden
+//        containerStack.setCustomSpacing(validationLabelSpacing, after: fieldContainerVStack)
     }
     
     // MARK: - Layout
@@ -207,7 +253,7 @@ extension FormCollectionViewCell: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let field = formField else { return }
-//        configureStateForFieldValidity(field)
+        configureStateForFieldValidity(field)
         field.fieldWasExited()
     }
     

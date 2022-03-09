@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum DateFormat: String {
-    case dayMonthYear = "dd MMMM yyyy"
-    case dayShortMonthYear = "dd MMM yyyy"
-    case dayShortMonthYearWithSlash = "dd/MM/yyyy"
-    case dayShortMonthYear24HourSecond = "dd MMM yyyy HH:mm:ss"
-}
-
 extension String {
     var isBlank: Bool {
         return allSatisfy({ $0.isWhitespace })
