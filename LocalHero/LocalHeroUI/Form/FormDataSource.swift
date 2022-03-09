@@ -101,7 +101,7 @@ extension FormDataSource {
             title: "Nickname",
             placeholder: "My favourite account",
             validation: "^(((?=.{1,}$)[A-Za-z\\-\\u00C0-\\u00FF' ])+\\s*)$",
-            fieldType: .text,
+            fieldType: .paymentAccountNickname,
             updated: updatedBlock,
             shouldChange: shouldChangeBlock,
             fieldExited: fieldExitedBlock

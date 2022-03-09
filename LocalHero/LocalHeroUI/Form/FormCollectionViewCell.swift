@@ -77,7 +77,6 @@ class FormCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 12)
-//        label.textColor = Current.themeManager.color(for: .text)
         label.heightAnchor.constraint(equalToConstant: Constants.titleLabelHeight).isActive = true
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         return label
@@ -86,7 +85,6 @@ class FormCollectionViewCell: UICollectionViewCell {
     lazy var textField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-//        field.font = UIFont.textFieldInput
         field.delegate = self
         field.heightAnchor.constraint(equalToConstant: Constants.textFieldHeight).isActive = true
         field.addTarget(self, action: .textFieldUpdated, for: .editingChanged)
@@ -102,9 +100,18 @@ class FormCollectionViewCell: UICollectionViewCell {
             imageView.widthAnchor.constraint(equalToConstant: 20)
         ])
         imageView.transform = CGAffineTransform(translationX: -4, y: 0)
-        imageView.isHidden = false
+        imageView.isHidden = true
         imageView.tintColor = .systemRed
         return imageView
+    }()
+    
+    private lazy var inputAccessory: UIToolbar = {
+        let bar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done = UIBarButtonItem(title: "Done", style: .plain, target: self, action: .accessoryDoneTouchUpInside)
+        bar.items = [flexSpace, done]
+        bar.sizeToFit()
+        return bar
     }()
     
     private weak var formField: FormField?
@@ -148,7 +155,7 @@ class FormCollectionViewCell: UICollectionViewCell {
         textField.clearButtonMode = field.fieldCommonName == .barcode ? .always : .whileEditing
         textField.accessibilityIdentifier = field.title
         formField = field
-//        textField.inputAccessoryView = inputAccessory
+        textField.inputAccessoryView = inputAccessory
 
         
         if case let .expiry(months, years) = field.fieldType {
@@ -179,13 +186,47 @@ class FormCollectionViewCell: UICollectionViewCell {
     
     @objc func textFieldUpdated(_ textField: UITextField, text: String?, backingData: [Int]?) {
         guard let textFieldText = textField.text else { return }
-//        formField?.updateValue(textFieldText)
+        formField?.updateValue(textFieldText)
 //        configureTextFieldRightView(shouldDisplay: textFieldText.isEmpty)
+    }
+    
+    @objc func accessoryDoneTouchUpInside() {
+        if let multipleChoiceInput = textField.inputView as? FormMultipleChoiceInput, let textFieldIsEmpty = textField.text?.isEmpty {
+            multipleChoiceInputDidUpdate(newValue: textFieldIsEmpty ? "" : multipleChoiceInput.fullContentString, backingData: multipleChoiceInput.backingData)
+        }
+        
+        textField.resignFirstResponder()
+        textFieldDidEndEditing(textField)
     }
 }
 
 extension FormCollectionViewCell: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return formField?.textField(textField, shouldChangeInRange: range, newValue: string) ?? false
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let field = formField else { return }
+//        configureStateForFieldValidity(field)
+        field.fieldWasExited()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.inputView?.isKind(of: FormMultipleChoiceInput.self) ?? false || textField.inputView?.isKind(of: UIDatePicker.self) ?? false {
+            if let multipleChoiceInput = textField.inputView as? FormMultipleChoiceInput {
+                textField.text = (pickerSelectedChoice?.isEmpty ?? false) ? multipleChoiceInput.fullContentString : pickerSelectedChoice
+            }
+        }
+        
+//        setState(.active)
+        
+        self.delegate?.formCollectionViewCell(self, didSelectField: textField)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.delegate?.formCollectionViewCell(self, shouldResignTextField: textField)
+        return true
+    }
 }
 
 extension FormCollectionViewCell: FormMultipleChoiceInputDelegate {
@@ -203,4 +244,5 @@ extension FormCollectionViewCell: FormMultipleChoiceInputDelegate {
 
 fileprivate extension Selector {
     static let textFieldUpdated = #selector(FormCollectionViewCell.textFieldUpdated(_:text:backingData:))
+    static let accessoryDoneTouchUpInside = #selector(FormCollectionViewCell.accessoryDoneTouchUpInside)
 }

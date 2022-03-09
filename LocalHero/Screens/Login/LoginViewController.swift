@@ -34,7 +34,7 @@ class LoginViewController: LocalHeroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let addPaymentCardviewController = AddPaymentAccountViewController()
+        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
         let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
         Current.navigate.to(navigationRequest)
         
@@ -61,7 +61,7 @@ class LoginViewController: LocalHeroViewController {
 //        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
 //        Current.navigate.to(navigationRequest)
         
-        let addPaymentCardviewController = AddPaymentAccountViewController()
+        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
 //        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
         let push = PushNavigationRequest(viewController: addPaymentCardviewController)
         Current.navigate.to(push)

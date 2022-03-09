@@ -47,6 +47,7 @@ class FormField {
     enum FieldInputType: Equatable {
         case text
         case paymentAccountNumber
+        case paymentAccountNickname
         case choice
         case string
         case sensitive
@@ -134,24 +135,24 @@ class FormField {
         self.hidden = hidden
     }
     
-//    func isValid() -> Bool {
-//        // If the field has manual validation, apply it
-//        if let validateBlock = manualValidate {
-//            return validateBlock(self)
-//        }
-//        
-//        // If our value is unset then we do not pass the validation check
-//        guard let value = value else { return false }
-//        
-//        if fieldType == .paymentAccountNumber {
-//            return PaymentCardType.validate(fullPan: value)
-//        } else {
-//            guard let validation = validation else { return !value.isEmpty || !value.isBlank }
-//            
-//            let predicate = NSPredicate(format: "SELF MATCHES %@", validation)
-//            return predicate.evaluate(with: value)
-//        }
-//    }
+    func isValid() -> Bool {
+        // If the field has manual validation, apply it
+        if let validateBlock = manualValidate {
+            return validateBlock(self)
+        }
+        
+        // If our value is unset then we do not pass the validation check
+        guard let value = value else { return false }
+        
+        if fieldType == .paymentAccountNumber {
+            return PaymentAccountType.validate(fullPan: value)
+        } else {
+            guard let validation = validation else { return !value.isEmpty || !value.isBlank }
+            
+            let predicate = NSPredicate(format: "SELF MATCHES %@", validation)
+            return predicate.evaluate(with: value)
+        }
+    }
     
     func updateValue(_ value: String?) {
         self.value = value

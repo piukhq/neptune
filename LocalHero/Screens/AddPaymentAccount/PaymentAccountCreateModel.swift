@@ -8,9 +8,16 @@
 import Foundation
 
 struct PaymentAccountCreateModel: Codable {
-    var fullPan, expiryMonth, expiryYear, nameOnCard, cardNickname: String?
-    var token, lastFourDigits, firstSixDigits: String?
-    var fingerprint, provider: String?
+    var fullPan: String?
+    var expiryMonth: String?
+    var expiryYear: String?
+    var nameOnCard: String?
+    var cardNickname: String?
+    var token: String?
+    var lastFourDigits: String?
+    var firstSixDigits: String?
+    var fingerprint: String?
+    var provider: PaymentAccountType?
 
     enum CodingKeys: String, CodingKey {
         case expiryMonth = "expiry_month"
@@ -20,7 +27,7 @@ struct PaymentAccountCreateModel: Codable {
         case token
         case lastFourDigits = "last_four_digits"
         case firstSixDigits = "first_six_digits"
-        case fingerprint, provider
+        case fingerprint
     }
 }
 
