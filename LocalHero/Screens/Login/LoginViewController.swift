@@ -14,7 +14,7 @@ class LoginViewController: LocalHeroViewController {
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .white
+        button.backgroundColor = .quaternaryLabel
         button.setTitle(L10n.loginButtonTitle, for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)

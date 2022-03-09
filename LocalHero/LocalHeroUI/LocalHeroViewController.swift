@@ -17,7 +17,7 @@ class LocalHeroViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
-        view.backgroundColor = .white
+        view.backgroundColor = .secondarySystemBackground
         configureUI()
     }
     
