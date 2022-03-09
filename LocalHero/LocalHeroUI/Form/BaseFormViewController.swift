@@ -7,7 +7,15 @@
 
 import UIKit
 
-class BaseFormViewController: UIViewController {
+class BaseFormViewController: LocalHeroViewController {
+    // MARK: - Helpers
+    
+    private enum Constants {
+        static let horizontalInset: CGFloat = 0.0
+        static let bottomInset: CGFloat = 150.0
+        static let postCollectionViewPadding: CGFloat = 15.0
+        static let preCollectionViewPadding: CGFloat = 10.0
+    }
     
     // MARK: - Properties
     
@@ -17,11 +25,23 @@ class BaseFormViewController: UIViewController {
         collectionView.dataSource = dataSource
         collectionView.isScrollEnabled = false
         collectionView.delegate = self
-        collectionView.backgroundColor = .secondarySystemBackground
+        collectionView.backgroundColor = .clear
         collectionView.register(FormCollectionViewCell.self)
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-        view.addSubview(collectionView)
         return collectionView
+    }()
+    
+    lazy var stackScrollView: StackScrollView = {
+        let stackView = StackScrollView(axis: .vertical, arrangedSubviews: [collectionView], adjustForKeyboard: true)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.backgroundColor = .clear
+        stackView.margin = UIEdgeInsets(top: 0, left: Constants.horizontalInset, bottom: 0, right: Constants.horizontalInset)
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: Constants.bottomInset, right: 0)
+        stackView.customPadding(Constants.postCollectionViewPadding, after: collectionView)
+        stackView.customPadding(Constants.preCollectionViewPadding, before: collectionView)
+        view.addSubview(stackView)
+        return stackView
     }()
     
     private lazy var layout: UICollectionViewFlowLayout = {
@@ -50,15 +70,14 @@ class BaseFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
-        view.backgroundColor = .white
     }
     
     private func configureLayout() {
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            stackScrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            stackScrollView.bottomAnchor.constraint(equalTo: backgroundImageView.bottomAnchor),
+            stackScrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            stackScrollView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
     }
 

@@ -202,11 +202,16 @@ class FormCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout
     
     private func configureLayout() {
+        let topConstraint = containerStack.topAnchor.constraint(equalTo: contentView.topAnchor)
+        topConstraint.priority = .required
+        let bottomConstraint = contentView.bottomAnchor.constraint(equalTo: containerStack.bottomAnchor)
+        bottomConstraint.priority = .required
+        
         NSLayoutConstraint.activate([
             containerStack.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             containerStack.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            containerStack.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            topConstraint,
+            bottomConstraint
         ])
     }
     

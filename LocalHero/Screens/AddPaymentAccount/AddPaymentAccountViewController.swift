@@ -8,39 +8,6 @@
 import Foundation
 import UIKit
 
-class AddPaymentAccountViewModel {
-    var paymentAccount: PaymentAccountCreateModel
-    
-    init(paymentAccount: PaymentAccountCreateModel? = nil) {
-        self.paymentAccount = paymentAccount ?? PaymentAccountCreateModel(fullPan: nil, expiryMonth: nil, expiryYear: nil, nameOnCard: nil, cardNickname: nil, token: nil, lastFourDigits: nil, firstSixDigits: nil, fingerprint: nil)
-    }
-    
-    var paymentAccountType: PaymentAccountType? {
-        return paymentAccount.provider
-    }
-    
-    func setPaymentAccopuntType(_ type: PaymentAccountType?) {
-        paymentAccount.provider = type
-    }
-    
-    func setPaymentAccountFullPan(_ fullPan: String?) {
-        paymentAccount.fullPan = fullPan
-    }
-    
-    func setPaymentAccountCardName(_ name: String?) {
-        paymentAccount.nameOnCard = name
-    }
-    
-    func setPaymentAccountNickname(_ name: String?) {
-        paymentAccount.cardNickname = name
-    }
-    
-    func setPaymentAccountExpiry(month: String?, year: String?) {
-        paymentAccount.expiryMonth = month
-        paymentAccount.expiryYear = year
-    }
-}
-
 class AddPaymentAccountViewController: BaseFormViewController {
     private var viewModel: AddPaymentAccountViewModel
     
@@ -57,6 +24,12 @@ class AddPaymentAccountViewController: BaseFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Payment Account"
+         
+        let button = HeroButton(title: "Add Payment Account") { [weak self] in
+            self?.viewModel.addPaymentCard()
+        }
+        
+        addFooterButtons([button])
     }
 }
 

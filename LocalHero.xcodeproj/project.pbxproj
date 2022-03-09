@@ -78,6 +78,10 @@
 		CEB785CE27D7C78C00B8F3D9 /* FormMultipleChoiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785CD27D7C78B00B8F3D9 /* FormMultipleChoiceInput.swift */; };
 		CEB785D127D8A32500B8F3D9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785D027D8A32400B8F3D9 /* String+Extension.swift */; };
 		CEB785D327D8D7FF00B8F3D9 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785D227D8D7FF00B8F3D9 /* Date+Extension.swift */; };
+		CEB785D527D8FFA900B8F3D9 /* HeroButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785D427D8FFA800B8F3D9 /* HeroButton.swift */; };
+		CEB785D727D904EC00B8F3D9 /* AddPaymentAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785D627D904EC00B8F3D9 /* AddPaymentAccountViewModel.swift */; };
+		CEB785D927D90CF700B8F3D9 /* HeroButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785D827D90CF700B8F3D9 /* HeroButtonStack.swift */; };
+		CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785DA27D918E600B8F3D9 /* StackScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +183,10 @@
 		CEB785CD27D7C78B00B8F3D9 /* FormMultipleChoiceInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormMultipleChoiceInput.swift; sourceTree = "<group>"; };
 		CEB785D027D8A32400B8F3D9 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		CEB785D227D8D7FF00B8F3D9 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CEB785D427D8FFA800B8F3D9 /* HeroButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroButton.swift; sourceTree = "<group>"; };
+		CEB785D627D904EC00B8F3D9 /* AddPaymentAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentAccountViewModel.swift; sourceTree = "<group>"; };
+		CEB785D827D90CF700B8F3D9 /* HeroButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroButtonStack.swift; sourceTree = "<group>"; };
+		CEB785DA27D918E600B8F3D9 /* StackScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackScrollView.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -480,6 +488,9 @@
 			isa = PBXGroup;
 			children = (
 				CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */,
+				CEB785D427D8FFA800B8F3D9 /* HeroButton.swift */,
+				CEB785D827D90CF700B8F3D9 /* HeroButtonStack.swift */,
+				CEB785DA27D918E600B8F3D9 /* StackScrollView.swift */,
 				CEB785CF27D7C79700B8F3D9 /* Form */,
 			);
 			path = LocalHeroUI;
@@ -508,6 +519,7 @@
 				CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */,
 				CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */,
 				CEB785B827D7567C00B8F3D9 /* AddPaymentAccountViewController.swift */,
+				CEB785D627D904EC00B8F3D9 /* AddPaymentAccountViewModel.swift */,
 			);
 			path = AddPaymentAccount;
 			sourceTree = "<group>";
@@ -796,19 +808,23 @@
 				CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
+				CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */,
 				CEB785CA27D7853000B8F3D9 /* Navigate.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
+				CEB785D927D90CF700B8F3D9 /* HeroButtonStack.swift in Sources */,
 				CEB785C127D765C600B8F3D9 /* UICollectionViewExtension.swift in Sources */,
 				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
 				CEB785A127CCEFDD00B8F3D9 /* PlanFeaturesModel.swift in Sources */,
 				CEB7859427CCD92200B8F3D9 /* ViewControllerFactory.swift in Sources */,
 				CEB785A527CCF1EF00B8F3D9 /* FieldsModel.swift in Sources */,
+				CEB785D727D904EC00B8F3D9 /* AddPaymentAccountViewModel.swift in Sources */,
 				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CEB7859F27CCEFB900B8F3D9 /* ContentModel.swift in Sources */,
+				CEB785D527D8FFA900B8F3D9 /* HeroButton.swift in Sources */,
 				CEB785C827D7842600B8F3D9 /* UIColor+Extension.swift in Sources */,
 				CEB7859927CCEEAE00B8F3D9 /* PlanDetailsModel.swift in Sources */,
 				CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */,
