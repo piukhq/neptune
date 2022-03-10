@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 protocol FormDataSourceDelegate: NSObjectProtocol {
     func formDataSource(_ dataSource: FormDataSource, changed value: String?, for field: FormField)
@@ -31,17 +32,15 @@ extension FormDataSourceDelegate {
 }
 
 
-class FormDataSource: NSObject, ObservableObject {
+class FormDataSource: NSObject {
     var fields: [FormField] = []
     private var cellTextFields: [Int: UITextField] = [:]
     
     typealias MultiDelegate = FormDataSourceDelegate & FormCollectionViewCellDelegate
     weak var delegate: MultiDelegate?
     
-    @Published var formIsValid = false
-    
-    func checkFormValidity() {
-        formIsValid = fields.allSatisfy({ $0.isValid() })
+    var fullFormIsValid: Bool {
+        return fields.allSatisfy({ $0.isValid() })
     }
 }
 

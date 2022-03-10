@@ -10,25 +10,14 @@ import SwiftUI
 
 class LoginViewController: LocalHeroViewController {
     // MARK: - Properties
-    
-    private lazy var loginButton: UIButton = {
-        let button = UIButton(type: .roundedRect)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .quaternaryLabel
-        button.setTitle(L10n.loginButtonTitle, for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
-        button.layer.cornerRadius = 25
-        button.layer.cornerCurve = .continuous
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.systemBlue.cgColor
-        view.addSubview(button)
-        return button
+
+    private lazy var loginButton: HeroButton = {
+        return HeroButton(viewModel: ButtonViewModel(disabled: false, title: L10n.loginButtonTitle, action: loginButtonTapped))
     }()
     
     private weak var delegate: BarcodeScannerViewControllerDelegate?
-    
-    
+
+
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -38,22 +27,12 @@ class LoginViewController: LocalHeroViewController {
         let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
         Current.navigate.to(navigationRequest)
         
+        addFooterButtons([loginButton])
     }
-    
-    override func configureUI() {
-        super.configureUI()
-        NSLayoutConstraint.activate([
-            loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
-            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-    }
-    
-    
+
     // MARK: - Private methods
 
-    @objc private func loginButtonTapped() {
+    private func loginButtonTapped() {
 //        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
 //        navigationController?.present(vc, animated: true)
         

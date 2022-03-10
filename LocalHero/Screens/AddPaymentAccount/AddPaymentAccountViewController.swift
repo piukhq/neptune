@@ -13,9 +13,7 @@ class AddPaymentAccountViewController: BaseFormViewController {
     private var viewModel: AddPaymentAccountViewModel
     
     private lazy var addAccountButton: HeroButton = {
-        return HeroButton(dataSource: dataSource, title: "Add Payment Account", buttonTapped: {
-            self.viewModel.addPaymentCard()
-        })
+        return HeroButton(viewModel: ButtonViewModel(title: "Add", action: viewModel.addPaymentCard))
     }()
     
     init(viewModel: AddPaymentAccountViewModel) {
@@ -36,7 +34,7 @@ class AddPaymentAccountViewController: BaseFormViewController {
     }
     
     override func formValidityUpdated(fullFormIsValid: Bool) {
-//        addAccountButton.disabled = !fullFormIsValid
+        addAccountButton.viewModel.disabled = !fullFormIsValid
     }
 }
 

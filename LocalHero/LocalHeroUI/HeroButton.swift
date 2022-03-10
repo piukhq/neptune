@@ -7,24 +7,37 @@
 
 import SwiftUI
 
-struct HeroButton: View, Identifiable {
-    @ObservedObject var dataSource: FormDataSource
-    var title: String
-    var id: String { title }
-    var buttonTapped: () -> Void
+class ButtonViewModel: ObservableObject {
+    @Published var disabled: Bool?
+    @Published var isLoading = false
     
+    var title: String
+    var action: () -> Void
+
+    init(disabled: Bool? = true, title: String, action: @escaping () -> Void) {
+        self.disabled = disabled
+        self.title = title
+        self.action = action
+    }
+}
+
+struct HeroButton: View, Identifiable {
+    @ObservedObject var viewModel: ButtonViewModel
+    var id: String { viewModel.title }
+
+
     var body: some View {
-        Button(action: buttonTapped) {
-            Text(title)
+        Button(action: viewModel.action) {
+            Text(viewModel.title)
                 .font(Font.headline)
         }
-        .disabled(!dataSource.formIsValid)
+        .disabled(viewModel.disabled ?? false)
     }
 }
 
 struct HeroButton_Previews: PreviewProvider {
     
     static var previews: some View {
-        HeroButton(dataSource: FormDataSource(), title: "Add Payment Card", buttonTapped: {})
+        HeroButton(viewModel: ButtonViewModel(title: "Add", action: {}))
     }
 }

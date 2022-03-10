@@ -80,6 +80,9 @@ class BaseFormViewController: LocalHeroViewController {
             stackScrollView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
     }
+
+    /// This method is designed to be overriden for updating UI elements in response to validity
+    func formValidityUpdated(fullFormIsValid: Bool) {}
 }
 
 extension BaseFormViewController: UICollectionViewDelegate {
@@ -93,7 +96,7 @@ extension BaseFormViewController: UICollectionViewDelegate {
 extension BaseFormViewController {
     func formDataSource(_ dataSource: FormDataSource, fieldDidExit: FormField) {
         collectionView.collectionViewLayout.invalidateLayout()
-        dataSource.checkFormValidity()
+        formValidityUpdated(fullFormIsValid: dataSource.fullFormIsValid)
         stackScrollView.contentInset.bottom = Constants.bottomInset
     }
 }
