@@ -37,7 +37,7 @@ class BaseFormViewController: LocalHeroViewController {
         stackView.margin = UIEdgeInsets(top: 0, left: Constants.horizontalInset, bottom: 0, right: Constants.horizontalInset)
         stackView.distribution = .fill
         stackView.alignment = .fill
-        stackView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: Constants.bottomInset, right: 0)
+        stackView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: Constants.bottomInset, right: 0)
         stackView.customPadding(Constants.postCollectionViewPadding, after: collectionView)
         stackView.customPadding(Constants.preCollectionViewPadding, before: collectionView)
         view.addSubview(stackView)

@@ -50,7 +50,8 @@ class FormCollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, textFieldHStack])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.layoutMargins = UIEdgeInsets(top: 00, left: 20, bottom: 7, right: 20)
+        stackView.spacing = 2
+        stackView.layoutMargins = UIEdgeInsets(top: 5, left: 20, bottom: 7, right: 20)
         stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()
@@ -77,7 +78,7 @@ class FormCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 12)
-        label.heightAnchor.constraint(equalToConstant: Constants.titleLabelHeight).isActive = true
+//        label.heightAnchor.constraint(equalToConstant: Constants.titleLabelHeight).isActive = true
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         return label
     }()
@@ -117,7 +118,7 @@ class FormCollectionViewCell: UICollectionViewCell {
     private weak var formField: FormField?
     private weak var delegate: FormCollectionViewCellDelegate?
     private var pickerSelectedChoice: String?
-    private var preferredWidth: CGFloat = 1917 // This has to be a non zero value, chose 300 because of the movie 300.
+    private var preferredWidth: CGFloat = 300 // This has to be a non zero value, chose 300 because of the movie 300.
 
     // MARK: - Initialisation
 
