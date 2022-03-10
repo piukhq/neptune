@@ -7,9 +7,16 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class AddPaymentAccountViewController: BaseFormViewController {
     private var viewModel: AddPaymentAccountViewModel
+    
+    private lazy var addAccountButton: HeroButton = {
+        return HeroButton(dataSource: dataSource, title: "Add Payment Account", buttonTapped: {
+            self.viewModel.addPaymentCard()
+        })
+    }()
     
     init(viewModel: AddPaymentAccountViewModel) {
         self.viewModel = viewModel
@@ -24,12 +31,12 @@ class AddPaymentAccountViewController: BaseFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Payment Account"
-         
-        let button = HeroButton(title: "Add Payment Account") { [weak self] in
-            self?.viewModel.addPaymentCard()
-        }
-        
-        addFooterButtons([button])
+
+        addFooterButtons([addAccountButton])
+    }
+    
+    override func formValidityUpdated(fullFormIsValid: Bool) {
+//        addAccountButton.disabled = !fullFormIsValid
     }
 }
 
@@ -134,6 +141,4 @@ extension AddPaymentAccountViewController: FormCollectionViewCellDelegate {
     func formCollectionViewCell(_ cell: FormCollectionViewCell, shouldResignTextField textField: UITextField) {
         
     }
-    
-    
 }

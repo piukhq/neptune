@@ -22,6 +22,6 @@ struct HeroButtonStack: View {
 
 struct HeroButtonStack_Previews: PreviewProvider {
     static var previews: some View {
-        HeroButtonStack(buttons: [HeroButton(title: "Delete") {}, HeroButton(title: "Add Card") {}])
+        HeroButtonStack(buttons: [HeroButton(dataSource: FormDataSource(), title: "Delete", buttonTapped: {}), HeroButton(dataSource: FormDataSource(), title: "Add Card") {}])
     }
 }

@@ -80,7 +80,6 @@ class BaseFormViewController: LocalHeroViewController {
             stackScrollView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
     }
-
 }
 
 extension BaseFormViewController: UICollectionViewDelegate {
@@ -88,6 +87,14 @@ extension BaseFormViewController: UICollectionViewDelegate {
         guard let cell = cell as? FormCollectionViewCell else { return }
         
         cell.setWidth(collectionView.frame.size.width)
+    }
+}
+
+extension BaseFormViewController {
+    func formDataSource(_ dataSource: FormDataSource, fieldDidExit: FormField) {
+        collectionView.collectionViewLayout.invalidateLayout()
+        dataSource.checkFormValidity()
+        stackScrollView.contentInset.bottom = Constants.bottomInset
     }
 }
 

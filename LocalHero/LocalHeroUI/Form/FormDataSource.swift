@@ -31,13 +31,18 @@ extension FormDataSourceDelegate {
 }
 
 
-class FormDataSource: NSObject {
+class FormDataSource: NSObject, ObservableObject {
     var fields: [FormField] = []
     private var cellTextFields: [Int: UITextField] = [:]
     
     typealias MultiDelegate = FormDataSourceDelegate & FormCollectionViewCellDelegate
-    
     weak var delegate: MultiDelegate?
+    
+    @Published var formIsValid = false
+    
+    func checkFormValidity() {
+        formIsValid = fields.allSatisfy({ $0.isValid() })
+    }
 }
 
 extension FormDataSource {
