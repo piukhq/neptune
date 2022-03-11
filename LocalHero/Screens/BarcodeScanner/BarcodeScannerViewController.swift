@@ -250,7 +250,9 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
 
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.delegate?.barcodeScannerViewController(self, didScanBarcode: barcode, completion: nil)
+            Current.navigate.close(animated: true) {
+                self.delegate?.barcodeScannerViewController(self, didScanBarcode: barcode, completion: nil)
+            }
         }
     }
 }

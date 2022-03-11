@@ -175,6 +175,9 @@ private extension APIClient {
                 return
             }
             
+            let decodedResponse = try decoder.decode(responseType, from: data)
+            print(decodedResponse)
+            
             if statusCode == unauthorizedStatus && endpoint.shouldRespondToUnauthorizedStatus {
                 // Unauthorized response
 //                NotificationCenter.default.post(name: .shouldLogout, object: nil)

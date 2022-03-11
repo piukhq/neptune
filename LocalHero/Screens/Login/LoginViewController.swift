@@ -24,9 +24,9 @@ class LoginViewController: LocalHeroViewController {
         super.viewDidLoad()
         footerButtons = [loginButton]
 
-//        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
-//        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
-//        Current.navigate.to(navigationRequest)
+        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
+        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+        Current.navigate.to(navigationRequest)
         
     }
 
@@ -34,16 +34,13 @@ class LoginViewController: LocalHeroViewController {
 
     private func loginButtonTapped() {
 //        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
-//        navigationController?.present(vc, animated: true)
-        
-//        let addPaymentCardviewController = AddPaymentAccountViewController()
-//        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+//        let navigationRequest = ModalNavigationRequest(viewController: vc)
 //        Current.navigate.to(navigationRequest)
+
         
         let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
-//        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
-        let push = PushNavigationRequest(viewController: addPaymentCardviewController)
-        Current.navigate.to(push)
+        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+        Current.navigate.to(navigationRequest)
     }
     
     private func showError(title: String) {
@@ -57,7 +54,7 @@ class LoginViewController: LocalHeroViewController {
 
 extension LoginViewController: BarcodeScannerViewControllerDelegate {
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?) {
-        dismiss(animated: true)
+        
         let loginResponse = LoginResponse(apiKey: nil, userEmail: nil, uid: nil, accessToken: barcode)
         guard loginResponse.isValidJWT else  {
             showError(title: L10n.alertUnsupportedBarcodeTitle)
@@ -66,19 +63,23 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         
         Current.userManager.setNewUser(with: loginResponse)
         
-        Current.wallet.getLoyaltyPlans { [weak self] error in
-            guard error == nil else {
-                if case .unauthorized = error {
-                    self?.showError(title: L10n.alertInvalidToken)
-                } else {
-                    self?.showError(title: error?.localizedDescription ?? L10n.alertError)
-                }
-                
-                return
-            }
-            
-            let loyaltyPlansViewController = LoyaltyPlansTableViewController()
-            self?.navigationController?.show(loyaltyPlansViewController, sender: self)
-        }
+        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
+        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+        Current.navigate.to(navigationRequest)
+        
+//        Current.wallet.getLoyaltyPlans { [weak self] error in
+//            guard error == nil else {
+//                if case .unauthorized = error {
+//                    self?.showError(title: L10n.alertInvalidToken)
+//                } else {
+//                    self?.showError(title: error?.localizedDescription ?? L10n.alertError)
+//                }
+//
+//                return
+//            }
+//
+//            let loyaltyPlansViewController = LoyaltyPlansTableViewController()
+//            self?.navigationController?.show(loyaltyPlansViewController, sender: self)
+//        }
     }
 }

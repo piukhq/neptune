@@ -44,6 +44,17 @@ class AddPaymentAccountViewModel {
         repository.addPaymentCard(paymentAccount, onSuccess: { paymentAccount in
             print("Payment card added")
             print(paymentAccount as Any)
+            let name = paymentAccount?.nameOnCard ?? ""
+            let nickName = paymentAccount?.cardNickname ?? ""
+            let expiry = paymentAccount?.expiryMonth ?? "" + " /" + paymentAccount?.expiryYear ?? "" ?? ""
+            let message = name + ", " + nickName + ", " + expiry
+            let ac = ViewControllerFactory.makeAlertController(title: "Payment Account Added!", message: message) {
+                Current.navigate.close()
+            }
+            
+            let navigationRequest = AlertNavigationRequest(alertController: ac)
+            Current.navigate.to(navigationRequest)
+            
         }) { _ in
             onError()
             

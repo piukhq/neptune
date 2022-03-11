@@ -91,6 +91,9 @@
 		CEB785EF27DB5D1F00B8F3D9 /* PaymentAccountCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785EE27DB5D1D00B8F3D9 /* PaymentAccountCreateRequest.swift */; };
 		CEB785F127DB623300B8F3D9 /* SecureUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785F027DB623300B8F3D9 /* SecureUtility.swift */; };
 		CEB785F727DB6CFD00B8F3D9 /* PaymentAccountResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785F627DB6CFC00B8F3D9 /* PaymentAccountResponseModel.swift */; };
+		CEB785F827DBA34B00B8F3D9 /* devPublicKey.der in Resources */ = {isa = PBXBuildFile; fileRef = CEB785F527DB689C00B8F3D9 /* devPublicKey.der */; };
+		CEB785F927DBA34E00B8F3D9 /* prodPublicKey.der in Resources */ = {isa = PBXBuildFile; fileRef = CEB785F327DB689B00B8F3D9 /* prodPublicKey.der */; };
+		CEB785FA27DBA35100B8F3D9 /* stagingPublicKey.der in Resources */ = {isa = PBXBuildFile; fileRef = CEB785F427DB689C00B8F3D9 /* stagingPublicKey.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -745,10 +748,13 @@
 			files = (
 				CE4EBB1227BCF67700A5CA31 /* LaunchScreen.storyboard in Resources */,
 				CEB7858E27C6A52A00B8F3D9 /* Localizable.strings in Resources */,
+				CEB785FA27DBA35100B8F3D9 /* stagingPublicKey.der in Resources */,
 				CEB7857027C6765600B8F3D9 /* bink.der in Resources */,
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
+				CEB785F827DBA34B00B8F3D9 /* devPublicKey.der in Resources */,
 				CE4EBB3A27BD038C00A5CA31 /* README.md in Resources */,
+				CEB785F927DBA34E00B8F3D9 /* prodPublicKey.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
