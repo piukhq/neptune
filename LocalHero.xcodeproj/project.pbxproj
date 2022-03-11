@@ -90,6 +90,7 @@
 		CEB785EC27DA576800B8F3D9 /* BinkButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785EB27DA576700B8F3D9 /* BinkButtonsView.swift */; };
 		CEB785EF27DB5D1F00B8F3D9 /* PaymentAccountCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785EE27DB5D1D00B8F3D9 /* PaymentAccountCreateRequest.swift */; };
 		CEB785F127DB623300B8F3D9 /* SecureUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785F027DB623300B8F3D9 /* SecureUtility.swift */; };
+		CEB785F727DB6CFD00B8F3D9 /* PaymentAccountResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785F627DB6CFC00B8F3D9 /* PaymentAccountResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +204,10 @@
 		CEB785EB27DA576700B8F3D9 /* BinkButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinkButtonsView.swift; sourceTree = "<group>"; };
 		CEB785EE27DB5D1D00B8F3D9 /* PaymentAccountCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountCreateRequest.swift; sourceTree = "<group>"; };
 		CEB785F027DB623300B8F3D9 /* SecureUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureUtility.swift; sourceTree = "<group>"; };
+		CEB785F327DB689B00B8F3D9 /* prodPublicKey.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = prodPublicKey.der; sourceTree = "<group>"; };
+		CEB785F427DB689C00B8F3D9 /* stagingPublicKey.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = stagingPublicKey.der; sourceTree = "<group>"; };
+		CEB785F527DB689C00B8F3D9 /* devPublicKey.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = devPublicKey.der; sourceTree = "<group>"; };
+		CEB785F627DB6CFC00B8F3D9 /* PaymentAccountResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountResponseModel.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -355,6 +360,9 @@
 			isa = PBXGroup;
 			children = (
 				CEB7856F27C6765600B8F3D9 /* bink.der */,
+				CEB785F527DB689C00B8F3D9 /* devPublicKey.der */,
+				CEB785F327DB689B00B8F3D9 /* prodPublicKey.der */,
+				CEB785F427DB689C00B8F3D9 /* stagingPublicKey.der */,
 				CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -537,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB785B227D6536200B8F3D9 /* PaymentAccountCreateModel.swift */,
+				CEB785F627DB6CFC00B8F3D9 /* PaymentAccountResponseModel.swift */,
 				CEB785EE27DB5D1D00B8F3D9 /* PaymentAccountCreateRequest.swift */,
 				CEB785B427D655E800B8F3D9 /* PaymentAccountType.swift */,
 				CEB785B827D7567C00B8F3D9 /* AddPaymentAccountViewController.swift */,
@@ -648,6 +657,7 @@
 				CE4EBB1427BCF67700A5CA31 /* Sources */,
 				CE4EBB1527BCF67700A5CA31 /* Frameworks */,
 				CE4EBB1627BCF67700A5CA31 /* Resources */,
+				5CF4C409081551E356647EF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -820,6 +830,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocalHero/Pods-LocalHero-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5CF4C409081551E356647EF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8DF723BA1959E88F12857464 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -884,6 +911,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB785F727DB6CFD00B8F3D9 /* PaymentAccountResponseModel.swift in Sources */,
 				CEB785A727CCF2B200B8F3D9 /* CredentialsModel.swift in Sources */,
 				CEB7859227C7A1CA00B8F3D9 /* Wallet.swift in Sources */,
 				CEB785E327DA3CB900B8F3D9 /* SpreedlyModels.swift in Sources */,

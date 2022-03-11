@@ -30,19 +30,3 @@ struct PaymentAccountCreateModel: Codable {
         case fingerprint
     }
 }
-
-
-struct PaymentAccountResponseModel: Codable {
-    let expiryMonth, expiryYear, nameOnCard, cardNickname: String?
-    let issuer: String?
-    let id: Int?
-    let status: String?
-
-    enum CodingKeys: String, CodingKey {
-        case expiryMonth = "expiry_month"
-        case expiryYear = "expiry_year"
-        case nameOnCard = "name_on_card"
-        case cardNickname = "card_nickname"
-        case issuer, id, status
-    }
-}

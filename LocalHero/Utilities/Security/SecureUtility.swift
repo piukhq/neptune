@@ -8,7 +8,7 @@
 
 import Foundation
 import Keys
-//import SwiftyRSA
+import SwiftyRSA
 
 enum SecureUtility {
     static func encryptedSensitiveFieldValue(_ value: String?) -> String? {
