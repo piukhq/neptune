@@ -15,17 +15,16 @@ class PaymentWalletRepository: WalletServiceProtocol {
 //            #if DEBUG
 //            fatalError("You are targetting production, but on a debug scheme. You should use a release scheme to test adding production payment cards.")
 //            #else
-            requestSpreedlyToken(paymentCard: paymentCard, onSuccess: { spreedlyResponse in
+            requestSpreedlyToken(paymentCard: paymentCard, onSuccess: { [weak self] spreedlyResponse in
                 guard spreedlyResponse.isValid else {
                     onError(nil)
                     return
                 }
-                onSuccess(spreedlyResponse)
-//                self?.createPaymentCard(paymentCard, spreedlyResponse: spreedlyResponse, onSuccess: { createdPaymentCard in
-//                    onSuccess(createdPaymentCard)
-//                }, onError: { error in
-//                    onError(error)
-//                })
+                self?.createPaymentCard(paymentCard, spreedlyResponse: spreedlyResponse, onSuccess: { createdPaymentCard in
+                    onSuccess(createdPaymentCard)
+                }, onError: { error in
+                    onError(error)
+                })
             }) { error in
                 onError(error)
             }
@@ -52,49 +51,49 @@ class PaymentWalletRepository: WalletServiceProtocol {
             }
         }
     }
-//
-//    private func createPaymentCard(_ paymentCard: PaymentAccountCreateModel, spreedlyResponse: SpreedlyResponse? = nil, onSuccess: @escaping (CD_PaymentCard?) -> Void, onError: @escaping(BinkError?) -> Void) {
-//        var paymentCreateRequest: PaymentCardCreateRequest?
-//
-//        if let spreedlyResponse = spreedlyResponse {
-//            paymentCreateRequest = PaymentCardCreateRequest(spreedlyResponse: spreedlyResponse)
-//        } else {
+
+    private func createPaymentCard(_ paymentCard: PaymentAccountCreateModel, spreedlyResponse: SpreedlyResponse? = nil, onSuccess: @escaping (CD_PaymentCard?) -> Void, onError: @escaping(BinkError?) -> Void) {
+        var paymentCreateRequest: PaymentAccountCreateRequest?
+
+        if let spreedlyResponse = spreedlyResponse {
+            paymentCreateRequest = PaymentAccountCreateRequest(spreedlyResponse: spreedlyResponse)
+        } else {
 //            paymentCreateRequest = PaymentCardCreateRequest(model: paymentCard)
-//        }
-//
-//        guard let request = paymentCreateRequest else {
-//            onError(nil)
-//            return
-//        }
-//
-//        addPaymentCard(withRequestModel: request) { (result, responseData) in
-//            switch result {
-//            case .success(let response):
-//                Current.database.performBackgroundTask { context in
-//                    let newObject = response.mapToCoreData(context, .update, overrideID: nil)
-//
-//                    // The uuid will have already been set in the mapToCoreData call, but thats fine we can set it to the desired value here from the initial post request
-//                    newObject.uuid = paymentCard.uuid
-//
-//                    if let statusCode = responseData?.urlResponse?.statusCode {
-//                        BinkAnalytics.track(CardAccountAnalyticsEvent.addPaymentCardResponseSuccess(request: paymentCard, paymentCard: newObject, statusCode: statusCode))
-//                    }
-//
-//                    try? context.save()
-//
-//                    DispatchQueue.main.async {
-//                        Current.database.performTask(with: newObject) { (_, safeObject) in
-//                            onSuccess(safeObject)
-//                        }
-//                    }
-//                }
-//            case .failure(let error):
-//                BinkAnalytics.track(CardAccountAnalyticsEvent.addPaymentCardResponseFail(request: paymentCard, responseData: responseData))
-//                if #available(iOS 14.0, *) {
-//                    BinkLogger.error(PaymentCardLoggerError.addPaymentCardFailure, value: responseData?.urlResponse?.statusCode.description)
-//                }
-//                onError(error)
-//            }
-//        }
-//    }
+        }
+
+        guard let request = paymentCreateRequest else {
+            onError(nil)
+            return
+        }
+
+        addPaymentCard(withRequestModel: request) { (result, responseData) in
+            switch result {
+            case .success(let response):
+                Current.database.performBackgroundTask { context in
+                    let newObject = response.mapToCoreData(context, .update, overrideID: nil)
+
+                    // The uuid will have already been set in the mapToCoreData call, but thats fine we can set it to the desired value here from the initial post request
+                    newObject.uuid = paymentCard.uuid
+
+                    if let statusCode = responseData?.urlResponse?.statusCode {
+                        BinkAnalytics.track(CardAccountAnalyticsEvent.addPaymentCardResponseSuccess(request: paymentCard, paymentCard: newObject, statusCode: statusCode))
+                    }
+
+                    try? context.save()
+
+                    DispatchQueue.main.async {
+                        Current.database.performTask(with: newObject) { (_, safeObject) in
+                            onSuccess(safeObject)
+                        }
+                    }
+                }
+            case .failure(let error):
+                BinkAnalytics.track(CardAccountAnalyticsEvent.addPaymentCardResponseFail(request: paymentCard, responseData: responseData))
+                if #available(iOS 14.0, *) {
+                    BinkLogger.error(PaymentCardLoggerError.addPaymentCardFailure, value: responseData?.urlResponse?.statusCode.description)
+                }
+                onError(error)
+            }
+        }
+    }
 }

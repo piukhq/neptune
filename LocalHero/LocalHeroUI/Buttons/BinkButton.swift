@@ -52,7 +52,6 @@ class BinkButton {
         case .plain:
             let button = UIButton(type: .roundedRect)
             button.setTitle(title, for: .normal)
-//            button.titleLabel?.font = .systemFont(ofSize: 20)
             button.setTitleColor(.systemBlue, for: .normal)
             button.setTitleColor(.systemGray, for: .disabled)
             button.isEnabled = enabled
