@@ -10,9 +10,9 @@ import SwiftUI
 
 class LoginViewController: LocalHeroViewController {
     // MARK: - Properties
-
-    private lazy var loginButton: HeroButton = {
-        return HeroButton(viewModel: ButtonViewModel(disabled: false, title: L10n.loginButtonTitle, action: loginButtonTapped))
+    
+    private lazy var loginButton: BinkButton = {
+        return BinkButton(type: .plain, title: L10n.loginButtonTitle, action: loginButtonTapped)
     }()
     
     private weak var delegate: BarcodeScannerViewControllerDelegate?
@@ -22,12 +22,12 @@ class LoginViewController: LocalHeroViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        footerButtons = [loginButton]
+
+//        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
+//        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+//        Current.navigate.to(navigationRequest)
         
-        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
-        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
-        Current.navigate.to(navigationRequest)
-        
-        addFooterButtons([loginButton])
     }
 
     // MARK: - Private methods

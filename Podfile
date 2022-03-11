@@ -7,11 +7,12 @@ def common_pods
 pod 'SwiftGen', '~> 6.5.1'
 
 
-#plugin 'cocoapods-keys', {
-#  :project => "binkapp",
-#  :keys => [
-#  ]
-#}
+plugin 'cocoapods-keys', {
+  :project => "localHero",
+  :keys => [
+  "spreedlyEnvironmentKey"
+  ]
+}
 
 end
 

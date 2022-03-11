@@ -54,6 +54,14 @@ final class APIClient {
         session = Session(configuration: configuration, serverTrustManager: ServerTrustManager(allHostsMustBeEvaluated: false, evaluators: evaluators))
     }
     
+    var isProduction: Bool {
+        return APIConstants.isProduction
+    }
+    
+    var isPreProduction: Bool {
+        return APIConstants.isPreProduction
+    }
+    
     private var networkIsReachable: Bool {
         return networkReachabilityManager?.isReachable ?? false
     }
@@ -85,6 +93,22 @@ extension APIClient {
                 return
             }
             session.request(validatedRequest.requestUrl, method: request.method, headers: validatedRequest.headers).cacheResponse(using: ResponseCacher.doNotCache).responseJSON { [weak self] response in
+                self?.handleResponse(response, endpoint: request.endpoint, expecting: responseType, isUserDriven: request.isUserDriven, completion: completion)
+            }
+        }
+    }
+    
+    func performRequestWithBody<ResponseType: Decodable, P: Encodable>(_ request: BinkNetworkRequest, body: P?, expecting responseType: ResponseType.Type, completion: APIClientCompletionHandler<ResponseType>?) {
+        validateRequest(request) { (validatedRequest, error) in
+            if let error = error {
+                completion?(.failure(error), nil)
+                return
+            }
+            guard let validatedRequest = validatedRequest else {
+                completion?(.failure(.invalidRequest), nil)
+                return
+            }
+            session.request(validatedRequest.requestUrl, method: request.method, parameters: body, encoder: JSONParameterEncoder.default, headers: validatedRequest.headers).cacheResponse(using: ResponseCacher.doNotCache).responseJSON { [weak self] response in
                 self?.handleResponse(response, endpoint: request.endpoint, expecting: responseType, isUserDriven: request.isUserDriven, completion: completion)
             }
         }

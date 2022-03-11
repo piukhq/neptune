@@ -9,8 +9,8 @@ import Foundation
 
 struct PaymentAccountCreateModel: Codable {
     var fullPan: String?
-    var expiryMonth: String?
-    var expiryYear: String?
+    var expiryMonth: Int?
+    var expiryYear: Int?
     var nameOnCard: String?
     var cardNickname: String?
     var token: String?

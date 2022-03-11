@@ -17,23 +17,22 @@ class LocalHeroViewController: UIViewController {
         return imageView
     }()
     
+    var footerButtons: [BinkButton] = [] {
+        didSet {
+            footerButtonsView = BinkButtonsView(buttons: footerButtons)
+        }
+    }
+    
+    var footerButtonsView: BinkButtonsView! {
+        didSet {
+            guard let footerButtonsView = footerButtonsView else { return }
+            footerButtonsView.attach(to: view)
+        }
+    }
+    
     override func viewDidLoad() {
         view.backgroundColor = .secondarySystemBackground
         configureUI()
-    }
-    
-    func addFooterButtons(_ buttons: [HeroButton]) {
-        let hostingController = UIHostingController(rootView: HeroButtonStack(buttons: buttons))
-        hostingController.view.backgroundColor = .clear
-        addChild(hostingController)
-        view.addSubview(hostingController.view)
-        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
     }
     
     func configureUI() {

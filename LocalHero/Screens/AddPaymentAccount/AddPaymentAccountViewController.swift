@@ -12,8 +12,13 @@ import SwiftUI
 class AddPaymentAccountViewController: BaseFormViewController {
     private var viewModel: AddPaymentAccountViewModel
     
-    private lazy var addAccountButton: HeroButton = {
-        return HeroButton(viewModel: ButtonViewModel(title: "Add", action: viewModel.addPaymentCard))
+    private lazy var addAccountButton: BinkButton = {
+        return BinkButton(type: .plain, title: "Add Payment Account", enabled: false) { [weak self] in
+            self?.addAccountButtonTapped()
+//            self?.viewModel.addPaymentCard {
+//                
+//            }
+        }
     }()
     
     init(viewModel: AddPaymentAccountViewModel) {
@@ -29,12 +34,17 @@ class AddPaymentAccountViewController: BaseFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Payment Account"
-
-        addFooterButtons([addAccountButton])
+        footerButtons = [addAccountButton]
     }
     
     override func formValidityUpdated(fullFormIsValid: Bool) {
-        addAccountButton.viewModel.disabled = !fullFormIsValid
+        addAccountButton.enabled = fullFormIsValid
+    }
+    
+    private func addAccountButtonTapped() {
+        viewModel.addPaymentCard {
+            print("Failed to add payment")
+        }
     }
 }
 
@@ -106,8 +116,8 @@ extension AddPaymentAccountViewController: FormDataSourceDelegate {
         // For mapping to the payment card expiry fields, we only care if we have BOTH
         guard options.count > 1 else { return }
         
-        let month = options.first as? String
-        let year = options.last as? String
+        let month = options.first as? Int
+        let year = options.last as? Int
         
         viewModel.setPaymentAccountExpiry(month: month, year: year)
     }

@@ -30,4 +30,8 @@ enum APIConstants {
     static var isProduction: Bool {
         return baseURLString == EnvironmentType.production.rawValue
     }
+    
+    static var isPreProduction: Bool {
+        return baseURLString == EnvironmentType.preprod.rawValue
+    }
 }

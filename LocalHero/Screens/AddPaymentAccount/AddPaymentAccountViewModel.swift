@@ -8,6 +8,7 @@
 import Foundation
 
 class AddPaymentAccountViewModel {
+    let repository = PaymentWalletRepository()
     var paymentAccount: PaymentAccountCreateModel
     
     init(paymentAccount: PaymentAccountCreateModel? = nil) {
@@ -34,12 +35,21 @@ class AddPaymentAccountViewModel {
         paymentAccount.cardNickname = name
     }
     
-    func setPaymentAccountExpiry(month: String?, year: String?) {
+    func setPaymentAccountExpiry(month: Int?, year: Int?) {
         paymentAccount.expiryMonth = month
         paymentAccount.expiryYear = year
     }
     
-    func addPaymentCard() {
-        print("Payment card added")
+    func addPaymentCard(onError: @escaping () -> Void) {
+        repository.addPaymentCard(paymentAccount, onSuccess: { paymentAccount in
+            print("Payment card added")
+            print(paymentAccount as Any)
+        }) { _ in
+            onError()
+            
+            let ac = ViewControllerFactory.makeAlertController(title: "Error", message: "Failed to add payment account")
+            let navigationRequest = AlertNavigationRequest(alertController: ac)
+            Current.navigate.to(navigationRequest)
+        }
     }
 }

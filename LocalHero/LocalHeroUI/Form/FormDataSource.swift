@@ -125,7 +125,7 @@ extension FormDataSource {
             manualValidate: manualValidateBlock,
             /// It's fine to force unwrap here, as we are already guarding against the values being nil and we don't want to provide default values
             /// We will never reach the force unwrapping if either value is nil
-            forcedValue: model.expiryMonth == nil || model.expiryYear == nil ? nil : "\(String(format: "%02d", model.expiryMonth ?? 0))/\(model.expiryYear ?? "0")"
+            forcedValue: model.expiryMonth == nil || model.expiryYear == nil ? nil : "\(String(format: "%02d", model.expiryMonth ?? 0))/\(model.expiryYear ?? 0)"
         )
         
         fields = [cardNumberField, nameOnCardField, nickNameField, expiryField]
