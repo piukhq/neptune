@@ -15,12 +15,17 @@ struct PaymentAccountResponseModel: Codable {
     let issuer: String?
     let id: Int?
     let status: String?
+    var provider: PaymentAccountType?
+    var firstSix: String?
+    var lastFour: String?
 
     enum CodingKeys: String, CodingKey {
         case expiryMonth = "expiry_month"
         case expiryYear = "expiry_year"
         case nameOnCard = "name_on_card"
         case cardNickname = "card_nickname"
-        case issuer, id, status
+        case firstSix = "first_six_digits"
+        case lastFour = "last_four_digits"
+        case issuer, id, status, provider
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 class Wallet {
     private (set) var loyaltyPlans: [LoyaltyPlanModel]?
+    private (set) var paymentAccounts: [PaymentAccountResponseModel]?
     
     func getLoyaltyPlans(completion: @escaping (NetworkingError?) -> Void) {
         let request = BinkNetworkRequest(endpoint: .getLoyaltyPlans, method: .get, headers: nil, isUserDriven: false)
@@ -21,5 +22,9 @@ class Wallet {
                 completion(error)
             }
         }
+    }
+    
+    func launch() {
+        // Get payment accounts
     }
 }

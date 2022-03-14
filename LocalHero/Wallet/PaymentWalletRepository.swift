@@ -67,7 +67,11 @@ class PaymentWalletRepository: WalletServiceProtocol {
 
         addPaymentCard(withRequestModel: request) { (result, responseData) in
             switch result {
-            case .success(let response):
+            case .success(var response):
+                // TODO: Persist to Core Data
+                response.provider = paymentAccount.provider
+                response.firstSix = paymentAccount.firstSixDigits
+                response.lastFour = paymentAccount.lastFourDigits
                 onSuccess(response)
             case .failure(let error):
                 onError(error)

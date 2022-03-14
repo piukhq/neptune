@@ -24,8 +24,8 @@ class LoginViewController: LocalHeroViewController {
         super.viewDidLoad()
         footerButtons = [loginButton]
 
-        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
-        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+        let walletViewController = WalletViewController(dataSource: FormDataSource())
+        let navigationRequest = PushNavigationRequest(viewController: walletViewController)
         Current.navigate.to(navigationRequest)
         
     }
