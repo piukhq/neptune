@@ -10,6 +10,8 @@ import Foundation
 enum WalletServiceError: BinkError {
     case failedToGetSpreedlyToken
     case failedToAddPaymentAccount
+    case failedToDecodeWallet
+    case failedToGetWallet
     case customError(String)
     
     var domain: BinkErrorDomain {
@@ -22,6 +24,10 @@ enum WalletServiceError: BinkError {
             return "Failed to get Spreedly token"
         case .failedToAddPaymentAccount:
             return "Failed to add payment account"
+        case .failedToDecodeWallet:
+            return "Failed to decode wallet"
+        case .failedToGetWallet:
+            return "Failed to get wallet"
         case .customError(let message):
             return message
         }
@@ -59,6 +65,23 @@ extension WalletServiceProtocol {
                 completion(.success(safeResponse), rawResponse)
             case .failure:
                 completion(.failure(.failedToAddPaymentAccount), rawResponse)
+            }
+        }
+    }
+    
+    func getWallet(isUserDriven: Bool, completion: @escaping ServiceCompletionResultHandler<WalletModel, WalletServiceError>) {
+        let request = BinkNetworkRequest(endpoint: .wallet, method: .get, isUserDriven: false)
+        Current.apiClient.performRequest(request, expecting: Safe<WalletModel>.self) { result, rawResponse in
+            switch result {
+            case .success(let response):
+                guard let safeResponse = response.value else {
+                    completion(.failure(.failedToDecodeWallet))
+                    return
+                }
+                completion(.success(safeResponse))
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(.failure(.failedToGetWallet))
             }
         }
     }

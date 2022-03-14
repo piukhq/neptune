@@ -97,6 +97,7 @@
 		CEB785FC27DF57A500B8F3D9 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785FB27DF57A400B8F3D9 /* WalletViewController.swift */; };
 		CEB7860127DF649900B8F3D9 /* WalletCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */; };
 		CEB7860227DF649900B8F3D9 /* WalletCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */; };
+		CEB7860427DF871A00B8F3D9 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7860327DF871A00B8F3D9 /* WalletModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +218,7 @@
 		CEB785FB27DF57A400B8F3D9 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCollectionViewCell.xib; sourceTree = "<group>"; };
+		CEB7860327DF871A00B8F3D9 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -590,6 +592,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7859127C7A1CA00B8F3D9 /* Wallet.swift */,
+				CEB7860327DF871A00B8F3D9 /* WalletModel.swift */,
 				CEB785DD27DA396F00B8F3D9 /* PaymentWalletRepository.swift */,
 			);
 			path = Wallet;
@@ -937,6 +940,7 @@
 				CEB785AB27CCF48700B8F3D9 /* ConsentsModel.swift in Sources */,
 				CEB785B327D6536300B8F3D9 /* PaymentAccountCreateModel.swift in Sources */,
 				CEB785BD27D75EDA00B8F3D9 /* BaseFormViewController.swift in Sources */,
+				CEB7860427DF871A00B8F3D9 /* WalletModel.swift in Sources */,
 				CEB785F127DB623300B8F3D9 /* SecureUtility.swift in Sources */,
 				CEB785D127D8A32500B8F3D9 /* String+Extension.swift in Sources */,
 				CEB785EA27DA576000B8F3D9 /* BinkButton.swift in Sources */,
