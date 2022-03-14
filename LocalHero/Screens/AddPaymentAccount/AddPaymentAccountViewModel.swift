@@ -42,11 +42,9 @@ class AddPaymentAccountViewModel {
     
     func addPaymentCard(onError: @escaping () -> Void) {
         repository.addPaymentCard(paymentAccount, onSuccess: { paymentAccount in
-            print("Payment card added")
-            print(paymentAccount as Any)
             let name = paymentAccount?.nameOnCard ?? ""
             let nickName = paymentAccount?.cardNickname ?? ""
-            let expiry = paymentAccount?.expiryMonth ?? "" + " /" + paymentAccount?.expiryYear ?? "" ?? ""
+            let expiry = paymentAccount?.expiryMonth ?? "" + " /" + (paymentAccount?.expiryYear ?? "")
             let message = name + ", " + nickName + ", " + expiry
             let ac = ViewControllerFactory.makeAlertController(title: "Payment Account Added!", message: message) {
                 Current.navigate.close()

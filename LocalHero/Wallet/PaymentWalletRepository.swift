@@ -9,7 +9,6 @@ import Foundation
 import CoreData
 
 class PaymentWalletRepository: WalletServiceProtocol {
-
     func addPaymentCard(_ paymentCard: PaymentAccountCreateModel, onSuccess: @escaping (PaymentAccountResponseModel?) -> Void, onError: @escaping(BinkError?) -> Void) {
         if Current.apiClient.isProduction || Current.apiClient.isPreProduction {
             #if DEBUG

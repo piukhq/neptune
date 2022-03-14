@@ -57,28 +57,6 @@ struct PaymentAccountCreateRequest: Codable {
     /// This should only be used for creating genuine payment cards using Spreedly path in a production environment
     init?(spreedlyResponse: SpreedlyResponse, paymentAccount: PaymentAccountCreateModel) {
         let paymentMethodResponse = spreedlyResponse.transaction?.paymentMethod
-//
-//        guard let firstSix = SecureUtility.encryptedSensitiveFieldValue(paymentMethodResponse?.firstSix) else {
-//            return nil
-//        }
-//        guard let lastFour = SecureUtility.encryptedSensitiveFieldValue(paymentMethodResponse?.lastFour) else {
-//            return nil
-//        }
-//        guard let month = SecureUtility.encryptedSensitiveFieldValue("\(paymentMethodResponse?.month ?? 0)") else {
-//            return nil
-//        }
-//        guard let year = SecureUtility.encryptedSensitiveFieldValue("\(paymentMethodResponse?.year ?? 0)") else {
-//            return nil
-//        }
-        
-//        self.token = paymentMethodResponse?.token ?? ""
-//        self.firstSixDigits = firstSix
-//        self.lastFourDigits = lastFour
-//        self.nameOnCard = paymentMethodResponse?.fullName ?? ""
-//        self.month = month
-//        self.year = year
-//        self.fingerprint = paymentMethodResponse?.fingerprint ?? ""
-//        self.cardNickname = paymentAccount.cardNickname
         
         self.token = paymentMethodResponse?.token ?? ""
         self.firstSixDigits = paymentMethodResponse?.firstSix ?? ""
