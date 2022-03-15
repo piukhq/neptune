@@ -75,17 +75,13 @@ class HeroNavigationController: UINavigationController {
         }
         coordinator.animate(alongsideTransition: nil) { _ in completion?() }
     }
-    
-//    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-//        viewControllerToPresent.title = "ASS"
-//    }
-//
+
     func configureUI() {
         navigationBar.standardAppearance = navBarAppearance()
         navigationBar.scrollEdgeAppearance = navBarAppearance()
         navigationBar.tintColor = .white
     }
-    
+
     func navBarAppearance() -> UINavigationBarAppearance {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()

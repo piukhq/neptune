@@ -98,6 +98,9 @@
 		CEB7860127DF649900B8F3D9 /* WalletCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */; };
 		CEB7860227DF649900B8F3D9 /* WalletCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */; };
 		CEB7860427DF871A00B8F3D9 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7860327DF871A00B8F3D9 /* WalletModel.swift */; };
+		CEB7860827DFA4FA00B8F3D9 /* WalletHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7860627DFA4FA00B8F3D9 /* WalletHeaderView.swift */; };
+		CEB7860927DFA4FA00B8F3D9 /* WalletHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB7860727DFA4FA00B8F3D9 /* WalletHeaderView.xib */; };
+		CEB7860B27DFAACA00B8F3D9 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7860A27DFAACA00B8F3D9 /* CollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +222,9 @@
 		CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCollectionViewCell.xib; sourceTree = "<group>"; };
 		CEB7860327DF871A00B8F3D9 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		CEB7860627DFA4FA00B8F3D9 /* WalletHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletHeaderView.swift; sourceTree = "<group>"; };
+		CEB7860727DFA4FA00B8F3D9 /* WalletHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletHeaderView.xib; sourceTree = "<group>"; };
+		CEB7860A27DFAACA00B8F3D9 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -385,9 +391,7 @@
 				CEB785AD27D6168C00B8F3D9 /* AddPaymentAccount */,
 				CEB7856127C64C1000B8F3D9 /* LoyaltyPlans */,
 				CEB7855827C63E1A00B8F3D9 /* Login */,
-				CEB785FB27DF57A400B8F3D9 /* WalletViewController.swift */,
-				CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */,
-				CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */,
+				CEB7860527DFA47200B8F3D9 /* Wallet */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -632,6 +636,19 @@
 			path = Security;
 			sourceTree = "<group>";
 		};
+		CEB7860527DFA47200B8F3D9 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				CEB785FB27DF57A400B8F3D9 /* WalletViewController.swift */,
+				CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */,
+				CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */,
+				CEB7860627DFA4FA00B8F3D9 /* WalletHeaderView.swift */,
+				CEB7860A27DFAACA00B8F3D9 /* CollectionReusableView.swift */,
+				CEB7860727DFA4FA00B8F3D9 /* WalletHeaderView.xib */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -762,6 +779,7 @@
 				CEB7860227DF649900B8F3D9 /* WalletCollectionViewCell.xib in Resources */,
 				CEB7858E27C6A52A00B8F3D9 /* Localizable.strings in Resources */,
 				CEB785FA27DBA35100B8F3D9 /* stagingPublicKey.der in Resources */,
+				CEB7860927DFA4FA00B8F3D9 /* WalletHeaderView.xib in Resources */,
 				CEB7857027C6765600B8F3D9 /* bink.der in Resources */,
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
@@ -993,10 +1011,12 @@
 				CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */,
 				CEB785FC27DF57A500B8F3D9 /* WalletViewController.swift in Sources */,
 				CEB785B727D66BCC00B8F3D9 /* HeroNavigationController.swift in Sources */,
+				CEB7860B27DFAACA00B8F3D9 /* CollectionReusableView.swift in Sources */,
 				CEB7854F27C54CEC00B8F3D9 /* BinkError.swift in Sources */,
 				CEB785B927D7567D00B8F3D9 /* AddPaymentAccountViewController.swift in Sources */,
 				CEB785CC27D7876200B8F3D9 /* UIViewController+Extension.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
+				CEB7860827DFA4FA00B8F3D9 /* WalletHeaderView.swift in Sources */,
 				CEB7859D27CCEF8700B8F3D9 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1182,7 +1202,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1217,7 +1237,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1396,7 +1416,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1527,7 +1547,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

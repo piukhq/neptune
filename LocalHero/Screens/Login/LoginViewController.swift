@@ -27,7 +27,6 @@ class LoginViewController: LocalHeroViewController {
         let walletViewController = WalletViewController()
         let navigationRequest = PushNavigationRequest(viewController: walletViewController)
         Current.navigate.to(navigationRequest)
-        
     }
 
     // MARK: - Private methods
@@ -36,10 +35,9 @@ class LoginViewController: LocalHeroViewController {
 //        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
 //        let navigationRequest = ModalNavigationRequest(viewController: vc)
 //        Current.navigate.to(navigationRequest)
-
         
-        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
-        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+        let walletViewController = WalletViewController()
+        let navigationRequest = PushNavigationRequest(viewController: walletViewController)
         Current.navigate.to(navigationRequest)
     }
     

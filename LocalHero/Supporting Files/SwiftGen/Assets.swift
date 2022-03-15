@@ -29,6 +29,7 @@ internal enum Asset {
   internal static let cardPaymentLogoVisa = ImageAsset(name: "cardPaymentLogoVisa")
   internal static let close = ImageAsset(name: "close")
   internal static let scannerGuide = ImageAsset(name: "scanner_guide")
+  internal static let threeDots = ImageAsset(name: "threeDots")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
