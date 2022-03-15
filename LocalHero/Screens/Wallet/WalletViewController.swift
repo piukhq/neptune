@@ -45,11 +45,6 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         let threeDotsImage = UIImage(systemName: "paperplane")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: threeDotsImage, style: .done, target: self, action: #selector(navigationBarButtonTapped))
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(navigationBarButtonTapped))
-
-
-//        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
-//        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
-//        Current.navigate.to(navigationRequest)
     }
     
     func configureCollectionView() {
