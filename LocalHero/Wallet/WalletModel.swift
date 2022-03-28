@@ -141,8 +141,12 @@ struct Voucher: Codable {
 // MARK: - PaymentAccount
 struct PaymentAccountModel: Codable {
     let id: Int?
-    let status, expiryMonth, expiryYear, nameOnCard: String?
+    let status: String?
+    let expiryMonth: String?
+    let expiryYear: String?
+    let nameOnCard: String?
     let cardNickname: String?
+    let lastFour: String?
     let provider: PaymentAccountType?
     let images: [ImageModel]?
     let pllLinks: [PaymentAccountPllLink]?
@@ -154,6 +158,7 @@ struct PaymentAccountModel: Codable {
         case nameOnCard = "name_on_card"
         case cardNickname = "card_nickname"
         case pllLinks = "pll_links"
+        case lastFour = "last_four_digits"
     }
 }
 

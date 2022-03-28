@@ -6,6 +6,20 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		CEED470F27ECD35D00CDD2DA /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CEED471427ECD35D00CDD2DA /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				CEED471527ECD36D00CDD2DA /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		133F3207AE27BFE685E0AE3F /* Pods_LocalHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */; };
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
@@ -101,6 +115,11 @@
 		CEB7860827DFA4FA00B8F3D9 /* WalletHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7860627DFA4FA00B8F3D9 /* WalletHeaderView.swift */; };
 		CEB7860927DFA4FA00B8F3D9 /* WalletHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB7860727DFA4FA00B8F3D9 /* WalletHeaderView.xib */; };
 		CEB7860B27DFAACA00B8F3D9 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7860A27DFAACA00B8F3D9 /* CollectionReusableView.swift */; };
+		CEED471A27EDB2B500CDD2DA /* localhero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEED471827EDB2B500CDD2DA /* localhero.xcdatamodeld */; };
+		CEED471D27EDB39800CDD2DA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED471C27EDB39800CDD2DA /* Database.swift */; };
+		CEED471F27EDB48800CDD2DA /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED471E27EDB48800CDD2DA /* NSPersistentContainer.swift */; };
+		CEED472127EDB6FA00CDD2DA /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED472027EDB6FA00CDD2DA /* NSManagedObjectContext.swift */; };
+		CEED472427EDB75800CDD2DA /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED472327EDB75800CDD2DA /* UIApplication+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +245,11 @@
 		CEB7860727DFA4FA00B8F3D9 /* WalletHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletHeaderView.xib; sourceTree = "<group>"; };
 		CEB7860A27DFAACA00B8F3D9 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEED471927EDB2B500CDD2DA /* localhero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = localhero.xcdatamodel; sourceTree = "<group>"; };
+		CEED471C27EDB39800CDD2DA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		CEED471E27EDB48800CDD2DA /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
+		CEED472027EDB6FA00CDD2DA /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		CEED472327EDB75800CDD2DA /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -321,6 +345,7 @@
 		CE4EBB0427BCF67200A5CA31 /* LocalHero */ = {
 			isa = PBXGroup;
 			children = (
+				CEED471627EDB28000CDD2DA /* Persistence */,
 				CE4EBB6127C5086800A5CA31 /* Info.plist */,
 				CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */,
 				CEB785DC27DA393B00B8F3D9 /* Wallet */,
@@ -649,6 +674,42 @@
 			path = Wallet;
 			sourceTree = "<group>";
 		};
+		CEED471627EDB28000CDD2DA /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				CEED471B27EDB36000CDD2DA /* Database */,
+				CEED471727EDB29200CDD2DA /* Model */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		CEED471727EDB29200CDD2DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEED471827EDB2B500CDD2DA /* localhero.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEED471B27EDB36000CDD2DA /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CEED471C27EDB39800CDD2DA /* Database.swift */,
+				CEED472227EDB71E00CDD2DA /* Extensions */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		CEED472227EDB71E00CDD2DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEED472027EDB6FA00CDD2DA /* NSManagedObjectContext.swift */,
+				CEED471E27EDB48800CDD2DA /* NSPersistentContainer.swift */,
+				CEED472327EDB75800CDD2DA /* UIApplication+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -742,6 +803,9 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = CE4EBB0127BCF67200A5CA31;
 					};
+					CEED470F27ECD35D00CDD2DA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = CE4EBAFD27BCF67100A5CA31 /* Build configuration list for PBXProject "LocalHero" */;
@@ -766,6 +830,7 @@
 				CE4EBB0127BCF67200A5CA31 /* LocalHero */,
 				CE4EBB1727BCF67700A5CA31 /* LocalHeroTests */,
 				CE4EBB2127BCF67700A5CA31 /* LocalHeroUITests */,
+				CEED470F27ECD35D00CDD2DA /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -941,6 +1006,23 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
 		};
+		CEED471527ECD36D00CDD2DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator --swift --model LocalHero/Persistence/Model/localhero.xcdatamodeld --output-dir LocalHero/Persistence/Entities\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -960,10 +1042,12 @@
 				CEB785BD27D75EDA00B8F3D9 /* BaseFormViewController.swift in Sources */,
 				CEB7860427DF871A00B8F3D9 /* WalletModel.swift in Sources */,
 				CEB785F127DB623300B8F3D9 /* SecureUtility.swift in Sources */,
+				CEED471A27EDB2B500CDD2DA /* localhero.xcdatamodeld in Sources */,
 				CEB785D127D8A32500B8F3D9 /* String+Extension.swift in Sources */,
 				CEB785EA27DA576000B8F3D9 /* BinkButton.swift in Sources */,
 				CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */,
 				CEB785BB27D756B000B8F3D9 /* FormDataSource.swift in Sources */,
+				CEED472127EDB6FA00CDD2DA /* NSManagedObjectContext.swift in Sources */,
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
 				CEB785CE27D7C78C00B8F3D9 /* FormMultipleChoiceInput.swift in Sources */,
 				CEB785A927CCF34100B8F3D9 /* PlanDocumentModel.swift in Sources */,
@@ -980,6 +1064,7 @@
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
 				CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */,
+				CEED471F27EDB48800CDD2DA /* NSPersistentContainer.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */,
 				CEB785CA27D7853000B8F3D9 /* Navigate.swift in Sources */,
@@ -997,6 +1082,7 @@
 				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CEB7859F27CCEFB900B8F3D9 /* ContentModel.swift in Sources */,
+				CEED471D27EDB39800CDD2DA /* Database.swift in Sources */,
 				CEB785D527D8FFA900B8F3D9 /* HeroButton.swift in Sources */,
 				CEB785C827D7842600B8F3D9 /* UIColor+Extension.swift in Sources */,
 				CEB7859927CCEEAE00B8F3D9 /* PlanDetailsModel.swift in Sources */,
@@ -1017,6 +1103,7 @@
 				CEB785CC27D7876200B8F3D9 /* UIViewController+Extension.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
 				CEB7860827DFA4FA00B8F3D9 /* WalletHeaderView.swift in Sources */,
+				CEED472427EDB75800CDD2DA /* UIApplication+Extension.swift in Sources */,
 				CEB7859D27CCEF8700B8F3D9 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1603,6 +1690,42 @@
 			};
 			name = "App Store (Internal)";
 		};
+		CEED471027ECD35D00CDD2DA /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Alpha;
+		};
+		CEED471127ECD35D00CDD2DA /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Beta;
+		};
+		CEED471227ECD35D00CDD2DA /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "App Store";
+		};
+		CEED471327ECD35D00CDD2DA /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC34M8YE55;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "App Store (Internal)";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1646,6 +1769,17 @@
 				CE4EBB3E27BD1B2800A5CA31 /* Beta */,
 				CE4EBB3427BCF67800A5CA31 /* App Store */,
 				CE4EBB4227BD1B3000A5CA31 /* App Store (Internal) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "App Store";
+		};
+		CEED471427ECD35D00CDD2DA /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEED471027ECD35D00CDD2DA /* Alpha */,
+				CEED471127ECD35D00CDD2DA /* Beta */,
+				CEED471227ECD35D00CDD2DA /* App Store */,
+				CEED471327ECD35D00CDD2DA /* App Store (Internal) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "App Store";
@@ -1724,6 +1858,19 @@
 			productName = JWTDecode;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CEED471827EDB2B500CDD2DA /* localhero.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEED471927EDB2B500CDD2DA /* localhero.xcdatamodel */,
+			);
+			currentVersion = CEED471927EDB2B500CDD2DA /* localhero.xcdatamodel */;
+			path = localhero.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE4EBAFA27BCF67100A5CA31 /* Project object */;
 }

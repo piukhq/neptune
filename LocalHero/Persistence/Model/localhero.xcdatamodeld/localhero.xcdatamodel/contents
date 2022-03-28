@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CD_BaseObject" representedClassName="CD_BaseObject" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+    </entity>
+    <entity name="CD_Image" representedClassName="CD_Image" parentEntity="CD_BaseObject" syncable="YES">
+        <attribute name="encoding" optional="YES" attributeType="String"/>
+        <attribute name="imageDescription" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="paymentAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_PaymentAccount" inverseName="image" inverseEntity="CD_PaymentAccount"/>
+    </entity>
+    <entity name="CD_Join" representedClassName="CD_Join" parentEntity="CD_BaseObject" syncable="YES">
+        <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Wallet" inverseName="join" inverseEntity="CD_Wallet"/>
+    </entity>
+    <entity name="CD_LoyaltyCard" representedClassName="CD_LoyaltyCard" parentEntity="CD_BaseObject" syncable="YES">
+        <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Wallet" inverseName="loyaltyCard" inverseEntity="CD_Wallet"/>
+    </entity>
+    <entity name="CD_PaymentAccount" representedClassName="CD_PaymentAccount" parentEntity="CD_BaseObject" syncable="YES">
+        <attribute name="cardNickname" optional="YES" attributeType="String"/>
+        <attribute name="expiryMonth" optional="YES" attributeType="String"/>
+        <attribute name="expiryYear" optional="YES" attributeType="String"/>
+        <attribute name="lastFour" optional="YES" attributeType="String"/>
+        <attribute name="nameOnCard" optional="YES" attributeType="String"/>
+        <attribute name="provider" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Image" inverseName="paymentAccount" inverseEntity="CD_Image"/>
+        <relationship name="pllLink" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_PaymentAccountPllLink" inverseName="paymentAccount" inverseEntity="CD_PaymentAccountPllLink"/>
+        <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Wallet" inverseName="paymentAccount" inverseEntity="CD_Wallet"/>
+    </entity>
+    <entity name="CD_PaymentAccountPllLink" representedClassName="CD_PaymentAccountPllLink" parentEntity="CD_BaseObject" syncable="YES">
+        <attribute name="loyaltyPlan" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="paymentAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_PaymentAccount" inverseName="pllLink" inverseEntity="CD_PaymentAccount"/>
+    </entity>
+    <entity name="CD_Wallet" representedClassName="CD_Wallet" parentEntity="CD_BaseObject" syncable="YES">
+        <relationship name="join" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Join" inverseName="wallet" inverseEntity="CD_Join"/>
+        <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="wallet" inverseEntity="CD_LoyaltyCard"/>
+        <relationship name="paymentAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_PaymentAccount" inverseName="wallet" inverseEntity="CD_PaymentAccount"/>
+    </entity>
+    <elements>
+        <element name="CD_PaymentAccount" positionX="-237.9441528320312" positionY="55.51333618164062" width="128" height="193"/>
+        <element name="CD_BaseObject" positionX="-450.0009460449219" positionY="173.174072265625" width="128" height="44"/>
+        <element name="CD_Wallet" positionX="-443.5166625976562" positionY="62.90777587890625" width="128" height="88"/>
+        <element name="CD_LoyaltyCard" positionX="-237.3450317382812" positionY="-18.0487060546875" width="128" height="58"/>
+        <element name="CD_Join" positionX="-237.3516845703125" positionY="-95.66845703125" width="128" height="58"/>
+        <element name="CD_Image" positionX="-244.0066528320312" positionY="285.3721313476562" width="128" height="118"/>
+        <element name="CD_PaymentAccountPllLink" positionX="-416.27294921875" positionY="308.9620361328125" width="128" height="88"/>
+    </elements>
+</model>
