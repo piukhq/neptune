@@ -12,6 +12,7 @@ enum WalletServiceError: BinkError {
     case failedToAddPaymentAccount
     case failedToDecodeWallet
     case failedToGetWallet
+    case failedToGetLoyaltyPlans
     case customError(String)
     
     var domain: BinkErrorDomain {
@@ -30,6 +31,8 @@ enum WalletServiceError: BinkError {
             return "Failed to get wallet"
         case .customError(let message):
             return message
+        case .failedToGetLoyaltyPlans:
+            return "Failed to get loyalty plans"
         }
     }
 }
@@ -37,6 +40,19 @@ enum WalletServiceError: BinkError {
 protocol WalletServiceProtocol {}
 
 extension WalletServiceProtocol {
+    func getLoyaltyPlans(isUserDriven: Bool, completion: @escaping ServiceCompletionResultHandler<[LoyaltyPlanModel], WalletServiceError>) {
+        let request = BinkNetworkRequest(endpoint: .getLoyaltyPlans, method: .get, headers: nil, isUserDriven: false)
+        Current.apiClient.performRequest(request, expecting: [Safe<LoyaltyPlanModel>].self) { result, _ in
+            switch result {
+            case .success(let response):
+                let safeResponse = response.compactMap( { $0.value })
+                completion(.success(safeResponse))
+            case .failure:
+                completion(.failure(.failedToGetLoyaltyPlans))
+            }
+        }
+    }
+    
     func getSpreedlyToken(withRequest model: SpreedlyRequest, completion: @escaping ServiceCompletionResultHandler<SpreedlyResponse, WalletServiceError>) {
         let request = BinkNetworkRequest(endpoint: .spreedly, method: .post, headers: nil, isUserDriven: true)
         Current.apiClient.performRequestWithBody(request, body: model, expecting: Safe<SpreedlyResponse>.self) { (result, rawResponse) in
