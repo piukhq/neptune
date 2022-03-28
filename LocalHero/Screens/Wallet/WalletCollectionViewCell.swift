@@ -31,9 +31,9 @@ class WalletCollectionViewCell: UICollectionViewCell {
 
         switch model.provider {
         case .visa, .mastercard:
-            accountNumberLabel.text = "**** **** **** ****"
+            accountNumberLabel.text = "**** **** **** \(model.lastFour ?? "****")"
         case .amex:
-            accountNumberLabel.text = "**** **** **** *****"
+            accountNumberLabel.text = "**** **** **** *\(model.lastFour ?? "****")"
         default:
             break
         }
