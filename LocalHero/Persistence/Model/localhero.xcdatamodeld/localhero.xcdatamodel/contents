@@ -11,10 +11,44 @@
         <relationship name="paymentAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_PaymentAccount" inverseName="image" inverseEntity="CD_PaymentAccount"/>
     </entity>
     <entity name="CD_Join" representedClassName="CD_Join" parentEntity="CD_BaseObject" syncable="YES">
+        <attribute name="loyaltyCardID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="loyaltyPlanID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="status" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Status" inverseName="join" inverseEntity="CD_Status"/>
         <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Wallet" inverseName="join" inverseEntity="CD_Wallet"/>
     </entity>
     <entity name="CD_LoyaltyCard" representedClassName="CD_LoyaltyCard" parentEntity="CD_BaseObject" syncable="YES">
+        <attribute name="loyaltyPlanID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="balance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCardBalance" inverseName="loyaltyCard" inverseEntity="CD_LoyaltyCardBalance"/>
+        <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCardCard" inverseName="loyaltyCard" inverseEntity="CD_LoyaltyCardCard"/>
+        <relationship name="pllLink" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCardPllLink" inverseName="loyaltyCard" inverseEntity="CD_LoyaltyCardPllLink"/>
+        <relationship name="status" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Status" inverseName="loyaltyCard" inverseEntity="CD_Status"/>
+        <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCardTransaction" inverseName="loyaltyCard" inverseEntity="CD_LoyaltyCardTransaction"/>
+        <relationship name="voucher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Voucher" inverseName="loyaltyCard" inverseEntity="CD_Voucher"/>
         <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Wallet" inverseName="loyaltyCard" inverseEntity="CD_Wallet"/>
+    </entity>
+    <entity name="CD_LoyaltyCardBalance" representedClassName="CD_LoyaltyCardBalance" syncable="YES">
+        <attribute name="currentDisplayValue" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="balance" inverseEntity="CD_LoyaltyCard"/>
+    </entity>
+    <entity name="CD_LoyaltyCardCard" representedClassName="CD_LoyaltyCardCard" syncable="YES">
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="barcodeType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cardNumber" optional="YES" attributeType="String"/>
+        <attribute name="colour" optional="YES" attributeType="String"/>
+        <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="card" inverseEntity="CD_LoyaltyCard"/>
+    </entity>
+    <entity name="CD_LoyaltyCardPllLink" representedClassName="CD_LoyaltyCardPllLink" syncable="YES">
+        <attribute name="paymentAccountID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="paymentScheme" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="pllLink" inverseEntity="CD_LoyaltyCard"/>
+    </entity>
+    <entity name="CD_LoyaltyCardTransaction" representedClassName="CD_LoyaltyCardTransaction" parentEntity="CD_BaseObject" syncable="YES">
+        <attribute name="displayValue" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="transactionDescription" optional="YES" attributeType="String"/>
+        <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="transaction" inverseEntity="CD_LoyaltyCard"/>
     </entity>
     <entity name="CD_PaymentAccount" representedClassName="CD_PaymentAccount" parentEntity="CD_BaseObject" syncable="YES">
         <attribute name="cardNickname" optional="YES" attributeType="String"/>
@@ -33,6 +67,28 @@
         <attribute name="status" optional="YES" attributeType="String"/>
         <relationship name="paymentAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_PaymentAccount" inverseName="pllLink" inverseEntity="CD_PaymentAccount"/>
     </entity>
+    <entity name="CD_Status" representedClassName="CD_Status" syncable="YES">
+        <attribute name="slug" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="statusDescription" optional="YES" attributeType="String"/>
+        <relationship name="join" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Join" inverseName="status" inverseEntity="CD_Join"/>
+        <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="status" inverseEntity="CD_LoyaltyCard"/>
+    </entity>
+    <entity name="CD_Voucher" representedClassName="CD_Voucher" syncable="YES">
+        <attribute name="barcodeType" optional="YES" attributeType="String"/>
+        <attribute name="bodyText" optional="YES" attributeType="String"/>
+        <attribute name="earnType" optional="YES" attributeType="String"/>
+        <attribute name="expiryDate" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="headline" optional="YES" attributeType="String"/>
+        <attribute name="issuedDate" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="progressDisplayText" optional="YES" attributeType="String"/>
+        <attribute name="redeemedDate" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rewardText" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="termsAndConditions" optional="YES" attributeType="String"/>
+        <attribute name="voucherCode" optional="YES" attributeType="String"/>
+        <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="voucher" inverseEntity="CD_LoyaltyCard"/>
+    </entity>
     <entity name="CD_Wallet" representedClassName="CD_Wallet" parentEntity="CD_BaseObject" syncable="YES">
         <relationship name="join" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Join" inverseName="wallet" inverseEntity="CD_Join"/>
         <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="wallet" inverseEntity="CD_LoyaltyCard"/>
@@ -42,9 +98,15 @@
         <element name="CD_PaymentAccount" positionX="-237.9441528320312" positionY="55.51333618164062" width="128" height="193"/>
         <element name="CD_BaseObject" positionX="-450.0009460449219" positionY="173.174072265625" width="128" height="44"/>
         <element name="CD_Wallet" positionX="-443.5166625976562" positionY="62.90777587890625" width="128" height="88"/>
-        <element name="CD_LoyaltyCard" positionX="-237.3450317382812" positionY="-18.0487060546875" width="128" height="58"/>
-        <element name="CD_Join" positionX="-237.3516845703125" positionY="-95.66845703125" width="128" height="58"/>
+        <element name="CD_LoyaltyCard" positionX="-189.5563354492188" positionY="-132.6060791015625" width="128" height="163"/>
+        <element name="CD_Join" positionX="-211.3529052734375" positionY="-265.4756469726562" width="128" height="103"/>
         <element name="CD_Image" positionX="-244.0066528320312" positionY="285.3721313476562" width="128" height="118"/>
         <element name="CD_PaymentAccountPllLink" positionX="-416.27294921875" positionY="308.9620361328125" width="128" height="88"/>
+        <element name="CD_Status" positionX="-445.99658203125" positionY="-154.8491821289062" width="128" height="118"/>
+        <element name="CD_LoyaltyCardBalance" positionX="-19.54754638671875" positionY="-126.595703125" width="128" height="88"/>
+        <element name="CD_LoyaltyCardTransaction" positionX="-19.443115234375" positionY="-13.77444458007812" width="128" height="103"/>
+        <element name="CD_Voucher" positionX="-28.6787109375" positionY="111.0153198242188" width="128" height="238"/>
+        <element name="CD_LoyaltyCardCard" positionX="-29.1209716796875" positionY="381.0267944335938" width="128" height="118"/>
+        <element name="CD_LoyaltyCardPllLink" positionX="-31.2061767578125" positionY="520.4432983398438" width="128" height="103"/>
     </elements>
 </model>

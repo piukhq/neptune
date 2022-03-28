@@ -45,12 +45,13 @@ struct Status: Codable {
 
 // MARK: - LoyaltyCard
 struct LoyaltyCardModel: Codable {
-    let id, loyaltyPlanID: Int?
+    let id: Int?
+    let loyaltyPlanID: Int?
     let status: Status?
     let balance: Balance?
     let transactions: [Transaction]?
     let vouchers: [Voucher]?
-    let card: Card?
+    let card: CardModel?
     let pllLinks: [LoyaltyCardPllLink]?
 
     enum CodingKeys: String, CodingKey {
@@ -73,7 +74,7 @@ struct Balance: Codable {
 }
 
 // MARK: - Card
-struct Card: Codable {
+struct CardModel: Codable {
     let barcode: String?
     let barcodeType: Int?
     let cardNumber, colour: String?
