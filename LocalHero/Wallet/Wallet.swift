@@ -78,17 +78,13 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
         getWallet(isUserDriven: false) { [weak self] result in
             switch result {
             case .success(let response):
-                // Map to core data
-                guard let paymentAccounts = response.paymentAccounts else {
-                    return
-                }
-
-                // TODO: - Map wallet instead of payments accounts 
-                self?.mapCoreDataObjects(objectsToMap: paymentAccounts, type: CD_PaymentAccount.self, completion: {
+                self?.mapCoreDataObjects(objectsToMap: [response], type: CD_Wallet.self, completion: {
                     self?.fetchCoreDataObjects(forObjectType: CD_PaymentAccount.self, completion: { paymentAccounts in
                         self?.paymentAccounts = paymentAccounts
                         completion(true, nil)
                     })
+                    
+                    // TODO: - Fetch Loyalty accounts
                 })
             case .failure(let error):
                 completion(false, error)
