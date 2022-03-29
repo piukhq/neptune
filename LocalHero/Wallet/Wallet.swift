@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Wallet: WalletServiceProtocol {
+class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
     private enum FetchType {
         case localLaunch // Specifically used on launch to perform desired behaviour not needed at any other time
         case localReactive // Any local fetch other than on launch
@@ -15,7 +15,7 @@ class Wallet: WalletServiceProtocol {
     }
     
     private (set) var loyaltyPlans: [LoyaltyPlanModel]?
-    private (set) var walletData: WalletModel?
+    private (set) var paymentAccounts: [CD_PaymentAccount]?
     
     
     // MARK: - Public
@@ -67,6 +67,10 @@ class Wallet: WalletServiceProtocol {
     private func loadWallet(forceRefresh: Bool = false, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
         guard forceRefresh else {
             // Fetch core data objects for wallet
+            fetchCoreDataObjects(forObjectType: CD_PaymentAccount.self) { [weak self] paymentAccounts in
+                guard let self = self else { return }
+                self.paymentAccounts = paymentAccounts
+            }
             completion(true, nil)
             return
         }
@@ -75,11 +79,17 @@ class Wallet: WalletServiceProtocol {
             switch result {
             case .success(let response):
                 // Map to core data
-                // Fetch core data object
-                
-                self?.walletData = response
-                completion(true, nil)
-                
+                guard let paymentAccounts = response.paymentAccounts else {
+                    return
+                }
+
+                // TODO: - Map wallet instead of payments accounts 
+                self?.mapCoreDataObjects(objectsToMap: paymentAccounts, type: CD_PaymentAccount.self, completion: {
+                    self?.fetchCoreDataObjects(forObjectType: CD_PaymentAccount.self, completion: { paymentAccounts in
+                        self?.paymentAccounts = paymentAccounts
+                        completion(true, nil)
+                    })
+                })
             case .failure(let error):
                 completion(false, error)
             }

@@ -72,6 +72,9 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         Current.navigate.to(navigationRequest)
     }
     
+    
+    // MARK: - Collection view
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.paymentAccounts?.count ?? 0
     }
@@ -82,6 +85,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         cell.configure(with: paymentAccount)
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 60)
     }
@@ -105,7 +109,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
 
 
 class WalletViewModel {
-    var paymentAccounts: [PaymentAccountModel]? {
-        return Current.wallet.walletData?.paymentAccounts
+    var paymentAccounts: [CD_PaymentAccount]? {
+        return Current.wallet.paymentAccounts
     }
 }

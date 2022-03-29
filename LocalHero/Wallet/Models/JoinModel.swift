@@ -1,24 +1,12 @@
 //
-//  WalletModel.swift
+//  JoinModel.swift
 //  LocalHero
 //
-//  Created by Sean Williams on 14/03/2022.
+//  Created by Sean Williams on 28/03/2022.
 //
 
 import Foundation
 
-// MARK: - Welcome
-struct WalletModel: Codable {
-    let joins: [JoinModel]?
-    let loyaltyCards: [LoyaltyCardModel]?
-    let paymentAccounts: [PaymentAccountModel]?
-
-    enum CodingKeys: String, CodingKey {
-        case joins
-        case loyaltyCards = "loyalty_cards"
-        case paymentAccounts = "payment_accounts"
-    }
-}
 
 // MARK: - Join
 struct JoinModel: Codable {
@@ -136,41 +124,5 @@ struct Voucher: Codable {
         case issuedDate = "issued_date"
         case expiryDate = "expiry_date"
         case redeemedDate = "redeemed_date"
-    }
-}
-
-// MARK: - PaymentAccount
-struct PaymentAccountModel: Codable {
-    let id: Int?
-    let status: String?
-    let expiryMonth: String?
-    let expiryYear: String?
-    let nameOnCard: String?
-    let cardNickname: String?
-    let lastFour: String?
-    let provider: PaymentAccountType?
-    let images: [ImageModel]?
-    let pllLinks: [PaymentAccountPllLink]?
-
-    enum CodingKeys: String, CodingKey {
-        case id, status, provider, images
-        case expiryMonth = "expiry_month"
-        case expiryYear = "expiry_year"
-        case nameOnCard = "name_on_card"
-        case cardNickname = "card_nickname"
-        case pllLinks = "pll_links"
-        case lastFour = "last_four_digits"
-    }
-}
-
-// MARK: - PaymentAccountPllLink
-struct PaymentAccountPllLink: Codable {
-    let loyaltyPlanID: Int?
-    let loyaltyPlan, status: String?
-
-    enum CodingKeys: String, CodingKey {
-        case loyaltyPlanID = "loyalty_plan_id"
-        case loyaltyPlan = "loyalty_plan"
-        case status
     }
 }
