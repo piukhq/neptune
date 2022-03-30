@@ -29,6 +29,9 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: .didLoadLocalWallet, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: .didLoadWallet, object: nil)
+        
         collectionView.register(WalletCollectionViewCell.self, asNib: true)
 //        collectionView.registerHeader(CollectionReusableView.self)
         collectionView.register(UINib(nibName: "WalletHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "WalletHeaderView")
@@ -57,6 +60,10 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
+    }
+    
+    @objc private func refresh() {
+        collectionView.reloadData()
     }
     
     @objc func navigationBarButtonTapped() {

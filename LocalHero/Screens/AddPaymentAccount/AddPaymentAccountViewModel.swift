@@ -42,6 +42,7 @@ class AddPaymentAccountViewModel {
     
     func addPaymentCard(onError: @escaping () -> Void) {
         repository.addPaymentCard(paymentAccount, onSuccess: { paymentAccount in
+            Current.wallet.refreshLocal()
             let name = paymentAccount?.nameOnCard ?? ""
             let nickName = paymentAccount?.cardNickname ?? ""
             let expiry = paymentAccount?.expiryMonth ?? "" + " /" + (paymentAccount?.expiryYear ?? "")

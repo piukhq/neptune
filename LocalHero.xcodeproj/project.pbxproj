@@ -150,6 +150,8 @@
 		CEED475F27F20D6800CDD2DA /* CoreDataRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED475E27F20D6800CDD2DA /* CoreDataRepositoryProtocol.swift */; };
 		CEED476227F2F77700CDD2DA /* PaymentAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476127F2F77700CDD2DA /* PaymentAccountModel.swift */; };
 		CEED476427F2F80D00CDD2DA /* PaymentAccountPllLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476327F2F80D00CDD2DA /* PaymentAccountPllLink.swift */; };
+		CEED476627F47F1F00CDD2DA /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476527F47F1F00CDD2DA /* Notification+Extension.swift */; };
+		CEED476827F4B23F00CDD2DA /* WalletCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476727F4B23F00CDD2DA /* WalletCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,6 +312,8 @@
 		CEED475E27F20D6800CDD2DA /* CoreDataRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataRepositoryProtocol.swift; sourceTree = "<group>"; };
 		CEED476127F2F77700CDD2DA /* PaymentAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountModel.swift; sourceTree = "<group>"; };
 		CEED476327F2F80D00CDD2DA /* PaymentAccountPllLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountPllLink.swift; sourceTree = "<group>"; };
+		CEED476527F47F1F00CDD2DA /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		CEED476727F4B23F00CDD2DA /* WalletCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCard.swift; sourceTree = "<group>"; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -559,6 +563,7 @@
 				CEB785C727D7842600B8F3D9 /* UIColor+Extension.swift */,
 				CEB785C027D765C600B8F3D9 /* UICollectionViewExtension.swift */,
 				CEB785C527D77C3000B8F3D9 /* Array+Extension.swift */,
+				CEED476527F47F1F00CDD2DA /* Notification+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7859127C7A1CA00B8F3D9 /* Wallet.swift */,
+				CEED476727F4B23F00CDD2DA /* WalletCard.swift */,
 				CEED475C27F1FFFB00CDD2DA /* Models */,
 				CEB785DD27DA396F00B8F3D9 /* PaymentWalletRepository.swift */,
 			);
@@ -1173,6 +1179,7 @@
 				CEED471A27EDB2B500CDD2DA /* localhero.xcdatamodeld in Sources */,
 				CEED475827F1FEC700CDD2DA /* _CD_LoyaltyCard.swift in Sources */,
 				CEED475027F1FEC700CDD2DA /* _CD_Status.swift in Sources */,
+				CEED476827F4B23F00CDD2DA /* WalletCard.swift in Sources */,
 				CEB785D127D8A32500B8F3D9 /* String+Extension.swift in Sources */,
 				CEB785EA27DA576000B8F3D9 /* BinkButton.swift in Sources */,
 				CEED474927F1FEC700CDD2DA /* _CD_BaseObject.swift in Sources */,
@@ -1194,6 +1201,7 @@
 				CEED475627F1FEC700CDD2DA /* CD_LoyaltyCard.swift in Sources */,
 				CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */,
 				CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */,
+				CEED476627F47F1F00CDD2DA /* Notification+Extension.swift in Sources */,
 				CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */,
 				CEB7857B27C68DD500B8F3D9 /* LocalHeroViewController.swift in Sources */,
 				CEED474E27F1FEC700CDD2DA /* CD_PaymentAccount.swift in Sources */,
