@@ -46,7 +46,10 @@ extension PaymentAccountResponseModel: CoreDataMappable, CoreDataIDMappable {
         update(cdObject, \.lastFour, with: lastFour, delta: delta)
         update(cdObject, \.provider, with: provider?.rawValue, delta: delta)
         
-        // TODO: - map images and PLL links
+        cdObject.images.forEach {
+            guard let image = $0 as? CD_Image else { return }
+            context.delete(image)
+        }
 
         if let images = images {
             for (i, image) in images.enumerated() {
@@ -55,6 +58,18 @@ extension PaymentAccountResponseModel: CoreDataMappable, CoreDataIDMappable {
                 update(cdImage, \.paymentAccount, with: cdObject, delta: delta)
                 cdObject.addImagesObject(cdImage)
             }
+        }
+        
+        cdObject.pllLinks.forEach {
+            guard let pllLink = $0 as? CD_PaymentAccountPllLink else { return }
+            cdObject.removePllLinksObject(pllLink)
+        }
+        
+        pllLinks?.forEach {
+            let overridePllLinkID = PaymentAccountPllLink.overrideId(forParentId: overrideID ?? id) + String($0.loyaltyCardID ?? 0)
+            let cdPllLink = $0.mapToCoreData(context, .update, overrideID: overridePllLinkID)
+            update(cdPllLink, \.paymentAccount, with: cdObject, delta: delta)
+            cdObject.addPllLinksObject(cdPllLink)
         }
     
         return cdObject

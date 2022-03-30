@@ -64,6 +64,7 @@
         <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Wallet" inverseName="paymentAccounts" inverseEntity="CD_Wallet"/>
     </entity>
     <entity name="CD_PaymentAccountPllLink" representedClassName="CD_PaymentAccountPllLink" parentEntity="CD_BaseObject" syncable="YES">
+        <attribute name="loyaltyCardID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
         <attribute name="loyaltyPlan" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
         <relationship name="paymentAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_PaymentAccount" inverseName="pllLinks" inverseEntity="CD_PaymentAccount"/>
@@ -102,7 +103,7 @@
         <element name="CD_LoyaltyCard" positionX="-189.5563354492188" positionY="-132.6060791015625" width="128" height="163"/>
         <element name="CD_Join" positionX="-211.3529052734375" positionY="-265.4756469726562" width="128" height="103"/>
         <element name="CD_Image" positionX="-244.0066528320312" positionY="285.3721313476562" width="128" height="118"/>
-        <element name="CD_PaymentAccountPllLink" positionX="-416.27294921875" positionY="308.9620361328125" width="128" height="88"/>
+        <element name="CD_PaymentAccountPllLink" positionX="-416.27294921875" positionY="308.9620361328125" width="128" height="103"/>
         <element name="CD_Status" positionX="-445.99658203125" positionY="-154.8491821289062" width="128" height="118"/>
         <element name="CD_LoyaltyCardBalance" positionX="-19.54754638671875" positionY="-126.595703125" width="128" height="88"/>
         <element name="CD_LoyaltyCardTransaction" positionX="-19.443115234375" positionY="-13.77444458007812" width="128" height="103"/>

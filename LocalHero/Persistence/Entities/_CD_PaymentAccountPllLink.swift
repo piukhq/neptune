@@ -5,6 +5,7 @@ import Foundation
 import CoreData
 
 public enum CD_PaymentAccountPllLinkAttributes: String {
+    case loyaltyCardID = "loyaltyCardID"
     case loyaltyPlan = "loyaltyPlan"
     case status = "status"
 }
@@ -42,6 +43,9 @@ open class _CD_PaymentAccountPllLink: CD_BaseObject {
     }
 
     // MARK: - Properties
+
+    @NSManaged open
+    var loyaltyCardID: NSNumber?
 
     @NSManaged open
     var loyaltyPlan: String?
