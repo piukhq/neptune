@@ -16,8 +16,8 @@ public enum CD_PaymentAccountAttributes: String {
 }
 
 public enum CD_PaymentAccountRelationships: String {
-    case image = "image"
-    case pllLink = "pllLink"
+    case images = "images"
+    case pllLinks = "pllLinks"
     case wallet = "wallet"
 }
 
@@ -78,17 +78,17 @@ open class _CD_PaymentAccount: CD_BaseObject {
     // MARK: - Relationships
 
     @NSManaged open
-    var image: NSSet
+    var images: NSSet
 
-    open func imageSet() -> NSMutableSet {
-        return self.image.mutableCopy() as! NSMutableSet
+    open func imagesSet() -> NSMutableSet {
+        return self.images.mutableCopy() as! NSMutableSet
     }
 
     @NSManaged open
-    var pllLink: NSSet
+    var pllLinks: NSSet
 
-    open func pllLinkSet() -> NSMutableSet {
-        return self.pllLink.mutableCopy() as! NSMutableSet
+    open func pllLinksSet() -> NSMutableSet {
+        return self.pllLinks.mutableCopy() as! NSMutableSet
     }
 
     @NSManaged open
@@ -98,56 +98,56 @@ open class _CD_PaymentAccount: CD_BaseObject {
 
 extension _CD_PaymentAccount {
 
-    open func addImage(_ objects: NSSet) {
-        let mutable = self.image.mutableCopy() as! NSMutableSet
+    open func addImages(_ objects: NSSet) {
+        let mutable = self.images.mutableCopy() as! NSMutableSet
         mutable.union(objects as Set<NSObject>)
-        self.image = mutable.copy() as! NSSet
+        self.images = mutable.copy() as! NSSet
     }
 
-    open func removeImage(_ objects: NSSet) {
-        let mutable = self.image.mutableCopy() as! NSMutableSet
+    open func removeImages(_ objects: NSSet) {
+        let mutable = self.images.mutableCopy() as! NSMutableSet
         mutable.minus(objects as Set<NSObject>)
-        self.image = mutable.copy() as! NSSet
+        self.images = mutable.copy() as! NSSet
     }
 
-    open func addImageObject(_ value: CD_Image) {
-        let mutable = self.image.mutableCopy() as! NSMutableSet
+    open func addImagesObject(_ value: CD_Image) {
+        let mutable = self.images.mutableCopy() as! NSMutableSet
         mutable.add(value)
-        self.image = mutable.copy() as! NSSet
+        self.images = mutable.copy() as! NSSet
     }
 
-    open func removeImageObject(_ value: CD_Image) {
-        let mutable = self.image.mutableCopy() as! NSMutableSet
+    open func removeImagesObject(_ value: CD_Image) {
+        let mutable = self.images.mutableCopy() as! NSMutableSet
         mutable.remove(value)
-        self.image = mutable.copy() as! NSSet
+        self.images = mutable.copy() as! NSSet
     }
 
 }
 
 extension _CD_PaymentAccount {
 
-    open func addPllLink(_ objects: NSSet) {
-        let mutable = self.pllLink.mutableCopy() as! NSMutableSet
+    open func addPllLinks(_ objects: NSSet) {
+        let mutable = self.pllLinks.mutableCopy() as! NSMutableSet
         mutable.union(objects as Set<NSObject>)
-        self.pllLink = mutable.copy() as! NSSet
+        self.pllLinks = mutable.copy() as! NSSet
     }
 
-    open func removePllLink(_ objects: NSSet) {
-        let mutable = self.pllLink.mutableCopy() as! NSMutableSet
+    open func removePllLinks(_ objects: NSSet) {
+        let mutable = self.pllLinks.mutableCopy() as! NSMutableSet
         mutable.minus(objects as Set<NSObject>)
-        self.pllLink = mutable.copy() as! NSSet
+        self.pllLinks = mutable.copy() as! NSSet
     }
 
-    open func addPllLinkObject(_ value: CD_PaymentAccountPllLink) {
-        let mutable = self.pllLink.mutableCopy() as! NSMutableSet
+    open func addPllLinksObject(_ value: CD_PaymentAccountPllLink) {
+        let mutable = self.pllLinks.mutableCopy() as! NSMutableSet
         mutable.add(value)
-        self.pllLink = mutable.copy() as! NSSet
+        self.pllLinks = mutable.copy() as! NSSet
     }
 
-    open func removePllLinkObject(_ value: CD_PaymentAccountPllLink) {
-        let mutable = self.pllLink.mutableCopy() as! NSMutableSet
+    open func removePllLinksObject(_ value: CD_PaymentAccountPllLink) {
+        let mutable = self.pllLinks.mutableCopy() as! NSMutableSet
         mutable.remove(value)
-        self.pllLink = mutable.copy() as! NSSet
+        self.pllLinks = mutable.copy() as! NSSet
     }
 
 }

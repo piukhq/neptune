@@ -48,7 +48,6 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
             
             completion?(success, error)
         }
-
     }
     
     private func getLoyaltyPlansAndWallet(forceRefresh: Bool = false, reloadPlans: Bool, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
@@ -101,7 +100,7 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
         getLoyaltyPlans(isUserDriven: isUserDriven, completion: { [weak self] result in
             switch result {
             case .success(let response):
-                // Map to core date
+                // Map to core data
                 // Fetch from core data
                 self?.loyaltyPlans = response
                 completion(true, nil)

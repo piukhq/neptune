@@ -47,14 +47,16 @@ extension PaymentAccountResponseModel: CoreDataMappable, CoreDataIDMappable {
         update(cdObject, \.provider, with: provider?.rawValue, delta: delta)
         
         // TODO: - map images and PLL links
-        
-//        images?.forEach { image in
-//            let cdImage = image.mapToCoreData(context, .update, overrideID: nil)
-//            update(cdImage, \.plan, with: cdObject, delta: delta)
-//            cdObject.addImagesObject(cdImage)
-//        }
+
+        if let images = images {
+            for (i, image) in images.enumerated() {
+                let indexID = ImageModel.overrideId(forParentId: overrideID ?? id) + String(i)
+                let cdImage = image.mapToCoreData(context, .update, overrideID: indexID)
+                update(cdImage, \.paymentAccount, with: cdObject, delta: delta)
+                cdObject.addImagesObject(cdImage)
+            }
+        }
     
-        
         return cdObject
     }
 }

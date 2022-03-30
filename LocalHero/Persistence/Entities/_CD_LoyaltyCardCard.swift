@@ -49,7 +49,7 @@ open class _CD_LoyaltyCardCard: CD_BaseObject {
     var barcode: String?
 
     @NSManaged open
-    var barcodeType: Int64 // Optional scalars not supported
+    var barcodeType: NSNumber?
 
     @NSManaged open
     var cardNumber: String?

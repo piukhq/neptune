@@ -48,7 +48,7 @@ open class _CD_LoyaltyCardTransaction: CD_BaseObject {
     var displayValue: String?
 
     @NSManaged open
-    var timestamp: Int64 // Optional scalars not supported
+    var timestamp: NSNumber?
 
     @NSManaged open
     var transactionDescription: String?

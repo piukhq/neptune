@@ -63,19 +63,19 @@ open class _CD_Voucher: CD_BaseObject {
     var earnType: String?
 
     @NSManaged open
-    var expiryDate: Int64 // Optional scalars not supported
+    var expiryDate: NSNumber?
 
     @NSManaged open
     var headline: String?
 
     @NSManaged open
-    var issuedDate: Int64 // Optional scalars not supported
+    var issuedDate: NSNumber?
 
     @NSManaged open
     var progressDisplayText: String?
 
     @NSManaged open
-    var redeemedDate: Int64 // Optional scalars not supported
+    var redeemedDate: NSNumber?
 
     @NSManaged open
     var rewardText: String?

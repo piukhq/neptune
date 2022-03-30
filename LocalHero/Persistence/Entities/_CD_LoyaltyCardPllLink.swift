@@ -45,7 +45,7 @@ open class _CD_LoyaltyCardPllLink: CD_BaseObject {
     // MARK: - Properties
 
     @NSManaged open
-    var paymentAccountID: Int64 // Optional scalars not supported
+    var paymentAccountID: NSNumber?
 
     @NSManaged open
     var paymentScheme: String?

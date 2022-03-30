@@ -45,10 +45,10 @@ open class _CD_Join: CD_BaseObject {
     // MARK: - Properties
 
     @NSManaged open
-    var loyaltyCardID: Int64 // Optional scalars not supported
+    var loyaltyCardID: NSNumber?
 
     @NSManaged open
-    var loyaltyPlanID: Int64 // Optional scalars not supported
+    var loyaltyPlanID: NSNumber?
 
     // MARK: - Relationships
 

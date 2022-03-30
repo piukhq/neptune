@@ -49,7 +49,7 @@ open class _CD_LoyaltyCard: CD_BaseObject {
     // MARK: - Properties
 
     @NSManaged open
-    var loyaltyPlanID: Int64 // Optional scalars not supported
+    var loyaltyPlanID: NSNumber?
 
     // MARK: - Relationships
 

@@ -52,7 +52,7 @@ open class _CD_Image: CD_BaseObject {
     var imageDescription: String?
 
     @NSManaged open
-    var type: Int16 // Optional scalars not supported
+    var type: NSNumber?
 
     @NSManaged open
     var url: String?

@@ -47,7 +47,7 @@ open class _CD_LoyaltyCardBalance: CD_BaseObject {
     var currentDisplayValue: String?
 
     @NSManaged open
-    var updatedAt: Int64 // Optional scalars not supported
+    var updatedAt: NSNumber?
 
     // MARK: - Relationships
 
