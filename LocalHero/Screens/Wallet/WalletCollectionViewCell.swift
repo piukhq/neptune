@@ -26,15 +26,15 @@ class WalletCollectionViewCell: UICollectionViewCell {
     
     func configure(with model: CD_PaymentAccount) {
         let name = (model.cardNickname ?? "") + " / " + (model.nameOnCard ?? "")
-        accountNameLabel.text = name
+        accountNameLabel.text = name.capitalized
         accountProviderLabel.text = model.provider?.uppercased()
         
         let provider = PaymentAccountType(rawValue: model.provider ?? "")
         switch provider {
         case .visa, .mastercard:
-            accountNumberLabel.text = "**** **** **** \(model.lastFour ?? "****")"
+            accountNumberLabel.text = "**** \(model.lastFour ?? "****")"
         case .amex:
-            accountNumberLabel.text = "**** **** **** *\(model.lastFour ?? "****")"
+            accountNumberLabel.text = "**** *\(model.lastFour ?? "****")"
         default:
             break
         }
