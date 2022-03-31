@@ -49,6 +49,11 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: threeDotsImage, style: .done, target: self, action: #selector(navigationBarButtonTapped))
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        Current.rootStateMachine.logout()
+    }
+    
     func configureCollectionView() {
         view.addSubview(collectionView)
         collectionView.dataSource = self

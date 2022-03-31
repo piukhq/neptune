@@ -20,4 +20,19 @@ class RootStateMachine: NSObject {
         window.tintColor = .black
         window.makeKeyAndVisible()
     }
+    
+    func logout() {
+        clearLocalStorage()
+    }
+    
+    private func clearLocalStorage() {
+        Current.userManager.removeUser()
+
+        Current.database.performBackgroundTask { context in
+            context.deleteAll(CD_LoyaltyCard.self)
+            context.deleteAll(CD_PaymentAccount.self)
+            context.deleteAll(CD_BaseObject.self) // Cleanup any orphaned objects
+            try? context.save()
+        }
+    }
 }
