@@ -23,21 +23,13 @@ class LoginViewController: LocalHeroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         footerButtons = [loginButton]
-
-        let walletViewController = WalletViewController()
-        let navigationRequest = PushNavigationRequest(viewController: walletViewController)
-        Current.navigate.to(navigationRequest)
     }
 
     // MARK: - Private methods
 
     private func loginButtonTapped() {
-//        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
-//        let navigationRequest = ModalNavigationRequest(viewController: vc)
-//        Current.navigate.to(navigationRequest)
-        
-        let walletViewController = WalletViewController()
-        let navigationRequest = PushNavigationRequest(viewController: walletViewController)
+        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
+        let navigationRequest = ModalNavigationRequest(viewController: vc)
         Current.navigate.to(navigationRequest)
     }
     
@@ -61,8 +53,8 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         
         Current.userManager.setNewUser(with: loginResponse)
         
-        let addPaymentCardviewController = AddPaymentAccountViewController(viewModel: AddPaymentAccountViewModel())
-        let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
+        let walletViewController = WalletViewController()
+        let navigationRequest = PushNavigationRequest(viewController: walletViewController)
         Current.navigate.to(navigationRequest)
         
 //        Current.wallet.getLoyaltyPlans { [weak self] error in

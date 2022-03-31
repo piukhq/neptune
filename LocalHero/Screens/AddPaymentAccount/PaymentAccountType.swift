@@ -11,6 +11,7 @@ enum PaymentAccountType: String, Codable {
         case visa = "Visa"
         case amex = "American Express"
         case mastercard = "Mastercard"
+        case other = "Other"
 
         var redactedPrefix: String {
             return "••••   ••••   ••••   "
@@ -24,6 +25,8 @@ enum PaymentAccountType: String, Codable {
                 return "cardPaymentLogoMastercard"
             case .visa:
                 return "cardPaymentLogoVisa"
+            case .other:
+                return "other"
             }
         }
 
@@ -35,11 +38,15 @@ enum PaymentAccountType: String, Codable {
                 return "cardPaymentSublogoMasterCard"
             case .visa:
                 return "cardPaymentSublogoVisa"
+            case .other:
+                return "other"
             }
         }
         
         var paymentSchemeIdentifier: Int {
             switch self {
+            case .other:
+                return 3
             case .amex:
                 return 2
             case .mastercard:
@@ -68,6 +75,10 @@ enum PaymentAccountType: String, Codable {
                 prefix = ["4"]
                 length = 16
                 whitespaceIndexLocations = [4, 9, 14]
+            case .other:
+                prefix = ["O"]
+                length = 5
+                whitespaceIndexLocations = []
             }
 
             return FormatValues(prefixes: prefix, length: length, whitespaceIndexLocations: whitespaceIndexLocations)

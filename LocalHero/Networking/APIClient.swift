@@ -175,8 +175,12 @@ private extension APIClient {
                 return
             }
             
-            let decodedResponse = try decoder.decode(responseType, from: data)
-            print(decodedResponse)
+            do {
+                let _ = try decoder.decode(responseType, from: data)
+            } catch {
+                print("SW: \(String(describing: error))")
+
+            }
             
             if statusCode == unauthorizedStatus && endpoint.shouldRespondToUnauthorizedStatus {
                 // Unauthorized response

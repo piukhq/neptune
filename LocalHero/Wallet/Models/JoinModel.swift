@@ -66,11 +66,13 @@ struct CardModel: Codable {
     let barcode: String?
     let barcodeType: Int?
     let cardNumber, colour: String?
+    let textColour: String?
 
     enum CodingKeys: String, CodingKey {
         case barcode
         case barcodeType = "barcode_type"
         case cardNumber = "card_number"
+        case textColour = "text_colour"
         case colour
     }
 }
@@ -104,7 +106,7 @@ struct Transaction: Codable {
 struct Voucher: Codable {
     let state, earnType, rewardText, headline: String?
     let voucherCode: String?
-    let barcodeType: String?
+    let barcodeType: Int?
     let progressDisplayText: String?
     let bodyText: String?
     let termsAndConditions: String?

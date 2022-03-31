@@ -25,8 +25,12 @@ class WalletCollectionViewCell: UICollectionViewCell {
     }()
     
     func configure(with model: CD_PaymentAccount) {
-        let name = (model.cardNickname ?? "") + " / " + (model.nameOnCard ?? "")
-        accountNameLabel.text = name.capitalized
+        if let nickname = model.cardNickname {
+            accountNameLabel.text = nickname.capitalized + " / " + (model.nameOnCard ?? "")
+        } else {
+            accountNameLabel.text = model.nameOnCard ?? ""
+        }
+
         accountProviderLabel.text = model.provider?.uppercased() ?? "Pending"
         
         let provider = PaymentAccountType(rawValue: model.provider ?? "")
