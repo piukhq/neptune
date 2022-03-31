@@ -66,7 +66,6 @@ struct PaymentAccountCreateRequest: Codable {
         self.year = String(paymentMethodResponse?.year ?? 0)
         self.fingerprint = paymentMethodResponse?.fingerprint ?? ""
         self.cardNickname = paymentAccount.cardNickname
-
     }
     
     private static func fakeFingerprint(pan: String, expiryYear: String, expiryMonth: String) -> String {
