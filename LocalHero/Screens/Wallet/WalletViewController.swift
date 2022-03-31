@@ -44,6 +44,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             self?.collectionView.reloadData()
         }
         configureCollectionView()
+        backgroundImageView.alpha = 0.3
         
         let threeDotsImage = UIImage(systemName: "paperplane")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: threeDotsImage, style: .done, target: self, action: #selector(navigationBarButtonTapped))

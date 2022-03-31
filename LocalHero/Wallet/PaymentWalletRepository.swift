@@ -19,7 +19,7 @@ class PaymentWalletRepository: WalletServiceProtocol {
                     onError(nil)
                     return
                 }
-                self?.createPaymentCard(paymentCard, spreedlyResponse: spreedlyResponse, onSuccess: { createdPaymentCard in
+                self?.createPaymentAccount(paymentCard, spreedlyResponse: spreedlyResponse, onSuccess: { createdPaymentCard in
                     onSuccess(createdPaymentCard)
                 }, onError: { error in
                     onError(error)
