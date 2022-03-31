@@ -68,7 +68,7 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
     private func getLoyaltyPlansAndWallet(forceRefresh: Bool = false, reloadPlans: Bool, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
         loadLoyaltyPlans(forceRefresh: reloadPlans, isUserDriven: isUserDriven) { [weak self] success, error in
             guard success else {
-                completion(success, .failedToGetWallet)
+                completion(success, error)
                 return
             }
             

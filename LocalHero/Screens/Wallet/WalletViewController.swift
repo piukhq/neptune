@@ -35,14 +35,6 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         collectionView.register(WalletCollectionViewCell.self, asNib: true)
 //        collectionView.registerHeader(CollectionReusableView.self)
         collectionView.register(UINib(nibName: "WalletHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "WalletHeaderView")
-        
-        Current.wallet.launch() { [weak self] success, error in
-            guard success else {
-                print("Failed to get wallet: \(error?.localizedDescription ?? "")")
-                return
-            }
-            self?.collectionView.reloadData()
-        }
         configureCollectionView()
         backgroundImageView.alpha = 0.3
         

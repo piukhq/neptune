@@ -12,7 +12,7 @@ enum WalletServiceError: BinkError {
     case failedToAddPaymentAccount
     case failedToDecodeWallet
     case failedToGetWallet
-    case failedToGetLoyaltyPlans
+    case failedToGetLoyaltyPlans(NetworkingError)
     case customError(String)
     
     var domain: BinkErrorDomain {
@@ -47,8 +47,8 @@ extension WalletServiceProtocol {
             case .success(let response):
                 let safeResponse = response.compactMap( { $0.value })
                 completion(.success(safeResponse))
-            case .failure:
-                completion(.failure(.failedToGetLoyaltyPlans))
+            case .failure(let error):
+                completion(.failure(.failedToGetLoyaltyPlans(error)))
             }
         }
     }

@@ -55,23 +55,21 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         
         Current.userManager.setNewUser(with: loginResponse)
         
-        let walletViewController = WalletViewController()
-        let navigationRequest = PushNavigationRequest(viewController: walletViewController)
-        Current.navigate.to(navigationRequest)
-        
-//        Current.wallet.getLoyaltyPlans { [weak self] error in
-//            guard error == nil else {
-//                if case .unauthorized = error {
-//                    self?.showError(title: L10n.alertInvalidToken)
-//                } else {
-//                    self?.showError(title: error?.localizedDescription ?? L10n.alertError)
-//                }
-//
-//                return
-//            }
-//
-//            let loyaltyPlansViewController = LoyaltyPlansTableViewController()
-//            self?.navigationController?.show(loyaltyPlansViewController, sender: self)
-//        }
+        Current.wallet.launch() { [weak self] success, error in
+            guard success else {
+                if case .failedToGetLoyaltyPlans(let networkingError) = error {
+                    if case .unauthorized = networkingError {
+                        self?.showError(title: L10n.alertInvalidToken)
+                    } else {
+                        self?.showError(title: networkingError.localizedDescription)
+                    }
+                }
+                return
+            }
+            
+            let walletViewController = WalletViewController()
+            let navigationRequest = PushNavigationRequest(viewController: walletViewController)
+            Current.navigate.to(navigationRequest)
+        }
     }
 }
