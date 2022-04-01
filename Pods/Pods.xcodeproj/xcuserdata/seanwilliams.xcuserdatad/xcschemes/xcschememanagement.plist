@@ -18,16 +18,22 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>29</integer>
 		</dict>
 		<key>Pods-LocalHero.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>28</integer>
 		</dict>
 		<key>Pods-LocalHeroTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>30</integer>
 		</dict>
 		<key>SwiftGen.xcscheme</key>
 		<dict>

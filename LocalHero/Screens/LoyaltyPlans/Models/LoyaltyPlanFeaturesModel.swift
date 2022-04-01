@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlanFeaturesModel: Codable {
+struct LoyaltyPlanFeaturesModel: Codable {
     let hasPoints, hasTransactions: Bool?
     let planType, barcodeType: Int?
     let colour: String?

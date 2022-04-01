@@ -27,24 +27,24 @@ struct LoyaltyCardModel: Codable {
     }
 }
 
-//extension LoyaltyCardModel: CoreDataMappable, CoreDataIDMappable {
-//    func objectToMapTo(_ cdObject: CD_LoyaltyCard, in context: NSManagedObjectContext, delta: Bool, overrideID: String?) -> some CD_LoyaltyCard {
-//        update(cdObject, \.id, with: overrideID ?? id, delta: delta)
-//        
-////        if let planID = loyaltyPlanID {
-////            // get plan for id from core data
-////            let plan = context.fetchWithApiID(CD_LoyaltyPlan.self, id: String(planID))
-////            
-////            // update loyalty card with this loyalty plan
-////            update(cdObject, \.loyaltyPlan, with: plan, delta: delta)
-////            
-////            // add this loyalty card core data object to the plan
-////            plan.addLoyaltyCardObject(cdObject)
-////        }
-//        return cdObject
-//    }
-//    
-//}
+extension LoyaltyCardModel: CoreDataMappable, CoreDataIDMappable {
+    func objectToMapTo(_ cdObject: CD_LoyaltyCard, in context: NSManagedObjectContext, delta: Bool, overrideID: String?) -> CD_LoyaltyCard {
+        update(cdObject, \.id, with: overrideID ?? id, delta: delta)
+        
+        if let planID = loyaltyPlanID {
+            // get plan for id from core data
+            let plan = context.fetchWithApiID(CD_LoyaltyPlan.self, id: String(planID))
+
+            // update loyalty card with this loyalty plan
+            update(cdObject, \.loyaltyPlan, with: plan, delta: delta)
+
+            // add this loyalty card core data object to the plan
+            plan?.addLoyaltyCardObject(cdObject)
+        }
+        return cdObject
+    }
+    
+}
 
 
 

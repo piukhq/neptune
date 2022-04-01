@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlanDetailsModel: Codable {
+struct LoyaltyPlanDetailsModel: Codable {
     let companyName, planName, planLabel: String?
     let planURL: String?
     let planSummary, planDescription, redeemInstructions, planRegisterInfo: String?

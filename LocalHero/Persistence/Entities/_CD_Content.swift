@@ -1,27 +1,24 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to CD_Image.swift instead.
+// Make changes to CD_Content.swift instead.
 
 import Foundation
 import CoreData
 
-public enum CD_ImageAttributes: String {
-    case encoding = "encoding"
-    case imageDescription = "imageDescription"
-    case type = "type"
-    case url = "url"
+public enum CD_ContentAttributes: String {
+    case column = "column"
+    case value = "value"
 }
 
-public enum CD_ImageRelationships: String {
-    case paymentAccount = "paymentAccount"
+public enum CD_ContentRelationships: String {
     case plan = "plan"
 }
 
-open class _CD_Image: CD_BaseObject {
+open class _CD_Content: CD_BaseObject {
 
     // MARK: - Class methods
 
     override open class func entityName () -> String {
-        return "CD_Image"
+        return "CD_Content"
     }
 
     override open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
@@ -29,7 +26,7 @@ open class _CD_Image: CD_BaseObject {
     }
 
     @nonobjc
-    open class func fetchRequest() -> NSFetchRequest<CD_Image> {
+    open class func fetchRequest() -> NSFetchRequest<CD_Content> {
         return NSFetchRequest(entityName: self.entityName())
     }
 
@@ -40,28 +37,19 @@ open class _CD_Image: CD_BaseObject {
     }
 
     public convenience init?(managedObjectContext: NSManagedObjectContext) {
-        guard let entity = _CD_Image.entity(managedObjectContext: managedObjectContext) else { return nil }
+        guard let entity = _CD_Content.entity(managedObjectContext: managedObjectContext) else { return nil }
         self.init(entity: entity, insertInto: managedObjectContext)
     }
 
     // MARK: - Properties
 
     @NSManaged open
-    var encoding: String?
+    var column: String?
 
     @NSManaged open
-    var imageDescription: String?
-
-    @NSManaged open
-    var type: NSNumber?
-
-    @NSManaged open
-    var url: String?
+    var value: String?
 
     // MARK: - Relationships
-
-    @NSManaged open
-    var paymentAccount: CD_PaymentAccount?
 
     @NSManaged open
     var plan: CD_LoyaltyPlan?

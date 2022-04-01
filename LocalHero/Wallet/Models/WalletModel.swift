@@ -38,6 +38,18 @@ extension WalletModel: CoreDataMappable, CoreDataIDMappable {
 //
 //        })
         
+        cdObject.loyaltyCards.forEach {
+            guard let loyaltyCard = $0 as? CD_LoyaltyCard else { return }
+            cdObject.removeLoyaltyCardsObject(loyaltyCard)
+        }
+        
+        loyaltyCards?.forEach({ loyaltyCard in
+            let cdLoyaltyCard = loyaltyCard.mapToCoreData(context, .update, overrideID: nil)
+            update(cdLoyaltyCard, \.wallet, with: cdObject, delta: delta)
+            cdObject.addLoyaltyCardsObject(cdLoyaltyCard)
+        })
+        
+        
         cdObject.paymentAccounts.forEach {
             guard let paymentAccount = $0 as? CD_PaymentAccount else { return }
             cdObject.removePaymentAccountsObject(paymentAccount)
