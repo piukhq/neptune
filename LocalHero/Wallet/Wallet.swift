@@ -16,6 +16,11 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
     
     private (set) var loyaltyPlans: [LoyaltyPlanModel]?
     private (set) var paymentAccounts: [CD_PaymentAccount]?
+    private (set) var loyaltyCards: [CD_LoyaltyCard]? {
+        didSet {
+            print(loyaltyCards as Any)
+        }
+    }
     private var hasLaunched = false
 
     
@@ -42,73 +47,85 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
 
     /// Maybe sack off this function - possibly redundant
     private func loadWalletData(forType type: FetchType, reloadPlans: Bool, isUserDriven: Bool, completion: ServiceCompletionSuccessHandler<WalletServiceError>? = nil) {
-        let dispatchGroup = DispatchGroup()
-        let forceRefresh = type == .reload
+        let walletDispatchGroup = DispatchGroup()
+        let forceAPIRefresh = type == .reload
         
-        if forceRefresh {
+        if forceAPIRefresh {
             // Get remote config
         }
         
-        dispatchGroup.enter()
-        getLoyaltyPlansAndWallet(forceRefresh: forceRefresh, reloadPlans: reloadPlans, isUserDriven: isUserDriven) { success, error in
+        walletDispatchGroup.enter()
+        getLoyaltyPlansAndWallet(forceAPIRefresh: forceAPIRefresh, reloadPlans: reloadPlans, isUserDriven: isUserDriven) { success, error in
             guard success else {
                 completion?(success, error)
                 return
             }
             
-            dispatchGroup.leave()
+            walletDispatchGroup.leave()
         }
         
-        dispatchGroup.notify(queue: .main) {
+        walletDispatchGroup.notify(queue: .main) {
             NotificationCenter.default.post(name: type == .reload ? .didLoadWallet : .didLoadLocalWallet, object: nil)
             completion?(true, nil)
         }
     }
     
-    private func getLoyaltyPlansAndWallet(forceRefresh: Bool = false, reloadPlans: Bool, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
+    private func getLoyaltyPlansAndWallet(forceAPIRefresh: Bool = false, reloadPlans: Bool, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
         loadLoyaltyPlans(forceRefresh: reloadPlans, isUserDriven: isUserDriven) { [weak self] success, error in
             guard success else {
                 completion(success, error)
                 return
             }
             
-            self?.loadWallet(forceRefresh: forceRefresh, isUserDriven: isUserDriven, completion: { success, error in
+            self?.loadWallet(forceAPIRefresh: forceAPIRefresh, isUserDriven: isUserDriven, completion: { success, error in
                 completion(success, error)
             })
         }
     }
     
-    private func loadWallet(forceRefresh: Bool = false, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
-        guard forceRefresh else {
-            // Fetch core data objects for wallet
-            fetchCoreDataObjects(forObjectType: CD_PaymentAccount.self) { [weak self] paymentAccounts in
-                guard let self = self else { return }
-                self.paymentAccounts = paymentAccounts
-                self.applyLocalWalletOrder(&self.localPaymentCardsOrder, to: paymentAccounts, updating: &self.paymentAccounts)
+    private func loadWallet(forceAPIRefresh: Bool = false, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
+        guard forceAPIRefresh else {
+            loadCoreDataPaymentAndLoyaltyAccounts {
                 completion(true, nil)
             }
-            
-            // TODO: - Fetch Loyalty accounts
-
             return
         }
         
-        getWallet(isUserDriven: false) { [weak self] result in
+        getWalletFromAPI(isUserDriven: false) { [weak self] result in
             switch result {
             case .success(let response):
                 self?.mapCoreDataObjects(objectsToMap: [response], type: CD_Wallet.self, completion: {
-                    self?.fetchCoreDataObjects(forObjectType: CD_PaymentAccount.self, completion: { paymentAccounts in
-                        guard let self = self else { return }
-                        self.paymentAccounts = paymentAccounts
-                        self.applyLocalWalletOrder(&self.localPaymentCardsOrder, to: paymentAccounts, updating: &self.paymentAccounts)
+                    self?.loadCoreDataPaymentAndLoyaltyAccounts {
                         completion(true, nil)
-                    })
-                    
-                    // TODO: - Fetch Loyalty accounts
+                    }
                 })
             case .failure(let error):
                 completion(false, error)
             }
+        }
+    }
+    
+    private func loadCoreDataPaymentAndLoyaltyAccounts(completion: @escaping EmptyCompletionBlock) {
+        let coreDataDispatchGroup = DispatchGroup()
+
+        coreDataDispatchGroup.enter()
+        fetchCoreDataObjects(forObjectType: CD_PaymentAccount.self) { [weak self] paymentAccounts in
+            guard let self = self else { return }
+            self.paymentAccounts = paymentAccounts
+            self.applyLocalWalletOrder(&self.localPaymentCardsOrder, to: paymentAccounts, updating: &self.paymentAccounts)
+            coreDataDispatchGroup.leave()
+        }
+        
+        coreDataDispatchGroup.enter()
+        fetchCoreDataObjects(forObjectType: CD_LoyaltyCard.self) { [weak self] loyaltyCards in
+            guard let self = self else { return }
+            self.loyaltyCards = loyaltyCards
+            self.applyLocalWalletOrder(&self.localLoyaltyCardsOrder, to: loyaltyCards, updating: &self.loyaltyCards)
+            coreDataDispatchGroup.leave()
+        }
+        
+        coreDataDispatchGroup.notify(queue: .main) {
+            completion()
         }
     }
     
@@ -141,6 +158,15 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
 
 extension Wallet {
     private var localPaymentCardsOrder: [String]? {
+        get {
+            return getLocalWalletOrder()
+        }
+        set {
+            setLocalWalletOrder(newValue)
+        }
+    }
+    
+    private var localLoyaltyCardsOrder: [String]? {
         get {
             return getLocalWalletOrder()
         }

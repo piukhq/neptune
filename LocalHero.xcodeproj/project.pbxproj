@@ -152,6 +152,7 @@
 		CEED476427F2F80D00CDD2DA /* PaymentAccountPllLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476327F2F80D00CDD2DA /* PaymentAccountPllLink.swift */; };
 		CEED476627F47F1F00CDD2DA /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476527F47F1F00CDD2DA /* Notification+Extension.swift */; };
 		CEED476827F4B23F00CDD2DA /* WalletCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476727F4B23F00CDD2DA /* WalletCard.swift */; };
+		CEED476A27F72E4900CDD2DA /* LoyaltyCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED476927F72E4800CDD2DA /* LoyaltyCardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,6 +315,7 @@
 		CEED476327F2F80D00CDD2DA /* PaymentAccountPllLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccountPllLink.swift; sourceTree = "<group>"; };
 		CEED476527F47F1F00CDD2DA /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		CEED476727F4B23F00CDD2DA /* WalletCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCard.swift; sourceTree = "<group>"; };
+		CEED476927F72E4800CDD2DA /* LoyaltyCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardModel.swift; sourceTree = "<group>"; };
 		D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -814,6 +816,7 @@
 			children = (
 				CEB7860327DF871A00B8F3D9 /* WalletModel.swift */,
 				CEED475A27F1FFF500CDD2DA /* JoinModel.swift */,
+				CEED476927F72E4800CDD2DA /* LoyaltyCardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1216,6 +1219,7 @@
 				CEB785DE27DA396F00B8F3D9 /* PaymentWalletRepository.swift in Sources */,
 				CEED474727F1FEC700CDD2DA /* _CD_PaymentAccountPllLink.swift in Sources */,
 				CEED474A27F1FEC700CDD2DA /* CD_Status.swift in Sources */,
+				CEED476A27F72E4900CDD2DA /* LoyaltyCardModel.swift in Sources */,
 				CEB785EC27DA576800B8F3D9 /* BinkButtonsView.swift in Sources */,
 				CEB7855A27C63E2C00B8F3D9 /* LoginResponse.swift in Sources */,
 				CEB785D927D90CF700B8F3D9 /* HeroButtonStack.swift in Sources */,

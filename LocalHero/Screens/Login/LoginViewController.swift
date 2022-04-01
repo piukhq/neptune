@@ -23,8 +23,24 @@ class LoginViewController: LocalHeroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         footerButtons = [loginButton]
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: nil, action: nil)
+        
+        Current.wallet.launch() { [weak self] success, error in
+            guard success else {
+                if case .failedToGetLoyaltyPlans(let networkingError) = error {
+                    if case .unauthorized = networkingError {
+                        self?.showError(title: L10n.alertInvalidToken)
+                    } else {
+                        self?.showError(title: networkingError.localizedDescription)
+                    }
+                }
+                return
+            }
+            
+            let walletViewController = WalletViewController()
+            let navigationRequest = PushNavigationRequest(viewController: walletViewController)
+            Current.navigate.to(navigationRequest)
+        }
     }
 
     // MARK: - Private methods

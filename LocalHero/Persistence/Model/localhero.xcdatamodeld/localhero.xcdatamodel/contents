@@ -17,7 +17,6 @@
         <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_Wallet" inverseName="joins" inverseEntity="CD_Wallet"/>
     </entity>
     <entity name="CD_LoyaltyCard" representedClassName="CD_LoyaltyCard" parentEntity="CD_BaseObject" syncable="YES">
-        <attribute name="loyaltyPlanID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
         <relationship name="balance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCardBalance" inverseName="loyaltyCard" inverseEntity="CD_LoyaltyCardBalance"/>
         <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCardCard" inverseName="loyaltyCard" inverseEntity="CD_LoyaltyCardCard"/>
         <relationship name="pllLink" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CD_LoyaltyCardPllLink" inverseName="loyaltyCard" inverseEntity="CD_LoyaltyCardPllLink"/>
@@ -97,18 +96,18 @@
         <relationship name="paymentAccounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CD_PaymentAccount" inverseName="wallet" inverseEntity="CD_PaymentAccount"/>
     </entity>
     <elements>
-        <element name="CD_PaymentAccount" positionX="-237.9441528320312" positionY="55.51333618164062" width="128" height="208"/>
-        <element name="CD_BaseObject" positionX="-450.0009460449219" positionY="173.174072265625" width="128" height="44"/>
-        <element name="CD_Wallet" positionX="-443.5166625976562" positionY="62.90777587890625" width="128" height="88"/>
-        <element name="CD_LoyaltyCard" positionX="-189.5563354492188" positionY="-132.6060791015625" width="128" height="163"/>
-        <element name="CD_Join" positionX="-211.3529052734375" positionY="-265.4756469726562" width="128" height="103"/>
+        <element name="CD_BaseObject" positionX="-488.9468688964844" positionY="201.7703857421875" width="128" height="44"/>
         <element name="CD_Image" positionX="-244.0066528320312" positionY="285.3721313476562" width="128" height="118"/>
+        <element name="CD_Join" positionX="-211.3529052734375" positionY="-265.4756469726562" width="128" height="103"/>
+        <element name="CD_LoyaltyCard" positionX="-429.0335083007813" positionY="-166.2645874023438" width="128" height="148"/>
+        <element name="CD_LoyaltyCardBalance" positionX="133.6176147460938" positionY="-245.9036102294922" width="128" height="88"/>
+        <element name="CD_LoyaltyCardCard" positionX="124.044189453125" positionY="261.7188873291016" width="128" height="118"/>
+        <element name="CD_LoyaltyCardPllLink" positionX="121.958984375" positionY="401.1353912353516" width="128" height="103"/>
+        <element name="CD_LoyaltyCardTransaction" positionX="133.7220458984375" positionY="-133.0823516845703" width="128" height="103"/>
+        <element name="CD_PaymentAccount" positionX="-237.9441528320312" positionY="55.51333618164062" width="128" height="208"/>
         <element name="CD_PaymentAccountPllLink" positionX="-416.27294921875" positionY="308.9620361328125" width="128" height="103"/>
-        <element name="CD_Status" positionX="-445.99658203125" positionY="-154.8491821289062" width="128" height="118"/>
-        <element name="CD_LoyaltyCardBalance" positionX="-19.54754638671875" positionY="-126.595703125" width="128" height="88"/>
-        <element name="CD_LoyaltyCardTransaction" positionX="-19.443115234375" positionY="-13.77444458007812" width="128" height="103"/>
-        <element name="CD_Voucher" positionX="-28.6787109375" positionY="111.0153198242188" width="128" height="238"/>
-        <element name="CD_LoyaltyCardCard" positionX="-29.1209716796875" positionY="381.0267944335938" width="128" height="118"/>
-        <element name="CD_LoyaltyCardPllLink" positionX="-31.2061767578125" positionY="520.4432983398438" width="128" height="103"/>
+        <element name="CD_Status" positionX="-765.3998413085938" positionY="-157.3210144042968" width="128" height="118"/>
+        <element name="CD_Voucher" positionX="124.4864501953125" positionY="-8.292587280273381" width="128" height="238"/>
+        <element name="CD_Wallet" positionX="-482.4625854492188" positionY="91.50408935546875" width="128" height="88"/>
     </elements>
 </model>

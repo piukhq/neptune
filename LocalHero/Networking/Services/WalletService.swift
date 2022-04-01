@@ -85,7 +85,7 @@ extension WalletServiceProtocol {
         }
     }
     
-    func getWallet(isUserDriven: Bool, completion: @escaping ServiceCompletionResultHandler<WalletModel, WalletServiceError>) {
+    func getWalletFromAPI(isUserDriven: Bool, completion: @escaping ServiceCompletionResultHandler<WalletModel, WalletServiceError>) {
         let request = BinkNetworkRequest(endpoint: .wallet, method: .get, isUserDriven: false)
         Current.apiClient.performRequest(request, expecting: Safe<WalletModel>.self) { result, rawResponse in
             switch result {
