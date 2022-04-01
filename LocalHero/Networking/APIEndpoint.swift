@@ -31,9 +31,9 @@ enum APIEndpoint {
             headers.append(.authorization(token))
         }
         
-//        if requiresBinkTestAuthHeader {
-//            headers.append(.binkTestAuth())
-//        }
+        if requiresBinkTestAuthHeader {
+            headers.append(.binkTestAuth())
+        }
         
         return headers
     }

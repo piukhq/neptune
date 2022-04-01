@@ -10,7 +10,8 @@ pod 'SwiftyRSA', :git => 'git@github.com:binkhq/SwiftyRSA.git'
 plugin 'cocoapods-keys', {
   :project => "localHero",
   :keys => [
-  "spreedlyEnvironmentKey"
+  "spreedlyEnvironmentKey",
+  "binkTestAuthHeaderToken"
   ]
 }
 
