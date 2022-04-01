@@ -40,7 +40,7 @@ struct BinkHTTPHeader {
     }
     
     static func binkTestAuth() -> BinkHTTPHeader {
-        return BinkHTTPHeader(name: "", value: "")
+        return BinkHTTPHeader(name: "", value: "") 
     }
     
     // MARK: - Defaults
