@@ -41,6 +41,8 @@ extension LoyaltyCardModel: CoreDataMappable, CoreDataIDMappable {
             // add this loyalty card core data object to the plan
             plan?.addLoyaltyCardObject(cdObject)
         }
+        
+        
         return cdObject
     }
     

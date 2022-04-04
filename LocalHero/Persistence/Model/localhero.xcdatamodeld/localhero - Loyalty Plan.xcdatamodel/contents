@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CD_BaseObject" representedClassName="CD_BaseObject" syncable="YES">
         <attribute name="id" attributeType="String"/>
     </entity>
@@ -67,10 +67,11 @@
     <entity name="CD_LoyaltyPlan" representedClassName="CD_LoyaltyPlan" parentEntity="CD_BaseObject" syncable="YES">
         <attribute name="planPopularity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
         <relationship name="content" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CD_Content" inverseName="plan" inverseEntity="CD_Content"/>
-        <relationship name="features" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyPlanFeatures" inverseName="plan" inverseEntity="CD_LoyaltyPlanFeatures"/>
         <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CD_Image" inverseName="plan" inverseEntity="CD_Image"/>
         <relationship name="journeyFields" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_JourneyFields" inverseName="plan" inverseEntity="CD_JourneyFields"/>
         <relationship name="loyaltyCard" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="loyaltyPlan" inverseEntity="CD_LoyaltyCard"/>
+        <relationship name="planDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyPlanDetails" inverseName="plan" inverseEntity="CD_LoyaltyPlanDetails"/>
+        <relationship name="planFeatures" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyPlanFeatures" inverseName="plan" inverseEntity="CD_LoyaltyPlanFeatures"/>
     </entity>
     <entity name="CD_LoyaltyPlanDetails" representedClassName="CD_LoyaltyPlanDetails" parentEntity="CD_BaseObject" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String"/>
@@ -83,6 +84,7 @@
         <attribute name="planSummary" optional="YES" attributeType="String"/>
         <attribute name="planURL" optional="YES" attributeType="String"/>
         <attribute name="redeemInstructions" optional="YES" attributeType="String"/>
+        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyPlan" inverseName="planDetails" inverseEntity="CD_LoyaltyPlan"/>
         <relationship name="tiers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CD_Tier" inverseName="plan" inverseEntity="CD_Tier"/>
     </entity>
     <entity name="CD_LoyaltyPlanFeatures" representedClassName="CD_LoyaltyPlanFeatures" parentEntity="CD_BaseObject" syncable="YES">
@@ -92,7 +94,7 @@
         <attribute name="hasTransactions" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="planType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
         <relationship name="journey" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CD_Journey" inverseName="planFeatures" inverseEntity="CD_Journey"/>
-        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyPlan" inverseName="features" inverseEntity="CD_LoyaltyPlan"/>
+        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyPlan" inverseName="planFeatures" inverseEntity="CD_LoyaltyPlan"/>
     </entity>
     <entity name="CD_PaymentAccount" representedClassName="CD_PaymentAccount" parentEntity="CD_BaseObject" syncable="YES">
         <attribute name="cardNickname" optional="YES" attributeType="String"/>
@@ -147,24 +149,24 @@
     </entity>
     <elements>
         <element name="CD_BaseObject" positionX="-447.9930114746094" positionY="233.0164794921875" width="128" height="44"/>
+        <element name="CD_Content" positionX="-833.0802307128906" positionY="357.5784912109374" width="128" height="88"/>
         <element name="CD_Image" positionX="-464.3154907226562" positionY="309.9597778320312" width="128" height="133"/>
         <element name="CD_Join" positionX="-211.3529052734375" positionY="-265.4756469726562" width="128" height="103"/>
+        <element name="CD_Journey" positionX="-1090.541809082031" positionY="237.6464538574219" width="128" height="88"/>
+        <element name="CD_JourneyFields" positionX="-840.6390380859375" positionY="468.7379455566406" width="128" height="58"/>
         <element name="CD_LoyaltyCard" positionX="-368.5322875976563" positionY="-147.8285522460938" width="128" height="163"/>
         <element name="CD_LoyaltyCardBalance" positionX="133.6176147460938" positionY="-245.9036102294922" width="128" height="88"/>
         <element name="CD_LoyaltyCardCard" positionX="124.044189453125" positionY="261.7188873291016" width="128" height="118"/>
         <element name="CD_LoyaltyCardPllLink" positionX="121.958984375" positionY="401.1353912353516" width="128" height="103"/>
         <element name="CD_LoyaltyCardTransaction" positionX="133.7220458984375" positionY="-133.0823516845703" width="128" height="103"/>
+        <element name="CD_LoyaltyPlan" positionX="-757.3574523925781" positionY="57.0457763671875" width="128" height="148"/>
+        <element name="CD_LoyaltyPlanDetails" positionX="-1090.273559570312" positionY="347.5816345214844" width="128" height="223"/>
+        <element name="CD_LoyaltyPlanFeatures" positionX="-1080.210723876953" positionY="36.85757446289062" width="128" height="148"/>
         <element name="CD_PaymentAccount" positionX="-237.9441528320312" positionY="55.51333618164062" width="128" height="208"/>
         <element name="CD_PaymentAccountPllLink" positionX="-428.1310424804688" positionY="453.1665649414062" width="128" height="103"/>
         <element name="CD_Status" positionX="-765.3998413085938" positionY="-157.3210144042968" width="128" height="118"/>
+        <element name="CD_Tier" positionX="-841.5016174316406" positionY="550.7752990722656" width="128" height="88"/>
         <element name="CD_Voucher" positionX="124.4864501953125" positionY="-8.292587280273381" width="128" height="238"/>
         <element name="CD_Wallet" positionX="-531.6431884765625" positionY="42.15069580078125" width="128" height="88"/>
-        <element name="CD_LoyaltyPlan" positionX="-757.3574523925781" positionY="57.0457763671875" width="128" height="133"/>
-        <element name="CD_LoyaltyPlanFeatures" positionX="-1080.210723876953" positionY="36.85757446289062" width="128" height="148"/>
-        <element name="CD_Journey" positionX="-1090.541809082031" positionY="237.6464538574219" width="128" height="88"/>
-        <element name="CD_LoyaltyPlanDetails" positionX="-1090.273559570312" positionY="347.5816345214844" width="128" height="208"/>
-        <element name="CD_Tier" positionX="-932.7079772949219" positionY="437.8213806152344" width="128" height="88"/>
-        <element name="CD_JourneyFields" positionX="-931.8453979492188" positionY="355.7840270996094" width="128" height="58"/>
-        <element name="CD_Content" positionX="-924.2865905761719" positionY="244.6245727539062" width="128" height="88"/>
     </elements>
 </model>

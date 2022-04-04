@@ -10,10 +10,11 @@ public enum CD_LoyaltyPlanAttributes: String {
 
 public enum CD_LoyaltyPlanRelationships: String {
     case content = "content"
-    case features = "features"
     case images = "images"
     case journeyFields = "journeyFields"
     case loyaltyCard = "loyaltyCard"
+    case planDetails = "planDetails"
+    case planFeatures = "planFeatures"
 }
 
 open class _CD_LoyaltyPlan: CD_BaseObject {
@@ -59,9 +60,6 @@ open class _CD_LoyaltyPlan: CD_BaseObject {
     }
 
     @NSManaged open
-    var features: CD_LoyaltyPlanFeatures?
-
-    @NSManaged open
     var images: NSSet
 
     open func imagesSet() -> NSMutableSet {
@@ -77,6 +75,12 @@ open class _CD_LoyaltyPlan: CD_BaseObject {
     open func loyaltyCardSet() -> NSMutableSet {
         return self.loyaltyCard.mutableCopy() as! NSMutableSet
     }
+
+    @NSManaged open
+    var planDetails: CD_LoyaltyPlanDetails?
+
+    @NSManaged open
+    var planFeatures: CD_LoyaltyPlanFeatures?
 
 }
 

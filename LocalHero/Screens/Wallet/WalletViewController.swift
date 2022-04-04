@@ -101,9 +101,12 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         switch indexPath.section {
         case 0:
             guard let loyaltyCard = viewModel.loyaltyCards?[safe: indexPath.item] else { return cell }
+            cell.configure(with: loyaltyCard)
         case 1:
             guard let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item] else { return cell }
             cell.configure(with: paymentAccount)
+        default:
+            break
         }
         
         return cell

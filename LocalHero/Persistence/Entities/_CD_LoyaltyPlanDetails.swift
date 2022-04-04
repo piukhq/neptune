@@ -18,6 +18,7 @@ public enum CD_LoyaltyPlanDetailsAttributes: String {
 }
 
 public enum CD_LoyaltyPlanDetailsRelationships: String {
+    case plan = "plan"
     case tiers = "tiers"
 }
 
@@ -82,6 +83,9 @@ open class _CD_LoyaltyPlanDetails: CD_BaseObject {
     var redeemInstructions: String?
 
     // MARK: - Relationships
+
+    @NSManaged open
+    var plan: CD_LoyaltyPlan?
 
     @NSManaged open
     var tiers: NSSet

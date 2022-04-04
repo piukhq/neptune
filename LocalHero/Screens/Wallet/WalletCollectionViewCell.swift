@@ -46,6 +46,8 @@ class WalletCollectionViewCell: UICollectionViewCell {
     
     func configure(with model: CD_LoyaltyCard) {
         primaryLabel.text = model.loyaltyPlan?.planDetails?.companyName
+        secondaryLabel.text = model.balance?.currentDisplayValue
+        accountProviderLabel.isHidden = true
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {

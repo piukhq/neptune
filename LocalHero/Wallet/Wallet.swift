@@ -14,7 +14,7 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
         case reload // A fetch from the API
     }
     
-    private (set) var loyaltyPlans: [LoyaltyPlanModel]?
+    private (set) var loyaltyPlans: [CD_LoyaltyPlan]?
     private (set) var paymentAccounts: [CD_PaymentAccount]?
     private (set) var loyaltyCards: [CD_LoyaltyCard]? {
         didSet {
@@ -131,17 +131,22 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
     
     private func loadLoyaltyPlans(forceRefresh: Bool = false, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
         guard forceRefresh else {
-            /// Fetch core data Loyalty plans
-            completion(true, nil)
+            self.fetchCoreDataObjects(forObjectType: CD_LoyaltyPlan.self) { localPlans in
+                self.loyaltyPlans = localPlans
+                completion(true, nil)
+            }
             return
         }
         getLoyaltyPlans(isUserDriven: isUserDriven, completion: { [weak self] result in
             switch result {
             case .success(let response):
-                // Map to core data
-                // Fetch from core data
-                self?.loyaltyPlans = response
-                completion(true, nil)
+                guard let self = self else { return }
+                self.mapCoreDataObjects(objectsToMap: response, type: CD_LoyaltyPlan.self) {
+                    self.fetchCoreDataObjects(forObjectType: CD_LoyaltyPlan.self) { loyaltyPlans in
+                        self.loyaltyPlans = loyaltyPlans
+                        completion(true, nil)
+                    }
+                }
             case .failure(let error):
                 guard let localPlans = self?.loyaltyPlans, !localPlans.isEmpty else {
                     completion(false, error)

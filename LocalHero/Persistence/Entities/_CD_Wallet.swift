@@ -4,13 +4,6 @@
 import Foundation
 import CoreData
 
-public enum CD_WalletAttributes: String {
-    case attribute = "attribute"
-    case attribute1 = "attribute1"
-    case attribute2 = "attribute2"
-    case attribute3 = "attribute3"
-}
-
 public enum CD_WalletRelationships: String {
     case joins = "joins"
     case loyaltyCards = "loyaltyCards"
