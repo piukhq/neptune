@@ -80,14 +80,32 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     
     // MARK: - Collection view
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberSections
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.paymentAccounts?.count ?? 0
+        switch section {
+        case 0:
+            return viewModel.loyaltyCards?.count ?? 0
+        case 1:
+            return viewModel.paymentAccounts?.count ?? 0
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: WalletCollectionViewCell = collectionView.dequeue(indexPath: indexPath)
-        guard let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item] else { return cell }
-        cell.configure(with: paymentAccount)
+        
+        switch indexPath.section {
+        case 0:
+            guard let loyaltyCard = viewModel.loyaltyCards?[safe: indexPath.item] else { return cell }
+        case 1:
+            guard let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item] else { return cell }
+            cell.configure(with: paymentAccount)
+        }
+        
         return cell
     }
     
@@ -100,5 +118,22 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
 class WalletViewModel {
     var paymentAccounts: [CD_PaymentAccount]? {
         return Current.wallet.paymentAccounts
+    }
+    
+    var loyaltyCards: [CD_LoyaltyCard]? {
+        return Current.wallet.loyaltyCards
+    }
+    
+    var numberSections: Int {
+        var sections = 0
+        
+        if let _ = paymentAccounts {
+            sections += 1
+        }
+        
+        if let _ = loyaltyCards {
+            sections += 1
+        }
+        return sections
     }
 }
