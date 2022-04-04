@@ -33,8 +33,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: .didLoadWallet, object: nil)
         
         collectionView.register(WalletCollectionViewCell.self, asNib: true)
-//        collectionView.registerHeader(CollectionReusableView.self)
-        collectionView.register(UINib(nibName: "WalletHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "WalletHeaderView")
+        collectionView.registerHeader(WalletHeaderView.self, asNib: true)
         configureCollectionView()
         backgroundImageView.alpha = 0.3
         
@@ -114,6 +113,16 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 60)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView: WalletHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, kind: UICollectionView.elementKindSectionHeader)
+        headerView.configure(title: indexPath.section == 0 ? "Loyalty Cards" : "Payment Cards")
+        return headerView
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: view.frame.width, height: 65)
     }
 }
 
