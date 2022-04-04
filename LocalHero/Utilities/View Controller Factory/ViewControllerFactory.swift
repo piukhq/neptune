@@ -8,7 +8,7 @@
 import UIKit
 
 enum ViewControllerFactory {
-    
+
     //MARK: - Alerts
     
     static func makeAlertController(title: String?, message: String?, completion: (() -> Void)? = nil) -> UIAlertController {

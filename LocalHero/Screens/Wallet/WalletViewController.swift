@@ -124,6 +124,23 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         CGSize(width: view.frame.width, height: 65)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var viewController: WalletCardDetailsViewController!
+        switch indexPath.section {
+        case 0:
+            let loyaltyCard = viewModel.loyaltyCards?[safe: indexPath.item]
+            viewController = WalletCardDetailsViewController(loyaltyCard: loyaltyCard, paymentAccount: nil)
+        case 1:
+            let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item]
+            viewController = WalletCardDetailsViewController(loyaltyCard: nil, paymentAccount: paymentAccount)
+        default:
+            break
+        }
+        
+        let navigationRequest = PushNavigationRequest(viewController: viewController)
+        Current.navigate.to(navigationRequest)
+    }
 }
 
 
