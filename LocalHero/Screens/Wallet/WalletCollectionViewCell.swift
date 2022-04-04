@@ -32,6 +32,7 @@ class WalletCollectionViewCell: UICollectionViewCell {
         }
 
         accountProviderLabel.text = model.provider?.uppercased() ?? "Pending"
+        accountProviderLabel.isHidden = false
         
         let provider = PaymentAccountType(rawValue: model.provider ?? "")
         switch provider {

@@ -16,11 +16,7 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
     
     private (set) var loyaltyPlans: [CD_LoyaltyPlan]?
     private (set) var paymentAccounts: [CD_PaymentAccount]?
-    private (set) var loyaltyCards: [CD_LoyaltyCard]? {
-        didSet {
-            print(loyaltyCards as Any)
-        }
-    }
+    private (set) var loyaltyCards: [CD_LoyaltyCard]?
     private var hasLaunched = false
 
     
@@ -45,7 +41,6 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
     
     // MARK: - Private
 
-    /// Maybe sack off this function - possibly redundant
     private func loadWalletData(forType type: FetchType, reloadPlans: Bool, isUserDriven: Bool, completion: ServiceCompletionSuccessHandler<WalletServiceError>? = nil) {
         let walletDispatchGroup = DispatchGroup()
         let forceAPIRefresh = type == .reload
@@ -131,8 +126,8 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
     
     private func loadLoyaltyPlans(forceRefresh: Bool = false, isUserDriven: Bool, completion: @escaping ServiceCompletionSuccessHandler<WalletServiceError>) {
         guard forceRefresh else {
-            self.fetchCoreDataObjects(forObjectType: CD_LoyaltyPlan.self) { localPlans in
-                self.loyaltyPlans = localPlans
+            self.fetchCoreDataObjects(forObjectType: CD_LoyaltyPlan.self) { [weak self] localPlans in
+                self?.loyaltyPlans = localPlans
                 completion(true, nil)
             }
             return

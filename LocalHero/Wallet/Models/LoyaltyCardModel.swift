@@ -13,7 +13,7 @@ struct LoyaltyCardModel: Codable {
     let apiId: Int?
     let loyaltyPlanID: Int?
     let status: Status?
-    let balance: Balance?
+    let balance: LoyaltyCardBalanceModel?
     let transactions: [Transaction]?
     let vouchers: [Voucher]?
     let card: CardModel?
@@ -30,6 +30,12 @@ struct LoyaltyCardModel: Codable {
 extension LoyaltyCardModel: CoreDataMappable, CoreDataIDMappable {
     func objectToMapTo(_ cdObject: CD_LoyaltyCard, in context: NSManagedObjectContext, delta: Bool, overrideID: String?) -> CD_LoyaltyCard {
         update(cdObject, \.id, with: overrideID ?? id, delta: delta)
+        
+        if let balance = balance {
+            let cdBalance = balance.mapToCoreData(context, .update, overrideID: LoyaltyCardBalanceModel.overrideId(forParentId: overrideID ?? id))
+            update(cdBalance, \.loyaltyCard, with: cdObject, delta: delta)
+            update(cdObject, \.balance, with: cdBalance, delta: delta)
+        }
         
         if let planID = loyaltyPlanID {
             // get plan for id from core data
@@ -48,18 +54,6 @@ extension LoyaltyCardModel: CoreDataMappable, CoreDataIDMappable {
     
 }
 
-
-
-// MARK: - Balance
-struct Balance: Codable {
-    let updatedAt: Int?
-    let currentDisplayValue: String?
-
-    enum CodingKeys: String, CodingKey {
-        case updatedAt = "updated_at"
-        case currentDisplayValue = "current_display_value"
-    }
-}
 
 // MARK: - Card
 struct CardModel: Codable {
