@@ -26,6 +26,8 @@
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
 		CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */; };
 		CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */; };
+		CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105D27FC3E1700A5C11A /* StatusModel.swift */; };
+		CE11106027FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */; };
 		CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */; };
 		CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */; };
 		CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */; };
@@ -210,6 +212,8 @@
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardBalanceModel.swift; sourceTree = "<group>"; };
 		CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewController.swift; sourceTree = "<group>"; };
+		CE11105D27FC3E1700A5C11A /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardTransactionModel.swift; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -882,7 +886,9 @@
 			children = (
 				CEB7860327DF871A00B8F3D9 /* WalletModel.swift */,
 				CEED475A27F1FFF500CDD2DA /* JoinModel.swift */,
+				CE11105D27FC3E1700A5C11A /* StatusModel.swift */,
 				CEED476927F72E4800CDD2DA /* LoyaltyCardModel.swift */,
+				CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */,
 				CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */,
 			);
 			path = Models;
@@ -1240,6 +1246,7 @@
 				CEED475327F1FEC700CDD2DA /* _CD_Wallet.swift in Sources */,
 				CEED474827F1FEC700CDD2DA /* CD_Image.swift in Sources */,
 				CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */,
+				CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */,
 				CEED478B27F74F9200CDD2DA /* _CD_Wallet.swift in Sources */,
 				CEB7855F27C644D400B8F3D9 /* Bundle+Extension.swift in Sources */,
 				CEED479327F74F9200CDD2DA /* _CD_LoyaltyPlanFeatures.swift in Sources */,
@@ -1288,6 +1295,7 @@
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
 				CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */,
 				CEED471F27EDB48800CDD2DA /* NSPersistentContainer.swift in Sources */,
+				CE11106027FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEED479227F74F9200CDD2DA /* CD_Tier.swift in Sources */,
 				CEED475227F1FEC700CDD2DA /* _CD_Join.swift in Sources */,
