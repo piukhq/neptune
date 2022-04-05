@@ -15,7 +15,7 @@ struct LoyaltyCardModel: Codable {
     let status: StatusModel?
     let balance: LoyaltyCardBalanceModel?
     let transactions: [LoyaltyCardTransactionModel]?
-    let vouchers: [Voucher]?
+    let vouchers: [VoucherModel]?
     let card: CardModel?
     let pllLinks: [LoyaltyCardPllLink]?
 
@@ -64,6 +64,15 @@ extension LoyaltyCardModel: CoreDataMappable, CoreDataIDMappable {
             }
         }
         
+        if let vouchers = vouchers {
+            for (index, voucher) in vouchers.enumerated() {
+                let indexID = VoucherModel.overrideId(forParentId: overrideID ?? id) + String(index)
+                let cdVoucher = voucher.mapToCoreData(context, .update, overrideID: indexID)
+                update(cdVoucher, \.loyaltyCard, with: cdObject, delta: false)
+                cdObject.addVoucherObject(cdVoucher)
+            }
+        }
+        
         return cdObject
     }
     
@@ -97,32 +106,3 @@ struct LoyaltyCardPllLink: Codable {
         case status
     }
 }
-
-
-// MARK: - Voucher
-struct Voucher: Codable {
-    let state, earnType, rewardText, headline: String?
-    let voucherCode: String?
-    let barcodeType: Int?
-    let progressDisplayText: String?
-    let bodyText: String?
-    let termsAndConditions: String?
-    let issuedDate, expiryDate: Int?
-    let redeemedDate: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case state
-        case earnType = "earn_type"
-        case rewardText = "reward_text"
-        case headline
-        case voucherCode = "voucher_code"
-        case barcodeType = "barcode_type"
-        case progressDisplayText = "progress_display_text"
-        case bodyText = "body_text"
-        case termsAndConditions = "terms_and_conditions"
-        case issuedDate = "issued_date"
-        case expiryDate = "expiry_date"
-        case redeemedDate = "redeemed_date"
-    }
-}
-

@@ -28,6 +28,7 @@
 		CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */; };
 		CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105D27FC3E1700A5C11A /* StatusModel.swift */; };
 		CE11106027FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */; };
+		CE11106227FC502400A5C11A /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106127FC502400A5C11A /* VoucherModel.swift */; };
 		CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */; };
 		CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */; };
 		CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */; };
@@ -214,6 +215,7 @@
 		CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewController.swift; sourceTree = "<group>"; };
 		CE11105D27FC3E1700A5C11A /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardTransactionModel.swift; sourceTree = "<group>"; };
+		CE11106127FC502400A5C11A /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -888,6 +890,7 @@
 				CEED475A27F1FFF500CDD2DA /* JoinModel.swift */,
 				CE11105D27FC3E1700A5C11A /* StatusModel.swift */,
 				CEED476927F72E4800CDD2DA /* LoyaltyCardModel.swift */,
+				CE11106127FC502400A5C11A /* VoucherModel.swift */,
 				CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */,
 				CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */,
 			);
@@ -1275,6 +1278,7 @@
 				CEB785CE27D7C78C00B8F3D9 /* FormMultipleChoiceInput.swift in Sources */,
 				CEED474527F1FEC700CDD2DA /* _CD_LoyaltyCardCard.swift in Sources */,
 				CEED474227F1FEC700CDD2DA /* CD_Wallet.swift in Sources */,
+				CE11106227FC502400A5C11A /* VoucherModel.swift in Sources */,
 				CEED478827F74F9200CDD2DA /* CD_Image.swift in Sources */,
 				CEB785A927CCF34100B8F3D9 /* PlanDocumentModel.swift in Sources */,
 				CEB7859B27CCEF5700B8F3D9 /* TiersModel.swift in Sources */,

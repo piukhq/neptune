@@ -128,7 +128,7 @@
         <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyPlanDetails" inverseName="tiers" inverseEntity="CD_LoyaltyPlanDetails"/>
     </entity>
     <entity name="CD_Voucher" representedClassName="CD_Voucher" parentEntity="CD_BaseObject" syncable="YES">
-        <attribute name="barcodeType" optional="YES" attributeType="String"/>
+        <attribute name="barcodeType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
         <attribute name="bodyText" optional="YES" attributeType="String"/>
         <attribute name="earnType" optional="YES" attributeType="String"/>
         <attribute name="expiryDate" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
