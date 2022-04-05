@@ -7,10 +7,15 @@
 
 import UIKit
 
-class WalletCardDetailsViewController: LocalHeroViewController {
+class WalletCardDetailsViewController: UIViewController {
     private lazy var textView: UITextView = {
        let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.isScrollEnabled = false
+        textView.isUserInteractionEnabled = true
+        textView.isEditable = false
+        textView.font = .systemFont(ofSize: 20)
+        textView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 0, right:20)
         view.addSubview(textView)
         return textView
     }()
@@ -38,10 +43,23 @@ class WalletCardDetailsViewController: LocalHeroViewController {
             textView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
-        var cardDetails: String?
+        var cardDetails = ""
         
         if let loyaltyCard = loyaltyCard {
-            cardDetails = loyaltyCard.loyaltyPlan?.planDetails?.companyName
+            title = loyaltyCard.loyaltyPlan?.planDetails?.companyName ?? ""
+        }
+        
+        if let paymentAccount = paymentAccount {
+            cardDetails = (paymentAccount.nameOnCard ?? "") + "\n"
+            cardDetails += (paymentAccount.cardNickname ?? "") + "\n"
+            cardDetails += (paymentAccount.id ?? "") + "\n"
+            cardDetails += (paymentAccount.provider ?? "") + "\n"
+            cardDetails += (paymentAccount.expiryMonth ?? "") + "\n"
+            cardDetails += (paymentAccount.expiryYear ?? "") + "\n"
+            cardDetails += (paymentAccount.lastFour ?? "") + "\n"
+            cardDetails += (paymentAccount.status ?? "") + "\n"
+            cardDetails += (paymentAccount.pllLinks.count == 0 ? "No PLL links" : "\(paymentAccount.pllLinks.count) PLL links") + "\n"
+            title = paymentAccount.provider
         }
         
         textView.text = cardDetails
