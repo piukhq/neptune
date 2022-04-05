@@ -157,33 +157,38 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
 // MARK: - Wallet Ordering
 
 extension Wallet {
+    enum WalletType: String, Codable {
+        case loyalty
+        case payment
+    }
+    
     private var localPaymentCardsOrder: [String]? {
         get {
-            return getLocalWalletOrder()
+            return getLocalWalletOrder(for: .payment)
         }
         set {
-            setLocalWalletOrder(newValue)
+            setLocalWalletOrder(newValue, for: .payment)
         }
     }
     
     private var localLoyaltyCardsOrder: [String]? {
         get {
-            return getLocalWalletOrder()
+            return getLocalWalletOrder(for: .loyalty)
         }
         set {
-            setLocalWalletOrder(newValue)
+            setLocalWalletOrder(newValue, for: .loyalty)
         }
     }
     
-    private func getLocalWalletOrder() -> [String]? {
+    private func getLocalWalletOrder(for walletType: WalletType) -> [String]? {
         guard let userId = Current.userManager.currentEmailAddress else { return nil }
-        return Current.userDefaults.value(forDefaultsKey: .localWalletOrder(userId: userId)) as? [String]
+        return Current.userDefaults.value(forDefaultsKey: .localWalletOrder(userId: userId, walletType: walletType)) as? [String]
     }
 
-    private func setLocalWalletOrder(_ newValue: [String]?) {
+    private func setLocalWalletOrder(_ newValue: [String]?, for walletType: WalletType) {
         guard let order = newValue else { return }
         guard let userId = Current.userManager.currentEmailAddress else { return }
-        Current.userDefaults.set(order, forDefaultsKey: .localWalletOrder(userId: userId))
+        Current.userDefaults.set(order, forDefaultsKey: .localWalletOrder(userId: userId, walletType: walletType))
     }
     
     private func applyLocalWalletOrder<C: WalletCard>(_ localOrder: inout [String]?, to cards: [C]?, updating walletDataSource: inout [C]?) {

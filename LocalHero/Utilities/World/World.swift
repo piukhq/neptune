@@ -36,12 +36,12 @@ protocol HeroUserDefaults {
 
 extension UserDefaults: HeroUserDefaults {
     enum Keys {
-        case localWalletOrder(userId: String)
+        case localWalletOrder(userId: String, walletType: Wallet.WalletType)
         
         var keyValue: String {
             switch self {
-            case .localWalletOrder(let userId):
-                return "localWalletOrders_user:_\(userId)"
+            case .localWalletOrder(let userId, let type):
+                return "localWalletOrders_user:_\(userId)_ \(type.rawValue)"
             }
         }
     }
