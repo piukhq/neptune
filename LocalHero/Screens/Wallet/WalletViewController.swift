@@ -43,7 +43,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        Current.rootStateMachine.logout()
+//        Current.rootStateMachine.logout()
     }
     
     func configureCollectionView() {

@@ -47,6 +47,13 @@ class WalletCardDetailsViewController: UIViewController {
         
         if let loyaltyCard = loyaltyCard {
             title = loyaltyCard.loyaltyPlan?.planDetails?.companyName ?? ""
+            cardDetails = (loyaltyCard.status?.state ?? "").capitalized + "\n"
+            cardDetails += (loyaltyCard.id ?? "") + "\n"
+            cardDetails += (loyaltyCard.pllLink.count == 0 ? "No PLL links" : "\(loyaltyCard.pllLink.count) PLL links") + "\n"
+            cardDetails += (loyaltyCard.balance?.currentDisplayValue ?? "") + "\n"
+            cardDetails += (loyaltyCard.transaction.count == 0 ? "No transactions" : "\(loyaltyCard.transaction.count) transactions") + "\n"
+            cardDetails += (loyaltyCard.voucher.count == 0 ? "No vouchers" : "\(loyaltyCard.voucher.count) vouchers") + "\n"
+            cardDetails += (loyaltyCard.card?.barcode ?? "") + "\n"
         }
         
         if let paymentAccount = paymentAccount {
@@ -57,7 +64,7 @@ class WalletCardDetailsViewController: UIViewController {
             cardDetails += (paymentAccount.expiryMonth ?? "") + "\n"
             cardDetails += (paymentAccount.expiryYear ?? "") + "\n"
             cardDetails += (paymentAccount.lastFour ?? "") + "\n"
-            cardDetails += (paymentAccount.status ?? "") + "\n"
+            cardDetails += (paymentAccount.status ?? "").capitalized + "\n"
             cardDetails += (paymentAccount.pllLinks.count == 0 ? "No PLL links" : "\(paymentAccount.pllLinks.count) PLL links") + "\n"
             title = paymentAccount.provider
         }
