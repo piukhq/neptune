@@ -29,6 +29,8 @@
 		CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105D27FC3E1700A5C11A /* StatusModel.swift */; };
 		CE11106027FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */; };
 		CE11106227FC502400A5C11A /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106127FC502400A5C11A /* VoucherModel.swift */; };
+		CE11106427FC62B200A5C11A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106327FC62B200A5C11A /* CardModel.swift */; };
+		CE11106627FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */; };
 		CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */; };
 		CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */; };
 		CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */; };
@@ -216,6 +218,8 @@
 		CE11105D27FC3E1700A5C11A /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardTransactionModel.swift; sourceTree = "<group>"; };
 		CE11106127FC502400A5C11A /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
+		CE11106327FC62B200A5C11A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyCardPllLinkModel.swift; path = "/Users/seanwilliams/Documents/iOS Development/LocalHero/LocalHero/Wallet/Models/LoyaltyCardPllLinkModel.swift"; sourceTree = "<absolute>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -888,8 +892,10 @@
 			children = (
 				CEB7860327DF871A00B8F3D9 /* WalletModel.swift */,
 				CEED475A27F1FFF500CDD2DA /* JoinModel.swift */,
+				CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */,
 				CE11105D27FC3E1700A5C11A /* StatusModel.swift */,
 				CEED476927F72E4800CDD2DA /* LoyaltyCardModel.swift */,
+				CE11106327FC62B200A5C11A /* CardModel.swift */,
 				CE11106127FC502400A5C11A /* VoucherModel.swift */,
 				CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */,
 				CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */,
@@ -1296,6 +1302,7 @@
 				CEED474E27F1FEC700CDD2DA /* CD_PaymentAccount.swift in Sources */,
 				CEED479027F74F9200CDD2DA /* CD_LoyaltyPlan.swift in Sources */,
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
+				CE11106427FC62B200A5C11A /* CardModel.swift in Sources */,
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
 				CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */,
 				CEED471F27EDB48800CDD2DA /* NSPersistentContainer.swift in Sources */,
@@ -1308,6 +1315,7 @@
 				CEB785DE27DA396F00B8F3D9 /* PaymentWalletRepository.swift in Sources */,
 				CEED474727F1FEC700CDD2DA /* _CD_PaymentAccountPllLink.swift in Sources */,
 				CEED474A27F1FEC700CDD2DA /* CD_Status.swift in Sources */,
+				CE11106627FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift in Sources */,
 				CEED479127F74F9200CDD2DA /* _CD_LoyaltyPlan.swift in Sources */,
 				CEED476A27F72E4900CDD2DA /* LoyaltyCardModel.swift in Sources */,
 				CEB785EC27DA576800B8F3D9 /* BinkButtonsView.swift in Sources */,

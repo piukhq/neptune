@@ -17,7 +17,7 @@ struct LoyaltyCardModel: Codable {
     let transactions: [LoyaltyCardTransactionModel]?
     let vouchers: [VoucherModel]?
     let card: CardModel?
-    let pllLinks: [LoyaltyCardPllLink]?
+    let pllLinks: [LoyaltyCardPllLinkModel]?
 
     enum CodingKeys: String, CodingKey {
         case apiId = "id"
@@ -73,36 +73,24 @@ extension LoyaltyCardModel: CoreDataMappable, CoreDataIDMappable {
             }
         }
         
+        if let card = card {
+            let cdCard = card.mapToCoreData(context, .update, overrideID: CardModel.overrideId(forParentId: overrideID ?? id))
+            update(cdCard, \.loyaltyCard, with: cdObject, delta: delta)
+            update(cdObject, \.card, with: cdCard, delta: delta)
+        } else {
+            update(cdObject, \.card, with: nil, delta: false)
+        }
+        
+        if let pllLinks = pllLinks {
+            for (index, pllLink) in pllLinks.enumerated() {
+                let indexID = LoyaltyCardPllLinkModel.overrideId(forParentId: overrideID ?? id) + String(index)
+                let cdPllLink = pllLink.mapToCoreData(context, .update, overrideID: indexID)
+                update(cdPllLink, \.loyaltyCard, with: cdObject, delta: delta)
+                cdObject.addPllLinkObject(cdPllLink)
+            }
+        }
+        
         return cdObject
     }
     
-}
-
-
-// MARK: - Card
-struct CardModel: Codable {
-    let barcode: String?
-    let barcodeType: Int?
-    let cardNumber, colour: String?
-    let textColour: String?
-
-    enum CodingKeys: String, CodingKey {
-        case barcode
-        case barcodeType = "barcode_type"
-        case cardNumber = "card_number"
-        case textColour = "text_colour"
-        case colour
-    }
-}
-
-// MARK: - LoyaltyCardPllLink
-struct LoyaltyCardPllLink: Codable {
-    let paymentAccountID: Int?
-    let paymentScheme, status: String?
-
-    enum CodingKeys: String, CodingKey {
-        case paymentAccountID = "payment_account_id"
-        case paymentScheme = "payment_scheme"
-        case status
-    }
 }

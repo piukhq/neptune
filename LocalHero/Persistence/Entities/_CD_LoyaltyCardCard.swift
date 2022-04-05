@@ -9,6 +9,7 @@ public enum CD_LoyaltyCardCardAttributes: String {
     case barcodeType = "barcodeType"
     case cardNumber = "cardNumber"
     case colour = "colour"
+    case textColour = "textColour"
 }
 
 public enum CD_LoyaltyCardCardRelationships: String {
@@ -56,6 +57,9 @@ open class _CD_LoyaltyCardCard: CD_BaseObject {
 
     @NSManaged open
     var colour: String?
+
+    @NSManaged open
+    var textColour: String?
 
     // MARK: - Relationships
 

@@ -122,7 +122,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: view.frame.width, height: 65)
+        return CGSize(width: view.frame.width, height: 65)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

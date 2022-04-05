@@ -50,6 +50,7 @@
         <attribute name="barcodeType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
         <attribute name="cardNumber" optional="YES" attributeType="String"/>
         <attribute name="colour" optional="YES" attributeType="String"/>
+        <attribute name="textColour" optional="YES" attributeType="String"/>
         <relationship name="loyaltyCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CD_LoyaltyCard" inverseName="card" inverseEntity="CD_LoyaltyCard"/>
     </entity>
     <entity name="CD_LoyaltyCardPllLink" representedClassName="CD_LoyaltyCardPllLink" parentEntity="CD_BaseObject" syncable="YES">
@@ -156,7 +157,7 @@
         <element name="CD_JourneyFields" positionX="-840.6390380859375" positionY="468.7379455566406" width="128" height="58"/>
         <element name="CD_LoyaltyCard" positionX="-368.5322875976563" positionY="-147.8285522460938" width="128" height="163"/>
         <element name="CD_LoyaltyCardBalance" positionX="133.6176147460938" positionY="-245.9036102294922" width="128" height="88"/>
-        <element name="CD_LoyaltyCardCard" positionX="124.044189453125" positionY="261.7188873291016" width="128" height="118"/>
+        <element name="CD_LoyaltyCardCard" positionX="124.044189453125" positionY="261.7188873291016" width="128" height="133"/>
         <element name="CD_LoyaltyCardPllLink" positionX="121.958984375" positionY="401.1353912353516" width="128" height="103"/>
         <element name="CD_LoyaltyCardTransaction" positionX="133.7220458984375" positionY="-133.0823516845703" width="128" height="103"/>
         <element name="CD_LoyaltyPlan" positionX="-757.3574523925781" positionY="57.0457763671875" width="128" height="148"/>
