@@ -47,24 +47,23 @@ class WalletCardDetailsViewController: UIViewController {
         
         if let loyaltyCard = loyaltyCard {
             title = loyaltyCard.loyaltyPlan?.planDetails?.companyName ?? ""
-            cardDetails = (loyaltyCard.status?.state ?? "").capitalized + "\n"
-            cardDetails += (loyaltyCard.id ?? "") + "\n"
+            cardDetails = "Status: \(loyaltyCard.status?.state ?? "")".capitalized + "\n"
+            cardDetails += "ID: \(loyaltyCard.id ?? "")" + "\n"
+            cardDetails += "Balance: \(loyaltyCard.balance?.currentDisplayValue ?? "Zero")" + "\n"
+            cardDetails += "Barcode: \(loyaltyCard.card?.barcode ?? "None")" + "\n"
+
             cardDetails += (loyaltyCard.pllLink.count == 0 ? "No PLL links" : "\(loyaltyCard.pllLink.count) PLL links") + "\n"
-            cardDetails += (loyaltyCard.balance?.currentDisplayValue ?? "") + "\n"
             cardDetails += (loyaltyCard.transaction.count == 0 ? "No transactions" : "\(loyaltyCard.transaction.count) transactions") + "\n"
             cardDetails += (loyaltyCard.voucher.count == 0 ? "No vouchers" : "\(loyaltyCard.voucher.count) vouchers") + "\n"
-            cardDetails += (loyaltyCard.card?.barcode ?? "") + "\n"
         }
         
         if let paymentAccount = paymentAccount {
-            cardDetails = (paymentAccount.nameOnCard ?? "") + "\n"
-            cardDetails += (paymentAccount.cardNickname ?? "") + "\n"
-            cardDetails += (paymentAccount.id ?? "") + "\n"
-            cardDetails += (paymentAccount.provider ?? "") + "\n"
-            cardDetails += (paymentAccount.expiryMonth ?? "") + "\n"
-            cardDetails += (paymentAccount.expiryYear ?? "") + "\n"
-            cardDetails += (paymentAccount.lastFour ?? "") + "\n"
-            cardDetails += (paymentAccount.status ?? "").capitalized + "\n"
+            cardDetails = (paymentAccount.cardNickname ?? "") + "\n"
+            cardDetails += (paymentAccount.nameOnCard ?? "") + "\n"
+            cardDetails += "ID: \(paymentAccount.id ?? "")" + "\n"
+            cardDetails += "Expiry: \(paymentAccount.expiryMonth ?? "") / \(paymentAccount.expiryYear ?? "")" + "\n"
+            cardDetails += "Last four digits: \(paymentAccount.lastFour ?? "")" + "\n"
+            cardDetails += "Status: \(paymentAccount.status ?? "")".capitalized + "\n"
             cardDetails += (paymentAccount.pllLinks.count == 0 ? "No PLL links" : "\(paymentAccount.pllLinks.count) PLL links") + "\n"
             title = paymentAccount.provider
         }

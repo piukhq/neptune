@@ -80,7 +80,9 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
             Current.navigate.to(navigationRequest)
         } settingsAction: {
-            print("Settings tapped")
+            let settingsViewController = SettingsViewController()
+            let navigationRequest = ModalNavigationRequest(viewController: settingsViewController)
+            Current.navigate.to(navigationRequest)
         }
         
         let navigationRequest = AlertNavigationRequest(alertController: alert)
