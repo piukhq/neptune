@@ -52,11 +52,6 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         navigationItem.rightBarButtonItem = settingsButton
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-//        Current.rootStateMachine.logout()
-    }
-    
     func configureCollectionView() {
         view.addSubview(collectionView)
         collectionView.dataSource = self
