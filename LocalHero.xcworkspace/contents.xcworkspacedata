@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/seanwilliams/Documents/iOS Development/LocalHero/LocalHero/Wallet/Models/LoyaltyCardPllLink.swift">
-   </FileRef>
-   <FileRef
       location = "group:LocalHero.xcodeproj">
    </FileRef>
    <FileRef
