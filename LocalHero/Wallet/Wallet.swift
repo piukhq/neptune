@@ -95,7 +95,7 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
                     }
                 })
             case .failure(let error):
-                completion(false, error)
+                completion(false, error) 
             }
         }
     }
