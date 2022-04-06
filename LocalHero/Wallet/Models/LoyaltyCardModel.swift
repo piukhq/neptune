@@ -8,7 +8,6 @@
 import CoreData
 import Foundation
 
-// MARK: - LoyaltyCard
 struct LoyaltyCardModel: Codable {
     let apiId: Int?
     let loyaltyPlanID: Int?

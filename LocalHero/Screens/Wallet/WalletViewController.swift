@@ -24,6 +24,18 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         return layout
     }()
     
+    private lazy var settingsButton: UIBarButtonItem = {
+        let threeDotsImage = UIImage(named: "dots")
+        threeDotsImage?.withTintColor(.white)
+        let settingsButton = UIButton(type: .custom)
+        settingsButton.setImage(threeDotsImage, for: .normal)
+        settingsButton.addTarget(self, action: #selector(navigationBarButtonTapped), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: settingsButton)
+        barButton.customView?.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        barButton.customView?.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        return barButton
+    }()
+    
     private var viewModel = WalletViewModel()
     
     override func viewDidLoad() {
@@ -36,9 +48,8 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         collectionView.registerHeader(WalletHeaderView.self, asNib: true)
         configureCollectionView()
         backgroundImageView.alpha = 0.3
-        
-        let threeDotsImage = UIImage(systemName: "paperplane")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: threeDotsImage, style: .done, target: self, action: #selector(navigationBarButtonTapped))
+        title = "Neptune"
+        navigationItem.rightBarButtonItem = settingsButton
     }
     
     override func viewDidDisappear(_ animated: Bool) {
