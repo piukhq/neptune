@@ -7,13 +7,14 @@
 
 import UIKit
 
-class WalletCardDetailsViewController: UIViewController {
+class WalletCardDetailsViewController: LocalHeroViewController {
     private lazy var textView: UITextView = {
        let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isScrollEnabled = false
         textView.isUserInteractionEnabled = true
         textView.isEditable = false
+        textView.backgroundColor = .clear
         textView.font = .systemFont(ofSize: 20)
         textView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 0, right:20)
         view.addSubview(textView)
@@ -37,7 +38,7 @@ class WalletCardDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         NSLayoutConstraint.activate([
-            textView.topAnchor.constraint(equalTo: view.topAnchor),
+            textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             textView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             textView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             textView.trailingAnchor.constraint(equalTo: view.trailingAnchor)

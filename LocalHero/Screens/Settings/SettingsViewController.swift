@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: LocalHeroViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
