@@ -220,7 +220,7 @@
 		CE11105F27FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardTransactionModel.swift; sourceTree = "<group>"; };
 		CE11106127FC502400A5C11A /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
 		CE11106327FC62B200A5C11A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
-		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyCardPllLinkModel.swift; path = "/Users/seanwilliams/Documents/iOS Development/LocalHero/LocalHero/Wallet/Models/LoyaltyCardPllLinkModel.swift"; sourceTree = "<absolute>"; };
+		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardPllLinkModel.swift; sourceTree = "<group>"; };
 		CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
