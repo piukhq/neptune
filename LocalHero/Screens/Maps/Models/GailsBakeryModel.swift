@@ -16,13 +16,15 @@ struct GailsBread: Codable {
 
 // MARK: - Feature
 struct BakeryModel: Codable, Identifiable {
-    var id = UUID()
+    var id: UUID? {
+        return UUID()
+    }
     let type: FeatureType
     let properties: Properties
     let geometry: Geometry
     
     var location: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: geometry.coordinates[0], longitude: geometry.coordinates[1])
+        return CLLocationCoordinate2D(latitude: geometry.coordinates[1], longitude: geometry.coordinates[0])
     }
 }
 
