@@ -9,7 +9,7 @@ import MapKit
 import Foundation
 
 // MARK: - Gails Bread
-struct GailsBread: Codable {
+struct GailsBreadModel: Codable {
     let type: String
     let features: [BakeryModel]
 }

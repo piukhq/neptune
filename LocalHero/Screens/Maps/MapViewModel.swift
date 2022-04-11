@@ -9,20 +9,14 @@ import Foundation
 
 class MapViewModel: ObservableObject {
     var bakeries: [BakeryModel] {
-        return gailsBakeriesData?.features ?? []
+        return getLocalJSONData()?.features ?? []
     }
     
-    var gailsBakeriesData: GailsBread?
-    
-    init() {
-        self.gailsBakeriesData = readJSON()
-    }
-    
-    func readJSON() -> GailsBread? {
+    func getLocalJSONData() -> GailsBreadModel? {
         if let path = Bundle.main.path(forResource: "bakeries", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let bakeriesData = try JSONDecoder().decode(GailsBread.self, from: data)
+                let bakeriesData = try JSONDecoder().decode(GailsBreadModel.self, from: data)
                 return bakeriesData
             } catch {
                 print(error.localizedDescription)
