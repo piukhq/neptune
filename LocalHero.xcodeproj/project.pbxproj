@@ -32,6 +32,9 @@
 		CE11106427FC62B200A5C11A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106327FC62B200A5C11A /* CardModel.swift */; };
 		CE11106627FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */; };
 		CE11106827FC8D1F00A5C11A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */; };
+		CE4C10E428042E0600390079 /* MapSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10E328042E0600390079 /* MapSwiftUIView.swift */; };
+		CE4C10E72804360F00390079 /* GailsBakeryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10E62804360F00390079 /* GailsBakeryModel.swift */; };
+		CE4C10E9280436D100390079 /* bakeries.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C10E8280436D100390079 /* bakeries.json */; };
 		CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */; };
 		CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */; };
 		CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */; };
@@ -222,6 +225,9 @@
 		CE11106327FC62B200A5C11A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardPllLinkModel.swift; sourceTree = "<group>"; };
 		CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
+		CE4C10E328042E0600390079 /* MapSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSwiftUIView.swift; sourceTree = "<group>"; };
+		CE4C10E62804360F00390079 /* GailsBakeryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GailsBakeryModel.swift; sourceTree = "<group>"; };
+		CE4C10E8280436D100390079 /* bakeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bakeries.json; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -440,6 +446,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE4C10E228042BB000390079 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C10E52804345B00390079 /* Models */,
+				CE4C10E328042E0600390079 /* MapSwiftUIView.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		CE4C10E52804345B00390079 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C10E8280436D100390079 /* bakeries.json */,
+				CE4C10E62804360F00390079 /* GailsBakeryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE4EBAF927BCF67100A5CA31 = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +561,7 @@
 		CE4EBB3827BCFB1B00A5CA31 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CE4C10E228042BB000390079 /* Maps */,
 				CEB785AD27D6168C00B8F3D9 /* AddPaymentAccount */,
 				CEB7856127C64C1000B8F3D9 /* LoyaltyPlans */,
 				CEB7855827C63E1A00B8F3D9 /* Login */,
@@ -1067,6 +1092,7 @@
 				CEB785F827DBA34B00B8F3D9 /* devPublicKey.der in Resources */,
 				CE4EBB3A27BD038C00A5CA31 /* README.md in Resources */,
 				CEB785F927DBA34E00B8F3D9 /* prodPublicKey.der in Resources */,
+				CE4C10E9280436D100390079 /* bakeries.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,6 +1340,7 @@
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEED479227F74F9200CDD2DA /* CD_Tier.swift in Sources */,
 				CEED475227F1FEC700CDD2DA /* _CD_Join.swift in Sources */,
+				CE4C10E428042E0600390079 /* MapSwiftUIView.swift in Sources */,
 				CEB785B527D655E800B8F3D9 /* PaymentAccountType.swift in Sources */,
 				CEB785CA27D7853000B8F3D9 /* Navigate.swift in Sources */,
 				CEB785DE27DA396F00B8F3D9 /* PaymentWalletRepository.swift in Sources */,
@@ -1351,6 +1378,7 @@
 				CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */,
+				CE4C10E72804360F00390079 /* GailsBakeryModel.swift in Sources */,
 				CEED474D27F1FEC700CDD2DA /* CD_LoyaltyCardPllLink.swift in Sources */,
 				CEED474627F1FEC700CDD2DA /* CD_LoyaltyCardTransaction.swift in Sources */,
 				CEB785D327D8D7FF00B8F3D9 /* Date+Extension.swift in Sources */,
