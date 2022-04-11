@@ -5,13 +5,7 @@
 //  Created by Sean Williams on 11/04/2022.
 //
 
-import Foundation
-
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
-
+import MapKit
 import Foundation
 
 // MARK: - Gails Bread
@@ -21,10 +15,15 @@ struct GailsBread: Codable {
 }
 
 // MARK: - Feature
-struct BakeryModel: Codable {
+struct BakeryModel: Codable, Identifiable {
+    var id = UUID()
     let type: FeatureType
     let properties: Properties
     let geometry: Geometry
+    
+    var location: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: geometry.coordinates[0], longitude: geometry.coordinates[1])
+    }
 }
 
 // MARK: - Geometry
