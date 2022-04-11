@@ -20,7 +20,7 @@ enum ViewControllerFactory {
         return ac
     }
     
-    static func makeHomeScreenMenuActionSheetController(addPaymentCardAction: @escaping (() -> Void), settingsAction: @escaping (() -> Void)) -> UIAlertController {
+    static func makeHomeScreenMenuActionSheetController(addPaymentCardAction: @escaping (() -> Void), settingsAction: @escaping (() -> Void), mapAction: @escaping (() -> Void)) -> UIAlertController {
         let ac = UIAlertController(title: "NEPTUNE GOD MODE", message: nil, preferredStyle: .actionSheet)
         ac.view.tintColor = .label
         ac.addAction(UIAlertAction(title: "Add Payment Card", style: .default, handler: { _ in
@@ -29,6 +29,10 @@ enum ViewControllerFactory {
         
         ac.addAction(UIAlertAction(title: "Settings", style: .default, handler: { _ in
             settingsAction()
+        }))
+        
+        ac.addAction(UIAlertAction(title: "Map", style: .default, handler: { _ in
+            mapAction()
         }))
         
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))

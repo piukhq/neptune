@@ -5,6 +5,7 @@
 //  Created by Sean Williams on 14/03/2022.
 //
 
+import SwiftUI
 import UIKit
 
 class WalletViewController: LocalHeroViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -77,6 +78,10 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         } settingsAction: {
             let settingsViewController = SettingsViewController()
             let navigationRequest = ModalNavigationRequest(viewController: settingsViewController)
+            Current.navigate.to(navigationRequest)
+        } mapAction: {
+            let vc = UIHostingController(rootView: MapSwiftUIView())
+            let navigationRequest = PushNavigationRequest(viewController: vc)
             Current.navigate.to(navigationRequest)
         }
         
