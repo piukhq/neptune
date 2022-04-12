@@ -14,14 +14,23 @@ class MapViewModel: ObservableObject {
     var annotations: [MKAnnotation] {
         bakeries.compactMap { bakery in
             let bakeryAnnoation = MKPointAnnotation()
-            bakeryAnnoation.title = bakery.properties.streetAddress
             bakeryAnnoation.coordinate = bakery.location
+//            bakeryAnnoation.title = bakery.properties.streetAddress
+//            bakeryAnnoation.subtitle = bakery.properties.openHours
             return bakeryAnnoation
         }
     }
     
     var bakeries: [BakeryModel] {
         return getLocalJSONData()?.features ?? []
+    }
+    
+    func bakeryForAnnotation(_ annotation: MKAnnotation?) -> BakeryModel? {
+        return bakeries.first(where: { $0.location.latitude == annotation?.coordinate.latitude && $0.location.longitude == annotation?.coordinate.longitude })
+    }
+    
+    func streetAddressForBakery(_ bakery: BakeryModel) -> String? {
+        return (bakery.properties.streetAddress ?? "") + "\n" + (bakery.properties.postalCode ?? "")
     }
     
     func getLocalJSONData() -> GailsBreadModel? {

@@ -58,6 +58,41 @@ extension MapViewController: MKMapViewDelegate {
             annotationView?.annotation = annotation
         }
         
+        configureDetailView(annotationView: annotationView)
         return annotationView
+    }
+    
+    func configureDetailView(annotationView: MKAnnotationView?) {
+        guard let bakery = viewModel.bakeryForAnnotation(annotationView?.annotation) else { return }
+        
+        let calloutView = UIStackView()
+        calloutView.translatesAutoresizingMaskIntoConstraints = false
+        calloutView.axis = .vertical
+        
+        
+        let addressTitleLabel = UILabel()
+        addressTitleLabel.text = "Address:"
+        addressTitleLabel.font = .systemFont(ofSize: 10)
+        
+        let addressLabel = UILabel()
+        addressLabel.text = viewModel.streetAddressForBakery(bakery)
+        addressLabel.numberOfLines = 0
+        
+        let spacer = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 15))
+        
+        let openingHoursTitleLabel = UILabel()
+        openingHoursTitleLabel.text = "Opening Hours:"
+        openingHoursTitleLabel.font = .systemFont(ofSize: 10)
+        
+        let openingHoursLabel = UILabel()
+        openingHoursLabel.text = bakery.properties.openHours
+        
+        calloutView.addArrangedSubview(addressTitleLabel)
+        calloutView.addArrangedSubview(addressLabel)
+        calloutView.addArrangedSubview(spacer)
+        calloutView.addArrangedSubview(openingHoursTitleLabel)
+        
+        
+        annotationView?.detailCalloutAccessoryView = calloutView
     }
 }
