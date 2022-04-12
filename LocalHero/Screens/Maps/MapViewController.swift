@@ -13,17 +13,21 @@ class MapViewController: UIViewController {
         let mapView = MKMapView()
         mapView.translatesAutoresizingMaskIntoConstraints = false
         mapView.setRegion(viewModel.region, animated: true)
+        mapView.showsUserLocation = true
         view.addSubview(mapView)
         return mapView
     }()
     
     private let viewModel = MapViewModel()
+    private let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
         mapView.delegate = self
         addAnnotationsToMap()
+        
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func configureLayout() {
