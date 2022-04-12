@@ -15,7 +15,7 @@ struct MapSwiftUIView: View {
     let locationManager = CLLocationManager()
 
     var body: some View {
-        Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: viewModel.bakeries) {
+        Map(coordinateRegion: $region, showsUserLocation: true, annotationItems: viewModel.bakeries) {
             MapMarker(coordinate: $0.location)
         }
         .navigationTitle("Neptune")
