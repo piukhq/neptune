@@ -1598,6 +1598,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1633,6 +1634,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1812,6 +1814,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1943,6 +1946,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
