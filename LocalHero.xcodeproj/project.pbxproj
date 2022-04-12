@@ -36,6 +36,7 @@
 		CE4C10E72804360F00390079 /* GailsBakeryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10E62804360F00390079 /* GailsBakeryModel.swift */; };
 		CE4C10E9280436D100390079 /* bakeries.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C10E8280436D100390079 /* bakeries.json */; };
 		CE4C10EB28046A2400390079 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10EA28046A2400390079 /* MapViewModel.swift */; };
+		CE4C10ED280594B900390079 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10EC280594B900390079 /* MapViewController.swift */; };
 		CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */; };
 		CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */; };
 		CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */; };
@@ -230,6 +231,7 @@
 		CE4C10E62804360F00390079 /* GailsBakeryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GailsBakeryModel.swift; sourceTree = "<group>"; };
 		CE4C10E8280436D100390079 /* bakeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bakeries.json; sourceTree = "<group>"; };
 		CE4C10EA28046A2400390079 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		CE4C10EC280594B900390079 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 			children = (
 				CE4C10E52804345B00390079 /* Models */,
 				CE4C10E328042E0600390079 /* MapSwiftUIView.swift */,
+				CE4C10EC280594B900390079 /* MapViewController.swift */,
 				CE4C10EA28046A2400390079 /* MapViewModel.swift */,
 			);
 			path = Maps;
@@ -1358,6 +1361,7 @@
 				CEED474B27F1FEC700CDD2DA /* CD_LoyaltyCardBalance.swift in Sources */,
 				CEB785C127D765C600B8F3D9 /* UICollectionViewExtension.swift in Sources */,
 				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
+				CE4C10ED280594B900390079 /* MapViewController.swift in Sources */,
 				CEED475927F1FEC700CDD2DA /* CD_Join.swift in Sources */,
 				CEED474C27F1FEC700CDD2DA /* CD_Voucher.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
