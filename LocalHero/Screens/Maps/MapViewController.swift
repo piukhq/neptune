@@ -62,12 +62,12 @@ extension MapViewController: MKMapViewDelegate {
         return annotationView
     }
     
-    func configureDetailView(annotationView: MKAnnotationView?) {
+    private func configureDetailView(annotationView: MKAnnotationView?) {
         guard let bakery = viewModel.bakeryForAnnotation(annotationView?.annotation) else { return }
         
-        let calloutView = UIStackView()
-        calloutView.translatesAutoresizingMaskIntoConstraints = false
-        calloutView.axis = .vertical
+        let calloutStackView = UIStackView()
+        calloutStackView.translatesAutoresizingMaskIntoConstraints = false
+        calloutStackView.axis = .vertical
         
         
         let addressTitleLabel = UILabel()
@@ -78,21 +78,42 @@ extension MapViewController: MKMapViewDelegate {
         addressLabel.text = viewModel.streetAddressForBakery(bakery)
         addressLabel.numberOfLines = 0
         
-        let spacer = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 15))
-        
         let openingHoursTitleLabel = UILabel()
         openingHoursTitleLabel.text = "Opening Hours:"
         openingHoursTitleLabel.font = .systemFont(ofSize: 10)
         
         let openingHoursLabel = UILabel()
-        openingHoursLabel.text = bakery.properties.openHours
+        openingHoursLabel.numberOfLines = 0
         
-        calloutView.addArrangedSubview(addressTitleLabel)
-        calloutView.addArrangedSubview(addressLabel)
-        calloutView.addArrangedSubview(spacer)
-        calloutView.addArrangedSubview(openingHoursTitleLabel)
+        let hours = bakery.properties.openHours?.components(separatedBy: "]],")
+        let unwantedCharacters = "{\"[]}"
+        var formattedHoursArray: [String] = []
         
+        hours?.forEach { openingHour in
+            var formattedHours = openingHour
+            unwantedCharacters.forEach { char in
+                formattedHours = formattedHours.replacingOccurrences(of: String(char), with: "")
+            }
+            formattedHours = formattedHours.replacingOccurrences(of: ",", with: " -")
+            formattedHours = String(formattedHours.dropFirst())
+            formattedHoursArray.append(formattedHours)
+        }
         
-        annotationView?.detailCalloutAccessoryView = calloutView
+        var formattedHoursString = ""
+        formattedHoursArray.forEach {
+            formattedHoursString.append(contentsOf: "\($0)\n")
+        }
+        
+        formattedHoursString.removeLast(2)
+        openingHoursLabel.text = formattedHoursString
+        
+        calloutStackView.addArrangedSubview(addressTitleLabel)
+        calloutStackView.addArrangedSubview(addressLabel)
+        calloutStackView.addArrangedSubview(openingHoursTitleLabel)
+        calloutStackView.addArrangedSubview(openingHoursLabel)
+        
+        calloutStackView.setCustomSpacing(15, after: addressLabel)
+        
+        annotationView?.detailCalloutAccessoryView = calloutStackView
     }
 }
