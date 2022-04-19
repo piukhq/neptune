@@ -15,8 +15,6 @@ class MapViewModel: ObservableObject {
         bakeries.compactMap { bakery in
             let bakeryAnnoation = MKPointAnnotation()
             bakeryAnnoation.coordinate = bakery.location
-//            bakeryAnnoation.title = bakery.properties.streetAddress
-//            bakeryAnnoation.subtitle = bakery.properties.openHours
             return bakeryAnnoation
         }
     }
@@ -33,7 +31,39 @@ class MapViewModel: ObservableObject {
         return (bakery.properties.streetAddress ?? "") + "\n" + (bakery.properties.postalCode ?? "")
     }
     
-    func getLocalJSONData() -> GailsBreadModel? {
+    func formatOpeningHoursText(for bakery: BakeryModel) -> String {
+        let hours = bakery.properties.openHours?.components(separatedBy: "],")
+        let unwantedCharacters = "{\"[]}"
+        var formattedHoursArray: [String] = []
+        
+        hours?.forEach { openingHour in
+            var formattedHours = openingHour
+            unwantedCharacters.forEach { char in
+                formattedHours = formattedHours.replacingOccurrences(of: String(char), with: "")
+            }
+            formattedHours = formattedHours.replacingOccurrences(of: ",", with: " -")
+            formattedHours = String(formattedHours.dropFirst())
+            formattedHoursArray.append(formattedHours)
+        }
+        
+        var formattedHoursString = ""
+        
+        for var openingHour in formattedHoursArray {
+            if bakery.properties.postalCode == "VN02783" {
+                if openingHour.last == " " {
+                    openingHour.append(contentsOf: "Closed")
+                }
+            }
+            
+            formattedHoursString.append(contentsOf: "\(openingHour)\n")
+        }
+
+        formattedHoursString.removeLast(1)
+        
+        return formattedHoursString
+    }
+    
+    private func getLocalJSONData() -> GailsBreadModel? {
         if let path = Bundle.main.path(forResource: "bakeries", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)

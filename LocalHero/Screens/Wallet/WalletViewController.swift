@@ -80,8 +80,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             let navigationRequest = ModalNavigationRequest(viewController: settingsViewController)
             Current.navigate.to(navigationRequest)
         } mapAction: {
-            let vc = UIHostingController(rootView: MapSwiftUIView())
-            let navigationRequest = PushNavigationRequest(viewController: vc)
+            let navigationRequest = PushNavigationRequest(viewController: MapViewController())
             Current.navigate.to(navigationRequest)
         }
         
@@ -153,29 +152,5 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         
         let navigationRequest = PushNavigationRequest(viewController: viewController)
         Current.navigate.to(navigationRequest)
-    }
-}
-
-
-class WalletViewModel {
-    var paymentAccounts: [CD_PaymentAccount]? {
-        return Current.wallet.paymentAccounts
-    }
-    
-    var loyaltyCards: [CD_LoyaltyCard]? {
-        return Current.wallet.loyaltyCards
-    }
-    
-    var numberSections: Int {
-        var sections = 0
-        
-        if let _ = paymentAccounts {
-            sections += 1
-        }
-        
-        if let _ = loyaltyCards {
-            sections += 1
-        }
-        return sections
     }
 }

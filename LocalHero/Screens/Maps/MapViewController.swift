@@ -26,7 +26,6 @@ class MapViewController: UIViewController {
         configureLayout()
         mapView.delegate = self
         addAnnotationsToMap()
-        
         locationManager.requestWhenInUseAuthorization()
     }
     
@@ -69,7 +68,6 @@ extension MapViewController: MKMapViewDelegate {
         calloutStackView.translatesAutoresizingMaskIntoConstraints = false
         calloutStackView.axis = .vertical
         
-        
         let addressTitleLabel = UILabel()
         addressTitleLabel.text = "Address:"
         addressTitleLabel.font = .systemFont(ofSize: 10)
@@ -84,34 +82,12 @@ extension MapViewController: MKMapViewDelegate {
         
         let openingHoursLabel = UILabel()
         openingHoursLabel.numberOfLines = 0
-        
-        let hours = bakery.properties.openHours?.components(separatedBy: "]],")
-        let unwantedCharacters = "{\"[]}"
-        var formattedHoursArray: [String] = []
-        
-        hours?.forEach { openingHour in
-            var formattedHours = openingHour
-            unwantedCharacters.forEach { char in
-                formattedHours = formattedHours.replacingOccurrences(of: String(char), with: "")
-            }
-            formattedHours = formattedHours.replacingOccurrences(of: ",", with: " -")
-            formattedHours = String(formattedHours.dropFirst())
-            formattedHoursArray.append(formattedHours)
-        }
-        
-        var formattedHoursString = ""
-        formattedHoursArray.forEach {
-            formattedHoursString.append(contentsOf: "\($0)\n")
-        }
-        
-        formattedHoursString.removeLast(2)
-        openingHoursLabel.text = formattedHoursString
+        openingHoursLabel.text = viewModel.formatOpeningHoursText(for: bakery)
         
         calloutStackView.addArrangedSubview(addressTitleLabel)
         calloutStackView.addArrangedSubview(addressLabel)
         calloutStackView.addArrangedSubview(openingHoursTitleLabel)
         calloutStackView.addArrangedSubview(openingHoursLabel)
-        
         calloutStackView.setCustomSpacing(15, after: addressLabel)
         
         annotationView?.detailCalloutAccessoryView = calloutStackView
