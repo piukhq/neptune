@@ -34,6 +34,7 @@ class RootStateMachine: NSObject {
     
     func logout() {
         clearLocalStorage()
+        moveTo(ViewControllerFactory.makeLoginViewController())
     }
     
     private func clearLocalStorage() {
