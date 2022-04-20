@@ -227,7 +227,7 @@
 		CE11106127FC502400A5C11A /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
 		CE11106327FC62B200A5C11A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardPllLinkModel.swift; sourceTree = "<group>"; };
-		CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
+		CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CE4C10E62804360F00390079 /* GailsBakeryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GailsBakeryModel.swift; sourceTree = "<group>"; };
 		CE4C10E8280436D100390079 /* bakeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bakeries.json; sourceTree = "<group>"; };
 		CE4C10EA28046A2400390079 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -573,8 +573,7 @@
 				CEB7856127C64C1000B8F3D9 /* LoyaltyPlans */,
 				CEB7855827C63E1A00B8F3D9 /* Login */,
 				CEB7860527DFA47200B8F3D9 /* Wallet */,
-				CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */,
-				CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */,
+				CE8DDBE628102C950059E43A /* Settings */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -589,6 +588,15 @@
 				CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CE8DDBE628102C950059E43A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */,
+				CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
