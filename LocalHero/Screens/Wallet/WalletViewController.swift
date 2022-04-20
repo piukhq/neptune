@@ -99,8 +99,8 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
             Current.navigate.to(navigationRequest)
         } settingsAction: {
-            let settingsViewController = SettingsViewController()
-            let navigationRequest = ModalNavigationRequest(viewController: settingsViewController)
+            let settingsView = UIHostingController(rootView: SettingsSwiftUIView())
+            let navigationRequest = ModalNavigationRequest(viewController: settingsView)
             Current.navigate.to(navigationRequest)
         } mapAction: {
             let navigationRequest = PushNavigationRequest(viewController: MapViewController())

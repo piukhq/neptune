@@ -7,16 +7,33 @@
 
 import SwiftUI
 
-class SettingsViewModel: BarcodeService {
+class SettingsViewModel: BarcodeService, ObservableObject {
+    @Published var showingActionSheet = false
+    
     let rowData = [SettingsRow(type: .currentLogin), SettingsRow(type: .changeEnvironment), SettingsRow(type: .logout)]
     
     var barcodeImage: UIImage? {
         return generateQRCode(from: Current.userManager.currentToken ?? "")
     }
+    
+    func action(for row: SettingsRow) {
+        switch row.type {
+        case .changeEnvironment:
+            showingActionSheet = true
+        case .logout:
+            Current.navigate.close(animated: true) {
+                Current.navigate.back(toRoot: true, animated: true) {
+                    Current.rootStateMachine.logout()
+                }
+            }
+        default:
+            break
+        }
+    }
 }
 
 struct SettingsSwiftUIView: View {
-    let viewModel = SettingsViewModel()
+    var viewModel = SettingsViewModel()
     
     var body: some View {
         List {
@@ -24,6 +41,7 @@ struct SettingsSwiftUIView: View {
                 SettingsRowView(row: row)
             }
         }
+        .listStyle(.plain)
     }
     
     struct SettingsRowView: View {
@@ -32,11 +50,14 @@ struct SettingsSwiftUIView: View {
             static let imagePadding: CGFloat = 10
         }
         
+        @ObservedObject var viewModel = SettingsViewModel()
+
         let row: SettingsRow
-        let viewModel = SettingsViewModel()
-        
+
         var body: some View {
-            Button(action: row.type.action) {
+            Button {
+                viewModel.action(for: row)
+            } label: {
                 switch row.type {
                 case .currentLogin:
                     VStack(alignment: .leading) {
@@ -66,9 +87,27 @@ struct SettingsSwiftUIView: View {
                     }
                 }
             }
+            .actionSheet(isPresented: $viewModel.showingActionSheet) {
+                ActionSheet(
+                    title: Text("Select a color"),
+                    buttons: [
+                        .default(Text("Red")) {
+                            print("Red")
+                        },                        
+                        .default(Text("Green")) {
+                            print("Green")
+                        },
+                    
+                        .default(Text("Blue")) {
+                            print("Blue")
+                        },
+                    ]
+                )
+            }
         }
     }
 }
+
 
 struct SettingsTextStack: View {
     let row: SettingsRow
@@ -76,9 +115,10 @@ struct SettingsTextStack: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 1) {
             Text(row.title)
+                .font(.system(size: 16))
             if let subtitle = row.subtitle {
                 Text(subtitle)
-                    .font(.subheadline)
+                    .font(.system(size: 14))
                     .fontWeight(.light)
                     .foregroundColor(Color.gray)
             }

@@ -34,21 +34,6 @@ struct SettingsRow: Hashable {
                 return "Remove token from secure storage etc."
             }
         }
-        
-        func action() {
-            switch self {
-            case .changeEnvironment:
-                print("Change env")
-            case .logout:
-                Current.navigate.close(animated: true) {
-                    Current.navigate.back(toRoot: true, animated: true) {
-                        Current.rootStateMachine.logout()
-                    }
-                }
-            default:
-                break
-            }
-        }
     }
     
     var type: RowType
