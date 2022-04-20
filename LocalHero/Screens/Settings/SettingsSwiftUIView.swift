@@ -5,8 +5,15 @@
 //  Created by Sean Williams on 20/04/2022.
 //
 
-import CoreImage.CIFilterBuiltins
 import SwiftUI
+
+class SettingsViewModel: BarcodeService {
+    let rowData = [SettingsRow(type: .currentLogin), SettingsRow(type: .changeEnvironment), SettingsRow(type: .logout)]
+    
+    var barcodeImage: UIImage? {
+        return generateQRCode(from: Current.userManager.currentToken ?? "")
+    }
+}
 
 struct SettingsSwiftUIView: View {
     let viewModel = SettingsViewModel()
@@ -20,6 +27,11 @@ struct SettingsSwiftUIView: View {
     }
     
     struct SettingsRowView: View {
+        enum Constants {
+            static let qrCodeSize: CGFloat = 160
+            static let imagePadding: CGFloat = 10
+        }
+        
         let row: SettingsRow
         let viewModel = SettingsViewModel()
         
@@ -36,8 +48,8 @@ struct SettingsSwiftUIView: View {
                                 Image(uiImage: image)
                                     .resizable()
                                     .interpolation(.none)
-                                    .frame(width: 150.0, height: 150.0)
-                                    .padding([.top, .bottom], 20)
+                                    .frame(width: Constants.qrCodeSize, height: Constants.qrCodeSize)
+                                    .padding([.top, .bottom], Constants.imagePadding)
                             }
                             
                             Spacer()
@@ -46,6 +58,11 @@ struct SettingsSwiftUIView: View {
                 default:
                     HStack {
                         SettingsTextStack(row: row)
+                        Spacer()
+                        Image(systemName: "chevron.forward")
+                            .resizable()
+                            .frame(width: 7, height: 12, alignment: .center)
+                            .foregroundColor(.gray)
                     }
                 }
             }
@@ -57,7 +74,7 @@ struct SettingsTextStack: View {
     let row: SettingsRow
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 1) {
             Text(row.title)
             if let subtitle = row.subtitle {
                 Text(subtitle)
@@ -66,111 +83,12 @@ struct SettingsTextStack: View {
                     .foregroundColor(Color.gray)
             }
         }
+        .padding([.top, .bottom], 5)
     }
 }
 
 struct SettingsSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsSwiftUIView()
-    }
-}
-
-
-class SettingsViewModel: BarcodeService {
-    let rowData = [SettingsRow(type: .currentLogin), SettingsRow(type: .changeEnvironment), SettingsRow(type: .logout)]
-    
-    var barcodeImage: UIImage? {
-//        return generateBarcode(Current.userManager.currentToken ?? "")
-        return generateQRCode(from: Current.userManager.currentToken ?? "")
-    }
-}
-
-struct SettingsRow: Hashable {
-    enum RowType {
-        case currentLogin
-        case changeEnvironment
-        case logout
-        
-        var title: String {
-            switch self {
-            case .currentLogin:
-                return "Current Login"
-            case .changeEnvironment:
-                return "Change Environment"
-            case .logout:
-                return "Logout"
-            }
-        }
-        
-        var subtitle: String? {
-            switch self {
-            case .currentLogin:
-                return Current.userManager.currentEmailAddress
-            case .changeEnvironment:
-                return APIConstants.baseURLString
-            case .logout:
-                return "Remove token from secure storage etc."
-            }
-        }
-        
-        func action() {
-            switch self {
-            case .changeEnvironment:
-                print("Change env")
-            case .logout:
-                Current.navigate.close(animated: true) {
-                    Current.navigate.back(toRoot: true, animated: true) {
-                        Current.rootStateMachine.logout()
-                    }
-                }
-            default:
-                break
-            }
-        }
-    }
-    
-    var type: RowType
-    
-    var title: String {
-        return type.title
-    }
-    
-    var subtitle: String? {
-        return type.subtitle
-    }
-}
-
-protocol BarcodeService {
-    func generateBarcode(_ string: String) -> UIImage?
-}
-
-extension BarcodeService {
-    func generateBarcode(_ string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
-        
-        if let filter = CIFilter(name: "CIQRCodeGenerator") {
-            filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 3, y: 3)
-            
-            if let output = filter.outputImage?.transformed(by: transform) {
-                return UIImage(ciImage: output)
-            }
-        }
-        
-        return nil
-    }
-    
-    func generateQRCode(from string: String) -> UIImage {
-        let filter = CIFilter.qrCodeGenerator()
-        let context = CIContext()
-        filter.message = Data(string.utf8)
-
-        if let outputImage = filter.outputImage {
-            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
-                return UIImage(cgImage: cgimg)
-            }
-        }
-
-        return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
 }

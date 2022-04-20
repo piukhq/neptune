@@ -51,6 +51,8 @@
 		CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */; };
 		CE8DDBE3280ECFBB0059E43A /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */; };
 		CE8DDBE528101C8B0059E43A /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */; };
+		CE8DDBE8281072D40059E43A /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE7281072D40059E43A /* BarcodeService.swift */; };
+		CE8DDBEA2810752B0059E43A /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE92810752A0059E43A /* SettingsRow.swift */; };
 		CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */; };
 		CEB7854027C542C300B8F3D9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7853F27C542C300B8F3D9 /* FirebaseRemoteConfig */; };
 		CEB7854227C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7854127C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta */; };
@@ -254,6 +256,8 @@
 		CE4EBB6127C5086800A5CA31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
+		CE8DDBE7281072D40059E43A /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
+		CE8DDBE92810752A0059E43A /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
 		CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		CEB7854A27C54A5C00B8F3D9 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CEB7854C27C54C4800B8F3D9 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
@@ -595,14 +599,24 @@
 			children = (
 				CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */,
 				CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */,
+				CE8DDBEB281075300059E43A /* Model */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE8DDBEB281075300059E43A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DDBE92810752A0059E43A /* SettingsRow.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */,
+				CE8DDBE7281072D40059E43A /* BarcodeService.swift */,
 				CEB785F227DB623900B8F3D9 /* Security */,
 				CEB785B627D66BCC00B8F3D9 /* HeroNavigationController.swift */,
 				CEB7855327C639D800B8F3D9 /* UserManager.swift */,
@@ -1341,6 +1355,7 @@
 				CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */,
 				CEED475627F1FEC700CDD2DA /* CD_LoyaltyCard.swift in Sources */,
 				CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */,
+				CE8DDBEA2810752B0059E43A /* SettingsRow.swift in Sources */,
 				CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */,
 				CEED476627F47F1F00CDD2DA /* Notification+Extension.swift in Sources */,
 				CEB7854D27C54C4800B8F3D9 /* NetworkingError.swift in Sources */,
@@ -1405,6 +1420,7 @@
 				CEED479727F74F9200CDD2DA /* CD_LoyaltyPlanFeatures.swift in Sources */,
 				CEED479627F74F9200CDD2DA /* _CD_LoyaltyCard.swift in Sources */,
 				CE4EBB4427BD6D6300A5CA31 /* Configuration.swift in Sources */,
+				CE8DDBE8281072D40059E43A /* BarcodeService.swift in Sources */,
 				CEB7856A27C65F6F00B8F3D9 /* LoyaltyPlanModel.swift in Sources */,
 				CEED478627F74F9200CDD2DA /* CD_LoyaltyPlanDetails.swift in Sources */,
 				CEB7855227C5514D00B8F3D9 /* BinkHTTPHeaders.swift in Sources */,
