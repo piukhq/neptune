@@ -8,6 +8,18 @@
 import UIKit
 
 enum ViewControllerFactory {
+    
+    static func makeWalletViewController() -> HeroNavigationController {
+        return HeroNavigationController(rootViewController: WalletViewController())
+    }
+    
+    
+    // MARK: - Onboarding
+    
+    static func makeLoginViewController() -> HeroNavigationController {
+        return HeroNavigationController(rootViewController: LoginViewController())
+    }
+    
 
     //MARK: - Alerts
     

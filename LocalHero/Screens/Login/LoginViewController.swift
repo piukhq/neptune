@@ -35,7 +35,8 @@ class LoginViewController: LocalHeroViewController {
     
     private func showError(title: String) {
         let ac = ViewControllerFactory.makeAlertController(title: title, message: nil)
-        self.present(ac, animated: true)
+        let navigationRequest = AlertNavigationRequest(alertController: ac)
+        Current.navigate.to(navigationRequest)
     }
 }
 
@@ -52,22 +53,6 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         }
         
         Current.userManager.setNewUser(with: loginResponse)
-        
-        Current.wallet.launch() { [weak self] success, error in
-            guard success else {
-                if case .failedToGetLoyaltyPlans(let networkingError) = error {
-                    if case .unauthorized = networkingError {
-                        self?.showError(title: L10n.alertInvalidToken)
-                    } else {
-                        self?.showError(title: networkingError.localizedDescription)
-                    }
-                }
-                return
-            }
-            
-            let walletViewController = WalletViewController()
-            let navigationRequest = PushNavigationRequest(viewController: walletViewController)
-            Current.navigate.to(navigationRequest)
-        }
+        Current.rootStateMachine.handleLogin()
     }
 }
