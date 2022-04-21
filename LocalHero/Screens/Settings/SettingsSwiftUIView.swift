@@ -17,6 +17,8 @@ class SettingsViewModel: BarcodeService, ObservableObject {
     }
     
     func action(for row: SettingsRow) {
+        configureActionSheet(for: row)
+        
         switch row.type {
         case .changeEnvironment:
             showingActionSheet = true
@@ -28,6 +30,30 @@ class SettingsViewModel: BarcodeService, ObservableObject {
             }
         default:
             break
+        }
+    }
+    
+    // MARK: - Action sheet
+    
+    var actionSheetTitle = ""
+    var actionSheetButtons: [ActionSheet.Button] = []
+    
+    func configureActionSheet(for row: SettingsRow) {
+        switch row.type {
+        case .changeEnvironment:
+            actionSheetTitle = "Choose Environment"
+            actionSheetButtons = [
+                .default(Text("Dev"), action: {
+                    
+                }),
+                .default(Text("Staging"), action: {
+                    
+                }),
+                .cancel()
+            ]
+        default:
+            actionSheetTitle = ""
+            actionSheetButtons = []
         }
     }
 }
@@ -89,19 +115,8 @@ struct SettingsSwiftUIView: View {
             }
             .actionSheet(isPresented: $viewModel.showingActionSheet) {
                 ActionSheet(
-                    title: Text("Select a color"),
-                    buttons: [
-                        .default(Text("Red")) {
-                            print("Red")
-                        },                        
-                        .default(Text("Green")) {
-                            print("Green")
-                        },
-                    
-                        .default(Text("Blue")) {
-                            print("Blue")
-                        },
-                    ]
+                    title: Text(viewModel.actionSheetTitle),
+                    buttons: viewModel.actionSheetButtons
                 )
             }
         }
