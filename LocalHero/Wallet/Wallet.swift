@@ -151,6 +151,12 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
             }
         })
     }
+    
+    func handleLogout() {
+        hasLaunched = false
+        loyaltyCards = nil
+        paymentAccounts = nil
+    }
 }
 
 

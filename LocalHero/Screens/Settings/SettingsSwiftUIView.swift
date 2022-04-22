@@ -23,11 +23,13 @@ class SettingsViewModel: BarcodeService, ObservableObject {
         case .changeEnvironment:
             showingActionSheet = true
         case .logout:
-            Current.navigate.close(animated: true) {
-                Current.navigate.back(toRoot: true, animated: true) {
-                    Current.rootStateMachine.logout()
-                }
-            }
+            NotificationCenter.default.post(name: .shouldLogout, object: nil)
+
+//            Current.navigate.close(animated: true) {
+//                Current.navigate.back(toRoot: true, animated: true) {
+//                    Current.rootStateMachine.logout()
+//                }
+//            }
         default:
             break
         }
@@ -44,10 +46,10 @@ class SettingsViewModel: BarcodeService, ObservableObject {
             actionSheetTitle = "Choose Environment"
             actionSheetButtons = [
                 .default(Text("Dev"), action: {
-                    
+                    APIConstants.changeEnvironment(.dev)
                 }),
                 .default(Text("Staging"), action: {
-                    
+                    APIConstants.changeEnvironment(.staging)
                 }),
                 .cancel()
             ]
