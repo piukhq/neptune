@@ -36,7 +36,7 @@ platform :ios do
  desc "Retrieve all the certificates for all targets and configures your machine to compile against devices"
   lane :setup do
 
-    # Bink
+    # Local Hero
 
     match(type: "appstore", app_identifier: "com.bink.localhero", readonly: true)
     match(type: "development", app_identifier: "com.bink.localhero.alpha", readonly: true)
@@ -46,6 +46,37 @@ platform :ios do
     match(type: "appstore", app_identifier: "com.bink.localhero.beta", readonly: true)
 
   end
+
+
+  # Add device
+
+ desc "Add device to portal"
+  lane :addDevice do  |options|
+      device_name = prompt(text: "Enter the device name: ")
+      device_udid = prompt(text: "Enter the device UDID: ")
+      device_hash = {}
+      device_hash[device_name] = device_udid
+      register_devices(
+                       devices: device_hash
+                       )
+	setupForce
+  end
+
+
+  desc "Retrieve and force update all the certificates for all targets and configures your machine to compile against devices, including new ones. NOTE: This should only be run if new devices are required in the profiles and certificates"
+  lane :setupForce do
+
+    # Local Hero
+
+    match(type: "appstore", app_identifier: "com.bink.localhero", readonly: false, force_for_new_devices: true)
+    match(type: "development", app_identifier: "com.bink.localhero.alpha", readonly: false, force_for_new_devices: true)
+    match(type: "adhoc", app_identifier: "com.bink.localhero.beta", readonly: false, force_for_new_devices: true)
+
+    # For MR builds to Testflight
+    match(type: "appstore", app_identifier: "com.bink.localhero.beta", readonly: false, force_for_new_devices: true)
+
+  end
+
 
   desc "Submit merge request build to TestFlight"
   lane :mr do |options|
