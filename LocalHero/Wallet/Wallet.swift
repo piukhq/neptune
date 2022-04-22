@@ -38,6 +38,10 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
         }
     }
     
+    func reloadWallet() {
+        loadWalletData(forType: .reload, reloadPlans: false, isUserDriven: false)
+    }
+    
     
     // MARK: - Private
 

@@ -53,6 +53,20 @@ extension LoginViewController: BarcodeScannerViewControllerDelegate {
         }
         
         Current.userManager.setNewUser(with: loginResponse)
-        Current.rootStateMachine.handleLogin()
+        
+        Current.wallet.launch() { [weak self] success, error in
+            guard success else {
+                if case .failedToGetLoyaltyPlans(let networkingError) = error {
+                    if case .unauthorized = networkingError {
+                        self?.showError(title: L10n.alertInvalidToken)
+                    } else {
+                        self?.showError(title: networkingError.localizedDescription)
+                    }
+                }
+                return
+            }
+            
+            Current.rootStateMachine.handleLogin()
+        }
     }
 }

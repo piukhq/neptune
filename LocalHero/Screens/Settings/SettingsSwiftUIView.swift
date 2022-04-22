@@ -24,12 +24,6 @@ class SettingsViewModel: BarcodeService, ObservableObject {
             showingActionSheet = true
         case .logout:
             NotificationCenter.default.post(name: .shouldLogout, object: nil)
-
-//            Current.navigate.close(animated: true) {
-//                Current.navigate.back(toRoot: true, animated: true) {
-//                    Current.rootStateMachine.logout()
-//                }
-//            }
         default:
             break
         }

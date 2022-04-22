@@ -51,23 +51,11 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         backgroundImageView.alpha = 0.3
         title = "Neptune"
         navigationItem.rightBarButtonItem = settingsButton
-        
-        handleLaunch()
     }
     
-    private func handleLaunch() {
-        Current.wallet.launch() { [weak self] success, error in
-            guard success else {
-                if case .failedToGetLoyaltyPlans(let networkingError) = error {
-                    if case .unauthorized = networkingError {
-                        self?.showError(title: L10n.alertInvalidToken)
-                    } else {
-                        self?.showError(title: networkingError.localizedDescription)
-                    }
-                }
-                return
-            }
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Current.wallet.reloadWallet()
     }
     
     private func configureCollectionView() {
