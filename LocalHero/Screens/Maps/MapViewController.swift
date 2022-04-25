@@ -69,7 +69,7 @@ extension MapViewController: MKMapViewDelegate {
         calloutStackView.axis = .vertical
         
         let addressTitleLabel = UILabel()
-        addressTitleLabel.text = "Address:"
+        addressTitleLabel.text  = L10n.mapAnnotationCalloutAddressTitle
         addressTitleLabel.font = .systemFont(ofSize: 10)
         
         let addressLabel = UILabel()
@@ -77,7 +77,7 @@ extension MapViewController: MKMapViewDelegate {
         addressLabel.numberOfLines = 0
         
         let openingHoursTitleLabel = UILabel()
-        openingHoursTitleLabel.text = "Opening Hours:"
+        openingHoursTitleLabel.text = L10n.mapAnnotationCalloutOpeningHoursTitle
         openingHoursTitleLabel.font = .systemFont(ofSize: 10)
         
         let openingHoursLabel = UILabel()

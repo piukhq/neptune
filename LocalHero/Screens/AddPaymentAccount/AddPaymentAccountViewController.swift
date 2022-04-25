@@ -15,9 +15,6 @@ class AddPaymentAccountViewController: BaseFormViewController {
     private lazy var addAccountButton: BinkButton = {
         return BinkButton(type: .plain, title: "Add Payment Account", enabled: false) { [weak self] in
             self?.addAccountButtonTapped()
-//            self?.viewModel.addPaymentCard {
-//                
-//            }
         }
     }()
     

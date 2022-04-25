@@ -26,7 +26,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     }()
     
     private lazy var settingsButton: UIBarButtonItem = {
-        let threeDotsImage = UIImage(named: "dots")
+        let threeDotsImage = UIImage(named: Asset.dots.name)
         threeDotsImage?.withTintColor(.white)
         let settingsButton = UIButton(type: .custom)
         settingsButton.setImage(threeDotsImage, for: .normal)
@@ -49,7 +49,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         collectionView.registerHeader(WalletHeaderView.self, asNib: true)
         configureCollectionView()
         backgroundImageView.alpha = 0.3
-        title = "Neptune"
+        title = L10n.appTitle
         navigationItem.rightBarButtonItem = settingsButton
     }
     
@@ -140,7 +140,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView: WalletHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, kind: UICollectionView.elementKindSectionHeader)
-        headerView.configure(title: indexPath.section == 0 ? "Loyalty Cards" : "Payment Cards")
+        headerView.configure(title: indexPath.section == 0 ? L10n.walletSectionHeaderLoyalty : L10n.walletSectionHeaderPayment)
         return headerView
     }
 

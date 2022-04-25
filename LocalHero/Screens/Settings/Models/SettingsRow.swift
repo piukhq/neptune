@@ -42,7 +42,7 @@ struct SettingsRow: Hashable {
                 let navigationRequest = AlertNavigationRequest(alertController: alertController)
                 Current.navigate.to(navigationRequest)
             case .logout:
-                let alertController = ViewControllerFactory.makeAlertController(title: "Logout", message: nil, showCancelButton: true, completion: {
+                let alertController = ViewControllerFactory.makeAlertController(title: L10n.settingsLogoutAlertTitle, message: L10n.settingsLogoutAlertMessage, showCancelButton: true, completion: {
                     NotificationCenter.default.post(name: .shouldLogout, object: nil)
                 })
                 let navigationRequest = AlertNavigationRequest(alertController: alertController)
