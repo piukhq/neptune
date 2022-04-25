@@ -31,7 +31,6 @@
 		CE11106227FC502400A5C11A /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106127FC502400A5C11A /* VoucherModel.swift */; };
 		CE11106427FC62B200A5C11A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106327FC62B200A5C11A /* CardModel.swift */; };
 		CE11106627FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */; };
-		CE11106827FC8D1F00A5C11A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */; };
 		CE4C10E72804360F00390079 /* GailsBakeryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10E62804360F00390079 /* GailsBakeryModel.swift */; };
 		CE4C10E9280436D100390079 /* bakeries.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C10E8280436D100390079 /* bakeries.json */; };
 		CE4C10EB28046A2400390079 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10EA28046A2400390079 /* MapViewModel.swift */; };
@@ -230,7 +229,6 @@
 		CE11106127FC502400A5C11A /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
 		CE11106327FC62B200A5C11A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardPllLinkModel.swift; sourceTree = "<group>"; };
-		CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CE4C10E62804360F00390079 /* GailsBakeryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GailsBakeryModel.swift; sourceTree = "<group>"; };
 		CE4C10E8280436D100390079 /* bakeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bakeries.json; sourceTree = "<group>"; };
 		CE4C10EA28046A2400390079 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -599,7 +597,6 @@
 		CE8DDBE628102C950059E43A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */,
 				CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */,
 				CE8DDBEB281075300059E43A /* Models */,
 			);
@@ -1370,7 +1367,6 @@
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
 				CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */,
 				CEED471F27EDB48800CDD2DA /* NSPersistentContainer.swift in Sources */,
-				CE11106827FC8D1F00A5C11A /* SettingsViewController.swift in Sources */,
 				CE11106027FC4AEB00A5C11A /* LoyaltyCardTransactionModel.swift in Sources */,
 				CEB7856627C6549C00B8F3D9 /* APIErrorResponses.swift in Sources */,
 				CEED479227F74F9200CDD2DA /* CD_Tier.swift in Sources */,
