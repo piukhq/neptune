@@ -22,7 +22,6 @@ enum ViewControllerFactory {
 
     //MARK: - Alerts
     
-    typealias AlertButtonAction = () -> Void
     
     static func makeAlertController(title: String?, message: String?, showCancelButton: Bool? = false, completion: (() -> Void)? = nil) -> UIAlertController {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)

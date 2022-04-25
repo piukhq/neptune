@@ -10,6 +10,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Failed to add payment account
+  internal static let addPaymentAccountFailedToAddAlertMessage = L10n.tr("Localizable", "addPaymentAccount_failedToAddAlertMessage")
+  /// Payment Account Added
+  internal static let addPaymentAccountSuccessAlertMessage = L10n.tr("Localizable", "addPaymentAccount_successAlertMessage")
+  /// Add Payment Account
+  internal static let addPaymentAccountButtonTitle = L10n.tr("Localizable", "addPaymentAccountButton_title")
   /// Error
   internal static let alertError = L10n.tr("Localizable", "alert_error")
   /// Invalid Token
@@ -22,6 +28,8 @@ internal enum L10n {
   internal static let appTitle = L10n.tr("Localizable", "app_title")
   /// Cancel
   internal static let cancel = L10n.tr("Localizable", "cancel")
+  /// Error
+  internal static let error = L10n.tr("Localizable", "error")
   /// Something went wrong
   internal static let errorSomethingWentWrong = L10n.tr("Localizable", "error_somethingWentWrong")
   /// Login
