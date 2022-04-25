@@ -92,14 +92,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return viewModel.loyaltyCards?.count ?? 0
-        case 1:
-            return viewModel.paymentAccounts?.count ?? 0
-        default:
-            return 0
-        }
+        return viewModel.getNumberOfItemsForSection(section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -150,29 +143,5 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         let viewController = WalletCardDetailsViewController(viewModel: walletCardDetailsViewModel)
         let navigationRequest = PushNavigationRequest(viewController: viewController)
         Current.navigate.to(navigationRequest)
-    }
-}
-
-
-class WalletViewModel {
-    var paymentAccounts: [CD_PaymentAccount]? {
-        return Current.wallet.paymentAccounts
-    }
-    
-    var loyaltyCards: [CD_LoyaltyCard]? {
-        return Current.wallet.loyaltyCards
-    }
-    
-    var numberSections: Int {
-        var sections = 0
-        
-        if let _ = paymentAccounts {
-            sections += 1
-        }
-        
-        if let _ = loyaltyCards {
-            sections += 1
-        }
-        return sections
     }
 }
