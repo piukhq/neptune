@@ -24,6 +24,7 @@
 		133F3207AE27BFE685E0AE3F /* Pods_LocalHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */; };
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
+		CE02BE2428170BD3004B9EA2 /* WalletCardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */; };
 		CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */; };
 		CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */; };
 		CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105D27FC3E1700A5C11A /* StatusModel.swift */; };
@@ -214,6 +215,7 @@
 		9D8E69498ECD5945AFDC2B47 /* Pods-LocalHeroTests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
+		CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardBalanceModel.swift; sourceTree = "<group>"; };
 		CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewController.swift; sourceTree = "<group>"; };
 		CE11105D27FC3E1700A5C11A /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
@@ -796,6 +798,7 @@
 				CEB7860A27DFAACA00B8F3D9 /* CollectionReusableView.swift */,
 				CEB7860727DFA4FA00B8F3D9 /* WalletHeaderView.xib */,
 				CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */,
+				CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1307,6 +1310,7 @@
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CE11106427FC62B200A5C11A /* CardModel.swift in Sources */,
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
+				CE02BE2428170BD3004B9EA2 /* WalletCardDetailsViewModel.swift in Sources */,
 				CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */,
 				CEED471F27EDB48800CDD2DA /* NSPersistentContainer.swift in Sources */,
 				CE11106827FC8D1F00A5C11A /* SettingsViewController.swift in Sources */,

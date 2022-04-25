@@ -134,18 +134,20 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var viewController: WalletCardDetailsViewController!
+        var walletCardDetailsViewModel: WalletCardDetailsViewModel!
+        
         switch indexPath.section {
         case 0:
             let loyaltyCard = viewModel.loyaltyCards?[safe: indexPath.item]
-            viewController = WalletCardDetailsViewController(loyaltyCard: loyaltyCard, paymentAccount: nil)
+            walletCardDetailsViewModel = WalletCardDetailsViewModel(loyaltyCard: loyaltyCard, paymentAccount: nil)
         case 1:
             let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item]
-            viewController = WalletCardDetailsViewController(loyaltyCard: nil, paymentAccount: paymentAccount)
+            walletCardDetailsViewModel = WalletCardDetailsViewModel(loyaltyCard: nil, paymentAccount: paymentAccount)
         default:
             break
         }
         
+        let viewController = WalletCardDetailsViewController(viewModel: walletCardDetailsViewModel)
         let navigationRequest = PushNavigationRequest(viewController: viewController)
         Current.navigate.to(navigationRequest)
     }
