@@ -25,6 +25,18 @@
 
 "settingsRowSubtitle_logout" = "Remove token from secure storage etc.";
 
+"settingsChooseEnvironmentActionSheet_title" = "Choose Environment";
+"settingsChooseEnvironmentActionSheet_dev" = "Dev";
+"settingsChooseEnvironmentActionSheet_staging" = "Staging";
+
+
+//MARK: - Wallet Screen
+
+"walletSettingsActionSheet_title" = "NEPTUNE GOD MODE";
+"walletSettingsActionSheet_addPaymentCard" = "Add Payment Card";
+"walletSettingsActionSheet_settings" = "Settings";
+"walletSettingsActionSheet_map" = "Map";
+
 
 //MARK: -  Alerts
 

@@ -39,35 +39,35 @@ enum ViewControllerFactory {
     }
     
     static func makeHomeScreenMenuActionSheetController(addPaymentCardAction: @escaping (() -> Void), settingsAction: @escaping (() -> Void), mapAction: @escaping (() -> Void)) -> UIAlertController {
-        let ac = UIAlertController(title: "NEPTUNE GOD MODE", message: nil, preferredStyle: .actionSheet)
+        let ac = UIAlertController(title: L10n.walletSettingsActionSheetTitle, message: nil, preferredStyle: .actionSheet)
         ac.view.tintColor = .label
-        ac.addAction(UIAlertAction(title: "Add Payment Card", style: .default, handler: { _ in
+        ac.addAction(UIAlertAction(title: L10n.walletSettingsActionSheetAddPaymentCard, style: .default, handler: { _ in
             addPaymentCardAction()
         }))
         
-        ac.addAction(UIAlertAction(title: "Settings", style: .default, handler: { _ in
+        ac.addAction(UIAlertAction(title: L10n.walletSettingsActionSheetSettings, style: .default, handler: { _ in
             settingsAction()
         }))
         
-        ac.addAction(UIAlertAction(title: "Map", style: .default, handler: { _ in
+        ac.addAction(UIAlertAction(title: L10n.walletSettingsActionSheetMap, style: .default, handler: { _ in
             mapAction()
         }))
         
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: L10n.cancel, style: .cancel))
         return ac
     }
     
     static func makeSettingsActionSheetController() -> UIAlertController {
-        let ac = UIAlertController(title: "Choose Environment", message: nil, preferredStyle: .actionSheet)
+        let ac = UIAlertController(title: L10n.settingsChooseEnvironmentActionSheetTitle, message: nil, preferredStyle: .actionSheet)
         ac.view.tintColor = .label
-        ac.addAction(UIAlertAction(title: "Dev", style: .default, handler: { _ in
+        ac.addAction(UIAlertAction(title: L10n.settingsChooseEnvironmentActionSheetDev, style: .default, handler: { _ in
             APIConstants.changeEnvironment(.dev)
         }))
-        ac.addAction(UIAlertAction(title: "Staging", style: .default, handler: { _ in
+        ac.addAction(UIAlertAction(title: L10n.settingsChooseEnvironmentActionSheetStaging, style: .default, handler: { _ in
             APIConstants.changeEnvironment(.staging)
         }))
         
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: L10n.cancel, style: .cancel))
         return ac
     }
 }

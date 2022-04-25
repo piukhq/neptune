@@ -24,6 +24,12 @@ internal enum L10n {
   internal static let loginButtonTitle = L10n.tr("Localizable", "login_button_title")
   /// OK
   internal static let ok = L10n.tr("Localizable", "ok")
+  /// Dev
+  internal static let settingsChooseEnvironmentActionSheetDev = L10n.tr("Localizable", "settingsChooseEnvironmentActionSheet_dev")
+  /// Staging
+  internal static let settingsChooseEnvironmentActionSheetStaging = L10n.tr("Localizable", "settingsChooseEnvironmentActionSheet_staging")
+  /// Choose Environment
+  internal static let settingsChooseEnvironmentActionSheetTitle = L10n.tr("Localizable", "settingsChooseEnvironmentActionSheet_title")
   /// Remove token from secure storage etc.
   internal static let settingsRowSubtitleLogout = L10n.tr("Localizable", "settingsRowSubtitle_logout")
   /// Change Environment
@@ -32,6 +38,14 @@ internal enum L10n {
   internal static let settingsRowTitleCurrentLogin = L10n.tr("Localizable", "settingsRowTitle_currentLogin")
   /// Logout
   internal static let settingsRowTitleLogout = L10n.tr("Localizable", "settingsRowTitle_logout")
+  /// Add Payment Card
+  internal static let walletSettingsActionSheetAddPaymentCard = L10n.tr("Localizable", "walletSettingsActionSheet_addPaymentCard")
+  /// Map
+  internal static let walletSettingsActionSheetMap = L10n.tr("Localizable", "walletSettingsActionSheet_map")
+  /// Settings
+  internal static let walletSettingsActionSheetSettings = L10n.tr("Localizable", "walletSettingsActionSheet_settings")
+  /// NEPTUNE GOD MODE
+  internal static let walletSettingsActionSheetTitle = L10n.tr("Localizable", "walletSettingsActionSheet_title")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
