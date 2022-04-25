@@ -6,9 +6,24 @@
   
 */
 
+//MARK: - Global
+
+"cancel" = "Cancel";
+"ok" = "OK";
+
+
 //MARK: -  Login Screen
 
 "login_button_title" = "Login";
+
+
+//MARK: -  Settings Screen
+
+"settingsRowTitle_currentLogin" = "Current Login";
+"settingsRowTitle_changeEnvironment" = "Change Environment";
+"settingsRowTitle_logout" = "Logout";
+
+"settingsRowSubtitle_logout" = "Remove token from secure storage etc.";
 
 
 //MARK: -  Alerts

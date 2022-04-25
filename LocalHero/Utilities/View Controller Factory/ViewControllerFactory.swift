@@ -24,11 +24,16 @@ enum ViewControllerFactory {
     
     typealias AlertButtonAction = () -> Void
     
-    static func makeAlertController(title: String?, message: String?, completion: (() -> Void)? = nil) -> UIAlertController {
+    static func makeAlertController(title: String?, message: String?, showCancelButton: Bool? = false, completion: (() -> Void)? = nil) -> UIAlertController {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: L10n.alertOk, style: .cancel, handler: { _ in
+        ac.view.tintColor = .label
+        ac.addAction(UIAlertAction(title: L10n.alertOk, style: .default, handler: { _ in
             completion?()
         }))
+        
+        if showCancelButton ?? false {
+            ac.addAction(UIAlertAction(title: L10n.cancel, style: .cancel))
+        }
         
         return ac
     }

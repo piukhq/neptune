@@ -16,11 +16,11 @@ struct SettingsRow: Hashable {
         var title: String {
             switch self {
             case .currentLogin:
-                return "Current Login"
+                return L10n.settingsRowTitleCurrentLogin
             case .changeEnvironment:
-                return "Change Environment"
+                return L10n.settingsRowTitleChangeEnvironment
             case .logout:
-                return "Logout"
+                return L10n.settingsRowTitleLogout
             }
         }
         
@@ -31,7 +31,7 @@ struct SettingsRow: Hashable {
             case .changeEnvironment:
                 return APIConstants.baseURLString
             case .logout:
-                return "Remove token from secure storage etc."
+                return L10n.settingsRowSubtitleLogout
             }
         }
         
@@ -42,7 +42,11 @@ struct SettingsRow: Hashable {
                 let navigationRequest = AlertNavigationRequest(alertController: alertController)
                 Current.navigate.to(navigationRequest)
             case .logout:
-                NotificationCenter.default.post(name: .shouldLogout, object: nil)
+                let alertController = ViewControllerFactory.makeAlertController(title: "Logout", message: nil, showCancelButton: true, completion: {
+                    NotificationCenter.default.post(name: .shouldLogout, object: nil)
+                })
+                let navigationRequest = AlertNavigationRequest(alertController: alertController)
+                Current.navigate.to(navigationRequest)
             default:
                 break
             }

@@ -18,8 +18,20 @@ internal enum L10n {
   internal static let alertOk = L10n.tr("Localizable", "alert_ok")
   /// Unsupported Barcode
   internal static let alertUnsupportedBarcodeTitle = L10n.tr("Localizable", "alert_unsupported_barcode_title")
+  /// Cancel
+  internal static let cancel = L10n.tr("Localizable", "cancel")
   /// Login
   internal static let loginButtonTitle = L10n.tr("Localizable", "login_button_title")
+  /// OK
+  internal static let ok = L10n.tr("Localizable", "ok")
+  /// Remove token from secure storage etc.
+  internal static let settingsRowSubtitleLogout = L10n.tr("Localizable", "settingsRowSubtitle_logout")
+  /// Change Environment
+  internal static let settingsRowTitleChangeEnvironment = L10n.tr("Localizable", "settingsRowTitle_changeEnvironment")
+  /// Current Login
+  internal static let settingsRowTitleCurrentLogin = L10n.tr("Localizable", "settingsRowTitle_currentLogin")
+  /// Logout
+  internal static let settingsRowTitleLogout = L10n.tr("Localizable", "settingsRowTitle_logout")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
