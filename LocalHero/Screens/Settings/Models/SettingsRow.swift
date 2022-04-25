@@ -34,6 +34,19 @@ struct SettingsRow: Hashable {
                 return "Remove token from secure storage etc."
             }
         }
+        
+        func action() {
+            switch self {
+            case .changeEnvironment:
+                let alertController = ViewControllerFactory.makeSettingsActionSheetController()
+                let navigationRequest = AlertNavigationRequest(alertController: alertController)
+                Current.navigate.to(navigationRequest)
+            case .logout:
+                NotificationCenter.default.post(name: .shouldLogout, object: nil)
+            default:
+                break
+            }
+        }
     }
     
     var type: RowType

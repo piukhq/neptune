@@ -7,56 +7,9 @@
 
 import SwiftUI
 
-class SettingsViewModel: BarcodeService, ObservableObject {
-    @Published var showingActionSheet = false
-    
-    let rowData = [SettingsRow(type: .currentLogin), SettingsRow(type: .changeEnvironment), SettingsRow(type: .logout)]
-    
-    var barcodeImage: UIImage? {
-        return generateQRCode(from: Current.userManager.currentToken ?? "")
-    }
-    
-    func action(for row: SettingsRow) {
-        configureActionSheet(for: row)
-        
-        switch row.type {
-        case .changeEnvironment:
-            showingActionSheet = true
-        case .logout:
-            NotificationCenter.default.post(name: .shouldLogout, object: nil)
-        default:
-            break
-        }
-    }
-    
-    // MARK: - Action sheet
-    
-    var actionSheetTitle = ""
-    var actionSheetButtons: [ActionSheet.Button] = []
-    
-    func configureActionSheet(for row: SettingsRow) {
-        switch row.type {
-        case .changeEnvironment:
-            actionSheetTitle = "Choose Environment"
-            actionSheetButtons = [
-                .default(Text("Dev"), action: {
-                    APIConstants.changeEnvironment(.dev)
-                }),
-                .default(Text("Staging"), action: {
-                    APIConstants.changeEnvironment(.staging)
-                }),
-                .cancel()
-            ]
-        default:
-            actionSheetTitle = ""
-            actionSheetButtons = []
-        }
-    }
-}
-
 struct SettingsSwiftUIView: View {
     var viewModel = SettingsViewModel()
-    
+
     var body: some View {
         List {
             ForEach(viewModel.rowData, id: \.self) { row in
@@ -72,13 +25,13 @@ struct SettingsSwiftUIView: View {
             static let imagePadding: CGFloat = 10
         }
         
-        @ObservedObject var viewModel = SettingsViewModel()
+        var viewModel = SettingsViewModel()
 
         let row: SettingsRow
 
         var body: some View {
             Button {
-                viewModel.action(for: row)
+                row.type.action()
             } label: {
                 switch row.type {
                 case .currentLogin:
@@ -108,12 +61,6 @@ struct SettingsSwiftUIView: View {
                             .foregroundColor(.gray)
                     }
                 }
-            }
-            .actionSheet(isPresented: $viewModel.showingActionSheet) {
-                ActionSheet(
-                    title: Text(viewModel.actionSheetTitle),
-                    buttons: viewModel.actionSheetButtons
-                )
             }
         }
     }

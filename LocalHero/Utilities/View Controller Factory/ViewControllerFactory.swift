@@ -8,7 +8,6 @@
 import UIKit
 
 enum ViewControllerFactory {
-    
     static func makeWalletViewController() -> HeroNavigationController {
         return HeroNavigationController(rootViewController: WalletViewController())
     }
@@ -22,6 +21,8 @@ enum ViewControllerFactory {
     
 
     //MARK: - Alerts
+    
+    typealias AlertButtonAction = () -> Void
     
     static func makeAlertController(title: String?, message: String?, completion: (() -> Void)? = nil) -> UIAlertController {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -48,7 +49,20 @@ enum ViewControllerFactory {
         }))
         
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        return ac
+    }
+    
+    static func makeSettingsActionSheetController() -> UIAlertController {
+        let ac = UIAlertController(title: "Choose Environment", message: nil, preferredStyle: .actionSheet)
+        ac.view.tintColor = .label
+        ac.addAction(UIAlertAction(title: "Dev", style: .default, handler: { _ in
+            APIConstants.changeEnvironment(.dev)
+        }))
+        ac.addAction(UIAlertAction(title: "Staging", style: .default, handler: { _ in
+            APIConstants.changeEnvironment(.staging)
+        }))
         
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         return ac
     }
 }

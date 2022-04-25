@@ -53,6 +53,7 @@
 		CE8DDBE528101C8B0059E43A /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */; };
 		CE8DDBE8281072D40059E43A /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE7281072D40059E43A /* BarcodeService.swift */; };
 		CE8DDBEA2810752B0059E43A /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE92810752A0059E43A /* SettingsRow.swift */; };
+		CE8DDBED28130DAC0059E43A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBEC28130DAB0059E43A /* SettingsViewModel.swift */; };
 		CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */; };
 		CEB7854027C542C300B8F3D9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7853F27C542C300B8F3D9 /* FirebaseRemoteConfig */; };
 		CEB7854227C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7854127C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta */; };
@@ -258,6 +259,7 @@
 		CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		CE8DDBE7281072D40059E43A /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		CE8DDBE92810752A0059E43A /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
+		CE8DDBEC28130DAB0059E43A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		CEB7854A27C54A5C00B8F3D9 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CEB7854C27C54C4800B8F3D9 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
@@ -599,17 +601,18 @@
 			children = (
 				CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */,
 				CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */,
-				CE8DDBEB281075300059E43A /* Model */,
+				CE8DDBEB281075300059E43A /* Models */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		CE8DDBEB281075300059E43A /* Model */ = {
+		CE8DDBEB281075300059E43A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CE8DDBE92810752A0059E43A /* SettingsRow.swift */,
+				CE8DDBEC28130DAB0059E43A /* SettingsViewModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
@@ -1446,6 +1449,7 @@
 				CEB7860827DFA4FA00B8F3D9 /* WalletHeaderView.swift in Sources */,
 				CEED472427EDB75800CDD2DA /* UIApplication+Extension.swift in Sources */,
 				CEB7859D27CCEF8700B8F3D9 /* ImageModel.swift in Sources */,
+				CE8DDBED28130DAC0059E43A /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
