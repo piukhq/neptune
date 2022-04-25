@@ -6,25 +6,59 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FCB95BD071010879EDEA21AAE11C135C /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftGen;
+			productName = SwiftGen;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		01EC5593FAE3D3F9B9CD6B2FAB03D423 /* Pods-LocalHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A9AE5852AD5A7B7BB32AB0236FD830 /* Pods-LocalHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29A33684F68E100B9F23AA20B10FCDED /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3866BBE9500F7599540B7F6BD4D2946F /* Pods-LocalHero-LocalHeroUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EE1F0BFF2BFF016C0772C6627D193D2 /* Pods-LocalHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E089C7551E560F15B32E6A14500129 /* Pods-LocalHero-dummy.m */; };
-		39FCDC22A752FEADF0D684C531704B07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		3A48D814AD5263529B84DEE648CA24D7 /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FF0294C2F67817A0B682017D59324D /* Pods-LocalHero-LocalHeroUITests-dummy.m */; };
-		41D74691B7BE7EE13C0443624BAE0C1B /* Pods-LocalHeroTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97003FEEC4421F318683D5A9C84CB30B /* Pods-LocalHeroTests-dummy.m */; };
-		6E2843972F5B38F59954C4DC66DFF2F6 /* Pods-LocalHeroTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 396866E8E6458AF4DA8A72AD5EC8E007 /* Pods-LocalHeroTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF858F17AC76CD22285A25BA6D442627 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E133E7CCAA8FE7A82616170A8FD14B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4D60701083955075CE48C338C2F7A8ED /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3866BBE9500F7599540B7F6BD4D2946F /* Pods-LocalHero-LocalHeroUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		622FA1F9E2762B033BCB0B7A9715C9E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6970D2610A7920CBA3EB1AEDD23EB5CA /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FF0294C2F67817A0B682017D59324D /* Pods-LocalHero-LocalHeroUITests-dummy.m */; };
+		8BA9B49B70519514B6314EDD84D4680B /* Pods-LocalHeroTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97003FEEC4421F318683D5A9C84CB30B /* Pods-LocalHeroTests-dummy.m */; };
+		96D43C2CB9D0BF62D395E54334C16480 /* Pods-LocalHeroTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 396866E8E6458AF4DA8A72AD5EC8E007 /* Pods-LocalHeroTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1EEF61FE06CDD9956A7329309A47D44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B62A0B41841EDB9D1A62D58049139818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		BB56DE56F3005EDDE697E5758DEC410D /* Pods-LocalHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E089C7551E560F15B32E6A14500129 /* Pods-LocalHero-dummy.m */; };
+		F962DF1B6CA4C018D892AB953D809FEB /* Pods-LocalHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A9AE5852AD5A7B7BB32AB0236FD830 /* Pods-LocalHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4D3AC84D763AEAF0F307B0078136D5DB /* PBXContainerItemProxy */ = {
+		35E5665919128B596762997411607385 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E798429DCFA7906F6625CCFC1088744;
+			remoteInfo = SwiftGen;
+		};
+		9C862DC44750EA51F22404B67F42E995 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E798429DCFA7906F6625CCFC1088744;
+			remoteInfo = SwiftGen;
+		};
+		BE16EBF3958B7D4FA812DF4C228629B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B20E1693BBF6AF309BBC50645CB480FA;
 			remoteInfo = "Pods-LocalHero";
+		};
+		E7CD19832DB36FB0B9AAB1B5A302E1C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E798429DCFA7906F6625CCFC1088744;
+			remoteInfo = SwiftGen;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,6 +75,7 @@
 		3CD781A885AB3FFCDE9D477DD398649C /* Pods-LocalHero.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.alpha.xcconfig"; sourceTree = "<group>"; };
 		3F96F18CBDCA11F9ABF85531035484AC /* Pods-LocalHeroTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHeroTests.modulemap"; sourceTree = "<group>"; };
 		4047B3CC9269E6FDFE3562A5B46AFF54 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
+		47B7CC0F137CBFE6284D00538E7C7431 /* SwiftGen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGen.release.xcconfig; sourceTree = "<group>"; };
 		5B48732C2EE089E08FB3C7DD697EF217 /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		5D198E27F5DF1ED840494338CB1301FF /* Pods-LocalHero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHero.modulemap"; sourceTree = "<group>"; };
 		6531CA105E69D6614ABAE3ECACBEDFA9 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig"; sourceTree = "<group>"; };
@@ -57,37 +92,38 @@
 		94A9AE5852AD5A7B7BB32AB0236FD830 /* Pods-LocalHero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalHero-umbrella.h"; sourceTree = "<group>"; };
 		97003FEEC4421F318683D5A9C84CB30B /* Pods-LocalHeroTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalHeroTests-dummy.m"; sourceTree = "<group>"; };
 		9B9795D37C5426ED0E3EDA760941E6ED /* Pods-LocalHeroTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LocalHeroTests"; path = Pods_LocalHeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0A22F9D13A3A668572F7E0EFCE19BE6 /* Pods-LocalHero.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.beta.xcconfig"; sourceTree = "<group>"; };
 		AE6A09166B90A7984C1A8C3711E0808E /* Pods-LocalHero */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LocalHero"; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8E59254DBFD4566045748250DCCD46 /* Pods-LocalHeroTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHeroTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C269D840BE1F7C819CA8E6377A99A752 /* Pods-LocalHeroTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHeroTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CEB785AC27CE866100B8F3D9 /* SwiftGen.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SwiftGen.release.xcconfig; sourceTree = "<group>"; };
 		EAF6E390C6719BDF040A7B1378A0C479 /* Pods-LocalHeroTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.beta.xcconfig"; sourceTree = "<group>"; };
 		FE2613FC9B196ED3D91E47DF2687E1C0 /* Pods-LocalHeroTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.alpha.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14736E9A636F891A24F7D893217A9EE6 /* Frameworks */ = {
+		1A658FADF488135EC8EFB644B2611885 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF858F17AC76CD22285A25BA6D442627 /* Foundation.framework in Frameworks */,
+				B62A0B41841EDB9D1A62D58049139818 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28BD186749110E7564203AEE44022E64 /* Frameworks */ = {
+		A39349C9AEF032E50572E8A8D9B2C8C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E133E7CCAA8FE7A82616170A8FD14B16 /* Foundation.framework in Frameworks */,
+				A1EEF61FE06CDD9956A7329309A47D44 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2DBC176255EBC2EE1BFEFF0239E9ED94 /* Frameworks */ = {
+		DFC2FA52C8F308ABFA724F2366E1029A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39FCDC22A752FEADF0D684C531704B07 /* Foundation.framework in Frameworks */,
+				622FA1F9E2762B033BCB0B7A9715C9E7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +146,14 @@
 			);
 			name = "Pods-LocalHero";
 			path = "Target Support Files/Pods-LocalHero";
+			sourceTree = "<group>";
+		};
+		08DF4A29620F30ECCD85AE71F22FD52C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D03A30BEEC83BEDE4BED3EDB96DEFD7B /* SwiftGen */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		279286D14C7C4D7CF4144FD42137827A /* Pods-LocalHero-LocalHeroUITests */ = {
@@ -176,14 +220,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CEF6F837509A8472044A65E0183829BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEB785AC27CE866100B8F3D9 /* SwiftGen.release.xcconfig */,
+				47B7CC0F137CBFE6284D00538E7C7431 /* SwiftGen.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGen";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				08DF4A29620F30ECCD85AE71F22FD52C /* Pods */,
 				BA93E6D79E4EB885028C4B1C350D316D /* Products */,
 				8F045595CEE4511A27BCBC0AB6B98B9E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D03A30BEEC83BEDE4BED3EDB96DEFD7B /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				CEF6F837509A8472044A65E0183829BB /* Support Files */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -197,27 +260,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		695F4FB8477DC23FD1D84877B0593EB7 /* Headers */ = {
+		7B08069BE68AD8F1B93C36D72CF47F8C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29A33684F68E100B9F23AA20B10FCDED /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */,
+				96D43C2CB9D0BF62D395E54334C16480 /* Pods-LocalHeroTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		716AAC357FC54BCB45C0E1EB5402C24E /* Headers */ = {
+		B1FECB199BAC85CEF4FD43F0FA19EC1E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01EC5593FAE3D3F9B9CD6B2FAB03D423 /* Pods-LocalHero-umbrella.h in Headers */,
+				F962DF1B6CA4C018D892AB953D809FEB /* Pods-LocalHero-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF9CDA294FB005998A61FA6BFD422B9B /* Headers */ = {
+		B3E6BE1AE139C20E7102694E6D228E29 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E2843972F5B38F59954C4DC66DFF2F6 /* Pods-LocalHeroTests-umbrella.h in Headers */,
+				4D60701083955075CE48C338C2F7A8ED /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,17 +289,18 @@
 /* Begin PBXNativeTarget section */
 		59BFED9DB09D9F5369AD7F0F9A195E8F /* Pods-LocalHeroTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41F1F1E6AB300982E2CBE98CC39013B9 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */;
+			buildConfigurationList = EB89E3D18331FD3906AA527819A7D0C0 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */;
 			buildPhases = (
-				EF9CDA294FB005998A61FA6BFD422B9B /* Headers */,
-				710F6C66A45D1D8E88A7DF7FD61F4F6E /* Sources */,
-				28BD186749110E7564203AEE44022E64 /* Frameworks */,
-				E6B6B08A47DCE2C0EE83F5CBE2842C6C /* Resources */,
+				7B08069BE68AD8F1B93C36D72CF47F8C /* Headers */,
+				7FF472B4748DF2265A2DEB65629B0A5D /* Sources */,
+				DFC2FA52C8F308ABFA724F2366E1029A /* Frameworks */,
+				655AD8D1416C72B41A3A2828EA2903AD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D8F7C9BDAFC6DA00F3B1CBC2B266C13A /* PBXTargetDependency */,
+				A08A0C391EC8CEDFAE11D26D78B27940 /* PBXTargetDependency */,
+				62C9F7537E6F31DB4F05C9A772054EFE /* PBXTargetDependency */,
 			);
 			name = "Pods-LocalHeroTests";
 			productName = Pods_LocalHeroTests;
@@ -245,16 +309,17 @@
 		};
 		88A9F296F27C330A08AB1DA86D7AD6BF /* Pods-LocalHero-LocalHeroUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56E04E6CC3BBB27C55AE9193A7BB797A /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */;
+			buildConfigurationList = 1CEC21F69EC9F6ED1D997006C99A9781 /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */;
 			buildPhases = (
-				695F4FB8477DC23FD1D84877B0593EB7 /* Headers */,
-				64A41DBFBC5B66DF13F74883606BF919 /* Sources */,
-				14736E9A636F891A24F7D893217A9EE6 /* Frameworks */,
-				78F0D7A2A86AAA55CDC8BDE6BDB95C4C /* Resources */,
+				B3E6BE1AE139C20E7102694E6D228E29 /* Headers */,
+				1992ED0A20D776423B1E1CF6D1A43629 /* Sources */,
+				A39349C9AEF032E50572E8A8D9B2C8C5 /* Frameworks */,
+				FFC65B845D7C689AFE1C98240BBB2EB7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				58610603079283E51908330CA92D26A2 /* PBXTargetDependency */,
 			);
 			name = "Pods-LocalHero-LocalHeroUITests";
 			productName = Pods_LocalHero_LocalHeroUITests;
@@ -263,16 +328,17 @@
 		};
 		B20E1693BBF6AF309BBC50645CB480FA /* Pods-LocalHero */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC1A2BA2040CC743F7BB6A4855838841 /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */;
+			buildConfigurationList = 74FA1EEFB79833F46522DDED2AE3F986 /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */;
 			buildPhases = (
-				716AAC357FC54BCB45C0E1EB5402C24E /* Headers */,
-				FDF99BE62C09FA00C0768A6E40624E35 /* Sources */,
-				2DBC176255EBC2EE1BFEFF0239E9ED94 /* Frameworks */,
-				3E38602BFA139D050093C69953CFE173 /* Resources */,
+				B1FECB199BAC85CEF4FD43F0FA19EC1E /* Headers */,
+				4B5F00937CFE79D585C4D23BDE3E41BC /* Sources */,
+				1A658FADF488135EC8EFB644B2611885 /* Frameworks */,
+				D89A69B246FA11D64BD28B23F2F73D9C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				811B17DFBA72D8C1072F7AB4D596A7E6 /* PBXTargetDependency */,
 			);
 			name = "Pods-LocalHero";
 			productName = Pods_LocalHero;
@@ -304,26 +370,27 @@
 				B20E1693BBF6AF309BBC50645CB480FA /* Pods-LocalHero */,
 				88A9F296F27C330A08AB1DA86D7AD6BF /* Pods-LocalHero-LocalHeroUITests */,
 				59BFED9DB09D9F5369AD7F0F9A195E8F /* Pods-LocalHeroTests */,
+				1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3E38602BFA139D050093C69953CFE173 /* Resources */ = {
+		655AD8D1416C72B41A3A2828EA2903AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78F0D7A2A86AAA55CDC8BDE6BDB95C4C /* Resources */ = {
+		D89A69B246FA11D64BD28B23F2F73D9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6B6B08A47DCE2C0EE83F5CBE2842C6C /* Resources */ = {
+		FFC65B845D7C689AFE1C98240BBB2EB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,83 +400,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		64A41DBFBC5B66DF13F74883606BF919 /* Sources */ = {
+		1992ED0A20D776423B1E1CF6D1A43629 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A48D814AD5263529B84DEE648CA24D7 /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */,
+				6970D2610A7920CBA3EB1AEDD23EB5CA /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		710F6C66A45D1D8E88A7DF7FD61F4F6E /* Sources */ = {
+		4B5F00937CFE79D585C4D23BDE3E41BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D74691B7BE7EE13C0443624BAE0C1B /* Pods-LocalHeroTests-dummy.m in Sources */,
+				BB56DE56F3005EDDE697E5758DEC410D /* Pods-LocalHero-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDF99BE62C09FA00C0768A6E40624E35 /* Sources */ = {
+		7FF472B4748DF2265A2DEB65629B0A5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE1F0BFF2BFF016C0772C6627D193D2 /* Pods-LocalHero-dummy.m in Sources */,
+				8BA9B49B70519514B6314EDD84D4680B /* Pods-LocalHeroTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D8F7C9BDAFC6DA00F3B1CBC2B266C13A /* PBXTargetDependency */ = {
+		58610603079283E51908330CA92D26A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */;
+			targetProxy = 9C862DC44750EA51F22404B67F42E995 /* PBXContainerItemProxy */;
+		};
+		62C9F7537E6F31DB4F05C9A772054EFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */;
+			targetProxy = E7CD19832DB36FB0B9AAB1B5A302E1C0 /* PBXContainerItemProxy */;
+		};
+		811B17DFBA72D8C1072F7AB4D596A7E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */;
+			targetProxy = 35E5665919128B596762997411607385 /* PBXContainerItemProxy */;
+		};
+		A08A0C391EC8CEDFAE11D26D78B27940 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LocalHero";
 			target = B20E1693BBF6AF309BBC50645CB480FA /* Pods-LocalHero */;
-			targetProxy = 4D3AC84D763AEAF0F307B0078136D5DB /* PBXContainerItemProxy */;
+			targetProxy = BE16EBF3958B7D4FA812DF4C228629B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06BBA1C2297A923302914471BF92810D /* Beta */ = {
+		0132C298E91AACAEF65B55A47227E37E /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A22F9D13A3A668572F7E0EFCE19BE6 /* Pods-LocalHero.beta.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Beta;
-		};
-		13F025A4DC0063C4ED2DE1623C67156F /* Alpha */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE2613FC9B196ED3D91E47DF2687E1C0 /* Pods-LocalHeroTests.alpha.xcconfig */;
+			baseConfigurationReference = EAF6E390C6719BDF040A7B1378A0C479 /* Pods-LocalHeroTests.beta.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -443,7 +490,194 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
+			name = Beta;
+		};
+		0A158657E6C1030C8C4FFAFAAEF50DC2 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 672A267C1C5D5AA5D5CBCFB1AC4BD2BC /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Beta;
+		};
+		1577344C741ABE29A508A5541E1695B4 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CD781A885AB3FFCDE9D477DD398649C /* Pods-LocalHero.alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
 			name = Alpha;
+		};
+		16B2605AC40D8B93D9000073A361C68B /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4047B3CC9269E6FDFE3562A5B46AFF54 /* Pods-LocalHeroTests.app store.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
+		177ED7F2729CAD5932E9FC427824BAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1BFB2EB2E3184B3D258B0572C0A46B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		20DDEBC41A2C1EC164EA1739FE97C589 /* Beta */ = {
 			isa = XCBuildConfiguration;
@@ -507,7 +741,83 @@
 			};
 			name = Beta;
 		};
-		2316234346D4829175E736467CBF0B4D /* Debug */ = {
+		2D442BD5A76EB53E41E510B6ACE75609 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 386D38B52D5C6E83FE656C7B89B80478 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Alpha;
+		};
+		2E4502D06AC34B31AAFBECC2B29F69CD /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B48732C2EE089E08FB3C7DD697EF217 /* Pods-LocalHero.app store (internal).xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store (Internal)";
+		};
+		3F03792DEE8BD9F6A05E7745993A70FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
@@ -543,7 +853,7 @@
 			};
 			name = Debug;
 		};
-		46B1D99163524BB579E82DE521B7F694 /* App Store (Internal) */ = {
+		545687A794E56BF757EE3252E94B3099 /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6531CA105E69D6614ABAE3ECACBEDFA9 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */;
 			buildSettings = {
@@ -581,82 +891,7 @@
 			};
 			name = "App Store (Internal)";
 		};
-		4E7A9C21270DB57AF8BCC8296B6F7251 /* Beta */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 672A267C1C5D5AA5D5CBCFB1AC4BD2BC /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Beta;
-		};
-		4EDAA0CA6DED34D920033BA0A24F7FD8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		787D93CDB3A0F720684CFAD02B91786F /* App Store */ = {
+		5D58295E2900E55C2D56548FE186CD64 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C81C9687C84DADE9F9302EC15E0B426 /* Pods-LocalHero.app store.xcconfig */;
 			buildSettings = {
@@ -694,7 +929,7 @@
 			};
 			name = "App Store";
 		};
-		7E450C58247213C8B149FC5A86428267 /* Release */ = {
+		6C5A9302C163AD7019C36C1FF6D114F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
@@ -707,7 +942,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -716,7 +951,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -728,6 +963,75 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		70830C53AA19ED9F80E81823CB339BD8 /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3149F232FA7AAA977D663EAC9E7EE1E2 /* Pods-LocalHeroTests.app store (internal).xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store (Internal)";
+		};
+		7478C8A3C5F92E828F0E9FF0B199783B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85F47A6E6D7D5812CB16894453B2834B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -797,6 +1101,44 @@
 			};
 			name = Debug;
 		};
+		98849230DEFE236CECD5FA6251E6AB62 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768B33CC1A20E827133693A3488A8486 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -858,44 +1200,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		A1C37AF271DE5046A8A370687FBF4C73 /* Alpha */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 386D38B52D5C6E83FE656C7B89B80478 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Alpha;
 		};
 		A1F56A1C51D012F21FB227246F6DDBAB /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
@@ -959,152 +1263,22 @@
 			};
 			name = "App Store (Internal)";
 		};
-		B0CFC00394A3016390D8FEFE148EF53F /* Debug */ = {
+		A603521721C83B99B83D6B722D4C203F /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B7CC0F137CBFE6284D00538E7C7431 /* SwiftGen.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C015ADBD7D39CEB87DF5651965D7A33B /* App Store (Internal) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B48732C2EE089E08FB3C7DD697EF217 /* Pods-LocalHero.app store (internal).xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = "App Store (Internal)";
-		};
-		C61E2E5608BD059D83394327E350AFB5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C8AB49AF148302A517CD8817517EDEE1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		C955DC1A948FF8819387AC022C0D50E1 /* App Store */ = {
 			isa = XCBuildConfiguration;
@@ -1168,9 +1342,8 @@
 			};
 			name = "App Store";
 		};
-		DB495CA1FEE1FEB6BEE53896B5E0E951 /* App Store */ = {
+		CFBAE387B42D7A3D78649F95AF8A8DA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4047B3CC9269E6FDFE3562A5B46AFF54 /* Pods-LocalHeroTests.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1204,49 +1377,10 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store";
+			name = Release;
 		};
-		DDCA74AC1C70BC5D2E255B5E7E12D227 /* Beta */ = {
+		DC93F7AF06A5D59E65C1BAA0522E7D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF6E390C6719BDF040A7B1378A0C479 /* Pods-LocalHeroTests.beta.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Beta;
-		};
-		E8467C04A57CFB91E8AEC2282EBD19CD /* App Store */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 768B33CC1A20E827133693A3488A8486 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1276,53 +1410,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store";
+			name = Debug;
 		};
-		EB603A949EECE7B021681597F32316B0 /* App Store (Internal) */ = {
+		DD5A8A68CB74E0B6E3B79979796FCEA4 /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3149F232FA7AAA977D663EAC9E7EE1E2 /* Pods-LocalHeroTests.app store (internal).xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "App Store (Internal)";
-		};
-		F3FC0D36211067F0D7271F92F3F9913F /* Alpha */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CD781A885AB3FFCDE9D477DD398649C /* Pods-LocalHero.alpha.xcconfig */;
+			baseConfigurationReference = A0A22F9D13A3A668572F7E0EFCE19BE6 /* Pods-LocalHero.beta.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1356,7 +1451,96 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
+			name = Beta;
+		};
+		DFC73C620CBA6C673E12F2A7F96A6748 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B7CC0F137CBFE6284D00538E7C7431 /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Beta;
+		};
+		EE286AE47CD70A381B1EB08F12C02212 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B7CC0F137CBFE6284D00538E7C7431 /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
 			name = Alpha;
+		};
+		F2362741AF09A037DFDA10CDB032584F /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE2613FC9B196ED3D91E47DF2687E1C0 /* Pods-LocalHeroTests.alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Alpha;
+		};
+		F6C32014D9AF978141B0D4E2D73B552B /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B7CC0F137CBFE6284D00538E7C7431 /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store";
 		};
 		F6C7D922C8B99F3640F714C7062B74AD /* Alpha */ = {
 			isa = XCBuildConfiguration;
@@ -1423,15 +1607,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41F1F1E6AB300982E2CBE98CC39013B9 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */ = {
+		1CEC21F69EC9F6ED1D997006C99A9781 /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13F025A4DC0063C4ED2DE1623C67156F /* Alpha */,
-				DB495CA1FEE1FEB6BEE53896B5E0E951 /* App Store */,
-				EB603A949EECE7B021681597F32316B0 /* App Store (Internal) */,
-				DDCA74AC1C70BC5D2E255B5E7E12D227 /* Beta */,
-				B0CFC00394A3016390D8FEFE148EF53F /* Debug */,
-				4EDAA0CA6DED34D920033BA0A24F7FD8 /* Release */,
+				2D442BD5A76EB53E41E510B6ACE75609 /* Alpha */,
+				98849230DEFE236CECD5FA6251E6AB62 /* App Store */,
+				545687A794E56BF757EE3252E94B3099 /* App Store (Internal) */,
+				0A158657E6C1030C8C4FFAFAAEF50DC2 /* Beta */,
+				DC93F7AF06A5D59E65C1BAA0522E7D6F /* Debug */,
+				6C5A9302C163AD7019C36C1FF6D114F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1449,28 +1633,41 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56E04E6CC3BBB27C55AE9193A7BB797A /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */ = {
+		74FA1EEFB79833F46522DDED2AE3F986 /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1C37AF271DE5046A8A370687FBF4C73 /* Alpha */,
-				E8467C04A57CFB91E8AEC2282EBD19CD /* App Store */,
-				46B1D99163524BB579E82DE521B7F694 /* App Store (Internal) */,
-				4E7A9C21270DB57AF8BCC8296B6F7251 /* Beta */,
-				C61E2E5608BD059D83394327E350AFB5 /* Debug */,
-				C8AB49AF148302A517CD8817517EDEE1 /* Release */,
+				1577344C741ABE29A508A5541E1695B4 /* Alpha */,
+				5D58295E2900E55C2D56548FE186CD64 /* App Store */,
+				2E4502D06AC34B31AAFBECC2B29F69CD /* App Store (Internal) */,
+				DD5A8A68CB74E0B6E3B79979796FCEA4 /* Beta */,
+				3F03792DEE8BD9F6A05E7745993A70FA /* Debug */,
+				177ED7F2729CAD5932E9FC427824BAE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC1A2BA2040CC743F7BB6A4855838841 /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */ = {
+		EB89E3D18331FD3906AA527819A7D0C0 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3FC0D36211067F0D7271F92F3F9913F /* Alpha */,
-				787D93CDB3A0F720684CFAD02B91786F /* App Store */,
-				C015ADBD7D39CEB87DF5651965D7A33B /* App Store (Internal) */,
-				06BBA1C2297A923302914471BF92810D /* Beta */,
-				2316234346D4829175E736467CBF0B4D /* Debug */,
-				7E450C58247213C8B149FC5A86428267 /* Release */,
+				F2362741AF09A037DFDA10CDB032584F /* Alpha */,
+				16B2605AC40D8B93D9000073A361C68B /* App Store */,
+				70830C53AA19ED9F80E81823CB339BD8 /* App Store (Internal) */,
+				0132C298E91AACAEF65B55A47227E37E /* Beta */,
+				1BFB2EB2E3184B3D258B0572C0A46B27 /* Debug */,
+				CFBAE387B42D7A3D78649F95AF8A8DA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCB95BD071010879EDEA21AAE11C135C /* Build configuration list for PBXAggregateTarget "SwiftGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE286AE47CD70A381B1EB08F12C02212 /* Alpha */,
+				F6C32014D9AF978141B0D4E2D73B552B /* App Store */,
+				A603521721C83B99B83D6B722D4C203F /* App Store (Internal) */,
+				DFC73C620CBA6C673E12F2A7F96A6748 /* Beta */,
+				7478C8A3C5F92E828F0E9FF0B199783B /* Debug */,
+				85F47A6E6D7D5812CB16894453B2834B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

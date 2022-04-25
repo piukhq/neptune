@@ -4,6 +4,8 @@ def common_pods
 
 #pod 'DTTJailbreakDetection', '~> 0.4'
 #pod 'SwiftLint', '~> 0.43'
+pod 'SwiftGen', '~> 6.5.1'
+
 
 #plugin 'cocoapods-keys', {
 #  :project => "binkapp",
