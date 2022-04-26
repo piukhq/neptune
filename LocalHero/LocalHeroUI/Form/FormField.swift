@@ -66,7 +66,7 @@ class FormField {
         
         func capitalization() -> UITextAutocapitalizationType {
             switch self {
-            case .text:
+            case .text, .paymentAccountNickname:
                 return .words
             default:
                 return .none
