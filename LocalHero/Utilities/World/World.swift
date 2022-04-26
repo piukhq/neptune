@@ -37,14 +37,14 @@ protocol HeroUserDefaults {
 extension UserDefaults: HeroUserDefaults {
     enum Keys {
         case localWalletOrder(userId: String, walletType: Wallet.WalletType)
-        case debugBaseURL
+        case overrideBaseURL
         
         var keyValue: String {
             switch self {
             case .localWalletOrder(let userId, let type):
                 return "localWalletOrders_user:_\(userId)_ \(type.rawValue)"
-            case .debugBaseURL:
-                return "debugBaseURL"
+            case .overrideBaseURL:
+                return "overrideBaseURL"
             }
         }
     }

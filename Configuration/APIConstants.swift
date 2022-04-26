@@ -9,7 +9,7 @@ import Foundation
 
 private var debugBaseURL = "" {
     didSet {
-        Current.userDefaults.set(debugBaseURL, forDefaultsKey: .debugBaseURL)
+        Current.userDefaults.set(debugBaseURL, forDefaultsKey: .overrideBaseURL)
     }
 }
 
@@ -24,8 +24,8 @@ enum APIConstants {
     static var baseURLString: String {
         if let _ = try? Configuration.value(for: .debug) {
             // If we have set the environment from the debug menu
-            if let debugBaseURLString = Current.userDefaults.value(forDefaultsKey: .debugBaseURL) as? String {
-                return debugBaseURLString
+            if let overrideBaseURLString = Current.userDefaults.value(forDefaultsKey: .overrideBaseURL) as? String {
+                return overrideBaseURLString
             }
         }
         
