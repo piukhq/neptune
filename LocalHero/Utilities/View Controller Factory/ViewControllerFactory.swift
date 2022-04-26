@@ -21,8 +21,7 @@ enum ViewControllerFactory {
     
 
     //MARK: - Alerts
-    
-    
+        
     static func makeAlertController(title: String?, message: String?, showCancelButton: Bool? = false, completion: (() -> Void)? = nil) -> UIAlertController {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.view.tintColor = .label
@@ -67,6 +66,38 @@ enum ViewControllerFactory {
         }))
         
         ac.addAction(UIAlertAction(title: L10n.cancel, style: .cancel))
+        return ac
+    }
+    
+    static func makeAlertViewControllerWithTextfield(title: String?, message: String?, cancelButton: Bool? = nil, okActionHandler: @escaping (String) -> Void, cancelActionHandler: EmptyCompletionBlock? = nil ) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.view.tintColor = .label
+        alert.addTextField { textfield in
+//            textfield.textContentType = .oneTimeCode
+//            textfield.keyboardType = .numberPad
+        }
+        alert.addAction(UIAlertAction(title: L10n.ok, style: .default, handler: { _ in
+            okActionHandler(alert.textFields?[0].text ?? "")
+        }))
+        
+        alert.addAction(UIAlertAction(title: L10n.cancel, style: .cancel, handler: { _ in
+            cancelActionHandler?()
+        }))
+        return alert
+    }
+    
+    static func makeScannerEnterManuallyAlertController(completion: (() -> Void)? = nil) -> UIAlertController {
+        let ac = UIAlertController(title: L10n.barcodeScannerWidgetTitleEnterManuallyText, message: L10n.barcodeScannerEnterManullyAlertDescription, preferredStyle: .alert)
+        ac.view.tintColor = .label
+        
+        
+        
+        ac.addAction(UIAlertAction(title: L10n.alertOk, style: .default, handler: { _ in
+            completion?()
+        }))
+        
+        ac.addAction(UIAlertAction(title: L10n.cancel, style: .cancel))
+        
         return ac
     }
 }

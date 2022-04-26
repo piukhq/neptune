@@ -67,6 +67,7 @@
 
 "barcodeScanner_widgetTitle_enterManuallyText" = "Enter Manually";
 "barcodeScanner_widgetExplainer_enterManuallyText" = "You can also enter your details manually";
+"barcodeScanner_enterManullyAlert_description" = "Enter or paste your login QR code below";
 
 
 // MARK: - Alerts
