@@ -81,7 +81,7 @@ extension FormDataSource {
         let yearData = Array(yearValue...yearValue + 50).compactMap { FormPickerData("\($0)", backingData: $0) }
         
         let cardNumberField = FormField(
-            title: "Card number",
+            title: "Card Number",
             placeholder: "xxxx xxxx xxxx xxxx",
             validation: nil,
             fieldType: .paymentAccountNumber,
@@ -93,7 +93,7 @@ extension FormDataSource {
         )
         
         let nameOnCardField = FormField(
-            title: "Name on card",
+            title: "Name on Card",
             placeholder: "J Appleseed",
             validation: "^(((?=.{1,}$)[A-Za-z\\-\\u00C0-\\u00FF' ])+\\s*)$",
             fieldType: .text,
