@@ -15,6 +15,10 @@ class LoginViewController: LocalHeroViewController {
         return BinkButton(type: .plain, title: L10n.loginButtonTitle, action: loginButtonTapped)
     }()
     
+    private lazy var enterManuallyButton: BinkButton = {
+        return BinkButton(type: .plain, title: "E", action: enterManualyButtonTapped)
+    }()
+    
     private weak var delegate: BarcodeScannerViewControllerDelegate?
 
 
@@ -23,6 +27,10 @@ class LoginViewController: LocalHeroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         footerButtons = [loginButton]
+        
+        if Configuration.isDebug() {
+            footerButtons.append(enterManuallyButton)
+        }
     }
 
     // MARK: - Private methods
@@ -31,6 +39,10 @@ class LoginViewController: LocalHeroViewController {
         let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
         let navigationRequest = ModalNavigationRequest(viewController: vc)
         Current.navigate.to(navigationRequest)
+    }
+    
+    private func enterManualyButtonTapped() {
+        
     }
     
     private func showError(title: String) {
