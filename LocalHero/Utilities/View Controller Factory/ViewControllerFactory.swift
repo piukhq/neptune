@@ -72,10 +72,7 @@ enum ViewControllerFactory {
     static func makeAlertViewControllerWithTextfield(title: String?, message: String?, cancelButton: Bool? = nil, okActionHandler: @escaping (String) -> Void, cancelActionHandler: EmptyCompletionBlock? = nil ) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.view.tintColor = .label
-        alert.addTextField { textfield in
-//            textfield.textContentType = .oneTimeCode
-//            textfield.keyboardType = .numberPad
-        }
+        alert.addTextField()
         alert.addAction(UIAlertAction(title: L10n.ok, style: .default, handler: { _ in
             okActionHandler(alert.textFields?[0].text ?? "")
         }))

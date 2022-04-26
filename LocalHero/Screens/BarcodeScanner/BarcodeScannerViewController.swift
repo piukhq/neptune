@@ -271,8 +271,8 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
     
     @objc private func enterManually() {
         widgetView.animateOnTap()
-        let alertController = ViewControllerFactory.makeAlertViewControllerWithTextfield(title: L10n.barcodeScannerWidgetTitleEnterManuallyText, message: L10n.barcodeScannerEnterManullyAlertDescription) { textfieldText in
-            print(textfieldText)
+        let alertController = ViewControllerFactory.makeAlertViewControllerWithTextfield(title: L10n.barcodeScannerWidgetTitleEnterManuallyText, message: L10n.barcodeScannerEnterManullyAlertDescription) { [weak self] textfieldText in
+            self?.passDataToBarcodeScannerDelegate(barcode: textfieldText)
         }
         let navigationRequest = AlertNavigationRequest(alertController: alertController)
         Current.navigate.to(navigationRequest)

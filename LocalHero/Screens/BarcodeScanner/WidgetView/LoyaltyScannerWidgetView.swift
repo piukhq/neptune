@@ -39,10 +39,10 @@ class LoyaltyScannerWidgetView: CustomView {
 
         backgroundColor = UIColor(hexString: "#3b48ea", alpha: 0.94)
         titleLabel.font = .boldSystemFont(ofSize: 20)
-//        titleLabel.textColor = Current.themeManager.color(for: .text)
+        titleLabel.textColor = .white
         explainerLabel.font = .systemFont(ofSize: 14)
         explainerLabel.numberOfLines = 2
-//        explainerLabel.textColor = Current.themeManager.color(for: .text)
+        explainerLabel.textColor = .white.withAlphaComponent(0.7)
         imageView.tintColor = .green
 
         setState(state)
