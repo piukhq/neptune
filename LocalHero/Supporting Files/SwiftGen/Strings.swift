@@ -30,6 +30,8 @@ internal enum L10n {
   internal static let barcodeScannerAddFromPhotoLibraryButtonTitle = L10n.tr("Localizable", "barcodeScanner_addFromPhotoLibrary_buttonTitle")
   /// Enter or paste your login QR code below
   internal static let barcodeScannerEnterManullyAlertDescription = L10n.tr("Localizable", "barcodeScanner_enterManullyAlert_description")
+  /// Failed to extract token from image
+  internal static let barcodeScannerErrorMessageFailedToDetectLoginToken = L10n.tr("Localizable", "barcodeScanner_errorMessage_failed_toDetectLoginToken")
   /// Scan your login QR code
   internal static let barcodeScannerExplainerLabelLogin = L10n.tr("Localizable", "barcodeScanner_explainerLabel_login")
   /// You can also enter your details manually

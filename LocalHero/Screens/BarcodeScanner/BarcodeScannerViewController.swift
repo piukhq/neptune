@@ -13,7 +13,6 @@ struct BarcodeScannerViewModel {
     var isScanning = false
 }
 
-
 protocol BarcodeScannerViewControllerDelegate: AnyObject {
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?)
 }
@@ -45,6 +44,7 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
     private var session = AVCaptureSession()
     private var captureOutput: AVCaptureMetadataOutput?
     private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    private var visionUtility = VisionImageDetectionUtility()
     private var previewView = UIView()
     private let schemeScanningQueue = DispatchQueue(label: "com.bink.localhero.scanning.loyalty.scheme.queue")
     private var rectOfInterest = CGRect.zero
@@ -88,7 +88,7 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
     }()
     
     private lazy var addFromPhotoLibraryButton: BinkButton = {
-        return BinkButton(type: .plain, title: L10n.barcodeScannerAddFromPhotoLibraryButtonTitle, action: addFromPhotoLibraryButtonTapped)
+        return BinkButton(type: .plain, title: L10n.barcodeScannerAddFromPhotoLibraryButtonTitle, action: toPhotoLibrary)
     }()
     
     private var viewModel: BarcodeScannerViewModel
@@ -278,9 +278,15 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
         Current.navigate.to(navigationRequest)
     }
     
-    private func addFromPhotoLibraryButtonTapped() {
-        
+    private func toPhotoLibrary() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        picker.modalPresentationStyle = .overCurrentContext
+        let navigationRequest = ModalNavigationRequest(viewController: picker, embedInNavigationController: false)
+        Current.navigate.to(navigationRequest)
     }
+    
 
     private func passDataToBarcodeScannerDelegate(barcode: String) {
         self.stopScanning()
@@ -292,6 +298,18 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
                 self.delegate?.barcodeScannerViewController(self, didScanBarcode: barcode, completion: nil)
             }
         }
+    }
+    
+    private func showError() {
+        let alert = ViewControllerFactory.makeAlertController(title: L10n.error, message: L10n.barcodeScannerErrorMessageFailedToDetectLoginToken) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.scanErrorThreshold, execute: {
+                self.canPresentScanError = true
+                self.shouldAllowScanning = true
+            })
+        }
+        
+        let navigationRequest = AlertNavigationRequest(alertController: alert)
+        Current.navigate.to(navigationRequest)
     }
 }
 
@@ -306,5 +324,26 @@ extension BarcodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             guard let stringValue = readableObject.stringValue else { return }
             passDataToBarcodeScannerDelegate(barcode: stringValue)
         }
+    }
+}
+
+// MARK: - Detect barcode from image
+
+extension BarcodeScannerViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+        Current.navigate.close(animated: true) { [weak self] in
+            self?.visionUtility.createVisionRequest(image: image) { barcode in
+                guard let barcode = barcode else {
+                    self?.showError()
+                    return
+                }
+                self?.passDataToBarcodeScannerDelegate(barcode: barcode)
+            }
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        Current.navigate.close(animated: true)
     }
 }

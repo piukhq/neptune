@@ -69,6 +69,8 @@
 "barcodeScanner_widgetExplainer_enterManuallyText" = "You can also enter your details manually";
 "barcodeScanner_enterManullyAlert_description" = "Enter or paste your login QR code below";
 
+"barcodeScanner_errorMessage_failed_toDetectLoginToken" = "Failed to extract token from image";
+
 
 // MARK: - Alerts
 
