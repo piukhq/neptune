@@ -36,6 +36,14 @@ class UserManager {
         }
     }
     
+    func removeUser() {
+        try? keychain.remove(Constants.tokenKey)
+        try? keychain.remove(Constants.emailKey)
+        
+        currentToken = nil
+        currentEmailAddress = nil
+    }
+    
     private func setToken(with response: LoginResponse) throws {
         guard let token = response.jwt else { throw UserManagerError.missingData }
         try keychain.set(token, key: Constants.tokenKey)

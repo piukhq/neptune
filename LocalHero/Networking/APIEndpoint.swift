@@ -7,6 +7,7 @@
 
 import Alamofire
 import Foundation
+import Keys
 
 enum APIEndpoint {
     case wallet
@@ -30,9 +31,9 @@ enum APIEndpoint {
             headers.append(.authorization(token))
         }
         
-//        if requiresBinkTestAuthHeader {
-//            headers.append(.binkTestAuth())
-//        }
+        if requiresBinkTestAuthHeader {
+            headers.append(.binkTestAuth())
+        }
         
         return headers
     }
@@ -128,8 +129,7 @@ enum APIEndpoint {
         case .createPaymentAccount:
             return "/v2/payment_accounts"
         case .spreedly:
-            return ""
-//            return "https://core.spreedly.com/v1/payment_methods?environment_key=\(BinkappKeys().spreedlyEnvironmentKey)"
+            return "https://core.spreedly.com/v1/payment_methods?environment_key=\(LocalHeroKeys().spreedlyEnvironmentKey)"
         default:
             return ""
         }

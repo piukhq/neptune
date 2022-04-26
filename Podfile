@@ -5,13 +5,15 @@ def common_pods
 #pod 'DTTJailbreakDetection', '~> 0.4'
 #pod 'SwiftLint', '~> 0.43'
 pod 'SwiftGen', '~> 6.5.1'
+pod 'SwiftyRSA', :git => 'git@github.com:binkhq/SwiftyRSA.git'
 
-
-#plugin 'cocoapods-keys', {
-#  :project => "binkapp",
-#  :keys => [
-#  ]
-#}
+plugin 'cocoapods-keys', {
+  :project => "localHero",
+  :keys => [
+  "spreedlyEnvironmentKey",
+  "binkTestAuthHeaderToken"
+  ]
+}
 
 end
 
