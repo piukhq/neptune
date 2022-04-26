@@ -24,6 +24,10 @@
 		133F3207AE27BFE685E0AE3F /* Pods_LocalHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */; };
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
+		CE02BE2A2817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE282817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift */; };
+		CE02BE2B2817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */; };
+		CE02BE2D2817FF4F004B9EA2 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */; };
+		CE02BE3028180294004B9EA2 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2F28180294004B9EA2 /* Animations.swift */; };
 		CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */; };
 		CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */; };
 		CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105D27FC3E1700A5C11A /* StatusModel.swift */; };
@@ -222,6 +226,10 @@
 		9D8E69498ECD5945AFDC2B47 /* Pods-LocalHeroTests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
+		CE02BE282817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyScannerWidgetView.swift; sourceTree = "<group>"; };
+		CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoyaltyScannerWidgetView.xib; sourceTree = "<group>"; };
+		CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		CE02BE2F28180294004B9EA2 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardBalanceModel.swift; sourceTree = "<group>"; };
 		CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewController.swift; sourceTree = "<group>"; };
 		CE11105D27FC3E1700A5C11A /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
@@ -456,6 +464,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE02BE272817FEF8004B9EA2 /* WidgetView */ = {
+			isa = PBXGroup;
+			children = (
+				CE02BE282817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift */,
+				CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */,
+			);
+			path = WidgetView;
+			sourceTree = "<group>";
+		};
+		CE02BE2E28180275004B9EA2 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				CE02BE2F28180294004B9EA2 /* Animations.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		CE4C10E228042BB000390079 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +641,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */,
+				CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */,
 				CE8DDBE7281072D40059E43A /* BarcodeService.swift */,
 				CEB785F227DB623900B8F3D9 /* Security */,
 				CEB785B627D66BCC00B8F3D9 /* HeroNavigationController.swift */,
@@ -729,6 +755,7 @@
 		CEB7857327C6862F00B8F3D9 /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				CE02BE272817FEF8004B9EA2 /* WidgetView */,
 				CEB7857827C6866B00B8F3D9 /* BarcodeScannerViewController.swift */,
 			);
 			name = BarcodeScanner;
@@ -738,6 +765,7 @@
 		CEB7857C27C68E3400B8F3D9 /* LocalHeroUI */ = {
 			isa = PBXGroup;
 			children = (
+				CE02BE2E28180275004B9EA2 /* Animations */,
 				CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */,
 				CEB785D427D8FFA800B8F3D9 /* HeroButton.swift */,
 				CEB785D827D90CF700B8F3D9 /* HeroButtonStack.swift */,
@@ -1118,6 +1146,7 @@
 				CEB785FA27DBA35100B8F3D9 /* stagingPublicKey.der in Resources */,
 				CEB7860927DFA4FA00B8F3D9 /* WalletHeaderView.xib in Resources */,
 				CEB7857027C6765600B8F3D9 /* bink.der in Resources */,
+				CE02BE2B2817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib in Resources */,
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
 				CEB785F827DBA34B00B8F3D9 /* devPublicKey.der in Resources */,
@@ -1313,6 +1342,7 @@
 				CEB785E327DA3CB900B8F3D9 /* SpreedlyModels.swift in Sources */,
 				CEED474127F1FEC700CDD2DA /* _CD_PaymentAccount.swift in Sources */,
 				CEED475327F1FEC700CDD2DA /* _CD_Wallet.swift in Sources */,
+				CE02BE2D2817FF4F004B9EA2 /* CustomView.swift in Sources */,
 				CEED474827F1FEC700CDD2DA /* CD_Image.swift in Sources */,
 				CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */,
 				CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */,
@@ -1330,6 +1360,7 @@
 				CEB785F127DB623300B8F3D9 /* SecureUtility.swift in Sources */,
 				CEED471A27EDB2B500CDD2DA /* localhero.xcdatamodeld in Sources */,
 				CEED475827F1FEC700CDD2DA /* _CD_LoyaltyCard.swift in Sources */,
+				CE02BE3028180294004B9EA2 /* Animations.swift in Sources */,
 				CEED475027F1FEC700CDD2DA /* _CD_Status.swift in Sources */,
 				CEED476827F4B23F00CDD2DA /* WalletCard.swift in Sources */,
 				CEB785D127D8A32500B8F3D9 /* String+Extension.swift in Sources */,
@@ -1399,6 +1430,7 @@
 				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CEB7859F27CCEFB900B8F3D9 /* ContentModel.swift in Sources */,
+				CE02BE2A2817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift in Sources */,
 				CEED471D27EDB39800CDD2DA /* Database.swift in Sources */,
 				CEB785D527D8FFA900B8F3D9 /* HeroButton.swift in Sources */,
 				CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */,

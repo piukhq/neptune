@@ -18,7 +18,7 @@ protocol BarcodeScannerViewControllerDelegate: AnyObject {
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?)
 }
 
-class BarcodeScannerViewController: UIViewController, UINavigationControllerDelegate {
+class BarcodeScannerViewController: LocalHeroViewController, UINavigationControllerDelegate {
     enum Constants {
         static let rectOfInterestInset: CGFloat = 25
         static let viewFrameRatio: CGFloat = 12 / 18
@@ -33,6 +33,11 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         static let closeButtonSize = CGSize(width: 44, height: 44)
         static let timerInterval: TimeInterval = 5.0
         static let scanErrorThreshold: TimeInterval = 1.0
+    }
+    
+    enum ScannerType {
+        case login
+        case loyalty
     }
 
     private weak var delegate: BarcodeScannerViewControllerDelegate?
@@ -59,12 +64,19 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
 
     private lazy var explainerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Scan your login QR code"
+        label.text = L10n.barcodeScannerExplainerLabelLogin
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         return label
+    }()
+    
+    private lazy var widgetView: LoyaltyScannerWidgetView = {
+        let widget = LoyaltyScannerWidgetView()
+        widget.addTarget(self, selector: #selector(enterManually))
+        widget.translatesAutoresizingMaskIntoConstraints = false
+        return widget
     }()
 
     private lazy var cancelButton: UIButton = {
@@ -73,6 +85,10 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         button.setImage(Asset.close.image, for: .normal)
         button.addTarget(self, action: #selector(close), for: .touchUpInside)
         return button
+    }()
+    
+    private lazy var addFromPhotoLibraryButton: BinkButton = {
+        return BinkButton(type: .plain, title: L10n.barcodeScannerAddFromPhotoLibraryButtonTitle, action: addFromPhotoLibraryButtonTapped)
     }()
     
     private var viewModel: BarcodeScannerViewModel
@@ -113,12 +129,21 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         guideImageView.frame = rectOfInterest.inset(by: Constants.guideImageInset)
         view.addSubview(guideImageView)
         view.addSubview(explainerLabel)
+        view.addSubview(widgetView)
+        
+        if Configuration.isDebug() {
+            footerButtons = [addFromPhotoLibraryButton]
+        }
 
         NSLayoutConstraint.activate([
             explainerLabel.topAnchor.constraint(equalTo: guideImageView.bottomAnchor, constant: Constants.explainerLabelPadding),
             explainerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.explainerLabelPadding),
             explainerLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.explainerLabelPadding),
-            explainerLabel.heightAnchor.constraint(equalToConstant: Constants.explainerLabelHeight)
+            explainerLabel.heightAnchor.constraint(equalToConstant: Constants.explainerLabelHeight),
+            widgetView.topAnchor.constraint(equalTo: explainerLabel.bottomAnchor, constant: Constants.widgetViewTopPadding),
+            widgetView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.widgetViewLeftRightPadding),
+            widgetView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.widgetViewLeftRightPadding),
+            widgetView.heightAnchor.constraint(equalToConstant: Constants.widgetViewHeight)
         ])
     }
 
@@ -242,6 +267,14 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
 
     @objc private func close() {
         dismiss(animated: true)
+    }
+    
+    @objc private func enterManually() {
+        widgetView.animateOnTap()
+    }
+    
+    private func addFromPhotoLibraryButtonTapped() {
+        
     }
 
     private func passDataToBarcodeScannerDelegate(barcode: String) {

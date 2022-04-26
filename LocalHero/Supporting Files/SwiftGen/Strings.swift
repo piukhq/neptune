@@ -26,6 +26,14 @@ internal enum L10n {
   internal static let alertUnsupportedBarcodeTitle = L10n.tr("Localizable", "alert_unsupported_barcode_title")
   /// Neptune
   internal static let appTitle = L10n.tr("Localizable", "app_title")
+  /// Add from Photo Library
+  internal static let barcodeScannerAddFromPhotoLibraryButtonTitle = L10n.tr("Localizable", "barcodeScanner_addFromPhotoLibrary_buttonTitle")
+  /// Scan your login QR code
+  internal static let barcodeScannerExplainerLabelLogin = L10n.tr("Localizable", "barcodeScanner_explainerLabel_login")
+  /// You can also enter your details manually
+  internal static let barcodeScannerWidgetExplainerEnterManuallyText = L10n.tr("Localizable", "barcodeScanner_widgetExplainer_enterManuallyText")
+  /// Enter Manually
+  internal static let barcodeScannerWidgetTitleEnterManuallyText = L10n.tr("Localizable", "barcodeScanner_widgetTitle_enterManuallyText")
   /// Cancel
   internal static let cancel = L10n.tr("Localizable", "cancel")
   /// Error
