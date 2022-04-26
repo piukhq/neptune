@@ -83,6 +83,7 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(Asset.close.image, for: .normal)
+        button.imageView?.tintColor = .systemPurple
         button.addTarget(self, action: #selector(close), for: .touchUpInside)
         return button
     }()
