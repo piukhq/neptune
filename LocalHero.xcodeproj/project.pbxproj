@@ -24,7 +24,7 @@
 		133F3207AE27BFE685E0AE3F /* Pods_LocalHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */; };
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
-		CE02BE2A2817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE282817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift */; };
+		CE02BE2A2817FF11004B9EA2 /* BarcodeScannerWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */; };
 		CE02BE2B2817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */; };
 		CE02BE2D2817FF4F004B9EA2 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */; };
 		CE02BE3028180294004B9EA2 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2F28180294004B9EA2 /* Animations.swift */; };
@@ -227,7 +227,7 @@
 		9D8E69498ECD5945AFDC2B47 /* Pods-LocalHeroTests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
-		CE02BE282817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyScannerWidgetView.swift; sourceTree = "<group>"; };
+		CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerWidgetView.swift; sourceTree = "<group>"; };
 		CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoyaltyScannerWidgetView.xib; sourceTree = "<group>"; };
 		CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		CE02BE2F28180294004B9EA2 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 		CE02BE272817FEF8004B9EA2 /* WidgetView */ = {
 			isa = PBXGroup;
 			children = (
-				CE02BE282817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift */,
+				CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */,
 				CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */,
 			);
 			path = WidgetView;
@@ -1442,7 +1442,7 @@
 				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CEB7859F27CCEFB900B8F3D9 /* ContentModel.swift in Sources */,
-				CE02BE2A2817FF11004B9EA2 /* LoyaltyScannerWidgetView.swift in Sources */,
+				CE02BE2A2817FF11004B9EA2 /* BarcodeScannerWidgetView.swift in Sources */,
 				CEED471D27EDB39800CDD2DA /* Database.swift in Sources */,
 				CEB785D527D8FFA900B8F3D9 /* HeroButton.swift in Sources */,
 				CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */,

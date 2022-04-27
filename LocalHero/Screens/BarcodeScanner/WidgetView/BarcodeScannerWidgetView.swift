@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoyaltyScannerWidgetView: CustomView {
+class BarcodeScannerWidgetView: CustomView {
     enum Constants {
         static let cornerRadius: CGFloat = 4
     }
@@ -67,7 +67,7 @@ class LoyaltyScannerWidgetView: CustomView {
     }
 }
 
-extension LoyaltyScannerWidgetView {
+extension BarcodeScannerWidgetView {
     enum WidgetState {
         case enterManually
 
