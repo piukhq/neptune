@@ -25,7 +25,7 @@
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
 		CE02BE2A2817FF11004B9EA2 /* BarcodeScannerWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */; };
-		CE02BE2B2817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */; };
+		CE02BE2B2817FF11004B9EA2 /* BarcodeScannerWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02BE292817FF11004B9EA2 /* BarcodeScannerWidgetView.xib */; };
 		CE02BE2D2817FF4F004B9EA2 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */; };
 		CE02BE3028180294004B9EA2 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2F28180294004B9EA2 /* Animations.swift */; };
 		CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */; };
@@ -228,7 +228,7 @@
 		B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerWidgetView.swift; sourceTree = "<group>"; };
-		CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoyaltyScannerWidgetView.xib; sourceTree = "<group>"; };
+		CE02BE292817FF11004B9EA2 /* BarcodeScannerWidgetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarcodeScannerWidgetView.xib; sourceTree = "<group>"; };
 		CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		CE02BE2F28180294004B9EA2 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardBalanceModel.swift; sourceTree = "<group>"; };
@@ -470,7 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */,
-				CE02BE292817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib */,
+				CE02BE292817FF11004B9EA2 /* BarcodeScannerWidgetView.xib */,
 			);
 			path = WidgetView;
 			sourceTree = "<group>";
@@ -1157,7 +1157,7 @@
 				CEB785FA27DBA35100B8F3D9 /* stagingPublicKey.der in Resources */,
 				CEB7860927DFA4FA00B8F3D9 /* WalletHeaderView.xib in Resources */,
 				CEB7857027C6765600B8F3D9 /* bink.der in Resources */,
-				CE02BE2B2817FF11004B9EA2 /* LoyaltyScannerWidgetView.xib in Resources */,
+				CE02BE2B2817FF11004B9EA2 /* BarcodeScannerWidgetView.xib in Resources */,
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
 				CEB785F827DBA34B00B8F3D9 /* devPublicKey.der in Resources */,
