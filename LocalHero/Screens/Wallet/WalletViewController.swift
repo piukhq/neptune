@@ -24,6 +24,18 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         return layout
     }()
     
+    private lazy var settingsButton: UIBarButtonItem = {
+        let threeDotsImage = UIImage(named: "dots")
+        threeDotsImage?.withTintColor(.white)
+        let settingsButton = UIButton(type: .custom)
+        settingsButton.setImage(threeDotsImage, for: .normal)
+        settingsButton.addTarget(self, action: #selector(navigationBarButtonTapped), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: settingsButton)
+        barButton.customView?.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        barButton.customView?.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        return barButton
+    }()
+    
     private var viewModel = WalletViewModel()
     
     override func viewDidLoad() {
@@ -33,18 +45,11 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: .didLoadWallet, object: nil)
         
         collectionView.register(WalletCollectionViewCell.self, asNib: true)
-//        collectionView.registerHeader(CollectionReusableView.self)
-        collectionView.register(UINib(nibName: "WalletHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "WalletHeaderView")
+        collectionView.registerHeader(WalletHeaderView.self, asNib: true)
         configureCollectionView()
         backgroundImageView.alpha = 0.3
-        
-        let threeDotsImage = UIImage(systemName: "paperplane")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: threeDotsImage, style: .done, target: self, action: #selector(navigationBarButtonTapped))
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        Current.rootStateMachine.logout()
+        title = "Neptune"
+        navigationItem.rightBarButtonItem = settingsButton
     }
     
     func configureCollectionView() {
@@ -70,7 +75,9 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
             Current.navigate.to(navigationRequest)
         } settingsAction: {
-            print("Settings tapped")
+            let settingsViewController = SettingsViewController()
+            let navigationRequest = ModalNavigationRequest(viewController: settingsViewController)
+            Current.navigate.to(navigationRequest)
         }
         
         let navigationRequest = AlertNavigationRequest(alertController: alert)
@@ -80,25 +87,61 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     
     // MARK: - Collection view
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberSections
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.paymentAccounts?.count ?? 0
+        return viewModel.getNumberOfItemsForSection(section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: WalletCollectionViewCell = collectionView.dequeue(indexPath: indexPath)
-        guard let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item] else { return cell }
-        cell.configure(with: paymentAccount)
+        
+        switch indexPath.section {
+        case 0:
+            guard let loyaltyCard = viewModel.loyaltyCards?[safe: indexPath.item] else { return cell }
+            cell.configure(with: loyaltyCard)
+        case 1:
+            guard let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item] else { return cell }
+            cell.configure(with: paymentAccount)
+        default:
+            break
+        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 60)
     }
-}
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView: WalletHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, kind: UICollectionView.elementKindSectionHeader)
+        headerView.configure(title: indexPath.section == 0 ? "Loyalty Cards" : "Payment Cards")
+        return headerView
+    }
 
-
-class WalletViewModel {
-    var paymentAccounts: [CD_PaymentAccount]? {
-        return Current.wallet.paymentAccounts
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 65)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var walletCardDetailsViewModel: WalletCardDetailsViewModel!
+        
+        switch indexPath.section {
+        case 0:
+            let loyaltyCard = viewModel.loyaltyCards?[safe: indexPath.item]
+            walletCardDetailsViewModel = WalletCardDetailsViewModel(loyaltyCard: loyaltyCard, paymentAccount: nil)
+        case 1:
+            let paymentAccount = viewModel.paymentAccounts?[safe: indexPath.item]
+            walletCardDetailsViewModel = WalletCardDetailsViewModel(loyaltyCard: nil, paymentAccount: paymentAccount)
+        default:
+            break
+        }
+        
+        let viewController = WalletCardDetailsViewController(viewModel: walletCardDetailsViewModel)
+        let navigationRequest = PushNavigationRequest(viewController: viewController)
+        Current.navigate.to(navigationRequest)
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class LoyaltyPlansViewModel {
-    var loyaltyPlans: [LoyaltyPlanModel] = []
+    var loyaltyPlans: [CD_LoyaltyPlan] = []
     
     init() {
         loyaltyPlans = Current.wallet.loyaltyPlans?.sorted(by: { firstPlan, secondPlan in

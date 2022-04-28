@@ -23,8 +23,6 @@ class LoginViewController: LocalHeroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         footerButtons = [loginButton]
-        
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: nil, action: nil)
     }
 
     // MARK: - Private methods

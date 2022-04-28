@@ -50,7 +50,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erA-hH-air">
                                         <rect key="frame" x="0.0" y="48" width="274" height="59"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="width" constant="90" id="xMO-fS-UI3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -91,15 +91,18 @@
             </constraints>
             <size key="customSize" width="434" height="108"/>
             <connections>
-                <outlet property="accountNameLabel" destination="hPS-TP-tZa" id="u8c-Z8-fvg"/>
-                <outlet property="accountNumberLabel" destination="erA-hH-air" id="9kI-Qa-tSE"/>
                 <outlet property="accountProviderLabel" destination="zQ5-Fl-zaT" id="1H6-NI-Kf9"/>
+                <outlet property="primaryLabel" destination="hPS-TP-tZa" id="u8c-Z8-fvg"/>
+                <outlet property="secondaryLabel" destination="erA-hH-air" id="9kI-Qa-tSE"/>
             </connections>
             <point key="canvasLocation" x="-10.144927536231885" y="162.72321428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

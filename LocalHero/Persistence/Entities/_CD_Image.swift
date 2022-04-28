@@ -13,6 +13,7 @@ public enum CD_ImageAttributes: String {
 
 public enum CD_ImageRelationships: String {
     case paymentAccount = "paymentAccount"
+    case plan = "plan"
 }
 
 open class _CD_Image: CD_BaseObject {
@@ -61,6 +62,9 @@ open class _CD_Image: CD_BaseObject {
 
     @NSManaged open
     var paymentAccount: CD_PaymentAccount?
+
+    @NSManaged open
+    var plan: CD_LoyaltyPlan?
 
 }
 

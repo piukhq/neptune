@@ -1,27 +1,24 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to CD_LoyaltyCardCard.swift instead.
+// Make changes to CD_Journey.swift instead.
 
 import Foundation
 import CoreData
 
-public enum CD_LoyaltyCardCardAttributes: String {
-    case barcode = "barcode"
-    case barcodeType = "barcodeType"
-    case cardNumber = "cardNumber"
-    case colour = "colour"
-    case textColour = "textColour"
+public enum CD_JourneyAttributes: String {
+    case journeyDescription = "journeyDescription"
+    case type = "type"
 }
 
-public enum CD_LoyaltyCardCardRelationships: String {
-    case loyaltyCard = "loyaltyCard"
+public enum CD_JourneyRelationships: String {
+    case planFeatures = "planFeatures"
 }
 
-open class _CD_LoyaltyCardCard: CD_BaseObject {
+open class _CD_Journey: CD_BaseObject {
 
     // MARK: - Class methods
 
     override open class func entityName () -> String {
-        return "CD_LoyaltyCardCard"
+        return "CD_Journey"
     }
 
     override open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
@@ -29,7 +26,7 @@ open class _CD_LoyaltyCardCard: CD_BaseObject {
     }
 
     @nonobjc
-    open class func fetchRequest() -> NSFetchRequest<CD_LoyaltyCardCard> {
+    open class func fetchRequest() -> NSFetchRequest<CD_Journey> {
         return NSFetchRequest(entityName: self.entityName())
     }
 
@@ -40,31 +37,22 @@ open class _CD_LoyaltyCardCard: CD_BaseObject {
     }
 
     public convenience init?(managedObjectContext: NSManagedObjectContext) {
-        guard let entity = _CD_LoyaltyCardCard.entity(managedObjectContext: managedObjectContext) else { return nil }
+        guard let entity = _CD_Journey.entity(managedObjectContext: managedObjectContext) else { return nil }
         self.init(entity: entity, insertInto: managedObjectContext)
     }
 
     // MARK: - Properties
 
     @NSManaged open
-    var barcode: String?
+    var journeyDescription: String?
 
     @NSManaged open
-    var barcodeType: NSNumber?
-
-    @NSManaged open
-    var cardNumber: String?
-
-    @NSManaged open
-    var colour: String?
-
-    @NSManaged open
-    var textColour: String?
+    var type: NSNumber?
 
     // MARK: - Relationships
 
     @NSManaged open
-    var loyaltyCard: CD_LoyaltyCard?
+    var planFeatures: CD_LoyaltyPlanFeatures?
 
 }
 

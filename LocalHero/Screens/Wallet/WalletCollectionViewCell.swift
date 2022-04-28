@@ -8,8 +8,8 @@
 import UIKit
 
 class WalletCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private weak var accountNameLabel: UILabel!
-    @IBOutlet private weak var accountNumberLabel: UILabel!
+    @IBOutlet private weak var primaryLabel: UILabel!
+    @IBOutlet private weak var secondaryLabel: UILabel!
     @IBOutlet private weak var accountProviderLabel: UILabel!
     
     private lazy var width: NSLayoutConstraint = {
@@ -26,22 +26,29 @@ class WalletCollectionViewCell: UICollectionViewCell {
     
     func configure(with model: CD_PaymentAccount) {
         if let nickname = model.cardNickname {
-            accountNameLabel.text = nickname.capitalized + " / " + (model.nameOnCard ?? "")
+            primaryLabel.text = nickname.capitalized + " / " + (model.nameOnCard ?? "")
         } else {
-            accountNameLabel.text = model.nameOnCard ?? ""
+            primaryLabel.text = model.nameOnCard ?? ""
         }
 
         accountProviderLabel.text = model.provider?.uppercased() ?? "Pending"
+        accountProviderLabel.isHidden = false
         
         let provider = PaymentAccountType(rawValue: model.provider ?? "")
         switch provider {
         case .visa, .mastercard:
-            accountNumberLabel.text = "**** \(model.lastFour ?? "****")"
+            secondaryLabel.text = "**** \(model.lastFour ?? "****")"
         case .amex:
-            accountNumberLabel.text = "**** *\(model.lastFour ?? "****")"
+            secondaryLabel.text = "**** *\(model.lastFour ?? "****")"
         default:
             break
         }
+    }
+    
+    func configure(with model: CD_LoyaltyCard) {
+        primaryLabel.text = model.loyaltyPlan?.planDetails?.companyName
+        secondaryLabel.text = model.balance?.currentDisplayValue
+        accountProviderLabel.isHidden = true
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {

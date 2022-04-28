@@ -4,13 +4,10 @@
 import Foundation
 import CoreData
 
-public enum CD_LoyaltyCardAttributes: String {
-    case loyaltyPlanID = "loyaltyPlanID"
-}
-
 public enum CD_LoyaltyCardRelationships: String {
     case balance = "balance"
     case card = "card"
+    case loyaltyPlan = "loyaltyPlan"
     case pllLink = "pllLink"
     case status = "status"
     case transaction = "transaction"
@@ -48,9 +45,6 @@ open class _CD_LoyaltyCard: CD_BaseObject {
 
     // MARK: - Properties
 
-    @NSManaged open
-    var loyaltyPlanID: NSNumber?
-
     // MARK: - Relationships
 
     @NSManaged open
@@ -58,6 +52,9 @@ open class _CD_LoyaltyCard: CD_BaseObject {
 
     @NSManaged open
     var card: CD_LoyaltyCardCard?
+
+    @NSManaged open
+    var loyaltyPlan: CD_LoyaltyPlan?
 
     @NSManaged open
     var pllLink: NSSet
