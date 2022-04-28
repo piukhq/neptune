@@ -24,6 +24,8 @@
 		133F3207AE27BFE685E0AE3F /* Pods_LocalHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4B5892A7E44F584164E64 /* Pods_LocalHero.framework */; };
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
+		CE02BE2428170BD3004B9EA2 /* WalletCardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */; };
+		CE02BE2628170EA0004B9EA2 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */; };
 		CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */; };
 		CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */; };
 		CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105D27FC3E1700A5C11A /* StatusModel.swift */; };
@@ -49,7 +51,6 @@
 		CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB4D27BFC12D00A5CA31 /* GoogleService-Info.plist */; };
 		CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5A27C4F7D400A5CA31 /* World.swift */; };
 		CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */; };
-		CE8DDBE3280ECFBB0059E43A /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */; };
 		CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */; };
 		CEB7854027C542C300B8F3D9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7853F27C542C300B8F3D9 /* FirebaseRemoteConfig */; };
 		CEB7854227C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CEB7854127C542C300B8F3D9 /* FirebaseRemoteConfigSwift-Beta */; };
@@ -219,6 +220,8 @@
 		9D8E69498ECD5945AFDC2B47 /* Pods-LocalHeroTests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		B96EBD58640E2D6B66439F12 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHeroTests.app store.xcconfig"; path = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
+		CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewModel.swift; sourceTree = "<group>"; };
+		CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardBalanceModel.swift; sourceTree = "<group>"; };
 		CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewController.swift; sourceTree = "<group>"; };
 		CE11105D27FC3E1700A5C11A /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
@@ -481,6 +484,7 @@
 				CE4EBB0327BCF67200A5CA31 /* Products */,
 				B50659EC64B1159398EC1E0F /* Pods */,
 				C467ABE9AE29EB6A3D910F57 /* Frameworks */,
+				CE535150281AF8F20071AE3D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -586,6 +590,14 @@
 				CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CE535150281AF8F20071AE3D /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
@@ -820,13 +832,14 @@
 			isa = PBXGroup;
 			children = (
 				CEB785FB27DF57A400B8F3D9 /* WalletViewController.swift */,
-				CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */,
+				CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */,
 				CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */,
 				CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */,
 				CEB7860627DFA4FA00B8F3D9 /* WalletHeaderView.swift */,
 				CEB7860A27DFAACA00B8F3D9 /* CollectionReusableView.swift */,
 				CEB7860727DFA4FA00B8F3D9 /* WalletHeaderView.xib */,
 				CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */,
+				CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1305,6 +1318,7 @@
 				CEB785F127DB623300B8F3D9 /* SecureUtility.swift in Sources */,
 				CEED471A27EDB2B500CDD2DA /* localhero.xcdatamodeld in Sources */,
 				CEED475827F1FEC700CDD2DA /* _CD_LoyaltyCard.swift in Sources */,
+				CE02BE2628170EA0004B9EA2 /* WalletViewModel.swift in Sources */,
 				CEED475027F1FEC700CDD2DA /* _CD_Status.swift in Sources */,
 				CEED476827F4B23F00CDD2DA /* WalletCard.swift in Sources */,
 				CEB785D127D8A32500B8F3D9 /* String+Extension.swift in Sources */,
@@ -1339,6 +1353,7 @@
 				CE4EBB4727BD6E0900A5CA31 /* APIConstants.swift in Sources */,
 				CE11106427FC62B200A5C11A /* CardModel.swift in Sources */,
 				CEB785BF27D7640000B8F3D9 /* FormCollectionViewCell.swift in Sources */,
+				CE02BE2428170BD3004B9EA2 /* WalletCardDetailsViewModel.swift in Sources */,
 				CEB785DB27D918E700B8F3D9 /* StackScrollView.swift in Sources */,
 				CEED471F27EDB48800CDD2DA /* NSPersistentContainer.swift in Sources */,
 				CE11106827FC8D1F00A5C11A /* SettingsViewController.swift in Sources */,
@@ -1409,7 +1424,6 @@
 				CEB785B927D7567D00B8F3D9 /* AddPaymentAccountViewController.swift in Sources */,
 				CEED475127F1FEC700CDD2DA /* _CD_Voucher.swift in Sources */,
 				CEED475727F1FEC700CDD2DA /* _CD_LoyaltyCardPllLink.swift in Sources */,
-				CE8DDBE3280ECFBB0059E43A /* WalletViewModel.swift in Sources */,
 				CEB785CC27D7876200B8F3D9 /* UIViewController+Extension.swift in Sources */,
 				CEED475427F1FEC700CDD2DA /* CD_LoyaltyCardCard.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
