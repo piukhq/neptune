@@ -13,16 +13,28 @@ class RootStateMachine: NSObject {
     
     func launch(withWindow window: UIWindow) {
         self.window = window
-        let loginViewController = LoginViewController()
-        let navigationController = HeroNavigationController(rootViewController: loginViewController)
-        window.rootViewController = navigationController
-        Current.navigate.setRootViewController(navigationController)
+        
+        if Current.userManager.hasCurrentUser {
+            handleLogin()
+        } else {
+            handleUnauthenticated()
+        }
+        
         window.tintColor = .black
         window.makeKeyAndVisible()
     }
     
+    func handleUnauthenticated() {
+        moveTo(ViewControllerFactory.makeLoginViewController())
+    }
+    
+    func handleLogin() {
+        moveTo(ViewControllerFactory.makeWalletViewController())
+    }
+    
     func logout() {
         clearLocalStorage()
+        moveTo(ViewControllerFactory.makeLoginViewController())
     }
     
     private func clearLocalStorage() {
@@ -34,5 +46,11 @@ class RootStateMachine: NSObject {
             context.deleteAll(CD_BaseObject.self) // Cleanup any orphaned objects
             try? context.save()
         }
+    }
+    
+    func moveTo(_ viewController: UIViewController) {
+        guard let window = window else { fatalError("Window does not exist. This should never happen") }
+        window.rootViewController = viewController
+        Current.navigate.setRootViewController(viewController)
     }
 }

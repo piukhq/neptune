@@ -5,6 +5,7 @@
 //  Created by Sean Williams on 14/03/2022.
 //
 
+import SwiftUI
 import UIKit
 
 class WalletViewController: LocalHeroViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -50,9 +51,26 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         backgroundImageView.alpha = 0.3
         title = "Neptune"
         navigationItem.rightBarButtonItem = settingsButton
+        
+        handleLaunch()
     }
     
-    func configureCollectionView() {
+    private func handleLaunch() {
+        Current.wallet.launch() { [weak self] success, error in
+            guard success else {
+                if case .failedToGetLoyaltyPlans(let networkingError) = error {
+                    if case .unauthorized = networkingError {
+                        self?.showError(title: L10n.alertInvalidToken)
+                    } else {
+                        self?.showError(title: networkingError.localizedDescription)
+                    }
+                }
+                return
+            }
+        }
+    }
+    
+    private func configureCollectionView() {
         view.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -63,6 +81,12 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
+    }
+    
+    private func showError(title: String) {
+        let ac = ViewControllerFactory.makeAlertController(title: title, message: nil)
+        let navigationRequest = AlertNavigationRequest(alertController: ac)
+        Current.navigate.to(navigationRequest)
     }
     
     @objc private func refresh() {
@@ -77,6 +101,9 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         } settingsAction: {
             let settingsViewController = SettingsViewController()
             let navigationRequest = ModalNavigationRequest(viewController: settingsViewController)
+            Current.navigate.to(navigationRequest)
+        } mapAction: {
+            let navigationRequest = PushNavigationRequest(viewController: MapViewController())
             Current.navigate.to(navigationRequest)
         }
         

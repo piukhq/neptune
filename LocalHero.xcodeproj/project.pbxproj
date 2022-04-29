@@ -34,6 +34,10 @@
 		CE11106427FC62B200A5C11A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106327FC62B200A5C11A /* CardModel.swift */; };
 		CE11106627FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */; };
 		CE11106827FC8D1F00A5C11A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */; };
+		CE4C10E72804360F00390079 /* GailsBakeryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10E62804360F00390079 /* GailsBakeryModel.swift */; };
+		CE4C10E9280436D100390079 /* bakeries.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C10E8280436D100390079 /* bakeries.json */; };
+		CE4C10EB28046A2400390079 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10EA28046A2400390079 /* MapViewModel.swift */; };
+		CE4C10ED280594B900390079 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10EC280594B900390079 /* MapViewController.swift */; };
 		CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */; };
 		CE4EBB0A27BCF67200A5CA31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */; };
 		CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB0E27BCF67700A5CA31 /* Assets.xcassets */; };
@@ -226,6 +230,10 @@
 		CE11106327FC62B200A5C11A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardPllLinkModel.swift; sourceTree = "<group>"; };
 		CE11106727FC8D1F00A5C11A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
+		CE4C10E62804360F00390079 /* GailsBakeryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GailsBakeryModel.swift; sourceTree = "<group>"; };
+		CE4C10E8280436D100390079 /* bakeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bakeries.json; sourceTree = "<group>"; };
+		CE4C10EA28046A2400390079 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		CE4C10EC280594B900390079 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE4EBB0227BCF67200A5CA31 /* Local Hero α.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Hero α.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4EBB0527BCF67200A5CA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4EBB0927BCF67200A5CA31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +254,7 @@
 		CE4EBB5A27C4F7D400A5CA31 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStateMachine.swift; sourceTree = "<group>"; };
 		CE4EBB6127C5086800A5CA31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		CEB7853A27C53AAE00B8F3D9 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		CEB7854A27C54A5C00B8F3D9 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CEB7854C27C54C4800B8F3D9 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
@@ -444,6 +453,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE4C10E228042BB000390079 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C10E52804345B00390079 /* Models */,
+				CE4C10EC280594B900390079 /* MapViewController.swift */,
+				CE4C10EA28046A2400390079 /* MapViewModel.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		CE4C10E52804345B00390079 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C10E8280436D100390079 /* bakeries.json */,
+				CE4C10E62804360F00390079 /* GailsBakeryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE4EBAF927BCF67100A5CA31 = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +484,7 @@
 				CE4EBB0327BCF67200A5CA31 /* Products */,
 				B50659EC64B1159398EC1E0F /* Pods */,
 				C467ABE9AE29EB6A3D910F57 /* Frameworks */,
+				CE535150281AF8F20071AE3D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -541,6 +570,7 @@
 		CE4EBB3827BCFB1B00A5CA31 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CE4C10E228042BB000390079 /* Maps */,
 				CEB785AD27D6168C00B8F3D9 /* AddPaymentAccount */,
 				CEB7856127C64C1000B8F3D9 /* LoyaltyPlans */,
 				CEB7855827C63E1A00B8F3D9 /* Login */,
@@ -560,6 +590,14 @@
 				CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CE535150281AF8F20071AE3D /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
@@ -1073,6 +1111,7 @@
 				CEB785F827DBA34B00B8F3D9 /* devPublicKey.der in Resources */,
 				CE4EBB3A27BD038C00A5CA31 /* README.md in Resources */,
 				CEB785F927DBA34E00B8F3D9 /* prodPublicKey.der in Resources */,
+				CE4C10E9280436D100390079 /* bakeries.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1336,6 +1375,7 @@
 				CEED474B27F1FEC700CDD2DA /* CD_LoyaltyCardBalance.swift in Sources */,
 				CEB785C127D765C600B8F3D9 /* UICollectionViewExtension.swift in Sources */,
 				CEB7858B27C69C5900B8F3D9 /* Assets.swift in Sources */,
+				CE4C10ED280594B900390079 /* MapViewController.swift in Sources */,
 				CEED475927F1FEC700CDD2DA /* CD_Join.swift in Sources */,
 				CEED474C27F1FEC700CDD2DA /* CD_Voucher.swift in Sources */,
 				CEB7855427C639D800B8F3D9 /* UserManager.swift in Sources */,
@@ -1355,10 +1395,12 @@
 				CEB7859927CCEEAE00B8F3D9 /* LoyaltyPlanDetailsModel.swift in Sources */,
 				CEB785E827DA3E3900B8F3D9 /* APIService.swift in Sources */,
 				CEED479527F74F9200CDD2DA /* CD_JourneyFields.swift in Sources */,
+				CE4C10EB28046A2400390079 /* MapViewModel.swift in Sources */,
 				CEB7860127DF649900B8F3D9 /* WalletCollectionViewCell.swift in Sources */,
 				CEB785B127D6219F00B8F3D9 /* FormField.swift in Sources */,
 				CE4EBB0627BCF67200A5CA31 /* AppDelegate.swift in Sources */,
 				CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */,
+				CE4C10E72804360F00390079 /* GailsBakeryModel.swift in Sources */,
 				CEED474D27F1FEC700CDD2DA /* CD_LoyaltyCardPllLink.swift in Sources */,
 				CEED474627F1FEC700CDD2DA /* CD_LoyaltyCardTransaction.swift in Sources */,
 				CEB785D327D8D7FF00B8F3D9 /* Date+Extension.swift in Sources */,
@@ -1570,6 +1612,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1605,6 +1648,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1784,6 +1828,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1915,6 +1960,7 @@
 				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = LocalHero/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Local Heroes need your permission to use your camera please";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sharing your location will help us direct you to nearby loyalty rewards";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
