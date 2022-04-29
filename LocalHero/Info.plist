@@ -6,7 +6,11 @@
 	<string>$(API_BASE_URL)</string>
 	<key>CFBundleIconName</key>
 	<string>AppIcon</string>
+	<key>DEBUG</key>
+	<string>$(DEBUG)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>SECRET</key>
+	<string>$(SECRET)</string>
 </dict>
 </plist>

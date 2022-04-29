@@ -201,7 +201,7 @@ private extension APIClient {
                     let errorMessage = decodedResponseErrors?.nonFieldErrors?.first ?? errorsDictionary?.values.first ?? errorsArray?.first
                     networkResponseData.errorMessage = errorMessage
 
-                    completion?(.failure(.customError(errorMessage ?? "Something went wrong")), networkResponseData)
+                    completion?(.failure(.customError(errorMessage ?? L10n.errorSomethingWentWrong)), networkResponseData)
                     return
                 }
                 completion?(.failure(.clientError(statusCode)), networkResponseData)

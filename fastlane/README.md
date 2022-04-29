@@ -23,6 +23,22 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Retrieve all the certificates for all targets and configures your machine to compile against devices
 
+### ios addDevice
+
+```sh
+[bundle exec] fastlane ios addDevice
+```
+
+Add device to portal
+
+### ios setupForce
+
+```sh
+[bundle exec] fastlane ios setupForce
+```
+
+Retrieve and force update all the certificates for all targets and configures your machine to compile against devices, including new ones. NOTE: This should only be run if new devices are required in the profiles and certificates
+
 ### ios mr
 
 ```sh

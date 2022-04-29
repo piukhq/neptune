@@ -53,7 +53,7 @@ class MapViewModel: ObservableObject {
         for var openingHour in formattedHoursArray {
             if bakery.properties.postalCode == "VN02783" {
                 if openingHour.last == " " {
-                    openingHour.append(contentsOf: "Closed")
+                    openingHour.append(contentsOf: L10n.mapAnnotationCalloutClosed)
                 }
             }
             

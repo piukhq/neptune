@@ -40,14 +40,14 @@ class AddPaymentAccountViewModel {
         paymentAccount.expiryYear = year
     }
     
-    func addPaymentCard(onError: @escaping () -> Void) {
+    func addPaymentCard(onError: EmptyCompletionBlock? = nil) {
         repository.addPaymentCard(paymentAccount, onSuccess: { paymentAccount in
             Current.wallet.refreshLocal()
             let name = paymentAccount?.nameOnCard ?? ""
             let nickName = paymentAccount?.cardNickname ?? ""
             let expiry = paymentAccount?.expiryMonth ?? "" + " /" + (paymentAccount?.expiryYear ?? "")
             let message = name + ", " + nickName + ", " + expiry
-            let ac = ViewControllerFactory.makeAlertController(title: "Payment Account Added!", message: message) {
+            let ac = ViewControllerFactory.makeAlertController(title: L10n.addPaymentAccountSuccessAlertMessage, message: message) {
                 Current.navigate.close()
             }
             
@@ -55,9 +55,9 @@ class AddPaymentAccountViewModel {
             Current.navigate.to(navigationRequest)
             
         }) { _ in
-            onError()
+            onError?()
             
-            let ac = ViewControllerFactory.makeAlertController(title: "Error", message: "Failed to add payment account")
+            let ac = ViewControllerFactory.makeAlertController(title: L10n.error, message: L10n.addPaymentAccountFailedToAddAlertMessage)
             let navigationRequest = AlertNavigationRequest(alertController: ac)
             Current.navigate.to(navigationRequest)
         }

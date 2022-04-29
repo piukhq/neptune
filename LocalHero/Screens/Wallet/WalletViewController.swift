@@ -26,7 +26,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     }()
     
     private lazy var settingsButton: UIBarButtonItem = {
-        let threeDotsImage = UIImage(named: "dots")
+        let threeDotsImage = UIImage(named: Asset.dots.name)
         threeDotsImage?.withTintColor(.white)
         let settingsButton = UIButton(type: .custom)
         settingsButton.setImage(threeDotsImage, for: .normal)
@@ -49,25 +49,13 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
         collectionView.registerHeader(WalletHeaderView.self, asNib: true)
         configureCollectionView()
         backgroundImageView.alpha = 0.3
-        title = "Neptune"
+        title = L10n.appTitle
         navigationItem.rightBarButtonItem = settingsButton
-        
-        handleLaunch()
     }
     
-    private func handleLaunch() {
-        Current.wallet.launch() { [weak self] success, error in
-            guard success else {
-                if case .failedToGetLoyaltyPlans(let networkingError) = error {
-                    if case .unauthorized = networkingError {
-                        self?.showError(title: L10n.alertInvalidToken)
-                    } else {
-                        self?.showError(title: networkingError.localizedDescription)
-                    }
-                }
-                return
-            }
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Current.wallet.reloadWallet()
     }
     
     private func configureCollectionView() {
@@ -99,8 +87,8 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
             let navigationRequest = ModalNavigationRequest(viewController: addPaymentCardviewController)
             Current.navigate.to(navigationRequest)
         } settingsAction: {
-            let settingsViewController = SettingsViewController()
-            let navigationRequest = ModalNavigationRequest(viewController: settingsViewController)
+            let settingsView = UIHostingController(rootView: SettingsSwiftUIView())
+            let navigationRequest = ModalNavigationRequest(viewController: settingsView)
             Current.navigate.to(navigationRequest)
         } mapAction: {
             let navigationRequest = PushNavigationRequest(viewController: MapViewController())
@@ -145,7 +133,7 @@ class WalletViewController: LocalHeroViewController, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView: WalletHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, kind: UICollectionView.elementKindSectionHeader)
-        headerView.configure(title: indexPath.section == 0 ? "Loyalty Cards" : "Payment Cards")
+        headerView.configure(title: indexPath.section == 0 ? L10n.walletSectionHeaderLoyalty : L10n.walletSectionHeaderPayment)
         return headerView
     }
 

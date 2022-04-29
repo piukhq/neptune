@@ -13,11 +13,8 @@ class AddPaymentAccountViewController: BaseFormViewController {
     private var viewModel: AddPaymentAccountViewModel
     
     private lazy var addAccountButton: BinkButton = {
-        return BinkButton(type: .plain, title: "Add Payment Account", enabled: false) { [weak self] in
+        return BinkButton(type: .plain, title: L10n.addPaymentAccountButtonTitle, enabled: false) { [weak self] in
             self?.addAccountButtonTapped()
-//            self?.viewModel.addPaymentCard {
-//                
-//            }
         }
     }()
     
@@ -33,7 +30,7 @@ class AddPaymentAccountViewController: BaseFormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Add Payment Account"
+        title = L10n.addPaymentAccountButtonTitle
         footerButtons = [addAccountButton]
     }
     
@@ -42,9 +39,7 @@ class AddPaymentAccountViewController: BaseFormViewController {
     }
     
     private func addAccountButtonTapped() {
-        viewModel.addPaymentCard {
-            print("Failed to add payment")
-        }
+        viewModel.addPaymentCard()
     }
 }
 

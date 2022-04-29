@@ -6,15 +6,68 @@
   
 */
 
-//MARK: -  Login Screen
+// MARK: - Global
+
+"cancel" = "Cancel";
+"ok" = "OK";
+"app_title" = "Neptune";
+"error" = "Error";
+
+
+// MARK: -  Login Screen
 
 "login_button_title" = "Login";
 
 
-//MARK: -  Alerts
+// MARK: -  Settings Screen
+
+"settingsRowTitle_currentLogin" = "Current Login";
+"settingsRowTitle_changeEnvironment" = "Change Environment";
+"settingsRowTitle_logout" = "Logout";
+
+"settingsRowSubtitle_logout" = "Remove token from secure storage etc.";
+
+"settings_logoutAlert_title" = "Logout";
+"settings_logoutAlert_message" = "Are you sure you want to logout?";
+
+"settingsChooseEnvironmentActionSheet_title" = "Choose Environment";
+"settingsChooseEnvironmentActionSheet_dev" = "Dev";
+"settingsChooseEnvironmentActionSheet_staging" = "Staging";
+
+
+// MARK: - Wallet Screen
+
+"wallet_settingsActionSheet_title" = "NEPTUNE GOD MODE";
+"wallet_settingsActionSheet_addPaymentCard" = "Add Payment Card";
+"wallet_settingsActionSheet_settings" = "Settings";
+"wallet_settingsActionSheet_map" = "Map";
+
+"wallet_sectionHeader_loyalty" = "Loyalty Cards";
+"wallet_sectionHeader_payment" = "Payment Cards";
+
+
+// MARK: - Map Screen
+
+"map_annotationCallout_addressTitle" = "Address:";
+"map_annotationCallout_openingHoursTitle" = "Opening Hours:";
+"map_annotationCallout_closed" = "Closed";
+
+
+// MARK: - Add Payment Card Screen
+
+"addPaymentAccountButton_title" = "Add Payment Account";
+"addPaymentAccount_failedToAddAlertMessage" = "Failed to add payment account";
+"addPaymentAccount_successAlertMessage" = "Payment Account Added";
+
+
+// MARK: - Alerts
 
 "alert_unsupported_barcode_title" = "Unsupported Barcode";
 "alert_invalid_token" = "Invalid Token";
 "alert_error" = "Error";
 "alert_ok" = "OK";
 
+
+// MARK: - Errors
+
+"error_somethingWentWrong" = "Something went wrong";

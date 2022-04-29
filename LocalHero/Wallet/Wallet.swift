@@ -38,6 +38,10 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
         }
     }
     
+    func reloadWallet() {
+        loadWalletData(forType: .reload, reloadPlans: false, isUserDriven: false)
+    }
+    
     
     // MARK: - Private
 
@@ -150,6 +154,12 @@ class Wallet: WalletServiceProtocol, CoreDataRepositoryProtocol {
                 completion(true, nil)
             }
         })
+    }
+    
+    func handleLogout() {
+        hasLaunched = false
+        loyaltyCards = nil
+        paymentAccounts = nil
     }
 }
 
