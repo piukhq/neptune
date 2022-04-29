@@ -2,7 +2,7 @@
 //  WalletViewModel.swift
 //  LocalHero
 //
-//  Created by Sean Williams on 19/04/2022.
+//  Created by Sean Williams on 25/04/2022.
 //
 
 import Foundation
@@ -27,5 +27,16 @@ class WalletViewModel {
             sections += 1
         }
         return sections
+    }
+    
+    func getNumberOfItemsForSection(_ section: Int) -> Int {
+        switch section {
+        case 0:
+            return loyaltyCards?.count ?? 0
+        case 1:
+            return paymentAccounts?.count ?? 0
+        default:
+            return 0
+        }
     }
 }
