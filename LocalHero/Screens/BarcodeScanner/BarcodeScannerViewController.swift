@@ -72,8 +72,8 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
         return label
     }()
     
-    private lazy var widgetView: LoyaltyScannerWidgetView = {
-        let widget = LoyaltyScannerWidgetView()
+    private lazy var widgetView: BarcodeScannerWidgetView = {
+        let widget = BarcodeScannerWidgetView()
         widget.addTarget(self, selector: #selector(enterManually))
         widget.translatesAutoresizingMaskIntoConstraints = false
         return widget

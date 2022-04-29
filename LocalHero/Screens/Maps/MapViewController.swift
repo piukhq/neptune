@@ -19,14 +19,13 @@ class MapViewController: UIViewController {
     }()
     
     private let viewModel = MapViewModel()
-    private let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
         mapView.delegate = self
         addAnnotationsToMap()
-        locationManager.requestWhenInUseAuthorization()
+        viewModel.locationManager.requestWhenInUseAuthorization()
     }
     
     func configureLayout() {
