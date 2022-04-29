@@ -54,7 +54,7 @@
 		CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB4D27BFC12D00A5CA31 /* GoogleService-Info.plist */; };
 		CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5A27C4F7D400A5CA31 /* World.swift */; };
 		CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */; };
-		CE8DDBE3280ECFBB0059E43A /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */; };
+		CE535151281BF2220071AE3D /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */; };
 		CE8DDBE528101C8B0059E43A /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */; };
 		CE8DDBE8281072D40059E43A /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE7281072D40059E43A /* BarcodeService.swift */; };
 		CE8DDBEA2810752B0059E43A /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE92810752A0059E43A /* SettingsRow.swift */; };
@@ -266,7 +266,6 @@
 		CE4EBB5A27C4F7D400A5CA31 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStateMachine.swift; sourceTree = "<group>"; };
 		CE4EBB6127C5086800A5CA31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		CE8DDBE7281072D40059E43A /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		CE8DDBE92810752A0059E43A /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
@@ -525,7 +524,6 @@
 				CE4EBB0327BCF67200A5CA31 /* Products */,
 				B50659EC64B1159398EC1E0F /* Pods */,
 				C467ABE9AE29EB6A3D910F57 /* Frameworks */,
-				CE53514F281AF4590071AE3D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -631,14 +629,6 @@
 				CE4EBB4A27BD6F8200A5CA31 /* Production.xcconfig */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		CE53514F281AF4590071AE3D /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		CE8DDBE628102C950059E43A /* Settings */ = {
@@ -896,7 +886,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB785FB27DF57A400B8F3D9 /* WalletViewController.swift */,
-				CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */,
+				CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */,
 				CEB785FF27DF649900B8F3D9 /* WalletCollectionViewCell.swift */,
 				CEB7860027DF649900B8F3D9 /* WalletCollectionViewCell.xib */,
 				CEB7860627DFA4FA00B8F3D9 /* WalletHeaderView.swift */,
@@ -1393,6 +1383,7 @@
 				CEED476427F2F80D00CDD2DA /* PaymentAccountPllLink.swift in Sources */,
 				CEED478C27F74F9200CDD2DA /* _CD_Image.swift in Sources */,
 				CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */,
+				CE535151281BF2220071AE3D /* WalletViewModel.swift in Sources */,
 				CEB785BB27D756B000B8F3D9 /* FormDataSource.swift in Sources */,
 				CEED472127EDB6FA00CDD2DA /* NSManagedObjectContext.swift in Sources */,
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
@@ -1494,7 +1485,6 @@
 				CEB785B927D7567D00B8F3D9 /* AddPaymentAccountViewController.swift in Sources */,
 				CEED475127F1FEC700CDD2DA /* _CD_Voucher.swift in Sources */,
 				CEED475727F1FEC700CDD2DA /* _CD_LoyaltyCardPllLink.swift in Sources */,
-				CE8DDBE3280ECFBB0059E43A /* WalletViewModel.swift in Sources */,
 				CEB785CC27D7876200B8F3D9 /* UIViewController+Extension.swift in Sources */,
 				CEED475427F1FEC700CDD2DA /* CD_LoyaltyCardCard.swift in Sources */,
 				CEB7854B27C54A5C00B8F3D9 /* APIEndpoint.swift in Sources */,
