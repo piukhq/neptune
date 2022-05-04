@@ -28,8 +28,16 @@ class LoginViewController: LocalHeroViewController {
     // MARK: - Private methods
 
     private func loginButtonTapped() {
-        let vc = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
-        let navigationRequest = ModalNavigationRequest(viewController: vc)
+        PermissionsUtility.launchLoginScanner() { [weak self] in
+            self?.toBarcodeScanner()
+        } enterManuallyAction: { [weak self] in
+            self?.toBarcodeScanner()
+        }
+    }
+    
+    private func toBarcodeScanner() {
+        let barcodeScannerViewController = BarcodeScannerViewController(viewModel: BarcodeScannerViewModel(), delegate: self)
+        let navigationRequest = ModalNavigationRequest(viewController: barcodeScannerViewController)
         Current.navigate.to(navigationRequest)
     }
     

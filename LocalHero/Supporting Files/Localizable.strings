@@ -71,6 +71,13 @@
 
 "barcodeScanner_errorMessage_failed_toDetectLoginToken" = "Failed to extract token from image";
 
+"permissions_deniedTitle" = "Please allow camera access";
+"permissions_deniedBody" = "To scan your barcodes, you’ll need to grant Local Hero access to your device’s camera.";
+"permissions_deniedEnterManualy" = "Enter Manually";
+"permissions_deniedAllowAccess" = "Allow Access";
+"permissions_deniedAddFromImageLibrary" = "Add image from library";
+
+
 
 // MARK: - Alerts
 

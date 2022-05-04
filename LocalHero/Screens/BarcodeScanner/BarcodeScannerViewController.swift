@@ -104,9 +104,38 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureLayout()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if hideNavigationBar {
+            navigationController?.setNavigationBarHidden(true, animated: false)
+
+            view.addSubview(cancelButton)
+            NSLayoutConstraint.activate([
+                cancelButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 4),
+                cancelButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -4),
+                cancelButton.heightAnchor.constraint(equalToConstant: Constants.closeButtonSize.height),
+                cancelButton.widthAnchor.constraint(equalToConstant: Constants.closeButtonSize.width)
+            ])
+        }
+
+        if !viewModel.isScanning {
+            startScanning()
+        }
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopScanning()
+    }
+    
+    
+    private func configureLayout() {
         view.addSubview(previewView)
 
         // BLUR AND MASK
@@ -126,7 +155,7 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
         maskLayer.path = maskedPath.cgPath
         blurredView.layer.mask = maskLayer
         view.addSubview(blurredView)
-
+        
         guideImageView.frame = rectOfInterest.inset(by: Constants.guideImageInset)
         view.addSubview(guideImageView)
         view.addSubview(explainerLabel)
@@ -135,7 +164,7 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
         if Configuration.isDebug() {
             footerButtons = [addFromPhotoLibraryButton]
         }
-
+        
         NSLayoutConstraint.activate([
             explainerLabel.topAnchor.constraint(equalTo: guideImageView.bottomAnchor, constant: Constants.explainerLabelPadding),
             explainerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.explainerLabelPadding),
@@ -146,31 +175,6 @@ class BarcodeScannerViewController: LocalHeroViewController, UINavigationControl
             widgetView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.widgetViewLeftRightPadding),
             widgetView.heightAnchor.constraint(equalToConstant: Constants.widgetViewHeight)
         ])
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if hideNavigationBar {
-            navigationController?.setNavigationBarHidden(true, animated: false)
-
-            view.addSubview(cancelButton)
-            NSLayoutConstraint.activate([
-                cancelButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 4),
-                cancelButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -4),
-                cancelButton.heightAnchor.constraint(equalToConstant: Constants.closeButtonSize.height),
-                cancelButton.widthAnchor.constraint(equalToConstant: Constants.closeButtonSize.width)
-            ])
-        }
-
-
-        if !viewModel.isScanning {
-            startScanning()
-        }
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        stopScanning()
     }
 
     private func startScanning() {

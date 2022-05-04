@@ -54,6 +54,16 @@ internal enum L10n {
   internal static let mapAnnotationCalloutOpeningHoursTitle = L10n.tr("Localizable", "map_annotationCallout_openingHoursTitle")
   /// OK
   internal static let ok = L10n.tr("Localizable", "ok")
+  /// Add image from library
+  internal static let permissionsDeniedAddFromImageLibrary = L10n.tr("Localizable", "permissions_deniedAddFromImageLibrary")
+  /// Allow Access
+  internal static let permissionsDeniedAllowAccess = L10n.tr("Localizable", "permissions_deniedAllowAccess")
+  /// To scan your barcodes, you’ll need to grant Local Hero access to your device’s camera.
+  internal static let permissionsDeniedBody = L10n.tr("Localizable", "permissions_deniedBody")
+  /// Enter Manually
+  internal static let permissionsDeniedEnterManualy = L10n.tr("Localizable", "permissions_deniedEnterManualy")
+  /// Please allow camera access
+  internal static let permissionsDeniedTitle = L10n.tr("Localizable", "permissions_deniedTitle")
   /// Are you sure you want to logout?
   internal static let settingsLogoutAlertMessage = L10n.tr("Localizable", "settings_logoutAlert_message")
   /// Logout

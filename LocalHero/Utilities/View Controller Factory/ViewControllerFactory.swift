@@ -83,18 +83,22 @@ enum ViewControllerFactory {
         return alert
     }
     
-    static func makeScannerEnterManuallyAlertController(completion: (() -> Void)? = nil) -> UIAlertController {
-        let ac = UIAlertController(title: L10n.barcodeScannerWidgetTitleEnterManuallyText, message: L10n.barcodeScannerEnterManullyAlertDescription, preferredStyle: .alert)
-        ac.view.tintColor = .label
+    static func barcodeScannerEnterManuallyAlertController(enterManuallyAction: @escaping () -> Void) -> UIAlertController? {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return nil }
         
+        let alert = UIAlertController(title: L10n.permissionsDeniedTitle, message: L10n.permissionsDeniedBody, preferredStyle: .alert)
+        alert.view.tintColor = .label
+        let allowAction = UIAlertAction(title: L10n.permissionsDeniedAllowAccess, style: .default, handler: { _ in
+            UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
+        })
+        let enterManuallyAction = UIAlertAction(title: L10n.permissionsDeniedEnterManualy, style: .default) { _ in
+            enterManuallyAction()
+        }
         
+        alert.addAction(enterManuallyAction)
+        alert.addAction(allowAction)
+        alert.addAction(UIAlertAction(title: L10n.cancel, style: .cancel, handler: nil))
         
-        ac.addAction(UIAlertAction(title: L10n.alertOk, style: .default, handler: { _ in
-            completion?()
-        }))
-        
-        ac.addAction(UIAlertAction(title: L10n.cancel, style: .cancel))
-        
-        return ac
+        return alert
     }
 } 
