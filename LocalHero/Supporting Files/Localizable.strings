@@ -60,6 +60,18 @@
 "addPaymentAccount_successAlertMessage" = "Payment Account Added";
 
 
+// MARK: - Barcode Scanner Screen
+
+"barcodeScanner_addFromPhotoLibrary_buttonTitle" = "Add from Photo Library";
+"barcodeScanner_explainerLabel_login" = "Scan your login QR code";
+
+"barcodeScanner_widgetTitle_enterManuallyText" = "Enter Manually";
+"barcodeScanner_widgetExplainer_enterManuallyText" = "You can also enter your details manually";
+"barcodeScanner_enterManullyAlert_description" = "Enter or paste your login QR code below";
+
+"barcodeScanner_errorMessage_failed_toDetectLoginToken" = "Failed to extract token from image";
+
+
 // MARK: - Alerts
 
 "alert_unsupported_barcode_title" = "Unsupported Barcode";

@@ -25,7 +25,10 @@
 		33CA44BE0D9E3D0B62A76197 /* Pods_LocalHero_LocalHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1766804A86B9C95D3203647 /* Pods_LocalHero_LocalHeroUITests.framework */; };
 		AB7D768F174F299ADE9DB63F /* Pods_LocalHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF46EB728F27F00C408AE54 /* Pods_LocalHeroTests.framework */; };
 		CE02BE2428170BD3004B9EA2 /* WalletCardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */; };
-		CE02BE2628170EA0004B9EA2 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */; };
+		CE02BE2A2817FF11004B9EA2 /* BarcodeScannerWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */; };
+		CE02BE2B2817FF11004B9EA2 /* BarcodeScannerWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02BE292817FF11004B9EA2 /* BarcodeScannerWidgetView.xib */; };
+		CE02BE2D2817FF4F004B9EA2 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */; };
+		CE02BE3028180294004B9EA2 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2F28180294004B9EA2 /* Animations.swift */; };
 		CE11105A27FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */; };
 		CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */; };
 		CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105D27FC3E1700A5C11A /* StatusModel.swift */; };
@@ -33,6 +36,7 @@
 		CE11106227FC502400A5C11A /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106127FC502400A5C11A /* VoucherModel.swift */; };
 		CE11106427FC62B200A5C11A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106327FC62B200A5C11A /* CardModel.swift */; };
 		CE11106627FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */; };
+		CE2F1371281821DE007CE4B6 /* VisionImageDetectionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1370281821DE007CE4B6 /* VisionImageDetectionUtility.swift */; };
 		CE4C10E72804360F00390079 /* GailsBakeryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10E62804360F00390079 /* GailsBakeryModel.swift */; };
 		CE4C10E9280436D100390079 /* bakeries.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4C10E8280436D100390079 /* bakeries.json */; };
 		CE4C10EB28046A2400390079 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C10EA28046A2400390079 /* MapViewModel.swift */; };
@@ -50,7 +54,7 @@
 		CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE4EBB4D27BFC12D00A5CA31 /* GoogleService-Info.plist */; };
 		CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5A27C4F7D400A5CA31 /* World.swift */; };
 		CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */; };
-		CE8DDBE3280ECFBB0059E43A /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */; };
+		CE535151281BF2220071AE3D /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */; };
 		CE8DDBE528101C8B0059E43A /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */; };
 		CE8DDBE8281072D40059E43A /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE7281072D40059E43A /* BarcodeService.swift */; };
 		CE8DDBEA2810752B0059E43A /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDBE92810752A0059E43A /* SettingsRow.swift */; };
@@ -226,6 +230,10 @@
 		C3F4AFC3A4E4CA0746D45B6E /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalHero.app store (internal).xcconfig"; path = "Target Support Files/Pods-LocalHero/Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		CE02BE2328170BD3004B9EA2 /* WalletCardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE02BE2528170EA0004B9EA2 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerWidgetView.swift; sourceTree = "<group>"; };
+		CE02BE292817FF11004B9EA2 /* BarcodeScannerWidgetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarcodeScannerWidgetView.xib; sourceTree = "<group>"; };
+		CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		CE02BE2F28180294004B9EA2 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		CE11105927FAF41B00A5C11A /* LoyaltyCardBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardBalanceModel.swift; sourceTree = "<group>"; };
 		CE11105B27FB48F700A5C11A /* WalletCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardDetailsViewController.swift; sourceTree = "<group>"; };
 		CE11105D27FC3E1700A5C11A /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
@@ -233,6 +241,7 @@
 		CE11106127FC502400A5C11A /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
 		CE11106327FC62B200A5C11A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		CE11106527FC657B00A5C11A /* LoyaltyCardPllLinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCardPllLinkModel.swift; sourceTree = "<group>"; };
+		CE2F1370281821DE007CE4B6 /* VisionImageDetectionUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionImageDetectionUtility.swift; sourceTree = "<group>"; };
 		CE4C10E62804360F00390079 /* GailsBakeryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GailsBakeryModel.swift; sourceTree = "<group>"; };
 		CE4C10E8280436D100390079 /* bakeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bakeries.json; sourceTree = "<group>"; };
 		CE4C10EA28046A2400390079 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -257,7 +266,6 @@
 		CE4EBB5A27C4F7D400A5CA31 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		CE4EBB5C27C4F82C00A5CA31 /* RootStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStateMachine.swift; sourceTree = "<group>"; };
 		CE4EBB6127C5086800A5CA31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE8DDBE2280ECFBB0059E43A /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		CE8DDBE428101C8B0059E43A /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		CE8DDBE7281072D40059E43A /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		CE8DDBE92810752A0059E43A /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
@@ -460,6 +468,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE02BE272817FEF8004B9EA2 /* WidgetView */ = {
+			isa = PBXGroup;
+			children = (
+				CE02BE282817FF11004B9EA2 /* BarcodeScannerWidgetView.swift */,
+				CE02BE292817FF11004B9EA2 /* BarcodeScannerWidgetView.xib */,
+			);
+			path = WidgetView;
+			sourceTree = "<group>";
+		};
+		CE02BE2E28180275004B9EA2 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				CE02BE2F28180294004B9EA2 /* Animations.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		CE2F136F28182178007CE4B6 /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F1370281821DE007CE4B6 /* VisionImageDetectionUtility.swift */,
+			);
+			path = Vision;
+			sourceTree = "<group>";
+		};
 		CE4C10E228042BB000390079 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,7 +524,6 @@
 				CE4EBB0327BCF67200A5CA31 /* Products */,
 				B50659EC64B1159398EC1E0F /* Pods */,
 				C467ABE9AE29EB6A3D910F57 /* Frameworks */,
-				CE535150281AF8F20071AE3D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -620,7 +652,9 @@
 		CEB7853727C531D700B8F3D9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CE2F136F28182178007CE4B6 /* Vision */,
 				CEB7858F27C78BA600B8F3D9 /* HapticFeedbackUtil.swift */,
+				CE02BE2C2817FF4F004B9EA2 /* CustomView.swift */,
 				CE8DDBE7281072D40059E43A /* BarcodeService.swift */,
 				CEB785F227DB623900B8F3D9 /* Security */,
 				CEB785B627D66BCC00B8F3D9 /* HeroNavigationController.swift */,
@@ -734,6 +768,7 @@
 		CEB7857327C6862F00B8F3D9 /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				CE02BE272817FEF8004B9EA2 /* WidgetView */,
 				CEB7857827C6866B00B8F3D9 /* BarcodeScannerViewController.swift */,
 			);
 			name = BarcodeScanner;
@@ -743,6 +778,7 @@
 		CEB7857C27C68E3400B8F3D9 /* LocalHeroUI */ = {
 			isa = PBXGroup;
 			children = (
+				CE02BE2E28180275004B9EA2 /* Animations */,
 				CEB7857A27C68DD500B8F3D9 /* LocalHeroViewController.swift */,
 				CEB785D427D8FFA800B8F3D9 /* HeroButton.swift */,
 				CEB785D827D90CF700B8F3D9 /* HeroButtonStack.swift */,
@@ -1124,6 +1160,7 @@
 				CEB785FA27DBA35100B8F3D9 /* stagingPublicKey.der in Resources */,
 				CEB7860927DFA4FA00B8F3D9 /* WalletHeaderView.xib in Resources */,
 				CEB7857027C6765600B8F3D9 /* bink.der in Resources */,
+				CE02BE2B2817FF11004B9EA2 /* BarcodeScannerWidgetView.xib in Resources */,
 				CE4EBB0F27BCF67700A5CA31 /* Assets.xcassets in Resources */,
 				CE4EBB4E27BFC12E00A5CA31 /* GoogleService-Info.plist in Resources */,
 				CEB785F827DBA34B00B8F3D9 /* devPublicKey.der in Resources */,
@@ -1319,6 +1356,7 @@
 				CEB785E327DA3CB900B8F3D9 /* SpreedlyModels.swift in Sources */,
 				CEED474127F1FEC700CDD2DA /* _CD_PaymentAccount.swift in Sources */,
 				CEED475327F1FEC700CDD2DA /* _CD_Wallet.swift in Sources */,
+				CE02BE2D2817FF4F004B9EA2 /* CustomView.swift in Sources */,
 				CEED474827F1FEC700CDD2DA /* CD_Image.swift in Sources */,
 				CE4EBB5D27C4F82C00A5CA31 /* RootStateMachine.swift in Sources */,
 				CE11105E27FC3E1700A5C11A /* StatusModel.swift in Sources */,
@@ -1336,7 +1374,7 @@
 				CEB785F127DB623300B8F3D9 /* SecureUtility.swift in Sources */,
 				CEED471A27EDB2B500CDD2DA /* localhero.xcdatamodeld in Sources */,
 				CEED475827F1FEC700CDD2DA /* _CD_LoyaltyCard.swift in Sources */,
-				CE02BE2628170EA0004B9EA2 /* WalletViewModel.swift in Sources */,
+				CE02BE3028180294004B9EA2 /* Animations.swift in Sources */,
 				CEED475027F1FEC700CDD2DA /* _CD_Status.swift in Sources */,
 				CEED476827F4B23F00CDD2DA /* WalletCard.swift in Sources */,
 				CEB785D127D8A32500B8F3D9 /* String+Extension.swift in Sources */,
@@ -1345,6 +1383,7 @@
 				CEED476427F2F80D00CDD2DA /* PaymentAccountPllLink.swift in Sources */,
 				CEED478C27F74F9200CDD2DA /* _CD_Image.swift in Sources */,
 				CEB7859027C78BA600B8F3D9 /* HapticFeedbackUtil.swift in Sources */,
+				CE535151281BF2220071AE3D /* WalletViewModel.swift in Sources */,
 				CEB785BB27D756B000B8F3D9 /* FormDataSource.swift in Sources */,
 				CEED472127EDB6FA00CDD2DA /* NSManagedObjectContext.swift in Sources */,
 				CEB7853B27C53AAE00B8F3D9 /* APIClient.swift in Sources */,
@@ -1359,6 +1398,7 @@
 				CEB785C627D77C3000B8F3D9 /* Array+Extension.swift in Sources */,
 				CEB785EF27DB5D1F00B8F3D9 /* PaymentAccountCreateRequest.swift in Sources */,
 				CEB7856727C65CDC00B8F3D9 /* LoyaltyPlansTableViewController.swift in Sources */,
+				CE2F1371281821DE007CE4B6 /* VisionImageDetectionUtility.swift in Sources */,
 				CE4EBB5B27C4F7D400A5CA31 /* World.swift in Sources */,
 				CEED475627F1FEC700CDD2DA /* CD_LoyaltyCard.swift in Sources */,
 				CEB7856C27C66CFE00B8F3D9 /* SafeDecoding.swift in Sources */,
@@ -1407,6 +1447,7 @@
 				CEB7858A27C69C5900B8F3D9 /* Strings.swift in Sources */,
 				CEB7857927C6866B00B8F3D9 /* BarcodeScannerViewController.swift in Sources */,
 				CEB7859F27CCEFB900B8F3D9 /* ContentModel.swift in Sources */,
+				CE02BE2A2817FF11004B9EA2 /* BarcodeScannerWidgetView.swift in Sources */,
 				CEED471D27EDB39800CDD2DA /* Database.swift in Sources */,
 				CEB785D527D8FFA900B8F3D9 /* HeroButton.swift in Sources */,
 				CE11105C27FB48F700A5C11A /* WalletCardDetailsViewController.swift in Sources */,

@@ -13,12 +13,11 @@ struct BarcodeScannerViewModel {
     var isScanning = false
 }
 
-
 protocol BarcodeScannerViewControllerDelegate: AnyObject {
     func barcodeScannerViewController(_ viewController: BarcodeScannerViewController, didScanBarcode barcode: String, completion: (() -> Void)?)
 }
 
-class BarcodeScannerViewController: UIViewController, UINavigationControllerDelegate {
+class BarcodeScannerViewController: LocalHeroViewController, UINavigationControllerDelegate {
     enum Constants {
         static let rectOfInterestInset: CGFloat = 25
         static let viewFrameRatio: CGFloat = 12 / 18
@@ -34,12 +33,18 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         static let timerInterval: TimeInterval = 5.0
         static let scanErrorThreshold: TimeInterval = 1.0
     }
+    
+    enum ScannerType {
+        case login
+        case loyalty
+    }
 
     private weak var delegate: BarcodeScannerViewControllerDelegate?
 
     private var session = AVCaptureSession()
     private var captureOutput: AVCaptureMetadataOutput?
     private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    private var visionUtility = VisionImageDetectionUtility()
     private var previewView = UIView()
     private let schemeScanningQueue = DispatchQueue(label: "com.bink.localhero.scanning.loyalty.scheme.queue")
     private var rectOfInterest = CGRect.zero
@@ -59,20 +64,32 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
 
     private lazy var explainerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Scan your login QR code"
+        label.text = L10n.barcodeScannerExplainerLabelLogin
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         return label
     }()
+    
+    private lazy var widgetView: BarcodeScannerWidgetView = {
+        let widget = BarcodeScannerWidgetView()
+        widget.addTarget(self, selector: #selector(enterManually))
+        widget.translatesAutoresizingMaskIntoConstraints = false
+        return widget
+    }()
 
     private lazy var cancelButton: UIButton = {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(Asset.close.image, for: .normal)
+        button.imageView?.tintColor = .systemPurple
         button.addTarget(self, action: #selector(close), for: .touchUpInside)
         return button
+    }()
+    
+    private lazy var addFromPhotoLibraryButton: BinkButton = {
+        return BinkButton(type: .plain, title: L10n.barcodeScannerAddFromPhotoLibraryButtonTitle, action: toPhotoLibrary)
     }()
     
     private var viewModel: BarcodeScannerViewModel
@@ -113,12 +130,21 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
         guideImageView.frame = rectOfInterest.inset(by: Constants.guideImageInset)
         view.addSubview(guideImageView)
         view.addSubview(explainerLabel)
+        view.addSubview(widgetView)
+        
+        if Configuration.isDebug() {
+            footerButtons = [addFromPhotoLibraryButton]
+        }
 
         NSLayoutConstraint.activate([
             explainerLabel.topAnchor.constraint(equalTo: guideImageView.bottomAnchor, constant: Constants.explainerLabelPadding),
             explainerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.explainerLabelPadding),
             explainerLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.explainerLabelPadding),
-            explainerLabel.heightAnchor.constraint(equalToConstant: Constants.explainerLabelHeight)
+            explainerLabel.heightAnchor.constraint(equalToConstant: Constants.explainerLabelHeight),
+            widgetView.topAnchor.constraint(equalTo: explainerLabel.bottomAnchor, constant: Constants.widgetViewTopPadding),
+            widgetView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Constants.widgetViewLeftRightPadding),
+            widgetView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.widgetViewLeftRightPadding),
+            widgetView.heightAnchor.constraint(equalToConstant: Constants.widgetViewHeight)
         ])
     }
 
@@ -243,6 +269,25 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
     @objc private func close() {
         dismiss(animated: true)
     }
+    
+    @objc private func enterManually() {
+        widgetView.animateOnTap()
+        let alertController = ViewControllerFactory.makeAlertViewControllerWithTextfield(title: L10n.barcodeScannerWidgetTitleEnterManuallyText, message: L10n.barcodeScannerEnterManullyAlertDescription) { [weak self] textfieldText in
+            self?.passDataToBarcodeScannerDelegate(barcode: textfieldText)
+        }
+        let navigationRequest = AlertNavigationRequest(alertController: alertController)
+        Current.navigate.to(navigationRequest)
+    }
+    
+    private func toPhotoLibrary() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        picker.modalPresentationStyle = .overCurrentContext
+        let navigationRequest = ModalNavigationRequest(viewController: picker, embedInNavigationController: false)
+        Current.navigate.to(navigationRequest)
+    }
+    
 
     private func passDataToBarcodeScannerDelegate(barcode: String) {
         self.stopScanning()
@@ -254,6 +299,18 @@ class BarcodeScannerViewController: UIViewController, UINavigationControllerDele
                 self.delegate?.barcodeScannerViewController(self, didScanBarcode: barcode, completion: nil)
             }
         }
+    }
+    
+    private func showError() {
+        let alert = ViewControllerFactory.makeAlertController(title: L10n.error, message: L10n.barcodeScannerErrorMessageFailedToDetectLoginToken) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.scanErrorThreshold, execute: {
+                self.canPresentScanError = true
+                self.shouldAllowScanning = true
+            })
+        }
+        
+        let navigationRequest = AlertNavigationRequest(alertController: alert)
+        Current.navigate.to(navigationRequest)
     }
 }
 
@@ -268,5 +325,26 @@ extension BarcodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             guard let stringValue = readableObject.stringValue else { return }
             passDataToBarcodeScannerDelegate(barcode: stringValue)
         }
+    }
+}
+
+// MARK: - Detect barcode from image
+
+extension BarcodeScannerViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+        Current.navigate.close(animated: true) { [weak self] in
+            self?.visionUtility.createVisionRequest(image: image) { barcode in
+                guard let barcode = barcode else {
+                    self?.showError()
+                    return
+                }
+                self?.passDataToBarcodeScannerDelegate(barcode: barcode)
+            }
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        Current.navigate.close(animated: true)
     }
 }
