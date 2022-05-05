@@ -6,237 +6,570 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FCB95BD071010879EDEA21AAE11C135C /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftGen;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		01EC5593FAE3D3F9B9CD6B2FAB03D423 /* Pods-LocalHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A9AE5852AD5A7B7BB32AB0236FD830 /* Pods-LocalHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29A33684F68E100B9F23AA20B10FCDED /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3866BBE9500F7599540B7F6BD4D2946F /* Pods-LocalHero-LocalHeroUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EE1F0BFF2BFF016C0772C6627D193D2 /* Pods-LocalHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E089C7551E560F15B32E6A14500129 /* Pods-LocalHero-dummy.m */; };
-		39FCDC22A752FEADF0D684C531704B07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		3A48D814AD5263529B84DEE648CA24D7 /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FF0294C2F67817A0B682017D59324D /* Pods-LocalHero-LocalHeroUITests-dummy.m */; };
-		41D74691B7BE7EE13C0443624BAE0C1B /* Pods-LocalHeroTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97003FEEC4421F318683D5A9C84CB30B /* Pods-LocalHeroTests-dummy.m */; };
-		6E2843972F5B38F59954C4DC66DFF2F6 /* Pods-LocalHeroTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 396866E8E6458AF4DA8A72AD5EC8E007 /* Pods-LocalHeroTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF858F17AC76CD22285A25BA6D442627 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E133E7CCAA8FE7A82616170A8FD14B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		010407BD8E4BB0FFD647709FA3C35CD5 /* SwiftyRSA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C97144725B90C8ACFF1E440DF0FB579 /* SwiftyRSA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BB89A96C42B269EFA937406A44BD701 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6137AF0A5A70E276B30C43B0C3D5BB /* Message.swift */; };
+		1B30FCFD0BF825917765BF3CF7C7F7E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		1D0ECE5FFA4E95061314A5808338FFFB /* ClearMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AABF265D55E9EC9B54792CC0EB6D4 /* ClearMessage.swift */; };
+		1D619A2576C00F52920089E5E24405F9 /* SwiftyRSA.h in Headers */ = {isa = PBXBuildFile; fileRef = 398769FABC466C6F104E9ADF46E8891E /* SwiftyRSA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F3CFE590B4D6DFCEF276B3A94CC9B36 /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93662EF6A0F9BA76AC080B05FA32BEA5 /* Pods-LocalHero-LocalHeroUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		237B6C79404BCE3F38DFB7BA617EB610 /* NSData+SHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB1758591BE17659771D1619C3F8AB8 /* NSData+SHA.m */; };
+		3223CDEBA93FD1FDEDCF4233387437FC /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E54DD75CB33626070ABE4DA9C7F9B7 /* PrivateKey.swift */; };
+		39C2C614CF0C63B04BEB9793F0975C16 /* EncryptedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA590CAC66259262552A96B58A1E20E /* EncryptedMessage.swift */; };
+		51538153A66D449532E7D1D7A42EC752 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		5230DB71AD1EFD9931CEB31C7C799212 /* Asn1Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A9C832C695ED5991757336CE14D92 /* Asn1Parser.swift */; };
+		68C63E1DE25586672249C1DC81CA009E /* LocalHeroKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = A477B2179B256E77FE75A39EFF1F94D9 /* LocalHeroKeys.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		71B45471201B9E122C255BA2CD4C10C2 /* Pods-LocalHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E3AA62DCE7874F15D6293C107B887795 /* Pods-LocalHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7290560070409105938B64438E631AE7 /* NSData+SHA.h in Headers */ = {isa = PBXBuildFile; fileRef = A899947571FF5B9C79B2FF033D1E214A /* NSData+SHA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7552FF7B16263D1A789E5B4A1DE685FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		76EE4F6BC5B782860D83C58C1267EE7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */; };
+		8146995FB6DBE56A00B9B12BD821C03F /* LocalHeroKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = A477B2179B256E77FE75A39EFF1F94D9 /* LocalHeroKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85BE62FAD05A00D14FC4FDE9D2F44673 /* SwiftyRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0A6B325F61FD6C107052E6892B55A5 /* SwiftyRSA.swift */; };
+		8656798DBCD06B25AC2F70762DC957F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		8AABF1813723BAFB4D70C9F3FB45886D /* Keys-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC6AE1470D0EBCBB362D55E1028A77 /* Keys-library-dummy.m */; };
+		9210CE2A0DC068F353CD728F1BA53FED /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC22476BB4C63E0D0BD134FE9DBAD5 /* Signature.swift */; };
+		95BF45EE1031EB250CE3DD4DE5EBC672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		9A3510BBDE83DCAC70171DD938A051A2 /* Keys-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D3BCF5D06790CEE9804DD6D2C7999 /* Keys-framework-dummy.m */; };
+		9D2722C9070C7C3A321F6B320A00F5D6 /* SwiftyRSAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43388C4C18E02154B783F30DA3704EFC /* SwiftyRSAError.swift */; };
+		9E0C8C92AFF15EB20D6E93264FDA9396 /* SwiftyRSA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EA0937C87CF09F38CF30B6F74E1F4 /* SwiftyRSA-dummy.m */; };
+		9E7C79ED8AA619DBFB06648941589D17 /* Keys-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0FDA982DDD0879B55984249C5911BC /* Keys-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4E5C25D223C6C28BBA9CEA36FCB260C /* Pods-LocalHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8029DA7BB2448DA464161347B74CD0F4 /* Pods-LocalHero-dummy.m */; };
+		BD2266F4370CD73EEDE50940979FBB74 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9218644356D6123447FF883B1424EE3 /* Key.swift */; };
+		BF6A3B5106B7A4DE8C5B90CEDC300B61 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951DE5C552A593C7FBD638997CABB1E /* PublicKey.swift */; };
+		C12B75991E2416BC4F96A12110BA8FF8 /* Pods-LocalHeroTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1981376DED59E0F8E3C8E1BCF884079 /* Pods-LocalHeroTests-dummy.m */; };
+		C282969FCA78FC11635C0D3B740D035D /* LocalHeroKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = E800D6EA0D06FD8B77BD950D866DF8F9 /* LocalHeroKeys.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C3BBDF8F5B35FB599EAC3CE827836FB8 /* SwiftyRSA+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F562E92D56F9B042BA8EF82EAF3F3EB5 /* SwiftyRSA+ObjC.swift */; };
+		CB595B6053DFC1DD0FF554430197BE33 /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B9D517BC0AC51C6322DCEB55876E8B /* Pods-LocalHero-LocalHeroUITests-dummy.m */; };
+		E89077F2F657F4354625F51E645C52C7 /* Pods-LocalHeroTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C5B1B8A8E9EA2DEB46C8752829724B /* Pods-LocalHeroTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE5C579636A927A61F9484C865C5FC5A /* LocalHeroKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = E800D6EA0D06FD8B77BD950D866DF8F9 /* LocalHeroKeys.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4D3AC84D763AEAF0F307B0078136D5DB /* PBXContainerItemProxy */ = {
+		0F00AD249E73F3A79951BC989678A5B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E798429DCFA7906F6625CCFC1088744;
+			remoteInfo = SwiftGen;
+		};
+		19AD1C23CC6EF20FAF302A265500309F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A1C13902E7ACDA3ABB5BA1FEACC86C;
+			remoteInfo = SwiftyRSA;
+		};
+		2865F13FA3C63BBF1203917E95D7441A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B20E1693BBF6AF309BBC50645CB480FA;
 			remoteInfo = "Pods-LocalHero";
 		};
+		2A50D7B42FC988356B1BAB465A3DF865 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E798429DCFA7906F6625CCFC1088744;
+			remoteInfo = SwiftGen;
+		};
+		3C7E2D543028611F1DAB1A9ADA31151F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 038B9A85B25D53B15C36692368AA8E7E;
+			remoteInfo = "Keys-framework";
+		};
+		7E5F82BCB2C4E8FD400790E5E3EBE10A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 038B9A85B25D53B15C36692368AA8E7E;
+			remoteInfo = "Keys-framework";
+		};
+		95B2A541AFD330C461A44D4B9B24B6F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A1C13902E7ACDA3ABB5BA1FEACC86C;
+			remoteInfo = SwiftyRSA;
+		};
+		C0D85956AE9CC54FDC9904A64DC42FCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A1C13902E7ACDA3ABB5BA1FEACC86C;
+			remoteInfo = SwiftyRSA;
+		};
+		FBF059E45B833D9964D7467212B15F5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E798429DCFA7906F6625CCFC1088744;
+			remoteInfo = SwiftGen;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01FCF86A0FF6479E95FCE6FC872B1EAB /* Pods-LocalHero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-Info.plist"; sourceTree = "<group>"; };
-		0B2DE95D53483C70F9DA9CC936E358FA /* Pods-LocalHero-LocalHeroUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-LocalHeroUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		19B582D29A9AC0E600B80D5227855EFB /* Pods-LocalHero-LocalHeroUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHero-LocalHeroUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		28ED1B8C4C08EAD75458A4F0AB4176BA /* Pods-LocalHero-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHero-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3149F232FA7AAA977D663EAC9E7EE1E2 /* Pods-LocalHeroTests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.app store (internal).xcconfig"; sourceTree = "<group>"; };
-		35E089C7551E560F15B32E6A14500129 /* Pods-LocalHero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalHero-dummy.m"; sourceTree = "<group>"; };
-		3866BBE9500F7599540B7F6BD4D2946F /* Pods-LocalHero-LocalHeroUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalHero-LocalHeroUITests-umbrella.h"; sourceTree = "<group>"; };
-		386D38B52D5C6E83FE656C7B89B80478 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.alpha.xcconfig"; sourceTree = "<group>"; };
-		396866E8E6458AF4DA8A72AD5EC8E007 /* Pods-LocalHeroTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalHeroTests-umbrella.h"; sourceTree = "<group>"; };
-		3CD781A885AB3FFCDE9D477DD398649C /* Pods-LocalHero.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.alpha.xcconfig"; sourceTree = "<group>"; };
-		3F96F18CBDCA11F9ABF85531035484AC /* Pods-LocalHeroTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHeroTests.modulemap"; sourceTree = "<group>"; };
-		4047B3CC9269E6FDFE3562A5B46AFF54 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
-		5B48732C2EE089E08FB3C7DD697EF217 /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
-		5D198E27F5DF1ED840494338CB1301FF /* Pods-LocalHero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHero.modulemap"; sourceTree = "<group>"; };
-		6531CA105E69D6614ABAE3ECACBEDFA9 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig"; sourceTree = "<group>"; };
-		6576A102B273782F60BA00E67DE76C4A /* Pods-LocalHeroTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHeroTests-Info.plist"; sourceTree = "<group>"; };
-		672A267C1C5D5AA5D5CBCFB1AC4BD2BC /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.beta.xcconfig"; sourceTree = "<group>"; };
-		6C81C9687C84DADE9F9302EC15E0B426 /* Pods-LocalHero.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.app store.xcconfig"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		74CF63A609FF62B988A8BF3D4535C6DD /* Pods-LocalHero-LocalHeroUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHero-LocalHeroUITests.modulemap"; sourceTree = "<group>"; };
-		767D752979A8AFE98A52B468E056D4B2 /* Pods-LocalHero-LocalHeroUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-LocalHeroUITests-Info.plist"; sourceTree = "<group>"; };
-		768B33CC1A20E827133693A3488A8486 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.app store.xcconfig"; sourceTree = "<group>"; };
-		76FF0294C2F67817A0B682017D59324D /* Pods-LocalHero-LocalHeroUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalHero-LocalHeroUITests-dummy.m"; sourceTree = "<group>"; };
-		80D73A35942C121717682AE039C5DB3B /* Pods-LocalHero-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-acknowledgements.plist"; sourceTree = "<group>"; };
+		0DA4828908E30CE4A29CB9AD3A405635 /* SwiftyRSA */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyRSA; path = SwiftyRSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EDBEDB672B7F8336B3AB927B8DE5FA5 /* Pods-LocalHeroTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.beta.xcconfig"; sourceTree = "<group>"; };
+		0F04ECB77CDBA9577174FFD58865ADC4 /* SwiftyRSA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyRSA.modulemap; sourceTree = "<group>"; };
+		1951DE5C552A593C7FBD638997CABB1E /* PublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublicKey.swift; path = Source/PublicKey.swift; sourceTree = "<group>"; };
+		20C00F77036A62052560A8D3837CABB8 /* SwiftyRSA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyRSA-prefix.pch"; sourceTree = "<group>"; };
+		22F8325CB4FA13B4AEBEDAFFA7168FCE /* Pods-LocalHero-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHero-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2496D0887FC3051A84B0CC8813C6B268 /* Keys-library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Keys-library.release.xcconfig"; path = "../Keys-library/Keys-library.release.xcconfig"; sourceTree = "<group>"; };
+		26981B31104F37CD46321C4556A5ED87 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig"; sourceTree = "<group>"; };
+		29CC22476BB4C63E0D0BD134FE9DBAD5 /* Signature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signature.swift; path = Source/Signature.swift; sourceTree = "<group>"; };
+		2F2082AB38BD46EC9038C6E72094A165 /* Pods-LocalHeroTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHeroTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		314763E5123D1BC8FDEC1C96634F0FCB /* SwiftyRSA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyRSA-Info.plist"; sourceTree = "<group>"; };
+		31AE7323EE208187D86E472BED6D76CA /* Pods-LocalHero-LocalHeroUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LocalHero-LocalHeroUITests-frameworks.sh"; sourceTree = "<group>"; };
+		3212920C48054A07D23C25181CCDE66E /* Pods-LocalHero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-Info.plist"; sourceTree = "<group>"; };
+		34B9D517BC0AC51C6322DCEB55876E8B /* Pods-LocalHero-LocalHeroUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalHero-LocalHeroUITests-dummy.m"; sourceTree = "<group>"; };
+		363295E428A4759FF0B818FF70F6625C /* Keys-library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Keys-library.debug.xcconfig"; path = "../Keys-library/Keys-library.debug.xcconfig"; sourceTree = "<group>"; };
+		365CB6631A77A598316E32F251645830 /* Pods-LocalHeroTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHeroTests-Info.plist"; sourceTree = "<group>"; };
+		398769FABC466C6F104E9ADF46E8891E /* SwiftyRSA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyRSA.h; path = Source/SwiftyRSA.h; sourceTree = "<group>"; };
+		40C2473585A0AF7ABDB09C2F0FEB0568 /* Pods-LocalHero-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-acknowledgements.plist"; sourceTree = "<group>"; };
+		43177C2D2CD36EBCDB94632540F7E904 /* Pods-LocalHero-LocalHeroUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHero-LocalHeroUITests.modulemap"; sourceTree = "<group>"; };
+		43388C4C18E02154B783F30DA3704EFC /* SwiftyRSAError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyRSAError.swift; path = Source/SwiftyRSAError.swift; sourceTree = "<group>"; };
+		4D1EA0937C87CF09F38CF30B6F74E1F4 /* SwiftyRSA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyRSA-dummy.m"; sourceTree = "<group>"; };
+		4E6137AF0A5A70E276B30C43B0C3D5BB /* Message.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Source/Message.swift; sourceTree = "<group>"; };
+		50E54DD75CB33626070ABE4DA9C7F9B7 /* PrivateKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrivateKey.swift; path = Source/PrivateKey.swift; sourceTree = "<group>"; };
+		57C28F9414D695D178F94D54A1F8B1B1 /* Pods-LocalHeroTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHeroTests.modulemap"; sourceTree = "<group>"; };
+		5ABC6AE1470D0EBCBB362D55E1028A77 /* Keys-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Keys-library-dummy.m"; path = "../Keys-library/Keys-library-dummy.m"; sourceTree = "<group>"; };
+		5D9DA76FF6D897DE84BCA60134E63F09 /* Pods-LocalHero-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LocalHero-frameworks.sh"; sourceTree = "<group>"; };
+		5EB1758591BE17659771D1619C3F8AB8 /* NSData+SHA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SHA.m"; path = "Source/NSData+SHA.m"; sourceTree = "<group>"; };
+		632A842B34393D6DA57225F941F1DF5E /* Pods-LocalHero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalHero.modulemap"; sourceTree = "<group>"; };
+		67A25C75364659E277B86F2C825C19CE /* Pods-LocalHeroTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.alpha.xcconfig"; sourceTree = "<group>"; };
+		6DEDA3C5D05B48F17F212924A45BE7A6 /* Pods-LocalHero.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.app store.xcconfig"; sourceTree = "<group>"; };
+		6F5AABF265D55E9EC9B54792CC0EB6D4 /* ClearMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClearMessage.swift; path = Source/ClearMessage.swift; sourceTree = "<group>"; };
+		7E7748136D5CBE6B41A1258995A65A8D /* Pods-LocalHero-LocalHeroUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-LocalHeroUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8029DA7BB2448DA464161347B74CD0F4 /* Pods-LocalHero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalHero-dummy.m"; sourceTree = "<group>"; };
+		84733822697D5EE909424231E623D7F7 /* SwiftyRSA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyRSA.release.xcconfig; sourceTree = "<group>"; };
+		93662EF6A0F9BA76AC080B05FA32BEA5 /* Pods-LocalHero-LocalHeroUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalHero-LocalHeroUITests-umbrella.h"; sourceTree = "<group>"; };
 		9486D86572AAE0DCE6A8C7D767200290 /* Pods-LocalHero-LocalHeroUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LocalHero-LocalHeroUITests"; path = Pods_LocalHero_LocalHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94A9AE5852AD5A7B7BB32AB0236FD830 /* Pods-LocalHero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalHero-umbrella.h"; sourceTree = "<group>"; };
-		97003FEEC4421F318683D5A9C84CB30B /* Pods-LocalHeroTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalHeroTests-dummy.m"; sourceTree = "<group>"; };
+		952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		98C15C7A4AA1415C4AC1EF82CAA0F860 /* Pods-LocalHeroTests.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.app store (internal).xcconfig"; sourceTree = "<group>"; };
 		9B9795D37C5426ED0E3EDA760941E6ED /* Pods-LocalHeroTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LocalHeroTests"; path = Pods_LocalHeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C97144725B90C8ACFF1E440DF0FB579 /* SwiftyRSA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyRSA-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0A22F9D13A3A668572F7E0EFCE19BE6 /* Pods-LocalHero.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.beta.xcconfig"; sourceTree = "<group>"; };
+		9F6181109970AFD746C636D8537D7CAF /* Keys.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = Keys.podspec.json; sourceTree = "<group>"; };
+		9FC1EAC37F29E9226CECAD158FA72E80 /* Keys-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Keys-framework.modulemap"; sourceTree = "<group>"; };
+		A027F28499A6C0AD4E72FEEFDAC4F168 /* Keys-framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Keys-framework.release.xcconfig"; sourceTree = "<group>"; };
+		A45734DCD638A9A5576900C911BB9FEF /* Keys-framework-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Keys-framework-Info.plist"; sourceTree = "<group>"; };
+		A477B2179B256E77FE75A39EFF1F94D9 /* LocalHeroKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalHeroKeys.h; sourceTree = "<group>"; };
+		A899947571FF5B9C79B2FF033D1E214A /* NSData+SHA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+SHA.h"; path = "Source/NSData+SHA.h"; sourceTree = "<group>"; };
+		AC0FDA982DDD0879B55984249C5911BC /* Keys-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Keys-framework-umbrella.h"; sourceTree = "<group>"; };
 		AE6A09166B90A7984C1A8C3711E0808E /* Pods-LocalHero */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LocalHero"; path = Pods_LocalHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB8E59254DBFD4566045748250DCCD46 /* Pods-LocalHeroTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHeroTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C269D840BE1F7C819CA8E6377A99A752 /* Pods-LocalHeroTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHeroTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EAF6E390C6719BDF040A7B1378A0C479 /* Pods-LocalHeroTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.beta.xcconfig"; sourceTree = "<group>"; };
-		FE2613FC9B196ED3D91E47DF2687E1C0 /* Pods-LocalHeroTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.alpha.xcconfig"; sourceTree = "<group>"; };
+		AF4D3BCF5D06790CEE9804DD6D2C7999 /* Keys-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Keys-framework-dummy.m"; sourceTree = "<group>"; };
+		B02214177B6D2B6038E51274990AEF47 /* Pods-LocalHero-LocalHeroUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalHero-LocalHeroUITests-Info.plist"; sourceTree = "<group>"; };
+		B1981376DED59E0F8E3C8E1BCF884079 /* Pods-LocalHeroTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalHeroTests-dummy.m"; sourceTree = "<group>"; };
+		B62CED338872EF536910A466267352B5 /* Keys-framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Keys-framework"; path = Keys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8BFE3FB9351887FCDFE021C3CEF6AC /* SwiftGen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGen.release.xcconfig; sourceTree = "<group>"; };
+		BAD2D219BD58D636A42996E9B13D097E /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.app store.xcconfig"; sourceTree = "<group>"; };
+		C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C4CB6766521972A7866FC5A895878163 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.alpha.xcconfig"; sourceTree = "<group>"; };
+		C5C61EA3C5BC70ED02F2FF2B4C82D46B /* Pods-LocalHero.app store (internal).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.app store (internal).xcconfig"; sourceTree = "<group>"; };
+		D1B02310E6B3F158473705A3B67B80E7 /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero-LocalHeroUITests.beta.xcconfig"; sourceTree = "<group>"; };
+		D39A9C832C695ED5991757336CE14D92 /* Asn1Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asn1Parser.swift; path = Source/Asn1Parser.swift; sourceTree = "<group>"; };
+		D3C5B1B8A8E9EA2DEB46C8752829724B /* Pods-LocalHeroTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalHeroTests-umbrella.h"; sourceTree = "<group>"; };
+		D4B5FC1A8F44103C20C834E5CAAEC363 /* Keys-library */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Keys-library"; path = "libKeys-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5AE737498C28F132ED2E882B994D0D1 /* Pods-LocalHeroTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHeroTests.app store.xcconfig"; sourceTree = "<group>"; };
+		DE0A6B325F61FD6C107052E6892B55A5 /* SwiftyRSA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyRSA.swift; path = Source/SwiftyRSA.swift; sourceTree = "<group>"; };
+		DEE57A8F1D1DAC4F6E1F6B7256979A2A /* Keys-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Keys-framework-prefix.pch"; sourceTree = "<group>"; };
+		E2F0CA58CD302DA518BCDDB61776A5EF /* Keys-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Keys-library-prefix.pch"; path = "../Keys-library/Keys-library-prefix.pch"; sourceTree = "<group>"; };
+		E3AA62DCE7874F15D6293C107B887795 /* Pods-LocalHero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalHero-umbrella.h"; sourceTree = "<group>"; };
+		E800D6EA0D06FD8B77BD950D866DF8F9 /* LocalHeroKeys.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalHeroKeys.m; sourceTree = "<group>"; };
+		F0E4D48BD2A315182B3050F1A9DEAD55 /* Pods-LocalHero.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.beta.xcconfig"; sourceTree = "<group>"; };
+		F179C557C9A2ACA1D1D20738CED8810A /* Pods-LocalHeroTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHeroTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F4D2EE2E60C292C770F9556587859DC7 /* Pods-LocalHero-LocalHeroUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalHero-LocalHeroUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F562E92D56F9B042BA8EF82EAF3F3EB5 /* SwiftyRSA+ObjC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyRSA+ObjC.swift"; path = "Source/SwiftyRSA+ObjC.swift"; sourceTree = "<group>"; };
+		F9218644356D6123447FF883B1424EE3 /* Key.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Key.swift; path = Source/Key.swift; sourceTree = "<group>"; };
+		F9B7F169F0ACAA0631C481E54BE436DB /* Pods-LocalHeroTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LocalHeroTests-frameworks.sh"; sourceTree = "<group>"; };
+		FCC49D2458F41EE5C45BFC972E57157F /* Pods-LocalHero.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalHero.alpha.xcconfig"; sourceTree = "<group>"; };
+		FFA590CAC66259262552A96B58A1E20E /* EncryptedMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EncryptedMessage.swift; path = Source/EncryptedMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14736E9A636F891A24F7D893217A9EE6 /* Frameworks */ = {
+		0F9454668A57678C0DC520CE4D993C26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF858F17AC76CD22285A25BA6D442627 /* Foundation.framework in Frameworks */,
+				95BF45EE1031EB250CE3DD4DE5EBC672 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28BD186749110E7564203AEE44022E64 /* Frameworks */ = {
+		19E7E6A930285D21CFA6B3FF5259EE00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E133E7CCAA8FE7A82616170A8FD14B16 /* Foundation.framework in Frameworks */,
+				7552FF7B16263D1A789E5B4A1DE685FC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2DBC176255EBC2EE1BFEFF0239E9ED94 /* Frameworks */ = {
+		1F3BB70E7959C87CFB4ECFDB62F10673 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39FCDC22A752FEADF0D684C531704B07 /* Foundation.framework in Frameworks */,
+				51538153A66D449532E7D1D7A42EC752 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2516C8F48256FA8DE9ECFDCC6D0352DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B30FCFD0BF825917765BF3CF7C7F7E3 /* Foundation.framework in Frameworks */,
+				76EE4F6BC5B782860D83C58C1267EE7D /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9642D8CE3663090D882832C443B33B4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8656798DBCD06B25AC2F70762DC957F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB33C82B5EF7ABD4A506A41F785E4C80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		079C48CCC53EFB67021C0AC5ED37DD6B /* Pods-LocalHero */ = {
+		08483673EE37F970983F24F274609F0D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D198E27F5DF1ED840494338CB1301FF /* Pods-LocalHero.modulemap */,
-				28ED1B8C4C08EAD75458A4F0AB4176BA /* Pods-LocalHero-acknowledgements.markdown */,
-				80D73A35942C121717682AE039C5DB3B /* Pods-LocalHero-acknowledgements.plist */,
-				35E089C7551E560F15B32E6A14500129 /* Pods-LocalHero-dummy.m */,
-				01FCF86A0FF6479E95FCE6FC872B1EAB /* Pods-LocalHero-Info.plist */,
-				94A9AE5852AD5A7B7BB32AB0236FD830 /* Pods-LocalHero-umbrella.h */,
-				3CD781A885AB3FFCDE9D477DD398649C /* Pods-LocalHero.alpha.xcconfig */,
-				6C81C9687C84DADE9F9302EC15E0B426 /* Pods-LocalHero.app store.xcconfig */,
-				5B48732C2EE089E08FB3C7DD697EF217 /* Pods-LocalHero.app store (internal).xcconfig */,
-				A0A22F9D13A3A668572F7E0EFCE19BE6 /* Pods-LocalHero.beta.xcconfig */,
+				E56784741B582B09F994392C105A6CB9 /* Pods-LocalHero */,
+				7DA25EABB721EAB211B83A13999D9F10 /* Pods-LocalHero-LocalHeroUITests */,
+				C2551AD0784403B01CFF3FE7B61364A2 /* Pods-LocalHeroTests */,
 			);
-			name = "Pods-LocalHero";
-			path = "Target Support Files/Pods-LocalHero";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		279286D14C7C4D7CF4144FD42137827A /* Pods-LocalHero-LocalHeroUITests */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74CF63A609FF62B988A8BF3D4535C6DD /* Pods-LocalHero-LocalHeroUITests.modulemap */,
-				19B582D29A9AC0E600B80D5227855EFB /* Pods-LocalHero-LocalHeroUITests-acknowledgements.markdown */,
-				0B2DE95D53483C70F9DA9CC936E358FA /* Pods-LocalHero-LocalHeroUITests-acknowledgements.plist */,
-				76FF0294C2F67817A0B682017D59324D /* Pods-LocalHero-LocalHeroUITests-dummy.m */,
-				767D752979A8AFE98A52B468E056D4B2 /* Pods-LocalHero-LocalHeroUITests-Info.plist */,
-				3866BBE9500F7599540B7F6BD4D2946F /* Pods-LocalHero-LocalHeroUITests-umbrella.h */,
-				386D38B52D5C6E83FE656C7B89B80478 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */,
-				768B33CC1A20E827133693A3488A8486 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */,
-				6531CA105E69D6614ABAE3ECACBEDFA9 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */,
-				672A267C1C5D5AA5D5CBCFB1AC4BD2BC /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */,
+				7CE426AC267333500FABE7BA0A5A42A0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31B15DC4A3132C14D7A3D94DDBCA3944 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B62CED338872EF536910A466267352B5 /* Keys-framework */,
+				D4B5FC1A8F44103C20C834E5CAAEC363 /* Keys-library */,
+				AE6A09166B90A7984C1A8C3711E0808E /* Pods-LocalHero */,
+				9486D86572AAE0DCE6A8C7D767200290 /* Pods-LocalHero-LocalHeroUITests */,
+				9B9795D37C5426ED0E3EDA760941E6ED /* Pods-LocalHeroTests */,
+				0DA4828908E30CE4A29CB9AD3A405635 /* SwiftyRSA */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		557A67C637BF6CEE2AC547F6CD68E539 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FC1EAC37F29E9226CECAD158FA72E80 /* Keys-framework.modulemap */,
+				AF4D3BCF5D06790CEE9804DD6D2C7999 /* Keys-framework-dummy.m */,
+				A45734DCD638A9A5576900C911BB9FEF /* Keys-framework-Info.plist */,
+				DEE57A8F1D1DAC4F6E1F6B7256979A2A /* Keys-framework-prefix.pch */,
+				AC0FDA982DDD0879B55984249C5911BC /* Keys-framework-umbrella.h */,
+				A027F28499A6C0AD4E72FEEFDAC4F168 /* Keys-framework.release.xcconfig */,
+				5ABC6AE1470D0EBCBB362D55E1028A77 /* Keys-library-dummy.m */,
+				E2F0CA58CD302DA518BCDDB61776A5EF /* Keys-library-prefix.pch */,
+				363295E428A4759FF0B818FF70F6625C /* Keys-library.debug.xcconfig */,
+				2496D0887FC3051A84B0CC8813C6B268 /* Keys-library.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Keys-framework";
+			sourceTree = "<group>";
+		};
+		5D2329808B8E167F8FC1DD6E196045A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C68B1E0B9FC65F5A9B9E62CFDE6BE1B4 /* SwiftGen */,
+				BD9BC9EEF60EDD77887E9DB942E0F694 /* SwiftyRSA */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7B646191671CD81D4E55422743287769 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F04ECB77CDBA9577174FFD58865ADC4 /* SwiftyRSA.modulemap */,
+				4D1EA0937C87CF09F38CF30B6F74E1F4 /* SwiftyRSA-dummy.m */,
+				314763E5123D1BC8FDEC1C96634F0FCB /* SwiftyRSA-Info.plist */,
+				20C00F77036A62052560A8D3837CABB8 /* SwiftyRSA-prefix.pch */,
+				9C97144725B90C8ACFF1E440DF0FB579 /* SwiftyRSA-umbrella.h */,
+				84733822697D5EE909424231E623D7F7 /* SwiftyRSA.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyRSA";
+			sourceTree = "<group>";
+		};
+		7CE426AC267333500FABE7BA0A5A42A0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */,
+				C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DA25EABB721EAB211B83A13999D9F10 /* Pods-LocalHero-LocalHeroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43177C2D2CD36EBCDB94632540F7E904 /* Pods-LocalHero-LocalHeroUITests.modulemap */,
+				F4D2EE2E60C292C770F9556587859DC7 /* Pods-LocalHero-LocalHeroUITests-acknowledgements.markdown */,
+				7E7748136D5CBE6B41A1258995A65A8D /* Pods-LocalHero-LocalHeroUITests-acknowledgements.plist */,
+				34B9D517BC0AC51C6322DCEB55876E8B /* Pods-LocalHero-LocalHeroUITests-dummy.m */,
+				31AE7323EE208187D86E472BED6D76CA /* Pods-LocalHero-LocalHeroUITests-frameworks.sh */,
+				B02214177B6D2B6038E51274990AEF47 /* Pods-LocalHero-LocalHeroUITests-Info.plist */,
+				93662EF6A0F9BA76AC080B05FA32BEA5 /* Pods-LocalHero-LocalHeroUITests-umbrella.h */,
+				C4CB6766521972A7866FC5A895878163 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */,
+				BAD2D219BD58D636A42996E9B13D097E /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */,
+				26981B31104F37CD46321C4556A5ED87 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */,
+				D1B02310E6B3F158473705A3B67B80E7 /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */,
 			);
 			name = "Pods-LocalHero-LocalHeroUITests";
 			path = "Target Support Files/Pods-LocalHero-LocalHeroUITests";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		8F51785F9F99BC547DE8EB431B8C3F69 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				BA8BFE3FB9351887FCDFE021C3CEF6AC /* SwiftGen.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGen";
 			sourceTree = "<group>";
 		};
-		8F045595CEE4511A27BCBC0AB6B98B9E /* Targets Support Files */ = {
+		918C67CEDF38AB6FC9603B3803A92E0F /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				079C48CCC53EFB67021C0AC5ED37DD6B /* Pods-LocalHero */,
-				279286D14C7C4D7CF4144FD42137827A /* Pods-LocalHero-LocalHeroUITests */,
-				A6A458F916CE3B53B4238E19E7678587 /* Pods-LocalHeroTests */,
+				92656BB12782451B21B7BCFEDDBEE7ED /* Keys */,
 			);
-			name = "Targets Support Files";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		A6A458F916CE3B53B4238E19E7678587 /* Pods-LocalHeroTests */ = {
+		92656BB12782451B21B7BCFEDDBEE7ED /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				3F96F18CBDCA11F9ABF85531035484AC /* Pods-LocalHeroTests.modulemap */,
-				BB8E59254DBFD4566045748250DCCD46 /* Pods-LocalHeroTests-acknowledgements.markdown */,
-				C269D840BE1F7C819CA8E6377A99A752 /* Pods-LocalHeroTests-acknowledgements.plist */,
-				97003FEEC4421F318683D5A9C84CB30B /* Pods-LocalHeroTests-dummy.m */,
-				6576A102B273782F60BA00E67DE76C4A /* Pods-LocalHeroTests-Info.plist */,
-				396866E8E6458AF4DA8A72AD5EC8E007 /* Pods-LocalHeroTests-umbrella.h */,
-				FE2613FC9B196ED3D91E47DF2687E1C0 /* Pods-LocalHeroTests.alpha.xcconfig */,
-				4047B3CC9269E6FDFE3562A5B46AFF54 /* Pods-LocalHeroTests.app store.xcconfig */,
-				3149F232FA7AAA977D663EAC9E7EE1E2 /* Pods-LocalHeroTests.app store (internal).xcconfig */,
-				EAF6E390C6719BDF040A7B1378A0C479 /* Pods-LocalHeroTests.beta.xcconfig */,
+				A477B2179B256E77FE75A39EFF1F94D9 /* LocalHeroKeys.h */,
+				E800D6EA0D06FD8B77BD950D866DF8F9 /* LocalHeroKeys.m */,
+				AAB502875BBCC48D1B972E37127F55A2 /* Pod */,
+				557A67C637BF6CEE2AC547F6CD68E539 /* Support Files */,
+			);
+			name = Keys;
+			path = CocoaPodsKeys;
+			sourceTree = "<group>";
+		};
+		AAB502875BBCC48D1B972E37127F55A2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9F6181109970AFD746C636D8537D7CAF /* Keys.podspec.json */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		BD9BC9EEF60EDD77887E9DB942E0F694 /* SwiftyRSA */ = {
+			isa = PBXGroup;
+			children = (
+				D39A9C832C695ED5991757336CE14D92 /* Asn1Parser.swift */,
+				6F5AABF265D55E9EC9B54792CC0EB6D4 /* ClearMessage.swift */,
+				FFA590CAC66259262552A96B58A1E20E /* EncryptedMessage.swift */,
+				F9218644356D6123447FF883B1424EE3 /* Key.swift */,
+				4E6137AF0A5A70E276B30C43B0C3D5BB /* Message.swift */,
+				A899947571FF5B9C79B2FF033D1E214A /* NSData+SHA.h */,
+				5EB1758591BE17659771D1619C3F8AB8 /* NSData+SHA.m */,
+				50E54DD75CB33626070ABE4DA9C7F9B7 /* PrivateKey.swift */,
+				1951DE5C552A593C7FBD638997CABB1E /* PublicKey.swift */,
+				29CC22476BB4C63E0D0BD134FE9DBAD5 /* Signature.swift */,
+				398769FABC466C6F104E9ADF46E8891E /* SwiftyRSA.h */,
+				DE0A6B325F61FD6C107052E6892B55A5 /* SwiftyRSA.swift */,
+				43388C4C18E02154B783F30DA3704EFC /* SwiftyRSAError.swift */,
+				ED45B1E39C332E12A05FBABF0E896BA5 /* ObjC */,
+				7B646191671CD81D4E55422743287769 /* Support Files */,
+			);
+			name = SwiftyRSA;
+			path = SwiftyRSA;
+			sourceTree = "<group>";
+		};
+		C2551AD0784403B01CFF3FE7B61364A2 /* Pods-LocalHeroTests */ = {
+			isa = PBXGroup;
+			children = (
+				57C28F9414D695D178F94D54A1F8B1B1 /* Pods-LocalHeroTests.modulemap */,
+				F179C557C9A2ACA1D1D20738CED8810A /* Pods-LocalHeroTests-acknowledgements.markdown */,
+				2F2082AB38BD46EC9038C6E72094A165 /* Pods-LocalHeroTests-acknowledgements.plist */,
+				B1981376DED59E0F8E3C8E1BCF884079 /* Pods-LocalHeroTests-dummy.m */,
+				F9B7F169F0ACAA0631C481E54BE436DB /* Pods-LocalHeroTests-frameworks.sh */,
+				365CB6631A77A598316E32F251645830 /* Pods-LocalHeroTests-Info.plist */,
+				D3C5B1B8A8E9EA2DEB46C8752829724B /* Pods-LocalHeroTests-umbrella.h */,
+				67A25C75364659E277B86F2C825C19CE /* Pods-LocalHeroTests.alpha.xcconfig */,
+				D5AE737498C28F132ED2E882B994D0D1 /* Pods-LocalHeroTests.app store.xcconfig */,
+				98C15C7A4AA1415C4AC1EF82CAA0F860 /* Pods-LocalHeroTests.app store (internal).xcconfig */,
+				0EDBEDB672B7F8336B3AB927B8DE5FA5 /* Pods-LocalHeroTests.beta.xcconfig */,
 			);
 			name = "Pods-LocalHeroTests";
 			path = "Target Support Files/Pods-LocalHeroTests";
 			sourceTree = "<group>";
 		};
-		BA93E6D79E4EB885028C4B1C350D316D /* Products */ = {
+		C68B1E0B9FC65F5A9B9E62CFDE6BE1B4 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				AE6A09166B90A7984C1A8C3711E0808E /* Pods-LocalHero */,
-				9486D86572AAE0DCE6A8C7D767200290 /* Pods-LocalHero-LocalHeroUITests */,
-				9B9795D37C5426ED0E3EDA760941E6ED /* Pods-LocalHeroTests */,
+				8F51785F9F99BC547DE8EB431B8C3F69 /* Support Files */,
 			);
-			name = Products;
+			name = SwiftGen;
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				BA93E6D79E4EB885028C4B1C350D316D /* Products */,
-				8F045595CEE4511A27BCBC0AB6B98B9E /* Targets Support Files */,
+				918C67CEDF38AB6FC9603B3803A92E0F /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				5D2329808B8E167F8FC1DD6E196045A1 /* Pods */,
+				31B15DC4A3132C14D7A3D94DDBCA3944 /* Products */,
+				08483673EE37F970983F24F274609F0D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		E56784741B582B09F994392C105A6CB9 /* Pods-LocalHero */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				632A842B34393D6DA57225F941F1DF5E /* Pods-LocalHero.modulemap */,
+				22F8325CB4FA13B4AEBEDAFFA7168FCE /* Pods-LocalHero-acknowledgements.markdown */,
+				40C2473585A0AF7ABDB09C2F0FEB0568 /* Pods-LocalHero-acknowledgements.plist */,
+				8029DA7BB2448DA464161347B74CD0F4 /* Pods-LocalHero-dummy.m */,
+				5D9DA76FF6D897DE84BCA60134E63F09 /* Pods-LocalHero-frameworks.sh */,
+				3212920C48054A07D23C25181CCDE66E /* Pods-LocalHero-Info.plist */,
+				E3AA62DCE7874F15D6293C107B887795 /* Pods-LocalHero-umbrella.h */,
+				FCC49D2458F41EE5C45BFC972E57157F /* Pods-LocalHero.alpha.xcconfig */,
+				6DEDA3C5D05B48F17F212924A45BE7A6 /* Pods-LocalHero.app store.xcconfig */,
+				C5C61EA3C5BC70ED02F2FF2B4C82D46B /* Pods-LocalHero.app store (internal).xcconfig */,
+				F0E4D48BD2A315182B3050F1A9DEAD55 /* Pods-LocalHero.beta.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-LocalHero";
+			path = "Target Support Files/Pods-LocalHero";
+			sourceTree = "<group>";
+		};
+		ED45B1E39C332E12A05FBABF0E896BA5 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				F562E92D56F9B042BA8EF82EAF3F3EB5 /* SwiftyRSA+ObjC.swift */,
+			);
+			name = ObjC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		695F4FB8477DC23FD1D84877B0593EB7 /* Headers */ = {
+		3B126712B44E87902CFEEC7810BE7F8D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29A33684F68E100B9F23AA20B10FCDED /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */,
+				E89077F2F657F4354625F51E645C52C7 /* Pods-LocalHeroTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		716AAC357FC54BCB45C0E1EB5402C24E /* Headers */ = {
+		5E951A891CEBC4B586AAD3B7FB7E3A6E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01EC5593FAE3D3F9B9CD6B2FAB03D423 /* Pods-LocalHero-umbrella.h in Headers */,
+				71B45471201B9E122C255BA2CD4C10C2 /* Pods-LocalHero-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF9CDA294FB005998A61FA6BFD422B9B /* Headers */ = {
+		645F8B6398A85409610B8D686DD544CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E2843972F5B38F59954C4DC66DFF2F6 /* Pods-LocalHeroTests-umbrella.h in Headers */,
+				7290560070409105938B64438E631AE7 /* NSData+SHA.h in Headers */,
+				1D619A2576C00F52920089E5E24405F9 /* SwiftyRSA.h in Headers */,
+				010407BD8E4BB0FFD647709FA3C35CD5 /* SwiftyRSA-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		753DEE69CA4565B64C95B57FC07BACFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F3CFE590B4D6DFCEF276B3A94CC9B36 /* Pods-LocalHero-LocalHeroUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E65B294951449F2EACC6F33EF9AFB1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C63E1DE25586672249C1DC81CA009E /* LocalHeroKeys.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90BD3C67FDE660683229A724A8AB2E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E7C79ED8AA619DBFB06648941589D17 /* Keys-framework-umbrella.h in Headers */,
+				8146995FB6DBE56A00B9B12BD821C03F /* LocalHeroKeys.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		59BFED9DB09D9F5369AD7F0F9A195E8F /* Pods-LocalHeroTests */ = {
+		038B9A85B25D53B15C36692368AA8E7E /* Keys-framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41F1F1E6AB300982E2CBE98CC39013B9 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */;
+			buildConfigurationList = D51B46EB2AD417FEAD266CBABBF0B178 /* Build configuration list for PBXNativeTarget "Keys-framework" */;
 			buildPhases = (
-				EF9CDA294FB005998A61FA6BFD422B9B /* Headers */,
-				710F6C66A45D1D8E88A7DF7FD61F4F6E /* Sources */,
-				28BD186749110E7564203AEE44022E64 /* Frameworks */,
-				E6B6B08A47DCE2C0EE83F5CBE2842C6C /* Resources */,
+				F90BD3C67FDE660683229A724A8AB2E5 /* Headers */,
+				445FBBB810FBE734F919F5EDBD020651 /* Sources */,
+				9642D8CE3663090D882832C443B33B4C /* Frameworks */,
+				800AE1454C3138C5E0239A2291B9428A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D8F7C9BDAFC6DA00F3B1CBC2B266C13A /* PBXTargetDependency */,
+			);
+			name = "Keys-framework";
+			productName = Keys;
+			productReference = B62CED338872EF536910A466267352B5 /* Keys-framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		59BFED9DB09D9F5369AD7F0F9A195E8F /* Pods-LocalHeroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 421A80E13A328EA665B022B2A6B35D60 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */;
+			buildPhases = (
+				3B126712B44E87902CFEEC7810BE7F8D /* Headers */,
+				3D502C939BD3F5CCB3D805F09C801B32 /* Sources */,
+				0F9454668A57678C0DC520CE4D993C26 /* Frameworks */,
+				7BE661C3F7EC0E11977806D4C8F07DCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB20C833B52B4C95AD3FF917C5298FFF /* PBXTargetDependency */,
+				9DDF80255CF3BF7890C95C81A53E9296 /* PBXTargetDependency */,
+				74716BEA115B585D04CD0CA146D8D076 /* PBXTargetDependency */,
 			);
 			name = "Pods-LocalHeroTests";
 			productName = Pods_LocalHeroTests;
@@ -245,39 +578,80 @@
 		};
 		88A9F296F27C330A08AB1DA86D7AD6BF /* Pods-LocalHero-LocalHeroUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56E04E6CC3BBB27C55AE9193A7BB797A /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */;
+			buildConfigurationList = 1F0E3E6DA575FB3FB61C3F3F92068898 /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */;
 			buildPhases = (
-				695F4FB8477DC23FD1D84877B0593EB7 /* Headers */,
-				64A41DBFBC5B66DF13F74883606BF919 /* Sources */,
-				14736E9A636F891A24F7D893217A9EE6 /* Frameworks */,
-				78F0D7A2A86AAA55CDC8BDE6BDB95C4C /* Resources */,
+				753DEE69CA4565B64C95B57FC07BACFF /* Headers */,
+				44333708DD45FE3B63B375B7A4492D6D /* Sources */,
+				1F3BB70E7959C87CFB4ECFDB62F10673 /* Frameworks */,
+				DA67A37CBA7A18197F464827ACA7DF6A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5E6760E0E4B4559A0E8319AE71335C46 /* PBXTargetDependency */,
+				C5B6AF80CAEFE38D73D9B386350F95E4 /* PBXTargetDependency */,
+				28A32A15C88FE535E04604A4FE8B591D /* PBXTargetDependency */,
 			);
 			name = "Pods-LocalHero-LocalHeroUITests";
 			productName = Pods_LocalHero_LocalHeroUITests;
 			productReference = 9486D86572AAE0DCE6A8C7D767200290 /* Pods-LocalHero-LocalHeroUITests */;
 			productType = "com.apple.product-type.framework";
 		};
-		B20E1693BBF6AF309BBC50645CB480FA /* Pods-LocalHero */ = {
+		92A1C13902E7ACDA3ABB5BA1FEACC86C /* SwiftyRSA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC1A2BA2040CC743F7BB6A4855838841 /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */;
+			buildConfigurationList = 4168CFE32B0F4E0A8C5BE3871439E34E /* Build configuration list for PBXNativeTarget "SwiftyRSA" */;
 			buildPhases = (
-				716AAC357FC54BCB45C0E1EB5402C24E /* Headers */,
-				FDF99BE62C09FA00C0768A6E40624E35 /* Sources */,
-				2DBC176255EBC2EE1BFEFF0239E9ED94 /* Frameworks */,
-				3E38602BFA139D050093C69953CFE173 /* Resources */,
+				645F8B6398A85409610B8D686DD544CD /* Headers */,
+				CB667B1643E337E3ABDEADFE02BEC989 /* Sources */,
+				2516C8F48256FA8DE9ECFDCC6D0352DB /* Frameworks */,
+				9B02A8D44A3A907DFCF16B90FF7B0DF7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = SwiftyRSA;
+			productName = SwiftyRSA;
+			productReference = 0DA4828908E30CE4A29CB9AD3A405635 /* SwiftyRSA */;
+			productType = "com.apple.product-type.framework";
+		};
+		B20E1693BBF6AF309BBC50645CB480FA /* Pods-LocalHero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86776C166C00251CEB053DF9A969ACCC /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */;
+			buildPhases = (
+				5E951A891CEBC4B586AAD3B7FB7E3A6E /* Headers */,
+				DAAE556D9738638E559229907BCA6BAF /* Sources */,
+				19E7E6A930285D21CFA6B3FF5259EE00 /* Frameworks */,
+				8A38C9FA46D208BDD2FEB4859E1F069C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AECAE33351B345B99896DDDBB8F4B6FB /* PBXTargetDependency */,
+				75E09AB787A9291E5AAE5B926FB74D82 /* PBXTargetDependency */,
+				ADE9BEA7F7711FCEF0F1B2A3BDF26D55 /* PBXTargetDependency */,
+			);
 			name = "Pods-LocalHero";
 			productName = Pods_LocalHero;
 			productReference = AE6A09166B90A7984C1A8C3711E0808E /* Pods-LocalHero */;
 			productType = "com.apple.product-type.framework";
+		};
+		FBDE307EEE6EFAED12F501BC7E7652AA /* Keys-library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F347DC5F87615F11CC45770DD502784 /* Build configuration list for PBXNativeTarget "Keys-library" */;
+			buildPhases = (
+				9E65B294951449F2EACC6F33EF9AFB1D /* Headers */,
+				D4489E33C0F050367F7D7098C6F44B92 /* Sources */,
+				AB33C82B5EF7ABD4A506A41F785E4C80 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Keys-library";
+			productName = "Keys-library";
+			productReference = D4B5FC1A8F44103C20C834E5CAAEC363 /* Keys-library */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -297,33 +671,51 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = BA93E6D79E4EB885028C4B1C350D316D /* Products */;
+			productRefGroup = 31B15DC4A3132C14D7A3D94DDBCA3944 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				038B9A85B25D53B15C36692368AA8E7E /* Keys-framework */,
+				FBDE307EEE6EFAED12F501BC7E7652AA /* Keys-library */,
 				B20E1693BBF6AF309BBC50645CB480FA /* Pods-LocalHero */,
 				88A9F296F27C330A08AB1DA86D7AD6BF /* Pods-LocalHero-LocalHeroUITests */,
 				59BFED9DB09D9F5369AD7F0F9A195E8F /* Pods-LocalHeroTests */,
+				1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */,
+				92A1C13902E7ACDA3ABB5BA1FEACC86C /* SwiftyRSA */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3E38602BFA139D050093C69953CFE173 /* Resources */ = {
+		7BE661C3F7EC0E11977806D4C8F07DCA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78F0D7A2A86AAA55CDC8BDE6BDB95C4C /* Resources */ = {
+		800AE1454C3138C5E0239A2291B9428A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6B6B08A47DCE2C0EE83F5CBE2842C6C /* Resources */ = {
+		8A38C9FA46D208BDD2FEB4859E1F069C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B02A8D44A3A907DFCF16B90FF7B0DF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA67A37CBA7A18197F464827ACA7DF6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,45 +725,131 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		64A41DBFBC5B66DF13F74883606BF919 /* Sources */ = {
+		3D502C939BD3F5CCB3D805F09C801B32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A48D814AD5263529B84DEE648CA24D7 /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */,
+				C12B75991E2416BC4F96A12110BA8FF8 /* Pods-LocalHeroTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		710F6C66A45D1D8E88A7DF7FD61F4F6E /* Sources */ = {
+		44333708DD45FE3B63B375B7A4492D6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D74691B7BE7EE13C0443624BAE0C1B /* Pods-LocalHeroTests-dummy.m in Sources */,
+				CB595B6053DFC1DD0FF554430197BE33 /* Pods-LocalHero-LocalHeroUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDF99BE62C09FA00C0768A6E40624E35 /* Sources */ = {
+		445FBBB810FBE734F919F5EDBD020651 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE1F0BFF2BFF016C0772C6627D193D2 /* Pods-LocalHero-dummy.m in Sources */,
+				9A3510BBDE83DCAC70171DD938A051A2 /* Keys-framework-dummy.m in Sources */,
+				C282969FCA78FC11635C0D3B740D035D /* LocalHeroKeys.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB667B1643E337E3ABDEADFE02BEC989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5230DB71AD1EFD9931CEB31C7C799212 /* Asn1Parser.swift in Sources */,
+				1D0ECE5FFA4E95061314A5808338FFFB /* ClearMessage.swift in Sources */,
+				39C2C614CF0C63B04BEB9793F0975C16 /* EncryptedMessage.swift in Sources */,
+				BD2266F4370CD73EEDE50940979FBB74 /* Key.swift in Sources */,
+				0BB89A96C42B269EFA937406A44BD701 /* Message.swift in Sources */,
+				237B6C79404BCE3F38DFB7BA617EB610 /* NSData+SHA.m in Sources */,
+				3223CDEBA93FD1FDEDCF4233387437FC /* PrivateKey.swift in Sources */,
+				BF6A3B5106B7A4DE8C5B90CEDC300B61 /* PublicKey.swift in Sources */,
+				9210CE2A0DC068F353CD728F1BA53FED /* Signature.swift in Sources */,
+				85BE62FAD05A00D14FC4FDE9D2F44673 /* SwiftyRSA.swift in Sources */,
+				C3BBDF8F5B35FB599EAC3CE827836FB8 /* SwiftyRSA+ObjC.swift in Sources */,
+				9E0C8C92AFF15EB20D6E93264FDA9396 /* SwiftyRSA-dummy.m in Sources */,
+				9D2722C9070C7C3A321F6B320A00F5D6 /* SwiftyRSAError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4489E33C0F050367F7D7098C6F44B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AABF1813723BAFB4D70C9F3FB45886D /* Keys-library-dummy.m in Sources */,
+				EE5C579636A927A61F9484C865C5FC5A /* LocalHeroKeys.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAE556D9738638E559229907BCA6BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E5C25D223C6C28BBA9CEA36FCB260C /* Pods-LocalHero-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D8F7C9BDAFC6DA00F3B1CBC2B266C13A /* PBXTargetDependency */ = {
+		28A32A15C88FE535E04604A4FE8B591D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyRSA;
+			target = 92A1C13902E7ACDA3ABB5BA1FEACC86C /* SwiftyRSA */;
+			targetProxy = 95B2A541AFD330C461A44D4B9B24B6F1 /* PBXContainerItemProxy */;
+		};
+		5E6760E0E4B4559A0E8319AE71335C46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Keys-framework";
+			target = 038B9A85B25D53B15C36692368AA8E7E /* Keys-framework */;
+			targetProxy = 3C7E2D543028611F1DAB1A9ADA31151F /* PBXContainerItemProxy */;
+		};
+		74716BEA115B585D04CD0CA146D8D076 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyRSA;
+			target = 92A1C13902E7ACDA3ABB5BA1FEACC86C /* SwiftyRSA */;
+			targetProxy = 19AD1C23CC6EF20FAF302A265500309F /* PBXContainerItemProxy */;
+		};
+		75E09AB787A9291E5AAE5B926FB74D82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */;
+			targetProxy = 2A50D7B42FC988356B1BAB465A3DF865 /* PBXContainerItemProxy */;
+		};
+		9DDF80255CF3BF7890C95C81A53E9296 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */;
+			targetProxy = FBF059E45B833D9964D7467212B15F5E /* PBXContainerItemProxy */;
+		};
+		ADE9BEA7F7711FCEF0F1B2A3BDF26D55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyRSA;
+			target = 92A1C13902E7ACDA3ABB5BA1FEACC86C /* SwiftyRSA */;
+			targetProxy = C0D85956AE9CC54FDC9904A64DC42FCE /* PBXContainerItemProxy */;
+		};
+		AECAE33351B345B99896DDDBB8F4B6FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Keys-framework";
+			target = 038B9A85B25D53B15C36692368AA8E7E /* Keys-framework */;
+			targetProxy = 7E5F82BCB2C4E8FD400790E5E3EBE10A /* PBXContainerItemProxy */;
+		};
+		C5B6AF80CAEFE38D73D9B386350F95E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */;
+			targetProxy = 0F00AD249E73F3A79951BC989678A5B8 /* PBXContainerItemProxy */;
+		};
+		DB20C833B52B4C95AD3FF917C5298FFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LocalHero";
 			target = B20E1693BBF6AF309BBC50645CB480FA /* Pods-LocalHero */;
-			targetProxy = 4D3AC84D763AEAF0F307B0078136D5DB /* PBXContainerItemProxy */;
+			targetProxy = 2865F13FA3C63BBF1203917E95D7441A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06BBA1C2297A923302914471BF92810D /* Beta */ = {
+		02FA5DF8C7A7784AEB25B549C74EB062 /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A22F9D13A3A668572F7E0EFCE19BE6 /* Pods-LocalHero.beta.xcconfig */;
+			baseConfigurationReference = F0E4D48BD2A315182B3050F1A9DEAD55 /* Pods-LocalHero.beta.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -407,9 +885,9 @@
 			};
 			name = Beta;
 		};
-		13F025A4DC0063C4ED2DE1623C67156F /* Alpha */ = {
+		20D64A003C7C9FDE6D873421319884F5 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE2613FC9B196ED3D91E47DF2687E1C0 /* Pods-LocalHeroTests.alpha.xcconfig */;
+			baseConfigurationReference = FCC49D2458F41EE5C45BFC972E57157F /* Pods-LocalHero.alpha.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -421,7 +899,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -430,7 +908,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -507,8 +985,81 @@
 			};
 			name = Beta;
 		};
-		2316234346D4829175E736467CBF0B4D /* Debug */ = {
+		26D6DAD55693EAB59BECBFA264CA78FE /* Beta */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EDBEDB672B7F8336B3AB927B8DE5FA5 /* Pods-LocalHeroTests.beta.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Beta;
+		};
+		27C239A952034BC618A1C612D0D7706E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-framework/Keys-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Keys-framework/Keys-framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Keys-framework/Keys-framework.modulemap";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = Keys;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2D9CC39D084CC426504EB1F4F0F140E5 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEDA3C5D05B48F17F212924A45BE7A6 /* Pods-LocalHero.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -538,14 +1089,38 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = "App Store";
 		};
-		46B1D99163524BB579E82DE521B7F694 /* App Store (Internal) */ = {
+		3A8996DE0A06F18A4407C881F357D7B8 /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6531CA105E69D6614ABAE3ECACBEDFA9 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-library/Keys-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = "Keys-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store (Internal)";
+		};
+		3B715A19D0411E923776FB7B93502EBB /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26981B31104F37CD46321C4556A5ED87 /* Pods-LocalHero-LocalHeroUITests.app store (internal).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -581,45 +1156,30 @@
 			};
 			name = "App Store (Internal)";
 		};
-		4E7A9C21270DB57AF8BCC8296B6F7251 /* Beta */ = {
+		3D107E10ADD9F85247E0860974146A73 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 672A267C1C5D5AA5D5CBCFB1AC4BD2BC /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-library/Keys-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = "Keys-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Beta;
+			name = "App Store";
 		};
-		4EDAA0CA6DED34D920033BA0A24F7FD8 /* Release */ = {
+		481EFEBD92539C4B797E069EB1329FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
@@ -656,9 +1216,9 @@
 			};
 			name = Release;
 		};
-		787D93CDB3A0F720684CFAD02B91786F /* App Store */ = {
+		4B1194DA38FB5D63F49E7768AA63F0B2 /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C81C9687C84DADE9F9302EC15E0B426 /* Pods-LocalHero.app store.xcconfig */;
+			baseConfigurationReference = 98C15C7A4AA1415C4AC1EF82CAA0F860 /* Pods-LocalHeroTests.app store (internal).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -670,7 +1230,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -679,7 +1239,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -692,9 +1252,47 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store";
+			name = "App Store (Internal)";
 		};
-		7E450C58247213C8B149FC5A86428267 /* Release */ = {
+		4D01E3A92AE2DCF5EF5B53E78F467248 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4CB6766521972A7866FC5A895878163 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Alpha;
+		};
+		58D00A599F7AC6E69CDACC67D878AA55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
@@ -730,6 +1328,220 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		66E2327EE1E5EB2C9F643C81C39F30D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70BE31CC53364A2F95A3CAF274B525A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		72C74C88EEA9CE8491F7F020F35E94A7 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD2D219BD58D636A42996E9B13D097E /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
+		7478C8A3C5F92E828F0E9FF0B199783B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		837AADA45631375065FCFAC2CE205B8F /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C61EA3C5BC70ED02F2FF2B4C82D46B /* Pods-LocalHero.app store (internal).xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store (Internal)";
+		};
+		85F47A6E6D7D5812CB16894453B2834B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8848CF815DFAC20252772BA46AC12A92 /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84733822697D5EE909424231E623D7F7 /* SwiftyRSA.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store (Internal)";
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -797,6 +1609,76 @@
 			};
 			name = Debug;
 		};
+		931834B5ABE3D01752F1A616C5A4214A /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A027F28499A6C0AD4E72FEEFDAC4F168 /* Keys-framework.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-framework/Keys-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Keys-framework/Keys-framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Keys-framework/Keys-framework.modulemap";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = Keys;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Alpha;
+		};
+		9946BD5677FCE8E8690AC5830C9CC4B1 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A027F28499A6C0AD4E72FEEFDAC4F168 /* Keys-framework.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-framework/Keys-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Keys-framework/Keys-framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Keys-framework/Keys-framework.modulemap";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = Keys;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -859,12 +1741,10 @@
 			};
 			name = Release;
 		};
-		A1C37AF271DE5046A8A370687FBF4C73 /* Alpha */ = {
+		A0990B61C520A44FAFA8966888FE3F76 /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 386D38B52D5C6E83FE656C7B89B80478 /* Pods-LocalHero-LocalHeroUITests.alpha.xcconfig */;
+			baseConfigurationReference = A027F28499A6C0AD4E72FEEFDAC4F168 /* Keys-framework.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -873,29 +1753,63 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-framework/Keys-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Keys-framework/Keys-framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Keys-framework/Keys-framework.modulemap";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = Keys;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Alpha;
+			name = "App Store (Internal)";
+		};
+		A102BB9D2603B65DF7D0D8AB3C738C61 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A027F28499A6C0AD4E72FEEFDAC4F168 /* Keys-framework.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-framework/Keys-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Keys-framework/Keys-framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Keys-framework/Keys-framework.modulemap";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = Keys;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Beta;
 		};
 		A1F56A1C51D012F21FB227246F6DDBAB /* App Store (Internal) */ = {
 			isa = XCBuildConfiguration;
@@ -959,11 +1873,9 @@
 			};
 			name = "App Store (Internal)";
 		};
-		B0CFC00394A3016390D8FEFE148EF53F /* Debug */ = {
+		A2A223C2A793E8F75792213EC30BE9F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -972,32 +1884,54 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-framework/Keys-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Keys-framework/Keys-framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Keys-framework/Keys-framework.modulemap";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = Keys;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		C015ADBD7D39CEB87DF5651965D7A33B /* App Store (Internal) */ = {
+		A3094549F32C987B4F5D7F9D7A5BB4A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B48732C2EE089E08FB3C7DD697EF217 /* Pods-LocalHero.app store (internal).xcconfig */;
+			baseConfigurationReference = 2496D0887FC3051A84B0CC8813C6B268 /* Keys-library.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-library/Keys-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = "Keys-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4D581E46409AA4E33B15891569CB678 /* Debug */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1027,50 +1961,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "App Store (Internal)";
-		};
-		C61E2E5608BD059D83394327E350AFB5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		C8AB49AF148302A517CD8817517EDEE1 /* Release */ = {
+		A583CFDC6E471CD30D81E989590B5F2E /* Beta */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1B02310E6B3F158473705A3B67B80E7 /* Pods-LocalHero-LocalHeroUITests.beta.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1104,7 +2002,159 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Beta;
+		};
+		A603521721C83B99B83D6B722D4C203F /* App Store (Internal) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA8BFE3FB9351887FCDFE021C3CEF6AC /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store (Internal)";
+		};
+		B5460CEA2D053F367075C3BD80348421 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5AE737498C28F132ED2E882B994D0D1 /* Pods-LocalHeroTests.app store.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
+		BA948C6671FCBDFB92451E9798D687BE /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A25C75364659E277B86F2C825C19CE /* Pods-LocalHeroTests.alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Alpha;
+		};
+		BD004DD5A3E24107FB2D7307C4002CD4 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84733822697D5EE909424231E623D7F7 /* SwiftyRSA.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Alpha;
+		};
+		BD10C3D71E5C2220E6D211A72FC1C88D /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-library/Keys-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = "Keys-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Beta;
 		};
 		C955DC1A948FF8819387AC022C0D50E1 /* App Store */ = {
 			isa = XCBuildConfiguration;
@@ -1168,11 +2218,9 @@
 			};
 			name = "App Store";
 		};
-		DB495CA1FEE1FEB6BEE53896B5E0E951 /* App Store */ = {
+		D294BE1AAF0E487D68F5B5362EF5049B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4047B3CC9269E6FDFE3562A5B46AFF54 /* Pods-LocalHeroTests.app store.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1182,71 +2230,53 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store";
+			name = Debug;
 		};
-		DDCA74AC1C70BC5D2E255B5E7E12D227 /* Beta */ = {
+		D9EB8B12BDF970E292878239AF7E1CEE /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF6E390C6719BDF040A7B1378A0C479 /* Pods-LocalHeroTests.beta.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-library/Keys-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = "Keys-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Beta;
+			name = Alpha;
 		};
-		E8467C04A57CFB91E8AEC2282EBD19CD /* App Store */ = {
+		DD0F338730C314336C5364CAE2C68CFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 768B33CC1A20E827133693A3488A8486 /* Pods-LocalHero-LocalHeroUITests.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1280,11 +2310,10 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store";
+			name = Release;
 		};
-		EB603A949EECE7B021681597F32316B0 /* App Store (Internal) */ = {
+		DD36204C2C342B3D2CBDD492B3D9BE2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3149F232FA7AAA977D663EAC9E7EE1E2 /* Pods-LocalHeroTests.app store (internal).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1296,7 +2325,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1305,7 +2334,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHeroTests/Pods-LocalHeroTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero-LocalHeroUITests/Pods-LocalHero-LocalHeroUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1314,49 +2343,84 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store (Internal)";
+			name = Debug;
 		};
-		F3FC0D36211067F0D7271F92F3F9913F /* Alpha */ = {
+		DFC73C620CBA6C673E12F2A7F96A6748 /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CD781A885AB3FFCDE9D477DD398649C /* Pods-LocalHero.alpha.xcconfig */;
+			baseConfigurationReference = BA8BFE3FB9351887FCDFE021C3CEF6AC /* SwiftGen.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LocalHero/Pods-LocalHero.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+			};
+			name = Beta;
+		};
+		EE286AE47CD70A381B1EB08F12C02212 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA8BFE3FB9351887FCDFE021C3CEF6AC /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Alpha;
+		};
+		EEEC54D3987ECF3561C730ABA4C25CAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 363295E428A4759FF0B818FF70F6625C /* Keys-library.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Keys-library/Keys-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Keys;
+				PRODUCT_NAME = "Keys-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6C32014D9AF978141B0D4E2D73B552B /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA8BFE3FB9351887FCDFE021C3CEF6AC /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store";
 		};
 		F6C7D922C8B99F3640F714C7062B74AD /* Alpha */ = {
 			isa = XCBuildConfiguration;
@@ -1420,18 +2484,116 @@
 			};
 			name = Alpha;
 		};
+		FA2E969EE7E9D88D54C50313085EEA03 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84733822697D5EE909424231E623D7F7 /* SwiftyRSA.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
+		FD4706417E9B89A3A6BCC69D7C53312B /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84733822697D5EE909424231E623D7F7 /* SwiftyRSA.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Beta;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41F1F1E6AB300982E2CBE98CC39013B9 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */ = {
+		1F0E3E6DA575FB3FB61C3F3F92068898 /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13F025A4DC0063C4ED2DE1623C67156F /* Alpha */,
-				DB495CA1FEE1FEB6BEE53896B5E0E951 /* App Store */,
-				EB603A949EECE7B021681597F32316B0 /* App Store (Internal) */,
-				DDCA74AC1C70BC5D2E255B5E7E12D227 /* Beta */,
-				B0CFC00394A3016390D8FEFE148EF53F /* Debug */,
-				4EDAA0CA6DED34D920033BA0A24F7FD8 /* Release */,
+				4D01E3A92AE2DCF5EF5B53E78F467248 /* Alpha */,
+				72C74C88EEA9CE8491F7F020F35E94A7 /* App Store */,
+				3B715A19D0411E923776FB7B93502EBB /* App Store (Internal) */,
+				A583CFDC6E471CD30D81E989590B5F2E /* Beta */,
+				DD36204C2C342B3D2CBDD492B3D9BE2E /* Debug */,
+				DD0F338730C314336C5364CAE2C68CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4168CFE32B0F4E0A8C5BE3871439E34E /* Build configuration list for PBXNativeTarget "SwiftyRSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD004DD5A3E24107FB2D7307C4002CD4 /* Alpha */,
+				FA2E969EE7E9D88D54C50313085EEA03 /* App Store */,
+				8848CF815DFAC20252772BA46AC12A92 /* App Store (Internal) */,
+				FD4706417E9B89A3A6BCC69D7C53312B /* Beta */,
+				D294BE1AAF0E487D68F5B5362EF5049B /* Debug */,
+				70BE31CC53364A2F95A3CAF274B525A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		421A80E13A328EA665B022B2A6B35D60 /* Build configuration list for PBXNativeTarget "Pods-LocalHeroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA948C6671FCBDFB92451E9798D687BE /* Alpha */,
+				B5460CEA2D053F367075C3BD80348421 /* App Store */,
+				4B1194DA38FB5D63F49E7768AA63F0B2 /* App Store (Internal) */,
+				26D6DAD55693EAB59BECBFA264CA78FE /* Beta */,
+				66E2327EE1E5EB2C9F643C81C39F30D2 /* Debug */,
+				481EFEBD92539C4B797E069EB1329FF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1449,28 +2611,54 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56E04E6CC3BBB27C55AE9193A7BB797A /* Build configuration list for PBXNativeTarget "Pods-LocalHero-LocalHeroUITests" */ = {
+		6F347DC5F87615F11CC45770DD502784 /* Build configuration list for PBXNativeTarget "Keys-library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1C37AF271DE5046A8A370687FBF4C73 /* Alpha */,
-				E8467C04A57CFB91E8AEC2282EBD19CD /* App Store */,
-				46B1D99163524BB579E82DE521B7F694 /* App Store (Internal) */,
-				4E7A9C21270DB57AF8BCC8296B6F7251 /* Beta */,
-				C61E2E5608BD059D83394327E350AFB5 /* Debug */,
-				C8AB49AF148302A517CD8817517EDEE1 /* Release */,
+				D9EB8B12BDF970E292878239AF7E1CEE /* Alpha */,
+				3D107E10ADD9F85247E0860974146A73 /* App Store */,
+				3A8996DE0A06F18A4407C881F357D7B8 /* App Store (Internal) */,
+				BD10C3D71E5C2220E6D211A72FC1C88D /* Beta */,
+				EEEC54D3987ECF3561C730ABA4C25CAF /* Debug */,
+				A3094549F32C987B4F5D7F9D7A5BB4A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC1A2BA2040CC743F7BB6A4855838841 /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */ = {
+		86776C166C00251CEB053DF9A969ACCC /* Build configuration list for PBXNativeTarget "Pods-LocalHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3FC0D36211067F0D7271F92F3F9913F /* Alpha */,
-				787D93CDB3A0F720684CFAD02B91786F /* App Store */,
-				C015ADBD7D39CEB87DF5651965D7A33B /* App Store (Internal) */,
-				06BBA1C2297A923302914471BF92810D /* Beta */,
-				2316234346D4829175E736467CBF0B4D /* Debug */,
-				7E450C58247213C8B149FC5A86428267 /* Release */,
+				20D64A003C7C9FDE6D873421319884F5 /* Alpha */,
+				2D9CC39D084CC426504EB1F4F0F140E5 /* App Store */,
+				837AADA45631375065FCFAC2CE205B8F /* App Store (Internal) */,
+				02FA5DF8C7A7784AEB25B549C74EB062 /* Beta */,
+				A4D581E46409AA4E33B15891569CB678 /* Debug */,
+				58D00A599F7AC6E69CDACC67D878AA55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D51B46EB2AD417FEAD266CBABBF0B178 /* Build configuration list for PBXNativeTarget "Keys-framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931834B5ABE3D01752F1A616C5A4214A /* Alpha */,
+				9946BD5677FCE8E8690AC5830C9CC4B1 /* App Store */,
+				A0990B61C520A44FAFA8966888FE3F76 /* App Store (Internal) */,
+				A102BB9D2603B65DF7D0D8AB3C738C61 /* Beta */,
+				A2A223C2A793E8F75792213EC30BE9F0 /* Debug */,
+				27C239A952034BC618A1C612D0D7706E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCB95BD071010879EDEA21AAE11C135C /* Build configuration list for PBXAggregateTarget "SwiftGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE286AE47CD70A381B1EB08F12C02212 /* Alpha */,
+				F6C32014D9AF978141B0D4E2D73B552B /* App Store */,
+				A603521721C83B99B83D6B722D4C203F /* App Store (Internal) */,
+				DFC73C620CBA6C673E12F2A7F96A6748 /* Beta */,
+				7478C8A3C5F92E828F0E9FF0B199783B /* Debug */,
+				85F47A6E6D7D5812CB16894453B2834B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

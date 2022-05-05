@@ -1,0 +1,13 @@
+strings:
+  inputs: LocalHero/Supporting Files/
+  outputs:
+    - templateName: structured-swift5
+      output: LocalHero/Supporting Files/SwiftGen/Strings.swift
+xcassets:
+  inputs:
+    - LocalHero/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: LocalHero/Supporting Files/SwiftGen/Assets.swift
+
+

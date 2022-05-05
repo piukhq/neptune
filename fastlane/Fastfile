@@ -1,31 +1,42 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+fastlane_version "1.104.0"
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
-default_platform(:ios)
+default_platform :ios
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+
+  # Lifecycle
+
+  before_all do |lane, options|
+
+    ENV["MATCH_PASSWORD"] = "!32Nzmzmznz!"
+
+    # This excludes these targets from the code coverage, required if we just want BinkApp posted to Slack
+    ENV["COVERAGE_EXCLUDE_TARGETS"] = ""
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "180"
+    ENV["FASTLANE_XCODE_LIST_TIMEOUT"] = "180"
+
+    # This allows the command line iTunes Connect uploaded to get through out firewall, otherwise all connections are blocked
+    # ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t DAV"
+
   end
-end
+
+  after_all do |lane|
+  end
+
+  error do |lane, exception|
+      notification(
+        subtitle: "Fastlane: #{lane} failed",
+        message: exception.message
+      )
+  end
+
+
+  # Certificate management
 
  desc "Retrieve all the certificates for all targets and configures your machine to compile against devices"
   lane :setup do
 
-    # Bink
+    # Local Hero
 
     match(type: "appstore", app_identifier: "com.bink.localhero", readonly: true)
     match(type: "development", app_identifier: "com.bink.localhero.alpha", readonly: true)
@@ -35,3 +46,94 @@ end
     match(type: "appstore", app_identifier: "com.bink.localhero.beta", readonly: true)
 
   end
+
+
+  # Add device
+
+ desc "Add device to portal"
+  lane :addDevice do  |options|
+      device_name = prompt(text: "Enter the device name: ")
+      device_udid = prompt(text: "Enter the device UDID: ")
+      device_hash = {}
+      device_hash[device_name] = device_udid
+      register_devices(
+                       devices: device_hash
+                       )
+	setupForce
+  end
+
+
+  desc "Retrieve and force update all the certificates for all targets and configures your machine to compile against devices, including new ones. NOTE: This should only be run if new devices are required in the profiles and certificates"
+  lane :setupForce do
+
+    # Local Hero
+
+    match(type: "appstore", app_identifier: "com.bink.localhero", readonly: false, force_for_new_devices: true)
+    match(type: "development", app_identifier: "com.bink.localhero.alpha", readonly: false, force_for_new_devices: true)
+    match(type: "adhoc", app_identifier: "com.bink.localhero.beta", readonly: false, force_for_new_devices: true)
+
+    # For MR builds to Testflight
+    match(type: "appstore", app_identifier: "com.bink.localhero.beta", readonly: false, force_for_new_devices: true)
+
+  end
+
+
+  desc "Submit merge request build to TestFlight"
+  lane :mr do |options|
+    app_store_connect_api_key(
+      key_id: ENV["FASTLANE_ASC_KEY_ID"],
+      issuer_id: ENV["FASTLANE_ASC_ISSUER_ID"],
+      key_content: ENV["FASTLANE_ASC_P8"],
+      in_house: false
+    )
+
+    increment_build_number(build_number: options[:build_number])
+
+    build_app(
+      workspace: "LocalHero.xcworkspace",
+      scheme: "App Store (internal)"
+    )
+
+    upload_to_testflight(
+      changelog: "Merge request build for branch: " + options[:branch_name],
+      skip_waiting_for_build_processing: true
+    )
+
+  end
+
+ desc "Submit Develop build to TestFlight"
+  lane :develop do |options|
+    app_store_connect_api_key(
+      key_id: ENV["FASTLANE_ASC_KEY_ID"],
+      issuer_id: ENV["FASTLANE_ASC_ISSUER_ID"],
+      key_content: ENV["FASTLANE_ASC_P8"],
+      in_house: false
+    )
+
+    increment_build_number(build_number: options[:build_number])
+
+    build_app(
+      workspace: "LocalHero.xcworkspace",
+      scheme: "App Store (internal)"
+    )
+
+    upload_to_testflight(
+      changelog: "Latest Develop build",
+      distribute_external: true,
+      groups: "Bink Internal",
+      reject_build_waiting_for_review: true,
+      skip_waiting_for_build_processing: false
+    )
+  end
+
+  desc "Submit dysm to Sentry for crash reporting"
+  lane :beta_dsym do
+    sentry_upload_dsym(
+      auth_token: ENV["SENTRY_AUTH_TOKEN"],
+      org_slug: 'bink',
+      project_slug: 'localhero',
+      dsym_path: ENV["BITRISE_DSYM_PATH"]
+    )
+  end
+
+end

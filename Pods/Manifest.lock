@@ -1,3 +1,35 @@
-PODFILE CHECKSUM: a7c7644508c04d4233c609abe1b24ced8d1e63c5
+PODS:
+  - Keys (1.0.1)
+  - SwiftGen (6.5.1)
+  - SwiftyRSA (1.6.0):
+    - SwiftyRSA/ObjC (= 1.6.0)
+  - SwiftyRSA/ObjC (1.6.0)
+
+DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - SwiftGen (~> 6.5.1)
+  - "SwiftyRSA (from `git@github.com:binkhq/SwiftyRSA.git`)"
+
+SPEC REPOS:
+  trunk:
+    - SwiftGen
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+  SwiftyRSA:
+    :git: "git@github.com:binkhq/SwiftyRSA.git"
+
+CHECKOUT OPTIONS:
+  SwiftyRSA:
+    :commit: c4f97d7726b5d1cb9480d7e442be4002716d1be9
+    :git: "git@github.com:binkhq/SwiftyRSA.git"
+
+SPEC CHECKSUMS:
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+  SwiftyRSA: 3b9c9179744217951facc6a3e9ae8d8c97061ffa
+
+PODFILE CHECKSUM: bf10855d91fcdeff9e0fbc985ad72e12690488b5
 
 COCOAPODS: 1.11.2

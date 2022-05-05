@@ -13,26 +13,55 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### setup
+## iOS
+
+### ios setup
 
 ```sh
-[bundle exec] fastlane setup
+[bundle exec] fastlane ios setup
 ```
 
 Retrieve all the certificates for all targets and configures your machine to compile against devices
 
-----
-
-
-## iOS
-
-### ios custom_lane
+### ios addDevice
 
 ```sh
-[bundle exec] fastlane ios custom_lane
+[bundle exec] fastlane ios addDevice
 ```
 
-Description of what the lane does
+Add device to portal
+
+### ios setupForce
+
+```sh
+[bundle exec] fastlane ios setupForce
+```
+
+Retrieve and force update all the certificates for all targets and configures your machine to compile against devices, including new ones. NOTE: This should only be run if new devices are required in the profiles and certificates
+
+### ios mr
+
+```sh
+[bundle exec] fastlane ios mr
+```
+
+Submit merge request build to TestFlight
+
+### ios develop
+
+```sh
+[bundle exec] fastlane ios develop
+```
+
+Submit Develop build to TestFlight
+
+### ios beta_dsym
+
+```sh
+[bundle exec] fastlane ios beta_dsym
+```
+
+Submit dysm to Sentry for crash reporting
 
 ----
 

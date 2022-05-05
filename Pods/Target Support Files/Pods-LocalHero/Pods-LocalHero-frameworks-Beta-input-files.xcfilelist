@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-LocalHero/Pods-LocalHero-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Keys-framework/Keys.framework
+${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework
